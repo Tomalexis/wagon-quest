@@ -5,4 +5,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  resources :games, only: [:show, :create] do
+    member do
+      patch :next_round
+      patch :continue
+    end
+    resources :battles, only: [:create]
+  end
+  resources :rounds, only: [] do
+    resources :game_answers, only: [:create]
+  end
 end
