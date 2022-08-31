@@ -1,1 +1,55 @@
 // Specific CSS for your home-page
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 90vh;
+  overflow: hidden;
+}
+
+.wrapper-start {
+  background-color: white;
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  padding: 30px 50px;
+  margin: 10px 0;
+  width: 80vh;
+}
+
+.btn-start {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: gray;
+  transition: background 0.3s ease;
+  width: 29%;
+  margin-top: 10px;
+}
+
+.btn-start:hover {
+  background: lightgray;
+  color: white;
+}
+
+h1 {
+  font-family: $nav-font;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.input-box {
+  width: 30rem;
+  height: 10rem;
+  border-radius: 5px;
+  border: solid 1px lightgrey;
+}
+
+.input-box::placeholder {
+  position: absolute;
+  top: 0;
+}
+
+.mini-wrap {
+  margin: 0 auto;
+}
