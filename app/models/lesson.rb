@@ -1,4 +1,4 @@
 class Lesson < ApplicationRecord
   has_many :questions
-  has_many :teachers
+  has_one :teacher
 end
