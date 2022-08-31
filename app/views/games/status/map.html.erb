@@ -1,1 +1,13 @@
-<h1>This is the map page</h1>
+<div class="map">
+  <% 21.times do |y| %>
+    <% 25.times do |x| %>
+    <% position = "#{x + 1}-#{y + 1}" %>
+      <div class ="tile" id="<%=position%>">
+        <% if @teachers_per_position.key?(position) %>
+          <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 48, height: 96, class: "teacher" %>
+          <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
