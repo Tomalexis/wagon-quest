@@ -325,9 +325,9 @@ slackbot = Teacher.create!(
   lesson_id: first_lesson.id
 )
 
-file = File.open(Rails.root.join("app/assets/images/square_jeremy.png"))
+file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
 slackbot.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
-file = File.open(Rails.root.join("app/assets/images/square_jeremy.png"))
+file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
 slackbot.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 slackbot.save!
 
@@ -345,9 +345,9 @@ jeremy = Teacher.create!(
   lesson_id: second_lesson.id
 )
 
-file = File.open(Rails.root.join("app/assets/images/square_jeremy.png"))
+file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
 jeremy.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
-file = File.open(Rails.root.join("app/assets/images/square_jeremy.png"))
+file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
 jeremy.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 jeremy.save!
 
