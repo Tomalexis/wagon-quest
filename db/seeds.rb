@@ -88,7 +88,7 @@ puts 'Creating answers...'
 
 first_slackbot_question_first_answer = Answer.new(
   content: 'mkdir <folder_name>',
-  kind: perfect,
+  kind: 'perfect',
   question_id: first_slackbot_question.id
 )
 
