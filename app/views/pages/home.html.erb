@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render "shared/navbar" %>
+
+<div class="container">
+  <div class="wrapper-start d-flex flex-column">
+    <h1>Wagon Quest</h1>
+    <div class="mini-wrap">
+    <p style="font-family: Inconsolata; font-size: 1rem;">Name your character</p>
+      <%= simple_form_for(@game) do |f| %>
+      <div class="d-flex justify-content-center flex-column">
+        <%= text_field_tag :username, nil, placeholder: "Paul Mc Cartney...", class:'input-box'%>
+        <%= f.submit "Start game", class:'btn btn-start' %>
+      </div>
+      <% end  %>
+    </div>
+  </div>
+</div>
