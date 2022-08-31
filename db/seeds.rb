@@ -94,211 +94,211 @@ first_slackbot_question_first_answer = Answer.new(
 
 first_slackbot_question_second_answer = Answer.new(
   content: 'mkdir',
-  kind: correct,
+  kind: "correct",
   question_id: first_slackbot_question.id
 )
 
 first_slackbot_question_third_answer = Answer.new(
   content: 'touch <folder_name>',
-  kind: misleading,
+  kind: "misleading",
   question_id: first_slackbot_question.id
 )
 
 first_slackbot_question_fourth_answer = Answer.new(
   content: '*You pick a cardboard and actually fold it*',
-  kind: weird,
+  kind: "weird",
   question_id: first_slackbot_question.id
 )
 
 second_slackbot_question_first_answer = Answer.new(
   content: 'git push <remote> <branch>',
-  kind: perfect,
+  kind: "perfect",
   question_id: second_slackbot_question.id
 )
 
 second_slackbot_question_second_answer = Answer.new(
   content: 'git push origin master',
-  kind: correct,
+  kind: "correct",
   question_id: second_slackbot_question.id
 )
 
 second_slackbot_question_third_answer = Answer.new(
   content: 'git commit',
-  kind: misleading,
+  kind: "misleading",
   question_id: second_slackbot_question.id
 )
 
 second_slackbot_question_fourth_answer = Answer.new(
   content: 'git putsch',
-  kind: weird,
+  kind: "weird",
   question_id: second_slackbot_question.id
 )
 
 third_slackbot_question_first_answer = Answer.new(
   content: 'cd <folder_name>',
-  kind: perfect,
+  kind: "perfect",
   question_id: third_slackbot_question.id
 )
 
 third_slackbot_question_second_answer = Answer.new(
   content: 'cd',
-  kind: correct,
+  kind: "correct",
   question_id: third_slackbot_question.id
 )
 
 third_slackbot_question_third_answer = Answer.new(
   content: 'pwd',
-  kind: misleading,
+  kind: "misleading",
   question_id: third_slackbot_question.id
 )
 
 third_slackbot_question_fourth_answer = Answer.new(
   content: 'laserdisc <folder_name>',
-  kind: weird,
+  kind: "weird",
   question_id: third_slackbot_question.id
 )
 
 fourth_slackbot_question_first_answer = Answer.new(
   content: 'touch <file_name>',
-  kind: perfect,
+  kind: "perfect",
   question_id: fourth_slackbot_question.id
 )
 
 fourth_slackbot_question_second_answer = Answer.new(
   content: 'touch',
-  kind: correct,
+  kind: "correct",
   question_id: fourth_slackbot_question.id
 )
 
 fourth_slackbot_question_third_answer = Answer.new(
   content: 'create <file_name>',
-  kind: misleading,
+  kind: "misleading",
   question_id: fourth_slackbot_question.id
 )
 
 fourth_slackbot_question_fourth_answer = Answer.new(
   content: 'Cause everytime we touch I get this feeling 🎵',
-  kind: weird,
+  kind: "weird",
   question_id: fourth_slackbot_question.id
 )
 
 fifth_slackbot_question_first_answer = Answer.new(
   content: 'git status',
-  kind: perfect,
+  kind: "perfect",
   question_id: fifth_slackbot_question.id
 )
 
 fifth_slackbot_question_second_answer = Answer.new(
   content: 'gst',
-  kind: correct,
+  kind: "correct",
   question_id: fifth_slackbot_question.id
 )
 
 fifth_slackbot_question_third_answer = Answer.new(
   content: 'git log',
-  kind: misleading,
+  kind: "misleading",
   question_id: fifth_slackbot_question.id
 )
 
 fifth_slackbot_question_fourth_answer = Answer.new(
   content: 'I am not looking for commitment right now...',
-  kind: weird,
+  kind: "weird",
   question_id: fifth_slackbot_question.id
 )
 
 first_jeremy_question_first_answer = Answer.new(
   content: '8:45 AM',
-  kind: perfect,
+  kind: "perfect",
   question_id: first_jeremy_question.id
 )
 
 first_jeremy_question_second_answer = Answer.new(
   content: '9:00 AM',
-  kind: correct,
+  kind: "correct",
   question_id: first_jeremy_question.id
 )
 
 first_jeremy_question_third_answer = Answer.new(
   content: '10:30 AM',
-  kind: misleading,
+  kind: "misleading",
   question_id: first_jeremy_question.id
 )
 
 first_jeremy_question_fourth_answer = Answer.new(
   content: 'What year is this ?!!',
-  kind: weird,
+  kind: "weird",
   question_id: first_jeremy_question.id
 )
 
 second_jeremy_question_first_answer = Answer.new(
   content: 'Only during events after working hours',
-  kind: perfect,
+  kind: "perfect",
   question_id: second_jeremy_question.id
 )
 
 second_jeremy_question_second_answer = Answer.new(
   content: 'Only after 6:00 PM',
-  kind: correct,
+  kind: "correct",
   question_id: second_jeremy_question.id
 )
 
 second_jeremy_question_third_answer = Answer.new(
   content: 'During lunch break',
-  kind: misleading,
+  kind: "misleading",
   question_id: second_jeremy_question.id
 )
 
 second_jeremy_question_fourth_answer = Answer.new(
   content: 'Well I usually mix my cereals with a white russian so...',
-  kind: weird,
+  kind: "weird",
   question_id: second_jeremy_question.id
 )
 
 third_jeremy_question_first_answer = Answer.new(
   content: 'In the dishwasher',
-  kind: perfect,
+  kind: "perfect",
   question_id: third_jeremy_question.id
 )
 
 third_jeremy_question_second_answer = Answer.new(
   content: 'In the sink',
-  kind: correct,
+  kind: "correct",
   question_id: third_jeremy_question.id
 )
 
 third_jeremy_question_third_answer = Answer.new(
   content: 'I can leave it at my seat',
-  kind: misleading,
+  kind: "misleading",
   question_id: third_jeremy_question.id
 )
 
 third_jeremy_question_fourth_answer = Answer.new(
   content: 'I drink tea so the rules does not apply to me !',
-  kind: weird,
+  kind: "weird",
   question_id: third_jeremy_question.id
 )
 
 fourth_jeremy_question_first_answer = Answer.new(
   content: 'One (family) bottle',
-  kind: perfect,
+  kind: "perfect",
   question_id: fourth_jeremy_question.id
 )
 
 fourth_jeremy_question_second_answer = Answer.new(
   content: 'How should I know ?!!',
-  kind: correct,
+  kind: "correct",
   question_id: fourth_jeremy_question.id
 )
 
 fourth_jeremy_question_third_answer = Answer.new(
   content: 'Ten billion bottles !!!',
-  kind: misleading,
+  kind: "misleading",
   question_id: fourth_jeremy_question.id
 )
 
 fourth_jeremy_question_fourth_answer = Answer.new(
   content: 'This is actually a wig !',
-  kind: weird,
+  kind: "weird",
   question_id: fourth_jeremy_question.id
 )
 
