@@ -4,10 +4,10 @@
   <div class="wrapper-start d-flex flex-column">
     <h1>Wagon Quest</h1>
     <div class="mini-wrap">
-    <p style="font-family: Inconsolata; font-size: 1rem;">Name your character</p>
+    <p style="font-family: Inconsolata; font-size: 1rem;">Name your character (10 characters max)</p>
       <%= simple_form_for(@game) do |f| %>
       <div class="d-flex justify-content-center flex-column">
-        <%= text_field_tag :username, nil, placeholder: "Paul Mc Cartney...", class:'input-box'%>
+        <%= text_area_tag :username, nil, maxlength: 10, placeholder: "Paul Mc Cartney...", class:'input-box'%>
         <%= f.submit "Start game", class:'btn btn-start' %>
       </div>
       <% end  %>
