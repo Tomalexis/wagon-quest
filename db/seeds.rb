@@ -320,14 +320,15 @@ slackbot = Teacher.create!(
   feedback_intro: 'I am ordering you to do your flashcards now Student !!!',
   feedback_user_won: 'I am so proud of you Student... I can see you have faith in the heart of the flashcards...',
   feedback_user_lost: '',
-  position_x: 0,
-  position_y: 0,
-  lesson_id: first_lesson.id
+  position_x: 2,
+  position_y: 3,
+  lesson_id: first_lesson.id,
+  tutorial: true
 )
 
-file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
+file = File.open(Rails.root.join("app/assets/images/slackbotstatic.png"))
 slackbot.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
-file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
+file = File.open(Rails.root.join("app/assets/images/slackbotstatic.png"))
 slackbot.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 slackbot.save!
 

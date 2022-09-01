@@ -4,4 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :games
+
+  has_one_attached :avatar_map
+  has_one_attached :avatar_battle
+
+  validates :username, presence: true, length: { maximum: 10 }, on: :update
 end

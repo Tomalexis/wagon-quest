@@ -1,3 +1,39 @@
+<div class="battle-background" style="background-image: url('<%= image_path "background-plain.png" %>')">
+  <div class="teacher-character">
+    <div class="teacher-infos">
+      Teacher's Name
+      <br>
+      Teacher's HP
+    </div>
+    <%= image_tag "redfront3.png", class: 'enemy-image' %>
+  </div>
+  <div class="stand-teacher">
+    <%= image_tag "socle-teacher.png" %>
+  </div>
+
+  <div class="question-box">Teacher's question</div>
+
+  <div class="answers">
+    <div class="first-answer"> A </div>
+    <div class="second-answer"> B </div>
+    <div class="third-answer"> C </div>
+    <div class="fourth-answer"> D </div>
+  </div>
+
+  <div class="stand-user">
+    <%= image_tag "socle-user.png" %>
+  </div>
+  <div class="user-character">
+      <div class="user-infos">
+        <%= @game.user.username %>
+        <br>
+        User HP:
+      </div>
+    <%= image_tag "back-user.png" %>
+  </div>
+  <div class="dialog-box">Lorem Ipsum</div>
+</div>
+
 <h1>round_core</h1>
 
 <%= Round.last.question.content %>
@@ -16,3 +52,13 @@
 <% end %>
 
 <%= link_to "Continue", continue_game_path(@game), data: { turbo_method: :patch } %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
