@@ -1,0 +1,27 @@
+$map-width: 480px;
+$map-height: 384px;
+
+$tile-size: 48px;
+
+$scale: 1;
+
+.intro{
+  width: $map-width * $scale;
+  height: $map-height * $scale;
+  background-image: asset-url("bedroom.png");
+  background-size: cover;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(10, $tile-size * $scale);
+  position: relative;
+}
+
+.tile{
+  width: $tile-size * $scale;
+  height: $tile-size * $scale;
+}
+
+.user{
+  width: $tile-size * $scale;
+  height: $tile-size * 2 * $scale;
+}
