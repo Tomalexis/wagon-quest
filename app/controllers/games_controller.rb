@@ -14,7 +14,7 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find(params[:id])
+    @game = current_user.games.find(params[:id])
 
     if @game.status == "map"
       @teachers_per_position = {}
@@ -27,5 +27,22 @@ class GamesController < ApplicationController
     end
 
     render "games/status/#{@game.status}"
+  end
+
+  def continue
+    @game = current_user.games.find(params[:id])
+
+    if @game.status == "intro"
+      @game.update(status: "battle")
+      teacher = Teacher.find_by(position_x: 0, position_y: 0)
+      battle = Battle.create(
+        game: @game,
+        teacher: teacher,
+        hp_user: teacher.lesson.hp_user,
+        hp_teacher: teacher.lesson.hp_teacher,
+        status: "battle_intro"
+      )
+    end
+    redirect_to game_path(@game)
   end
 end
