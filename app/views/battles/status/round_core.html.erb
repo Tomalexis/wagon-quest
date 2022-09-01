@@ -1,1 +1,5 @@
 <h1>round_core</h1>
+
+<%= Round.last.question.content %>
+
+<%= link_to "Continue", continue_game_path(@game), data: { turbo_method: :patch } %>

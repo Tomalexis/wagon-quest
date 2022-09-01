@@ -47,7 +47,35 @@ class GamesController < ApplicationController
         hp_teacher: teacher.lesson.hp_teacher,
         status: "battle_intro"
       )
+    elsif @game.status == "battle" && @game.battles.last.status == "battle_intro"
+      this_battle = @game.battles.last
+      this_battle.update(status: "round_intro")
+      @round = Round.create(
+        battle: this_battle,
+        question: this_battle.teacher.lesson.questions.sample
+        # Pour l'instant je vais rester sur sample.
+      )
+      # game status battle && battle status battle_intro
+      # -> battle status round_intro
+      # créer le round avec tous ses paramètres
+      # pour question, doit être random, mais pas déjà sélectionnée pour cette battle
+    elsif @game.status == "battle" && @game.battles.last.status == "round_intro"
+      this_battle = @game.battles.last
+      this_battle.update(status: "round_core")
+    elsif @game.status == "battle" && @game.battles.last.status == "round_core"
+      this_battle = @game.battles.last
+      this_battle.update(status: "round_outro")
+    elsif @game.status == "battle" && @game.battles.last.status == "round_outro"
+      this_battle = @game.battles.last
+      this_battle.update(status: "round_intro")
+      @round = Round.create(
+        battle: this_battle,
+        question: this_battle.teacher.lesson.questions.sample
+        # Pour l'instant je vais rester sur sample.
+      )
+      # No battle_outro yet, still in the loop until the whole system is done.
     end
     redirect_to game_path(@game)
+
   end
 end
