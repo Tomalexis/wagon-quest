@@ -5,7 +5,7 @@ $tile-size: 48px;
 
 $scale: 0.85;
 
-.map{
+.map {
   width: $map-width * $scale;
   height: $map-height * $scale;
   background-image: asset-url("Map1.png");
@@ -13,14 +13,14 @@ $scale: 0.85;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(25, $tile-size * $scale);
-}
 
-.tile{
-  width: $tile-size * $scale;
-  height: $tile-size * $scale;
-}
+  .tile {
+    width: $tile-size * $scale;
+    height: $tile-size * $scale;
+  }
 
-.teacher{
-  width: $tile-size * $scale;
-  height: $tile-size * 2 * $scale;
+  .teacher, .user {
+    width: $tile-size * $scale;
+    height: $tile-size * 2 * $scale;
+  }
 }

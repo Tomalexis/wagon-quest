@@ -5,7 +5,7 @@ $tile-size: 48px;
 
 $scale: 1;
 
-.intro{
+.intro {
   width: $map-width * $scale;
   height: $map-height * $scale;
   background-image: asset-url("bedroom.png");
@@ -14,14 +14,14 @@ $scale: 1;
   display: grid;
   grid-template-columns: repeat(10, $tile-size * $scale);
   position: relative;
-}
 
-.tile{
-  width: $tile-size * $scale;
-  height: $tile-size * $scale;
-}
+  .tile {
+    width: $tile-size * $scale;
+    height: $tile-size * $scale;
+  }
 
-.user{
-  width: $tile-size * $scale;
-  height: $tile-size * 2 * $scale;
+  .teacher, .user {
+    width: $tile-size * $scale;
+    height: $tile-size * 2 * $scale;
+  }
 }

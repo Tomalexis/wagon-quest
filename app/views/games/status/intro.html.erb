@@ -5,7 +5,7 @@
       <% position = "#{x + 1}-#{y + 1}" %>
         <div class ="tile" id="<%=position%>">
           <% if @user_position == position %>
-            <%= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
+            <%= image_tag "userstatic.png", width: 48, height: 96, class: "user" %>
           <% end %>
           <% if @slackbot_position == position %>
             <%= cl_image_tag @slackbot.avatar_map.key, width: 48, height: 96, class: "teacher" %>
