@@ -33,3 +33,32 @@
   </div>
   <div class="dialog-box">Lorem Ipsum</div>
 </div>
+
+<h1>round_core</h1>
+
+<%= Round.last.question.content %>
+
+<% Round.last.question.answers.shuffle.each do |answer| %>
+<li><%= answer.content %></li>
+  <% if answer.kind == "perfect" %>
+    <p><%= Round.last.battle.teacher.feedback_answer_perfect %></p>
+  <% elsif answer.kind == "correct" %>
+    <p><%= Round.last.battle.teacher.feedback_answer_correct %></p>
+  <% elsif answer.kind == "misleading" %>
+    <p><%= Round.last.battle.teacher.feedback_answer_misleading %></p>
+  <% elsif answer.kind == "weird" %>
+    <p><%= Round.last.battle.teacher.feedback_answer_weird %></p>
+  <% end %>
+<% end %>
+
+<%= link_to "Continue", continue_game_path(@game), data: { turbo_method: :patch } %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

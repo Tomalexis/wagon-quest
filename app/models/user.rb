@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_one_attached :avatar_map
   has_one_attached :avatar_battle
 
-  validates :username, presence: true, length: { maximum: 10 }
+  validates :username, presence: true, length: { maximum: 10 }, on: :update
 end

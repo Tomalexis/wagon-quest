@@ -14,7 +14,7 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find(params[:id])
+    @game = current_user.games.find(params[:id])
 
     if @game.status == "map"
       @teachers_per_position = {}
@@ -35,6 +35,74 @@ class GamesController < ApplicationController
       @slackbot_position = "#{@slackbot.position_x}-#{@slackbot.position_y}"
     end
 
-    render "games/status/#{@game.status}"
+    if @game.status == "battle"
+      battle = @game.battles.last
+      render "battles/status/#{battle.status}"
+    else
+      render "games/status/#{@game.status}"
+    end
+  end
+
+  def continue
+    @game = current_user.games.find(params[:id])
+
+    if @game.status == "intro"
+      @game.update(status: "battle")
+      teacher = Teacher.find_by(tutorial: true)
+      battle = Battle.create(
+        game: @game,
+        teacher: teacher,
+        hp_user: teacher.lesson.hp_user,
+        hp_teacher: teacher.lesson.hp_teacher,
+        status: "battle_intro"
+      )
+    elsif @game.status == "battle" && @game.battles.last.status == "battle_intro"
+      this_battle = @game.battles.last
+      this_battle.update(status: "round_intro")
+      @round = Round.create(
+        battle: this_battle,
+        question: this_battle.teacher.lesson.questions.sample
+        # Pour l'instant je vais rester sur sample.
+      )
+      # game status battle && battle status battle_intro
+      # -> battle status round_intro
+      # créer le round avec tous ses paramètres
+      # pour question, doit être random, mais pas déjà sélectionnée pour cette battle
+    elsif @game.status == "battle" && @game.battles.last.status == "round_intro"
+      this_battle = @game.battles.last
+      this_battle.update(status: "round_core")
+    elsif @game.status == "battle" && @game.battles.last.status == "round_core"
+      this_battle = @game.battles.last
+      this_battle.update(status: "round_outro")
+    elsif @game.status == "battle" && @game.battles.last.status == "round_outro"
+      this_battle = @game.battles.last
+      question_to_ask = this_battle.teacher.lesson.questions.where.not(id: this_battle.question_ids).sample
+      if question_to_ask
+        @round = Round.create(
+          battle: this_battle,
+          question: question_to_ask
+          # Pour l'instant je vais rester sur sample.
+        )
+        this_battle.update(status: "round_intro")
+      else
+        this_battle.update(status: "battle_outro")
+      end
+      # No battle_outro yet, still in the loop until the whole system is done.
+    elsif @game.status == "battle" && @game.battles.last.status == "battle_outro"
+      this_battle = @game.battles.last
+      if this_battle.hp_user <= 0
+        teacher = Teacher.find_by(tutorial: true)
+        battle = Battle.create(
+          game: @game,
+          teacher: teacher,
+          hp_user: teacher.lesson.hp_user,
+          hp_teacher: teacher.lesson.hp_teacher,
+          status: "battle_intro"
+        )
+      elsif this_battle.hp_teacher <= 0
+        @game.update(status: "map")
+      end
+    end
+    redirect_to game_path(@game)
   end
 end

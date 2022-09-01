@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   resources :games, only: [:show, :create] do
     member do
-      patch :next_round
       patch :continue
     end
     resources :battles, only: [:create]
