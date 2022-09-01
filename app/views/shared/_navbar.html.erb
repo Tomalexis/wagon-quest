@@ -30,7 +30,7 @@
               <%= image_tag "no-user-image-icon-27.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
-                <%= link_to "Sign Up", "#", class: "dropdown-item" %>
+                <%= link_to "Sign Up", new_user_registration_path, class: "dropdown-item" %>
               </div>
             </li>
           <% end %>
