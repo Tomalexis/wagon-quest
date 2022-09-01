@@ -40,9 +40,13 @@ h1 {
 
 .input-box {
   width: 30rem;
-  height: 10rem;
+  height: 5rem;
   border-radius: 5px;
   border: solid 1px lightgrey;
+  resize: vertical;
+  font-family: $geek-font;
+  font-size: 2rem;
+  text-indent: 1rem;
 }
 
 .input-box::placeholder {
