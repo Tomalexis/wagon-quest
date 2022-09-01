@@ -26,7 +26,12 @@ class GamesController < ApplicationController
       end
     end
 
-    render "games/status/#{@game.status}"
+    if @game.status == "battle"
+      battle = @game.battles.last
+      render "battles/status/#{battle.status}"
+    else
+      render "games/status/#{@game.status}"
+    end
   end
 
   def continue
