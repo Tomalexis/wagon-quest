@@ -1,1 +1,17 @@
-<h1>This is the intro page</h1>
+<div class="container">
+  <div class="intro">
+    <% 8.times do |y| %>
+      <% 10.times do |x| %>
+      <% position = "#{x + 1}-#{y + 1}" %>
+        <div class ="tile" id="<%=position%>">
+          <% if @user_position == position %>
+            <%= image_tag "userstatic.png", width: 48, height: 96, class: "user" %>
+          <% end %>
+          <% if @slackbot_position == position %>
+            <%= cl_image_tag @slackbot.avatar_map.key, width: 48, height: 96, class: "teacher" %>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

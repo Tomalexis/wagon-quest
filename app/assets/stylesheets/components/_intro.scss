@@ -1,26 +1,29 @@
-$map-width: 1200px;
-$map-height: 1000px;
+$map-width: 480px;
+$map-height: 384px;
 
 $tile-size: 48px;
 
-$scale: 0.85;
+$scale: 1;
 
-.map {
+.intro {
   width: $map-width * $scale;
   height: $map-height * $scale;
-  background-image: asset-url("Map1.png");
+  background-image: asset-url("bedroom.png");
   background-size: cover;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(25, $tile-size * $scale);
+  grid-template-columns: repeat(10, $tile-size * $scale);
 
   .tile {
     width: $tile-size * $scale;
     height: $tile-size * $scale;
+    position: relative;
   }
 
   .teacher, .user {
     width: $tile-size * $scale;
     height: $tile-size * 2 * $scale;
+    position: absolute;
+    bottom: 0px;
   }
 }
