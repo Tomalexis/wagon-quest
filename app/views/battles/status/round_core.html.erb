@@ -1,11 +1,11 @@
 <div class="battle-background" style="background-image: url('<%= image_path "background-plain.png" %>')">
   <div class="teacher-character">
     <div class="teacher-infos">
-      <div><%= @game.battles.last.teacher.name %></div>
-      <% if @game.battles.last.hp_teacher > 4 %>
-          <div>HP: <span class="hp-number"><%= @game.battles.last.hp_teacher %></span></div>
+      <div><%= @battle.teacher.name %></div>
+      <% if @battle.hp_teacher > 4 %>
+          <div>HP: <span class="hp-number"><%= @battle.hp_teacher %></span></div>
         <% else %>
-          <div>HP: <span class="hp-number-low"><%= @game.battles.last.hp_teacher %></span></div>
+          <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
         <% end %>
     </div>
     <%= image_tag "redfront4.png", class: 'enemy-image' %>
@@ -15,12 +15,16 @@
   </div>
 
   <div class="question-box">
-    <p class="question-text"><%= Round.last.question.content %></p>
+    <p class="question-text"><%= @round.question.content %></p>
   </div>
 
   <div class="answers">
-    <% Round.last.question.answers.shuffle.each do |answer| %>
-      <div class="answer"> <%= link_to answer.content, round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post } %> </div>
+    <% @round.question.answers.each do |answer| %>
+      <%= link_to round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post }, class:'answer-link' do %>
+        <div class="answer">
+          <%= answer.content %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
@@ -30,18 +34,15 @@
   <div class="user-character">
       <div class="user-infos">
         <div><%= @game.user.username %></div>
-        <% if @game.battles.last.hp_user > 4 %>
-          <div>HP: <span class="hp-number"><%= @game.battles.last.hp_user %></span></div>
+        <% if @battle.hp_user > 4 %>
+          <div>HP: <span class="hp-number"><%= @battle.hp_user %></span></div>
         <% else %>
-          <div>HP: <span class="hp-number-low"><%= @game.battles.last.hp_user %></span></div>
+          <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
         <% end %>
       </div>
     <%= image_tag "back-user.png" %>
   </div>
   <div class="dialog-box">
     Pick an answer !
-    <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
-      <i class="fa-regular fa-lg fa-square-caret-down"></i>
-    <% end %>
   </div>
 </div>

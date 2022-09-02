@@ -1,11 +1,11 @@
 <div class="battle-background" style="background-image: url('<%= image_path "background-plain.png" %>')">
   <div class="teacher-character">
     <div class="teacher-infos">
-      <div><%= @game.battles.last.teacher.name %></div>
-      <% if @game.battles.last.hp_teacher > 4 %>
-          <div>HP: <span class="hp-number"><%= @game.battles.last.hp_teacher %></span></div>
+      <div><%= @battle.teacher.name %></div>
+      <% if @battle.hp_teacher > 4 %>
+          <div>HP: <span class="hp-number"><%= @battle.hp_teacher %></span></div>
         <% else %>
-          <div>HP: <span class="hp-number-low"><%= @game.battles.last.hp_teacher %></span></div>
+          <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
         <% end %>
     </div>
     <%= image_tag "redfront4.png", class: 'enemy-image' %>
@@ -20,16 +20,16 @@
   <div class="user-character">
       <div class="user-infos">
         <div><%= @game.user.username %></div>
-        <% if @game.battles.last.hp_user > 4 %>
-          <div>HP: <span class="hp-number"><%= @game.battles.last.hp_user %></span></div>
+        <% if @battle.hp_user > 4 %>
+          <div>HP: <span class="hp-number"><%= @battle.hp_user %></span></div>
         <% else %>
-          <div>HP: <span class="hp-number-low"><%= @game.battles.last.hp_user %></span></div>
+          <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
         <% end %>
       </div>
     <%= image_tag "back-user.png" %>
   </div>
   <div class="dialog-box">
-    <%= "#{@game.battles.last.teacher.name} is challenging you to a flashcard battle !" %>
+    <%= "#{@battle.teacher.name} is challenging you to a flashcard battle !" %>
     <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
       <i class="fa-regular fa-lg fa-square-caret-down"></i>
     <% end %>

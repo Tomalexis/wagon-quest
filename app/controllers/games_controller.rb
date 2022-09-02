@@ -43,6 +43,11 @@ class GamesController < ApplicationController
     if @game.status == "battle"
       @battle = @game.battles.last
       @round = @battle.rounds.last
+
+      if @round
+        @game_answer = @round.game_answers.last
+      end
+
       render "battles/status/#{@battle.status}"
     else
       render "games/status/#{@game.status}"
