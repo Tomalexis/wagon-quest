@@ -36,8 +36,9 @@ class GamesController < ApplicationController
     end
 
     if @game.status == "battle"
-      battle = @game.battles.last
-      render "battles/status/#{battle.status}"
+      @battle = @game.battles.last
+      @round = @battle.rounds.last
+      render "battles/status/#{@battle.status}"
     else
       render "games/status/#{@game.status}"
     end
@@ -73,11 +74,22 @@ class GamesController < ApplicationController
       this_battle.update(status: "round_core")
     elsif @game.status == "battle" && @game.battles.last.status == "round_core"
       this_battle = @game.battles.last
+      #### C'EST LA QUE SERA LE CODE DE COMBAT. (début)
+      # if answer.kind == "correct" || answer.kind == "perfect"
+        # this_battle.hp_teacher -= 2
+        # this_battle.update(status: "round_outro")
+      # elsif answer.kind == "weird" || answer.kind == "misleading"
+        # this_battle.hp_user -= 2
+      #### C'EST LA QUE SERA LE CODE DE COMBAT. Ou pas. (fin)
       this_battle.update(status: "round_outro")
     elsif @game.status == "battle" && @game.battles.last.status == "round_outro"
       this_battle = @game.battles.last
+      this_round = this_battle.rounds.last
+      this_answer = this_round.game_answers.last.answer
       question_to_ask = this_battle.teacher.lesson.questions.where.not(id: this_battle.question_ids).sample
-      if question_to_ask
+      if this_answer.kind == "weird" || this_answer.kind == "misleading"
+        this_battle.update(status: "round_core")
+      elsif question_to_ask
         @round = Round.create(
           battle: this_battle,
           question: question_to_ask

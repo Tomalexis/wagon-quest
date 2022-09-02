@@ -36,18 +36,18 @@
 
 <h1>round_core</h1>
 
-<%= Round.last.question.content %>
+<%= @round.question.content %>
 
-<% Round.last.question.answers.shuffle.each do |answer| %>
-<li><%= answer.content %></li>
+<% @round.question.answers.shuffle.each do |answer| %>
+<li><%= link_to answer.content, round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post } %></li>
   <% if answer.kind == "perfect" %>
-    <p><%= Round.last.battle.teacher.feedback_answer_perfect %></p>
+    <p><%= @round.battle.teacher.feedback_answer_perfect %></p>
   <% elsif answer.kind == "correct" %>
-    <p><%= Round.last.battle.teacher.feedback_answer_correct %></p>
+    <p><%= @round.battle.teacher.feedback_answer_correct %></p>
   <% elsif answer.kind == "misleading" %>
-    <p><%= Round.last.battle.teacher.feedback_answer_misleading %></p>
+    <p><%= @round.battle.teacher.feedback_answer_misleading %></p>
   <% elsif answer.kind == "weird" %>
-    <p><%= Round.last.battle.teacher.feedback_answer_weird %></p>
+    <p><%= @round.battle.teacher.feedback_answer_weird %></p>
   <% end %>
 <% end %>
 
