@@ -1,14 +1,49 @@
-<h1>round_outro</h1>
+<div class="battle-background" style="background-image: url('<%= image_path "background-plain.png" %>')">
+  <div class="teacher-character">
+    <div class="teacher-infos">
+      <div><%= @battle.teacher.name %></div>
+      <% if @battle.hp_teacher > 4 %>
+          <div>HP: <span class="hp-number"><%= @battle.hp_teacher %></span></div>
+        <% else %>
+          <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
+        <% end %>
+    </div>
+    <%= image_tag "redfront4.png", class: 'enemy-image' %>
+  </div>
+  <div class="stand-teacher">
+    <%= image_tag "socle-teacher.png" %>
+  </div>
 
+  <div class="question-box">
+    <p class="question-text"><%= @round.question.content %></p>
+  </div>
 
-<% if GameAnswer.last.answer.kind == "weird" %>
-<%= Battle.last.teacher.feedback_answer_weird %>
-<% elsif GameAnswer.last.answer.kind == "misleading" %>
-<%= Battle.last.teacher.feedback_answer_misleading %>
-<% elsif GameAnswer.last.answer.kind == "correct" %>
-<%= Battle.last.teacher.feedback_answer_correct %>
-<% elsif GameAnswer.last.answer.kind == "perfect" %>
-<%= Battle.last.teacher.feedback_answer_perfect %>
-<% end %>
-
-<%= link_to "Continue", continue_game_path(@game), data: { turbo_method: :patch } %>
+  <div class="stand-user">
+    <%= image_tag "socle-user.png" %>
+  </div>
+  <div class="user-character">
+      <div class="user-infos">
+        <div><%= @game.user.username %></div>
+        <% if @battle.hp_user > 4 %>
+          <div>HP: <span class="hp-number"><%= @battle.hp_user %></span></div>
+        <% else %>
+          <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
+        <% end %>
+      </div>
+    <%= image_tag "back-user.png" %>
+  </div>
+  <div class="dialog-box">
+    <% if @game_answer.answer.kind == "perfect" %>
+      <p><%= @battle.teacher.feedback_answer_perfect %></p>
+    <% elsif @game_answer.answer.kind == "correct" %>
+      <p><%= @battle.teacher.feedback_answer_correct %></p>
+    <% elsif @game_answer.answer.kind == "misleading" %>
+      <p><%= @battle.teacher.feedback_answer_misleading %></p>
+    <% elsif @game_answer.answer.kind == "weird" %>
+      <p><%= @battle.teacher.feedback_answer_weird %></p>
+    <% end %>
+    <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
+      <i class="fa-regular fa-lg fa-square-caret-down"></i>
+    <% end %>
+  </div>
+</div>
