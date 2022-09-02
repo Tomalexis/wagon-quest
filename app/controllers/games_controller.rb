@@ -10,7 +10,12 @@ class GamesController < ApplicationController
     @game.user_position_x = 9
     @game.user_position_y = 6
     @game.save
-    redirect_to game_path(@game)
+
+    if @user.valid?
+      redirect_to game_path(@game)
+    else
+      render "pages/home"
+    end
   end
 
   def show
