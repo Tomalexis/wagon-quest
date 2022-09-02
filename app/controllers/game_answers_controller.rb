@@ -2,9 +2,9 @@ class GameAnswersController < ApplicationController
   def create
     # {"game_answer"=>{"answer_id"=>"114"}, "round_id"=>"57"}
     # récupérer le round depuis les params .find
-    @round = Round.find(params[:round_id])
+    @round = current_user.rounds.find(params[:round_id])
     # récupérer l'answer depuis les params (nestées)
-    @answer = Answer.find(params[:game_answer][:answer_id])
+    @answer = @round.question.answers.find(params[:game_answer][:answer_id])
     # créer un game_answer connecté au round et à l'answer
     GameAnswer.create(
       game: @round.battle.game,
