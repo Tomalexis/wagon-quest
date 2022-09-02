@@ -19,12 +19,12 @@
 }
 
 .enemy-image {
-  width: 38rem;
-  height: 27rem;
+  width: 14rem;
+  height: 19rem;
   z-index: 2;
   position: absolute;
-  right: 4rem;
-  top: 0;
+  right: 15rem;
+  top: 3rem;
 }
 
 .stand-user {
@@ -57,13 +57,23 @@
 }
 
 .teacher-infos, .user-infos {
-  border: 1px solid black;
+  border: 1px solid #085737;
   border-radius: 5px;
   background-color: wheat;
   width: 20rem;
+  font-family: $nav-font;
+  font-weight: bolder;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1rem;
 }
 
 .dialog-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #579097;
   border: solid #D04F37;
   border-top-width: 5px;
@@ -77,28 +87,45 @@
   bottom: 0;
   text-indent: 10px;
   padding-top: 5px;
+  font-family: $nav-font;
   font-size: 30px;
+  font-weight: bolder;
   z-index: 3;
 }
 
 .question-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1em;
   position: absolute;
   top: 5rem;
   left: 5rem;
-  background-color: wheat;
-  border: solid 1px black;
-  border-radius: 5px;
+  background-color: rgb(236, 227, 208);
+  border: solid 4px #085737;
+  border-radius: 10px;
   width: 40vw;
   height: 20vh;
+  font-family: $nav-font;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 
-.first-answer, .second-answer, .third-answer, .fourth-answer {
-  background-color: wheat;
-  border: solid 1px black;
-  border-radius: 5px;
+.answer {
+  background-color: rgb(236, 227, 208);
+  border: solid 4px #085737;
+  border-radius: 10px;
   margin-left: 1rem;
   width: 16vw;
   height: 31vh;
+  font-family: $nav-font;
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  justify-content: center;
 }
 
 .answers {
@@ -110,4 +137,21 @@
   bottom: 11vh;
   right: 1vw;
   width: 100vw;
+}
+
+.fa-square-caret-down {
+  text-decoration: none;
+  color: black;
+}
+
+.fa-square-caret-down:hover {
+  color: darkgray;
+}
+
+.hp-number {
+  color: #18C020;
+}
+
+.hp-number-low {
+  color: #D04F37;
 }
