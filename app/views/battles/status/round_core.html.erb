@@ -20,7 +20,7 @@
 
   <div class="answers">
     <% Round.last.question.answers.shuffle.each do |answer| %>
-      <div class="answer"> <%= answer.content %> </div>
+      <div class="answer"> <%= link_to answer.content, round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post } %> </div>
     <% end %>
   </div>
 

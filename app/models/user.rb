@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :games
+  has_many :battles, through: :games
+  has_many :rounds, through: :battles
 
   has_one_attached :avatar_map
   has_one_attached :avatar_battle

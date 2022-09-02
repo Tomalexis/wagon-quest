@@ -1,3 +1,14 @@
 <h1>round_outro</h1>
 
+
+<% if GameAnswer.last.answer.kind == "weird" %>
+<%= Battle.last.teacher.feedback_answer_weird %>
+<% elsif GameAnswer.last.answer.kind == "misleading" %>
+<%= Battle.last.teacher.feedback_answer_misleading %>
+<% elsif GameAnswer.last.answer.kind == "correct" %>
+<%= Battle.last.teacher.feedback_answer_correct %>
+<% elsif GameAnswer.last.answer.kind == "perfect" %>
+<%= Battle.last.teacher.feedback_answer_perfect %>
+<% end %>
+
 <%= link_to "Continue", continue_game_path(@game), data: { turbo_method: :patch } %>
