@@ -1,23 +1,27 @@
 <div class="battle-background" style="background-image: url('<%= image_path "background-plain.png" %>')">
   <div class="teacher-character">
     <div class="teacher-infos">
-      Teacher's Name
-      <br>
-      Teacher's HP
+      <div><%= @game.battles.last.teacher.name %></div>
+      <% if @game.battles.last.hp_teacher > 4 %>
+          <div>HP: <span class="hp-number"><%= @game.battles.last.hp_teacher %></span></div>
+        <% else %>
+          <div>HP: <span class="hp-number-low"><%= @game.battles.last.hp_teacher %></span></div>
+        <% end %>
     </div>
-    <%= image_tag "redfront3.png", class: 'enemy-image' %>
+    <%= image_tag "redfront4.png", class: 'enemy-image' %>
   </div>
   <div class="stand-teacher">
     <%= image_tag "socle-teacher.png" %>
   </div>
 
-  <div class="question-box">Teacher's question</div>
+  <div class="question-box">
+    <p class="question-text"><%= Round.last.question.content %></p>
+  </div>
 
   <div class="answers">
-    <div class="first-answer"> A </div>
-    <div class="second-answer"> B </div>
-    <div class="third-answer"> C </div>
-    <div class="fourth-answer"> D </div>
+    <% Round.last.question.answers.shuffle.each do |answer| %>
+      <div class="answer"> <%= answer.content %> </div>
+    <% end %>
   </div>
 
   <div class="stand-user">
@@ -25,40 +29,19 @@
   </div>
   <div class="user-character">
       <div class="user-infos">
-        <%= @game.user.username %>
-        <br>
-        User HP:
+        <div><%= @game.user.username %></div>
+        <% if @game.battles.last.hp_user > 4 %>
+          <div>HP: <span class="hp-number"><%= @game.battles.last.hp_user %></span></div>
+        <% else %>
+          <div>HP: <span class="hp-number-low"><%= @game.battles.last.hp_user %></span></div>
+        <% end %>
       </div>
     <%= image_tag "back-user.png" %>
   </div>
-  <div class="dialog-box">Lorem Ipsum</div>
+  <div class="dialog-box">
+    Pick an answer !
+    <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
+      <i class="fa-regular fa-lg fa-square-caret-down"></i>
+    <% end %>
+  </div>
 </div>
-
-<h1>round_core</h1>
-
-<%= Round.last.question.content %>
-
-<% Round.last.question.answers.shuffle.each do |answer| %>
-<li><%= answer.content %></li>
-  <% if answer.kind == "perfect" %>
-    <p><%= Round.last.battle.teacher.feedback_answer_perfect %></p>
-  <% elsif answer.kind == "correct" %>
-    <p><%= Round.last.battle.teacher.feedback_answer_correct %></p>
-  <% elsif answer.kind == "misleading" %>
-    <p><%= Round.last.battle.teacher.feedback_answer_misleading %></p>
-  <% elsif answer.kind == "weird" %>
-    <p><%= Round.last.battle.teacher.feedback_answer_weird %></p>
-  <% end %>
-<% end %>
-
-<%= link_to "Continue", continue_game_path(@game), data: { turbo_method: :patch } %>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
