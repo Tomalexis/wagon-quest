@@ -18,16 +18,19 @@
     <p class="question-text"><%= @round.question.content %></p>
   </div>
 
-  <!-- <div class="answers"> -->
-  <div class="answers" style="display: none">
-    <% @round.question.answers.each do |answer| %>
-      <%= link_to round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post }, class:'answer-link' do %>
-        <div class="answer">
-          <%= answer.content %>
-        </div>
+  <% if @battle.teacher.status == "secret_boss" %>
+    <div class="answers" style="display: none">
+  <% else %>
+    <div class="answers">
+  <% end %>
+      <% @round.question.answers.each do |answer| %>
+        <%= link_to round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post }, class:'answer-link' do %>
+          <div class="answer">
+            <%= answer.content %>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
 
   <div class="stand-user">
     <%= image_tag "socle-user.png" %>
@@ -44,22 +47,15 @@
       </div>
     <%= image_tag "back-user.png" %>
   </div>
-  <!--
+
   <div class="dialog-box">
-    Pick an answer !
-  </div>
-  -->
-  <div class="dialog-box">
-    <!-- <input type="text">
-    <input type="submit" value="Send"> -->
-    <%# simple_form_for [@round, GameAnswer.new] do |f| %>
-      <%#= f.input :content, as: :custom_input %>
-      <%#= f.submit %>
-    <%# end %>
-    <%= form_for :secret_boss, url: round_game_answers_path(@round, GameAnswer.new), method: :post, data: { turbo: :false } do |f| %>
-      <%= f.text_field :content %>
-      <%= f.submit "Go" %>
+    <% if @battle.teacher.status == "secret_boss" %>
+      <%= form_for :secret_boss, url: round_game_answers_path(@round, GameAnswer.new), method: :post, data: { turbo: :false } do |f| %>
+        <%= f.text_field :content %>
+        <%= f.submit "Go" %>
+      <% end %>
+    <% else %>
+      Pick an answer !
     <% end %>
-    <!-- Need to erase the content of the form afterwards. -->
   </div>
 </div>
