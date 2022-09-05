@@ -98,52 +98,52 @@ puts 'Jeremy questions created.'
 puts 'Creating Sébastien questions...'
 
 first_sebastien_question = Question.create!(
-  content: 'Q1.',
+  content: 'How do you create a project in Rails?',
   lesson_id: secret_lesson.id
 )
 
 second_sebastien_question = Question.create!(
-  content: 'Q2.',
+  content: 'How do you interact with your project in Rails?',
   lesson_id: secret_lesson.id
 )
 
 third_sebastien_question = Question.create!(
-  content: 'Q3.',
+  content: 'How do you run your project locally in Rails?',
   lesson_id: secret_lesson.id
 )
 
 fourth_sebastien_question = Question.create!(
-  content: 'Q4.',
+  content: 'How do you active JavaScript in your local project in Rails?',
   lesson_id: secret_lesson.id
 )
 
 fifth_sebastien_question = Question.create!(
-  content: 'Q5.',
+  content: 'How do you create a model through the terminal in Rails?',
   lesson_id: secret_lesson.id
 )
 
 sixth_sebastien_question = Question.create!(
-  content: 'Q6.',
+  content: 'How do you create a controller through the terminal in Rails?',
   lesson_id: secret_lesson.id
 )
 
 seventh_sebastien_question = Question.create!(
-  content: 'Q7.',
+  content: 'How do you create a migration through the terminal in Rails?',
   lesson_id: secret_lesson.id
 )
 
 eighth_sebastien_question = Question.create!(
-  content: 'Q8.',
+  content: "How do you list all of your project's routes in Rails?",
   lesson_id: secret_lesson.id
 )
 
 ninth_sebastien_question = Question.create!(
-  content: 'Q9.',
+  content: "How do you launch all of your project's migrations in Rails?",
   lesson_id: secret_lesson.id
 )
 
 tenth_sebastien_question = Question.create!(
-  content: 'Q10.',
+  content: "How do you feed your project's initial database in Rails?",
   lesson_id: secret_lesson.id
 )
 

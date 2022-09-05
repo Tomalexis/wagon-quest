@@ -30,9 +30,9 @@
     <%= image_tag "back-user.png" %>
   </div>
   <div class="dialog-box">
-    <% if @battle.hp_teacher == 0 %>
+    <% if @battle.hp_teacher <= 0 %>
       <p><%= @battle.teacher.feedback_user_won %></p>
-    <% elsif @battle.hp_user == 0 %>
+    <% elsif @battle.hp_user <= 0 %>
       <p><%= @battle.teacher.feedback_user_lost %></p>
     <% end %>
     <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
