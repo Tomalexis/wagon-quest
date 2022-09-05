@@ -22,6 +22,8 @@ class GamesController < ApplicationController
     @game = current_user.games.find(params[:id])
 
     if @game.status == "map"
+      @user_position = "#{@game.user_position_x}-#{@game.user_position_y}"
+
       @teachers_per_position = {}
 
       @teachers = Teacher.where(status: ["regular", "final_boss"])
@@ -30,14 +32,19 @@ class GamesController < ApplicationController
         @teachers_per_position["#{teacher.position_x}-#{teacher.position_y}"] = teacher
       end
 
+      @obstacle_positions = []
+      @obstacle_positions += @teachers_per_position.keys
+
     elsif @game.status == "intro"
 
       @user = current_user
-
       @user_position = "#{@game.user_position_x}-#{@game.user_position_y}"
 
       @slackbot = Teacher.find_by(status: "tutorial")
       @slackbot_position = "#{@slackbot.position_x}-#{@slackbot.position_y}"
+
+      @obstacle_positions = ['10-2', '7-4', '7-5', '1-2', '2-2', '3-2', '4-2', '1-6', '2-6', '1-8', '2-8']
+      @obstacle_positions << @slackbot_position
     end
 
     if @game.status == "battle"

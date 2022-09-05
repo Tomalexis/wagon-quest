@@ -27,6 +27,51 @@
   top: -3rem;
 }
 
+.enemy-image-mini {
+  width: 10rem;
+  height: 20rem;
+  z-index: 2;
+  position: absolute;
+  right: 17rem;
+  top: 1rem;
+}
+
+.enemy-image-blink {
+  width: 14rem;
+  height: 25rem;
+  z-index: 2;
+  position: absolute;
+  right: 15rem;
+  top: -3rem;
+  animation: blinkingImage 2s;
+
+  @keyframes blinkingImage {
+    0% {opacity: 1;}
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+}
+
+.enemy-image-mini-blink {
+  width: 10rem;
+  height: 20rem;
+  z-index: 2;
+  position: absolute;
+  right: 17rem;
+  top: 1rem;
+  animation: blinkingImage 2s;
+
+  @keyframes blinkingImage {
+    0% {opacity: 1;}
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+}
+
 .stand-user {
   position: absolute;
   left: -9rem;
@@ -47,7 +92,7 @@
 
 .user-character {
   position: absolute;
-  bottom: 5rem;
+  bottom: 3rem;
   padding-left: 2rem;
 
   img {
@@ -60,7 +105,7 @@
   border: 1px solid #085737;
   border-radius: 5px;
   background-color: wheat;
-  width: 20rem;
+  width: 15rem;
   font-family: $nav-font;
   font-weight: bolder;
   font-size: 20px;
@@ -103,6 +148,10 @@
   }
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .question-box {
   display: flex;
   align-items: center;
@@ -130,7 +179,7 @@
   width: 16vw;
   height: 31vh;
   font-family: $nav-font;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bolder;
   text-align: center;
   display: flex;
@@ -141,6 +190,15 @@
 
   &:hover {
     transform: scale(1.1);
+  }
+}
+
+.answer-disabled {
+  background-color: gray;
+  text-decoration: line-through;
+
+  &:hover {
+    transform: scale(1);
   }
 }
 
@@ -214,4 +272,82 @@
    to {
       margin-left: 0%;
    }
+}
+
+.question-text {
+  z-index: 3;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  p {
+    font-size: 12px;
+   }
+
+  .answer {
+    font-size: 11px;
+  }
+
+  .question-box {
+    font-size: 10px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  p {
+    font-size: 16px;
+   }
+
+  .answer {
+    font-size: 15px;
+  }
+
+  .question-box {
+    font-size: 15px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  p {
+    font-size: 20px;
+   }
+
+  .answer {
+    font-size: 18px;
+  }
+
+  .question-box {
+    font-size: 20px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  p {
+    font-size: 24px;
+   }
+
+  .answer {
+    font-size: 21px;
+  }
+
+  .question-box {
+    font-size: 25px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  p {
+    font-size: 24px;
+  }
+
+  .answer {
+    font-size: 24px;
+  }
+
+  .question-box {
+    font-size: 30px;
+  }
 }
