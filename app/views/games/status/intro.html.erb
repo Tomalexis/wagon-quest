@@ -20,7 +20,7 @@
           <% end %>
           >
           <% if @user_position == position %>
-            <%= image_tag "userstatic.png", width: 32, height: 80, class: "user", data: {'map-target': 'user'}%>
+            <%= image_tag "userstatic.png", width: 44, height: 92, class: "user", data: {'map-target': 'user'}%>
           <% end %>
           <% if @slackbot_position == position %>
             <%= cl_image_tag @slackbot.avatar_map.key, width: 48, height: 96, class: "teacher" %>
