@@ -8,7 +8,11 @@
           <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
         <% end %>
     </div>
-    <%= image_tag "slackbotstatic.png", class: 'enemy-image' %>
+    <% if @battle.teacher.tutorial == true %>
+      <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image' %>
+    <% else  %>
+      <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-mini' %>
+    <% end %>
   </div>
   <div class="stand-teacher">
     <%= image_tag "socle-teacher.png" %>
@@ -20,10 +24,16 @@
 
   <div class="answers">
     <% @round.question.answers.each do |answer| %>
-      <%= link_to round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post }, class:'answer-link' do %>
-        <div class="answer">
+      <% if @round.answer_ids.include?(answer.id) %>
+        <div class="answer answer-disabled">
           <%= answer.content %>
         </div>
+      <% else %>
+        <%= link_to round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post }, class:'answer-link' do %>
+          <div class="answer">
+            <%= answer.content %>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
