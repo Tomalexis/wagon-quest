@@ -8,7 +8,7 @@
           <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
         <% end %>
     </div>
-    <%= image_tag "redfront4.png", class: 'enemy-image' %>
+    <%= image_tag "slackbotstatic.png", class: 'enemy-image' %>
   </div>
   <div class="stand-teacher">
     <%= image_tag "socle-teacher.png" %>
@@ -35,12 +35,16 @@
   <div class="dialog-box">
     <% if @game_answer.answer.kind == "perfect" %>
       <p><%= @battle.teacher.feedback_answer_perfect %></p>
+      <p><%= "#{@battle.teacher.name} loses 2 HP !" %></p>
     <% elsif @game_answer.answer.kind == "correct" %>
       <p><%= @battle.teacher.feedback_answer_correct %></p>
+      <p><%= "#{@battle.teacher.name} loses 2 HP !" %></p>
     <% elsif @game_answer.answer.kind == "misleading" %>
       <p><%= @battle.teacher.feedback_answer_misleading %></p>
+      <p><%= "#{@game.user.username} loses 2 HP !" %></p>
     <% elsif @game_answer.answer.kind == "weird" %>
       <p><%= @battle.teacher.feedback_answer_weird %></p>
+      <p><%= "#{@game.user.username} loses 2 HP !" %></p>
     <% end %>
     <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
       <i class="fa-regular fa-lg fa-square-caret-down"></i>

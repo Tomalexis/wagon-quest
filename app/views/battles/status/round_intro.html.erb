@@ -8,7 +8,7 @@
           <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
         <% end %>
     </div>
-    <%= image_tag "redfront4.png", class: 'enemy-image' %>
+    <%= image_tag "slackbotstatic.png", class: 'enemy-image' %>
   </div>
   <div class="stand-teacher">
     <%= image_tag "socle-teacher.png" %>
@@ -16,6 +16,10 @@
 
   <div class="question-box">
     <p class="question-text"><%= @round.question.content %></p>
+  </div>
+
+  <div class="slide-right">
+    <p class="question-text">NEW QUESTION !</p>
   </div>
 
   <div class="stand-user">

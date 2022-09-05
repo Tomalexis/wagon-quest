@@ -14,17 +14,18 @@
   border-radius: 5px;
   padding: 30px 50px;
   margin: 10px 0;
-  width: 80vh;
+  width: 40vw;
 }
 
 .btn-start {
   color: white;
-  padding: 8px 24px;
+  padding: 8px 3px;
   border-radius: 4px;
   background: gray;
   transition: background 0.3s ease;
-  width: 29%;
+  width: 32%;
   margin-top: 10px;
+  font-family: $nav-font
 }
 
 .btn-start:hover {
@@ -39,19 +40,20 @@ h1 {
 }
 
 .input-box {
-  width: 30rem;
+  width: 23vw;
   height: 5rem;
   border-radius: 5px;
   border: solid 1px lightgrey;
-  resize: vertical;
   font-family: $geek-font;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-indent: 1rem;
 }
 
 .input-box::placeholder {
   position: absolute;
   top: 0;
+  font-size: 20px;
+  color: lightgray;
 }
 
 .mini-wrap {

@@ -20,11 +20,11 @@
 
 .enemy-image {
   width: 14rem;
-  height: 19rem;
+  height: 25rem;
   z-index: 2;
   position: absolute;
   right: 15rem;
-  top: 3rem;
+  top: -3rem;
 }
 
 .stand-user {
@@ -88,9 +88,19 @@
   text-indent: 10px;
   padding-top: 5px;
   font-family: $nav-font;
+  text-shadow: 1px 1px 1px white;
   font-size: 30px;
   font-weight: bolder;
   z-index: 3;
+  animation: blinkingBackground 3s;
+
+  @keyframes blinkingBackground {
+    0% {background-color: #579097;}
+    25% {background-color: #70c0ca;}
+    50% {background-color: #579097;}
+    75% {background-color: #70c0ca;}
+    100% {background-color: #579097;}
+  }
 }
 
 .question-box {
@@ -121,11 +131,17 @@
   height: 31vh;
   font-family: $nav-font;
   font-size: 25px;
+  font-weight: bolder;
   text-align: center;
   display: flex;
   align-items: center;
   padding: 0.5em 1em;
   justify-content: center;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .answers {
@@ -149,7 +165,7 @@
 }
 
 .hp-number {
-  color: #18C020;
+  color: #2c8b31;
 }
 
 .hp-number-low {
@@ -159,4 +175,43 @@
 .answer-link {
   text-decoration: none;
   color: black;
+
+  &:hover {
+    color: #31B4DD;
+  }
+}
+
+.slide-right {
+  display: flex;
+  position: absolute;
+  top: 45%;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  animation: blinkingText 3s infinite;
+
+  @keyframes blinkingText {
+    0% {color: #D04F37;}
+    25% {color: #da8779;}
+    50% {color: #D04F37;}
+    75% {color: #da8779;}
+    100% {color: #D04F37;}
+  }
+}
+
+.slide-right p {
+  animation: 2s slide-right;
+  font-size: 50px;
+  font-family: $geek-font;
+  font-style: italic;
+}
+
+@keyframes slide-right {
+   from {
+      margin-left: -100%;
+   }
+
+   to {
+      margin-left: 0%;
+   }
 }
