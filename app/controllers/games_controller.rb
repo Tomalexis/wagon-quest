@@ -16,7 +16,7 @@ class GamesController < ApplicationController
     if @user.valid?
       redirect_to game_path(@game)
     else
-      render "pages/home"
+      render "pages/home", status: :unprocessable_entity
     end
   end
 

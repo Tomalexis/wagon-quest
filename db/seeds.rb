@@ -34,6 +34,12 @@ second_lesson = Lesson.create!(
   hp_teacher: 8
 )
 
+secret_lesson = Lesson.create!(
+  name: "Do or die",
+  hp_user: 10,
+  hp_teacher: 20
+)
+
 puts 'Lessons created'
 
 puts 'Creating Slackbot questions...'
@@ -88,6 +94,60 @@ fourth_jeremy_question = Question.create!(
 )
 
 puts 'Jeremy questions created.'
+
+puts 'Creating Sébastien questions...'
+
+first_sebastien_question = Question.create!(
+  content: 'Q1.',
+  lesson_id: secret_lesson.id
+)
+
+second_sebastien_question = Question.create!(
+  content: 'Q2.',
+  lesson_id: secret_lesson.id
+)
+
+third_sebastien_question = Question.create!(
+  content: 'Q3.',
+  lesson_id: secret_lesson.id
+)
+
+fourth_sebastien_question = Question.create!(
+  content: 'Q4.',
+  lesson_id: secret_lesson.id
+)
+
+fifth_sebastien_question = Question.create!(
+  content: 'Q5.',
+  lesson_id: secret_lesson.id
+)
+
+sixth_sebastien_question = Question.create!(
+  content: 'Q6.',
+  lesson_id: secret_lesson.id
+)
+
+seventh_sebastien_question = Question.create!(
+  content: 'Q7.',
+  lesson_id: secret_lesson.id
+)
+
+eighth_sebastien_question = Question.create!(
+  content: 'Q8.',
+  lesson_id: secret_lesson.id
+)
+
+ninth_sebastien_question = Question.create!(
+  content: 'Q9.',
+  lesson_id: secret_lesson.id
+)
+
+tenth_sebastien_question = Question.create!(
+  content: 'Q10.',
+  lesson_id: secret_lesson.id
+)
+
+puts 'Sebastien questions created.'
 
 puts 'Creating answers...'
 
@@ -309,6 +369,130 @@ fourth_jeremy_question_fourth_answer = Answer.create!(
 
 puts 'Answers created.'
 
+puts 'Creating Sébastien answers...'
+
+first_sebastien_question_answer = Answer.create!(
+  content: 'rails new',
+  kind: "perfect",
+  question_id: first_sebastien_question.id
+)
+
+first_sebastien_question_non_answer = Answer.create!(
+  content: '',
+  kind: "weird",
+  question_id: first_sebastien_question.id
+)
+
+second_sebastien_question_answer = Answer.create!(
+  content: 'rails console',
+  kind: "perfect",
+  question_id: second_sebastien_question.id
+)
+
+second_sebastien_question_non_answer = Answer.create!(
+  content: '',
+  kind: "weird",
+  question_id: second_sebastien_question.id
+)
+
+third_sebastien_question_answer = Answer.create!(
+  content: 'rails server',
+  kind: "perfect",
+  question_id: third_sebastien_question.id
+)
+
+third_sebastien_question_non_answer = Answer.create!(
+  content: '',
+  kind: "weird",
+  question_id: third_sebastien_question.id
+)
+
+fourth_sebastien_question_answer = Answer.create!(
+  content: 'yarn build --watch',
+  kind: "perfect",
+  question_id: fourth_sebastien_question.id
+)
+
+fourth_sebastien_question_non_answer = Answer.create!(
+  content: '',
+  kind: "weird",
+  question_id: fourth_sebastien_question.id
+)
+
+fifth_sebastien_question_answer = Answer.create!(
+  content: 'rails generate model',
+  kind: "perfect",
+  question_id: fifth_sebastien_question.id
+)
+
+fifth_sebastien_question_non_answer = Answer.create!(
+  content: '',
+  kind: "weird",
+  question_id: fifth_sebastien_question.id
+)
+
+sixth_sebastien_question_answer = Answer.create!(
+  content: 'rails generate controller',
+  kind: "perfect",
+  question_id: sixth_sebastien_question.id
+)
+
+sixth_sebastien_question_non_answer = Answer.create!(
+  content: '',
+  kind: "weird",
+  question_id: sixth_sebastien_question.id
+)
+
+seventh_sebastien_question_answer = Answer.create!(
+  content: 'rails generate migrate',
+  kind: "perfect",
+  question_id: seventh_sebastien_question.id
+)
+
+seventh_sebastien_question_non_answer = Answer.create!(
+  content: '',
+  kind: "weird",
+  question_id: seventh_sebastien_question.id
+)
+
+eighth_sebastien_question_answer = Answer.create!(
+  content: 'rails routes',
+  kind: "perfect",
+  question_id: eighth_sebastien_question.id
+)
+
+eighth_sebastien_question_non_answer = Answer.create!(
+  content: '',
+  kind: "weird",
+  question_id: eighth_sebastien_question.id
+)
+
+ninth_sebastien_question_answer = Answer.create!(
+  content: 'rails db:migrate',
+  kind: "perfect",
+  question_id: ninth_sebastien_question.id
+)
+
+ninth_sebastien_question_non_answer = Answer.create!(
+  content: '',
+  kind: "weird",
+  question_id: ninth_sebastien_question.id
+)
+
+tenth_sebastien_question_answer = Answer.create!(
+  content: 'rails db:seed',
+  kind: "perfect",
+  question_id: tenth_sebastien_question.id
+)
+
+tenth_sebastien_question_non_answer = Answer.create!(
+  content: '',
+  kind: "weird",
+  question_id: tenth_sebastien_question.id
+)
+
+puts 'Sébastien answers created.'
+
 puts 'Creating teachers...'
 
 slackbot = Teacher.create!(
@@ -352,5 +536,20 @@ jeremy.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image
 file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
 jeremy.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 jeremy.save!
+
+seb = Teacher.create!(
+  name: 'Sébastien',
+  feedback_answer_perfect: '...',
+  feedback_answer_correct: '...',
+  feedback_answer_misleading: '...',
+  feedback_answer_weird: '...',
+  feedback_intro: "...",
+  feedback_user_won: '...',
+  feedback_user_lost: '...',
+  position_x: 99,
+  position_y: 99,
+  lesson_id: secret_lesson.id,
+  status: "secret_boss"
+)
 
 puts 'Finish !'
