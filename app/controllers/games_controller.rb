@@ -1,7 +1,9 @@
 class GamesController < ApplicationController
   def create
     @user = current_user
-    @user.username = params[:username].capitalize!
+    @user.username = params[:username].capitalize
+    # @user.username = params[:username]
+    # @user.username = params[:username].capitalize!
     @user.save
 
     @game = Game.new
