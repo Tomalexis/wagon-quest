@@ -32,6 +32,9 @@ class GamesController < ApplicationController
         @teachers_per_position["#{teacher.position_x}-#{teacher.position_y}"] = teacher
       end
 
+      @obstacle_positions = []
+      @obstacle_positions << @teachers_per_position
+
     elsif @game.status == "intro"
 
       @user = current_user
@@ -40,7 +43,7 @@ class GamesController < ApplicationController
       @slackbot = Teacher.find_by(tutorial: true)
       @slackbot_position = "#{@slackbot.position_x}-#{@slackbot.position_y}"
 
-      @obstacle_positions = ['10-2', '7-4', '7-5']
+      @obstacle_positions = ['10-2', '7-4', '7-5', '1-2', '2-2', '3-2', '4-2', '1-6', '2-6', '1-8', '2-8']
       @obstacle_positions << @slackbot_position
     end
 

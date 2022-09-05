@@ -12,7 +12,11 @@
   <% tile_count_y.times do |y| %>
     <% tile_count_x.times do |x| %>
       <% position = "#{x + 1}-#{y + 1}" %>
-      <div class ="tile" id="<%=position%>">
+      <div class ="tile"
+        id="<%=position%>"
+        <% if @obstacle_positions.include?(position) %>
+            data-map-target="obstacle"
+          <% end %>>
         <% if @teachers_per_position.key?(position) %>
           <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 48, height: 96, class: "teacher" %>
           <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
