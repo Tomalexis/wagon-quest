@@ -18,19 +18,22 @@
 }
 
 .btn-start {
-  color: white;
+  color: black;
   padding: 8px 3px;
   border-radius: 4px;
-  background: gray;
+  background: linear-gradient(-180deg, #fff 20%, #f5f5f5 80%);
   transition: background 0.3s ease;
   width: 32%;
   margin-top: 10px;
-  font-family: $nav-font
+  font-family: $nav-font;
+  border: 0.5px solid #D5D5D5;
 }
 
 .btn-start:hover {
-  background: lightgray;
-  color: white;
+  background: linear-gradient(180deg, #f3f3f3 20%, rgb(235, 235, 235) 80%);
+  color: black;
+  cursor: pointer;
+  border: 0.5px solid #c0c0c0;
 }
 
 h1 {
@@ -58,4 +61,23 @@ h1 {
 
 .mini-wrap {
   margin: 0 auto;
+}
+
+.back {
+  position: fixed;
+  background-color: rgb(165, 164, 164);
+  border-radius: 0px;
+  padding: 0px 12px;
+  box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  border: none !important;
+  font-family: $nav-font;
+  font-size: 20px;
+  margin: 0;
+  left: 0px;
+  border-radius: 0 0 10px 0
+}
+
+.fa-volume-high {
+  color: rgb(228, 225, 225);
 }
