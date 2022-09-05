@@ -1,11 +1,11 @@
-$map-width: 480px;
-$map-height: 384px;
-
-$tile-size: 48px;
-
-$scale: 1;
-
 .intro {
+  $map-width: 480px;
+  $map-height: 384px;
+
+  $tile-size: 48px;
+
+  $scale: 1;
+
   width: $map-width * $scale;
   height: $map-height * $scale;
   background-image: asset-url("bedroom.png");

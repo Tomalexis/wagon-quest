@@ -1,11 +1,24 @@
-<div class="map">
-  <% 21.times do |y| %>
-    <% 25.times do |x| %>
-    <% position = "#{x + 1}-#{y + 1}" %>
+<% tile_count_y = 18 %>
+<% tile_count_x = 27 %>
+<div class="map"
+  data-controller="map"
+  data-map-user-position-x-value="<%= @game.user_position_x %>"
+  data-map-user-position-y-value="<%= @game.user_position_y %>"
+  data-map-map-position-x-min-value="1"
+  data-map-map-position-x-max-value="<%= tile_count_x %>"
+  data-map-map-position-y-min-value="1"
+  data-map-map-position-y-max-value="<%= tile_count_y %>"
+  >
+  <% tile_count_y.times do |y| %>
+    <% tile_count_x.times do |x| %>
+      <% position = "#{x + 1}-#{y + 1}" %>
       <div class ="tile" id="<%=position%>">
         <% if @teachers_per_position.key?(position) %>
           <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 48, height: 96, class: "teacher" %>
           <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
+        <% end %>
+        <% if @user_position == position %>
+          <%= image_tag "userstatic.png", width: 48, height: 96, class: "user", data: {'map-target': 'user'}%>
         <% end %>
       </div>
     <% end %>
