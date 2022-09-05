@@ -56,79 +56,14 @@ class GamesController < ApplicationController
     end
   end
 
-  # def continue
-  #   @game = current_user.games.find(params[:id])
-
-  #   if @game.status == "intro"
-  #     @game.update(status: "battle")
-  #     teacher = Teacher.find_by(status: "tutorial")
-  #     battle = Battle.create(
-  #       game: @game,
-  #       teacher: teacher,
-  #       hp_user: teacher.lesson.hp_user,
-  #       hp_teacher: teacher.lesson.hp_teacher,
-  #       status: "battle_intro"
-  #     )
-  #   elsif @game.status == "battle" && @game.battles.last.status == "battle_intro"
-  #     this_battle = @game.battles.last
-  #     this_battle.update(status: "round_intro")
-  #     @round = Round.create(
-  #       battle: this_battle,
-  #       question: this_battle.teacher.lesson.questions.sample
-  #       # Pour l'instant je vais rester sur sample.
-  #     )
-  #     # game status battle && battle status battle_intro
-  #     # -> battle status round_intro
-  #     # créer le round avec tous ses paramètres
-  #     # pour question, doit être random, mais pas déjà sélectionnée pour cette battle
-  #   elsif @game.status == "battle" && @game.battles.last.status == "round_intro"
-  #     this_battle = @game.battles.last
-  #     this_battle.update(status: "round_core")
-  #   elsif @game.status == "battle" && @game.battles.last.status == "round_core"
-  #     this_battle = @game.battles.last
-  #     this_battle.update(status: "round_outro")
-  #   elsif @game.status == "battle" && @game.battles.last.status == "round_outro"
-  #     this_battle = @game.battles.last
-  #     this_round = this_battle.rounds.last
-  #     this_answer = this_round.game_answers.last.answer
-  #     question_to_ask = this_battle.teacher.lesson.questions.where.not(id: this_battle.question_ids).sample
-  #     if this_answer.kind == "weird" || this_answer.kind == "misleading"
-  #       this_battle.update(status: "round_core")
-  #     elsif question_to_ask
-  #       @round = Round.create(
-  #         battle: this_battle,
-  #         question: question_to_ask
-  #         # Pour l'instant je vais rester sur sample.
-  #       )
-  #       this_battle.update(status: "round_intro")
-  #     else
-  #       this_battle.update(status: "battle_outro")
-  #     end
-  #     # No battle_outro yet, still in the loop until the whole system is done.
-  #   elsif @game.status == "battle" && @game.battles.last.status == "battle_outro"
-  #     this_battle = @game.battles.last
-  #     if this_battle.hp_user <= 0
-  #       teacher = Teacher.find_by(status: "tutorial")
-  #       battle = Battle.create(
-  #         game: @game,
-  #         teacher: teacher,
-  #         hp_user: teacher.lesson.hp_user,
-  #         hp_teacher: teacher.lesson.hp_teacher,
-  #         status: "battle_intro"
-  #       )
-  #     elsif this_battle.hp_teacher <= 0
-  #       @game.update(status: "map")
-  #     end
-  #   end
-  #   redirect_to game_path(@game)
-  # end
-
   def continue # for secret_boss
     @game = current_user.games.find(params[:id])
 
     if @game.status == "intro"
       @game.update(status: "battle")
-      teacher = Teacher.find_by(status: "secret_boss")
+      teacher_status = ENV.fetch("TEACHER_STATUS_CHOSEN", "tutorial")
+
+      teacher = Teacher.find_by(status: teacher_status)
       battle = Battle.create(
         game: @game,
         teacher: teacher,
@@ -168,7 +103,8 @@ class GamesController < ApplicationController
     elsif @game.status == "battle" && @game.battles.last.status == "battle_outro"
       this_battle = @game.battles.last
       if this_battle.hp_user <= 0
-        teacher = Teacher.find_by(status: "secret_boss")
+        # teacher = Teacher.find_by(status: "secret_boss")
+        teacher = this_battle.teacher
         battle = Battle.create(
           game: @game,
           teacher: teacher,

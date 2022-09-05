@@ -33,6 +33,6 @@ class GameAnswersController < ApplicationController
       # récupérer le game à partir de la battle
       @game = @battle.game
       # rediriger toujours vers la show du game
-      redirect_to game_path(@game)
+      redirect_to game_path(@game), status: :see_other
   end
 end

@@ -56,9 +56,10 @@
       <%#= f.input :content, as: :custom_input %>
       <%#= f.submit %>
     <%# end %>
-    <%= form_for :secret_boss, url: round_game_answers_path(@round, GameAnswer.new), method: :post do |f| %>
+    <%= form_for :secret_boss, url: round_game_answers_path(@round, GameAnswer.new), method: :post, data: { turbo: :false } do |f| %>
       <%= f.text_field :content %>
       <%= f.submit "Go" %>
     <% end %>
+    <!-- Need to erase the content of the form afterwards. -->
   </div>
 </div>

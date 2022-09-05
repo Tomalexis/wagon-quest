@@ -444,7 +444,7 @@ sixth_sebastien_question_non_answer = Answer.create!(
 )
 
 seventh_sebastien_question_answer = Answer.create!(
-  content: 'rails generate migrate',
+  content: 'rails generate migration',
   kind: "perfect",
   question_id: seventh_sebastien_question.id
 )
