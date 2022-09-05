@@ -35,11 +35,13 @@ class GamesController < ApplicationController
     elsif @game.status == "intro"
 
       @user = current_user
-
       @user_position = "#{@game.user_position_x}-#{@game.user_position_y}"
 
       @slackbot = Teacher.find_by(tutorial: true)
       @slackbot_position = "#{@slackbot.position_x}-#{@slackbot.position_y}"
+
+      @obstacle_positions = ['10-2', '7-4', '7-5']
+      @obstacle_positions << @slackbot_position
     end
 
     if @game.status == "battle"

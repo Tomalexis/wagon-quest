@@ -1,11 +1,26 @@
+  <% tile_count_y = 8 %>
+  <% tile_count_x = 10 %>
 <div class="container">
-  <div class="intro">
-    <% 8.times do |y| %>
-      <% 10.times do |x| %>
+  <div class="intro"
+    data-controller="map"
+    data-map-user-position-x-value="<%= @game.user_position_x %>"
+    data-map-user-position-y-value="<%= @game.user_position_y %>"
+    data-map-map-position-x-min-value="1"
+    data-map-map-position-x-max-value="<%= tile_count_x %>"
+    data-map-map-position-y-min-value="2"
+    data-map-map-position-y-max-value="<%= tile_count_y %>"
+    >
+    <% tile_count_y.times do |y| %>
+      <% tile_count_x.times do |x| %>
       <% position = "#{x + 1}-#{y + 1}" %>
-        <div class ="tile" id="<%=position%>">
+        <div class ="tile"
+          id="<%=position%>"
+          <% if @obstacle_positions.include?(position) %>
+            data-map-target="obstacle"
+          <% end %>
+          >
           <% if @user_position == position %>
-            <%= image_tag "userstatic.png", width: 48, height: 96, class: "user" %>
+            <%= image_tag "userstatic.png", width: 48, height: 96, class: "user", data: {'map-target': 'user'}%>
           <% end %>
           <% if @slackbot_position == position %>
             <%= cl_image_tag @slackbot.avatar_map.key, width: 48, height: 96, class: "teacher" %>
