@@ -1,11 +1,12 @@
-$map-width: 480px;
-$map-height: 384px;
-
-$tile-size: 48px;
-
-$scale: 1;
-
 .intro {
+  $map-width: 480px;
+  $map-height: 384px;
+
+  $tile-size: 48px;
+  $sprite-size: 44px;
+
+  $scale: 1.25;
+
   width: $map-width * $scale;
   height: $map-height * $scale;
   background-image: asset-url("bedroom.png");
@@ -18,11 +19,13 @@ $scale: 1;
     width: $tile-size * $scale;
     height: $tile-size * $scale;
     position: relative;
+    display: flex;
+    justify-content: center;
   }
 
   .teacher, .user {
-    width: $tile-size * $scale;
-    height: $tile-size * 2 * $scale;
+    width: $sprite-size * $scale;
+    height: $sprite-size * 2 * $scale;
     position: absolute;
     bottom: 0px;
   }
