@@ -8,7 +8,7 @@
           <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
         <% end %>
     </div>
-    <% if @battle.teacher.tutorial == true %>
+    <% if @battle.teacher.status == "tutorial" %>
       <% if @game_answer.answer.kind == "perfect" || @game_answer.answer.kind == "correct"%>
         <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-blink' %>
       <% else %>
@@ -36,7 +36,8 @@
   <div class="user-character">
       <div class="user-infos">
         <div><%= @game.user.username %></div>
-        <% if @battle.hp_user > 4 %>
+        <% if @battle.teacher.status == "tutorial" %>
+        <% elsif @battle.hp_user > 4 %>
           <div>HP: <span class="hp-number"><%= @battle.hp_user %></span></div>
         <% else %>
           <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
@@ -53,10 +54,14 @@
       <p><%= "#{@battle.teacher.name} loses 2 HP !" %></p>
     <% elsif @game_answer.answer.kind == "misleading" %>
       <p><%= @battle.teacher.feedback_answer_misleading %></p>
-      <p><%= "#{@game.user.username} loses 2 HP !" %></p>
+      <% if @battle.teacher.status != "tutorial" %>
+        <p><%= "#{@game.user.username} loses 2 HP !" %></p>
+      <% end %>
     <% elsif @game_answer.answer.kind == "weird" %>
       <p><%= @battle.teacher.feedback_answer_weird %></p>
-      <p><%= "#{@game.user.username} loses 2 HP !" %></p>
+      <% if @battle.teacher.status != "tutorial" %>
+        <p><%= "#{@game.user.username} loses 2 HP !" %></p>
+      <% end %>
     <% end %>
     <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
       <i class="fa-regular fa-lg fa-square-caret-down"></i>

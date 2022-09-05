@@ -1,10 +1,19 @@
 class GameAnswersController < ApplicationController
   def create
-    # {"game_answer"=>{"answer_id"=>"114"}, "round_id"=>"57"}
-    # récupérer le round depuis les params .find
     @round = current_user.rounds.find(params[:round_id])
-    # récupérer l'answer depuis les params (nestées)
-    @answer = @round.question.answers.find(params[:game_answer][:answer_id])
+    if @round.battle.teacher.status == "secret_boss"
+      if @round.question.answers.find_by(content: params[:secret_boss][:content])
+        @answer = @round.question.answers.find_by(content: params[:secret_boss][:content])
+      else
+        @answer = @round.question.answers.find_by(kind: "weird")
+      end
+    else
+      # {"game_answer"=>{"answer_id"=>"114"}, "round_id"=>"57"}
+      # récupérer le round depuis les params .find
+      ## @round = current_user.rounds.find(params[:round_id])
+      # récupérer l'answer depuis les params (nestées)
+      @answer = @round.question.answers.find(params[:game_answer][:answer_id])
+    end
     # créer un game_answer connecté au round et à l'answer
     GameAnswer.create(
       game: @round.battle.game,
@@ -24,6 +33,6 @@ class GameAnswersController < ApplicationController
     # récupérer le game à partir de la battle
     @game = @battle.game
     # rediriger toujours vers la show du game
-    redirect_to game_path(@game)
+    redirect_to game_path(@game), status: :see_other
   end
 end

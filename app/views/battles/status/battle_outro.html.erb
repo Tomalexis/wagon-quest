@@ -8,7 +8,7 @@
           <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
         <% end %>
     </div>
-    <% if @battle.teacher.tutorial == true %>
+    <% if @battle.teacher.status == "tutorial" %>
       <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image' %>
     <% else  %>
       <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-mini' %>
@@ -24,7 +24,8 @@
   <div class="user-character">
       <div class="user-infos">
         <div><%= @game.user.username %></div>
-        <% if @battle.hp_user > 4 %>
+        <% if @battle.teacher.status == "tutorial" %>
+        <% elsif @battle.hp_user > 4 %>
           <div>HP: <span class="hp-number"><%= @battle.hp_user %></span></div>
         <% else %>
           <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
@@ -33,9 +34,9 @@
     <%= image_tag "back-user.png" %>
   </div>
   <div class="dialog-box">
-    <% if @battle.hp_teacher == 0 %>
+    <% if @battle.hp_teacher <= 0 %>
       <p><%= @battle.teacher.feedback_user_won %></p>
-    <% elsif @battle.hp_user == 0 %>
+    <% elsif @battle.hp_user <= 0 %>
       <p><%= @battle.teacher.feedback_user_lost %></p>
     <% end %>
     <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
