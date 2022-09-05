@@ -29,7 +29,6 @@
       <div class="user-infos">
         <div><%= @game.user.username %></div>
         <% if @battle.teacher.status == "tutorial" %>
-          <div></div>
         <% elsif @battle.hp_user > 4 %>
           <div>HP: <span class="hp-number"><%= @battle.hp_user %></span></div>
         <% else %>
