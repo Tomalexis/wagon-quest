@@ -26,7 +26,7 @@ class GamesController < ApplicationController
     if @game.status == "map"
       @teachers_per_position = {}
 
-      @teachers = Teacher.where(status: "tutorial")
+      @teachers = Teacher.where.not(status: "tutorial")
 
       @teachers.each do |teacher|
         @teachers_per_position["#{teacher.position_x}-#{teacher.position_y}"] = teacher
@@ -89,7 +89,10 @@ class GamesController < ApplicationController
       this_round = this_battle.rounds.last
       this_answer = this_round.game_answers.last.answer
       question_to_ask = this_battle.teacher.lesson.questions.where.not(id: this_battle.question_ids).sample
-      if this_answer.kind == "weird" || this_answer.kind == "misleading"
+
+      if this_battle.hp_user <= 0 || this_battle.hp_teacher <= 0
+        this_battle.update(status: "battle_outro")
+      elsif this_answer.kind == "weird" || this_answer.kind == "misleading"
         this_battle.update(status: "round_core")
       elsif question_to_ask
         @round = Round.create(
