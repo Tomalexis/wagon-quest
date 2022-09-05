@@ -2,8 +2,6 @@ class GamesController < ApplicationController
   def create
     @user = current_user
     @user.username = params[:username].capitalize
-    # @user.username = params[:username]
-    # @user.username = params[:username].capitalize!
     @user.save
 
     @game = Game.new
@@ -26,7 +24,7 @@ class GamesController < ApplicationController
     if @game.status == "map"
       @teachers_per_position = {}
 
-      @teachers = Teacher.where.not(status: "tutorial")
+      @teachers = Teacher.where(status: ["regular", "final_boss"])
 
       @teachers.each do |teacher|
         @teachers_per_position["#{teacher.position_x}-#{teacher.position_y}"] = teacher

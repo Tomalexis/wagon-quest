@@ -42,15 +42,13 @@
       <p><%= "#{@battle.teacher.name} loses 2 HP !" %></p>
     <% elsif @game_answer.answer.kind == "misleading" %>
       <p><%= @battle.teacher.feedback_answer_misleading %></p>
-      <% if @battle.teacher.status == "tutorial" %>
-      <% else %>
-      <p><%= "#{@game.user.username} loses 2 HP !" %></p>
+      <% if @battle.teacher.status != "tutorial" %>
+        <p><%= "#{@game.user.username} loses 2 HP !" %></p>
       <% end %>
     <% elsif @game_answer.answer.kind == "weird" %>
       <p><%= @battle.teacher.feedback_answer_weird %></p>
-      <% if @battle.teacher.status == "tutorial" %>
-      <% else %>
-      <p><%= "#{@game.user.username} loses 2 HP !" %></p>
+      <% if @battle.teacher.status != "tutorial" %>
+        <p><%= "#{@game.user.username} loses 2 HP !" %></p>
       <% end %>
     <% end %>
     <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
