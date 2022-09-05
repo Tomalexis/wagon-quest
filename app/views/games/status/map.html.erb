@@ -18,11 +18,11 @@
             data-map-target="obstacle"
           <% end %>>
         <% if @teachers_per_position.key?(position) %>
-          <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 48, height: 96, class: "teacher" %>
+          <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 45, height: 93, class: "teacher" %>
           <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
         <% end %>
         <% if @user_position == position %>
-          <%= image_tag "userstatic.png", width: 48, height: 96, class: "user", data: {'map-target': 'user'}%>
+          <%= image_tag "userstatic.png", width: 45, height: 93, class: "user", data: {'map-target': 'user'}%>
         <% end %>
       </div>
     <% end %>
