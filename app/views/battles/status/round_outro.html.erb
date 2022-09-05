@@ -8,7 +8,7 @@
           <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
         <% end %>
     </div>
-    <% if @battle.teacher.tutorial == true %>
+    <% if @battle.teacher.status == "tutorial" %>
       <% if @game_answer.answer.kind == "perfect" || @game_answer.answer.kind == "correct"%>
         <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-blink' %>
       <% else %>

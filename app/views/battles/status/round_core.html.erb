@@ -2,13 +2,13 @@
   <div class="teacher-character">
     <div class="teacher-infos">
       <div><%= @battle.teacher.name %></div>
-      <% if @battle.hp_teacher > 4 %>
+        <% if @battle.hp_teacher > 4 %>
           <div>HP: <span class="hp-number"><%= @battle.hp_teacher %></span></div>
         <% else %>
           <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
         <% end %>
     </div>
-    <% if @battle.teacher.tutorial == true %>
+    <% if @battle.teacher.status == "tutorial" %>
       <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image' %>
     <% else  %>
       <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-mini' %>
@@ -22,11 +22,12 @@
     <p class="question-text"><%= @round.question.content %></p>
   </div>
 
-  <% if @battle.teacher.status == "secret_boss" %>
-    <div class="answers" style="display: none">
-  <% else %>
-    <div class="answers">
-  <% end %>
+  <div
+    class="answers"
+    <% if @battle.teacher.status == "secret_boss" %>
+      style="display: none"
+    <% end %>
+    >
     <% @round.question.answers.each do |answer| %>
       <% if @round.answer_ids.include?(answer.id) %>
         <div class="answer answer-disabled">
@@ -39,7 +40,8 @@
           </div>
         <% end %>
       <% end %>
-    </div>
+    <% end %>
+  </div>
 
   <div class="stand-user">
     <%= image_tag "socle-user.png" %>
