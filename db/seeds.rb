@@ -323,7 +323,7 @@ slackbot = Teacher.create!(
   position_x: 2,
   position_y: 3,
   lesson_id: first_lesson.id,
-  tutorial: true
+  status: "tutorial"
 )
 
 file = File.open(Rails.root.join("app/assets/images/slackbotstatic.png"))
@@ -343,7 +343,8 @@ jeremy = Teacher.create!(
   feedback_user_lost: 'Dude, that is not a very chill attitude, go have an ice cream and try again !',
   position_x: 10,
   position_y: 10,
-  lesson_id: second_lesson.id
+  lesson_id: second_lesson.id,
+  status: "regular"
 )
 
 file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))

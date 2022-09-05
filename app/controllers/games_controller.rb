@@ -26,7 +26,7 @@ class GamesController < ApplicationController
     if @game.status == "map"
       @teachers_per_position = {}
 
-      @teachers = Teacher.where(tutorial: false)
+      @teachers = Teacher.where(status: "tutorial")
 
       @teachers.each do |teacher|
         @teachers_per_position["#{teacher.position_x}-#{teacher.position_y}"] = teacher
@@ -38,7 +38,7 @@ class GamesController < ApplicationController
 
       @user_position = "#{@game.user_position_x}-#{@game.user_position_y}"
 
-      @slackbot = Teacher.find_by(tutorial: true)
+      @slackbot = Teacher.find_by(status: "tutorial")
       @slackbot_position = "#{@slackbot.position_x}-#{@slackbot.position_y}"
     end
 
@@ -61,7 +61,7 @@ class GamesController < ApplicationController
 
     if @game.status == "intro"
       @game.update(status: "battle")
-      teacher = Teacher.find_by(tutorial: true)
+      teacher = Teacher.find_by(status: "tutorial")
       battle = Battle.create(
         game: @game,
         teacher: teacher,
@@ -115,7 +115,7 @@ class GamesController < ApplicationController
     elsif @game.status == "battle" && @game.battles.last.status == "battle_outro"
       this_battle = @game.battles.last
       if this_battle.hp_user <= 0
-        teacher = Teacher.find_by(tutorial: true)
+        teacher = Teacher.find_by(status: "tutorial")
         battle = Battle.create(
           game: @game,
           teacher: teacher,
