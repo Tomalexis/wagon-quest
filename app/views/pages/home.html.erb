@@ -1,4 +1,9 @@
 <%= render "shared/navbar" %>
+<div data-controller="music">
+  <audio src="/DQ-INTRO.mp3" loop='true' data-music-target='audio'></audio>
+  <button class="btn back" data-action='click->music#play' data-music-target='playButton'><i class="fa-solid fa-volume-xmark"></i></button>
+  <button class="btn back" data-action='click->music#pause' data-music-target='pauseButton' hidden><i class="fa-solid fa-volume-high"></i></button>
+</div>
 
 <div class="container">
   <div class="wrapper-start d-flex flex-column">

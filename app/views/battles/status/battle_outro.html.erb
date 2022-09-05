@@ -8,7 +8,11 @@
           <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
         <% end %>
     </div>
-    <%= image_tag "slackbotstatic.png", class: 'enemy-image' %>
+    <% if @battle.teacher.tutorial == true %>
+      <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image' %>
+    <% else  %>
+      <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-mini' %>
+    <% end %>
   </div>
   <div class="stand-teacher">
     <%= image_tag "socle-teacher.png" %>
