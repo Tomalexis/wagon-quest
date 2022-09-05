@@ -552,4 +552,10 @@ seb = Teacher.create!(
   status: "secret_boss"
 )
 
+file = File.open(Rails.root.join("app/assets/images/seb_tall.png"))
+seb.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
+file = File.open(Rails.root.join("app/assets/images/seb_square.png"))
+seb.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
+seb.save!
+
 puts 'Finish !'
