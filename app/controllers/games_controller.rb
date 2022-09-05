@@ -33,7 +33,7 @@ class GamesController < ApplicationController
       end
 
       @obstacle_positions = []
-      @obstacle_positions << @teachers_per_position
+      @obstacle_positions += @teachers_per_position.keys
 
     elsif @game.status == "intro"
 
