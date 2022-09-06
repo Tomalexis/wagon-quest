@@ -28,7 +28,7 @@
       style="display: none"
     <% end %>
     >
-    <% @round.question.answers.each do |answer| %>
+    <% @round.question.answers.shuffle(random: Random.new(@round.id)).each do |answer| %>
       <% if @round.answer_ids.include?(answer.id) %>
         <div class="answer answer-disabled">
           <%= answer.content %>
