@@ -22,6 +22,8 @@ class GamesController < ApplicationController
     @game = current_user.games.find(params[:id])
 
     if @game.status == "map"
+
+      @user = current_user
       @user_position = "#{@game.user_position_x}-#{@game.user_position_y}"
 
       @teachers_per_position = {}
@@ -32,7 +34,16 @@ class GamesController < ApplicationController
         @teachers_per_position["#{teacher.position_x}-#{teacher.position_y}"] = teacher
       end
 
-      @obstacle_positions = []
+      @obstacle_positions = ['7-8', '8-8', '13-8', '15-8', '18-8', '21-8', '22-8', '23-8', '24-8', '25-8',
+                             '18-9',
+                             '7-11', '18-11',
+                             '15-12', '16-12',
+                             '1-13', '2-13', '3-13', '4-13', '5-13', '6-13', '7-13', '10-13', '11-13', '12-13', '13-13',
+                             '14-13', '15-13', '16-13', '17-13', '18-13', '19-13', '20-13', '21-13', '22-13', '23-13',
+                             '24-13', '25-13', '26-13', '27-13',
+                             '1-14', '2-14', '3-14', '4-14', '5-14', '6-14', '7-14', '10-14', '11-14', '12-14', '13-14',
+                             '14-14', '15-14', '16-14', '17-14', '18-14', '19-14', '20-14', '21-14', '22-14', '23-14',
+                             '24-14', '25-14', '26-14', '27-14']
       @obstacle_positions += @teachers_per_position.keys
 
     elsif @game.status == "intro"
@@ -126,7 +137,7 @@ class GamesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to game_path(@game) }
+      format.html { redirect_to game_path(@game), status: :see_other }
 
       format.json do
         round = this_battle.rounds.last

@@ -24,7 +24,7 @@
   z-index: 2;
   position: absolute;
   right: 15rem;
-  top: -3rem;
+  top: 4rem;
 }
 
 .enemy-image-mini {
@@ -42,7 +42,7 @@
   z-index: 2;
   position: absolute;
   right: 15rem;
-  top: -3rem;
+  top: 4rem;
   animation: blinkingImage 2s;
 
   @keyframes blinkingImage {
@@ -61,6 +61,18 @@
   position: absolute;
   right: 17rem;
   top: 1rem;
+  animation: blinkingImage 2s;
+
+  @keyframes blinkingImage {
+    0% {opacity: 1;}
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+}
+
+.character-blink {
   animation: blinkingImage 2s;
 
   @keyframes blinkingImage {
@@ -92,11 +104,11 @@
 
 .user-character {
   position: absolute;
-  bottom: 3rem;
+  bottom: 5rem;
   padding-left: 2rem;
 
   img {
-    width: 20rem;
+    width: 11rem;
     height: 20rem;
   }
 }
@@ -130,6 +142,8 @@
   height: 10vh;
   position: fixed;
   bottom: 0;
+  right: 0;
+  left: 0;
   text-indent: 10px;
   padding-top: 5px;
   font-family: $nav-font;
@@ -290,6 +304,30 @@ p {
   .question-box {
     font-size: 10px;
   }
+
+  .dialog-box {
+    font-size: 18px;
+  }
+
+  .enemy-image {
+    right: -2rem;
+    top: -4rem;
+  }
+
+  .enemy-image-blink {
+    right: -2rem;
+    top: -4rem;
+  }
+
+  .enemy-image-mini {
+    right: 3rem;
+    top: 1rem;
+  }
+
+  .enemy-image-mini-blink {
+    right: 3rem;
+    top: 1rem;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -304,6 +342,30 @@ p {
 
   .question-box {
     font-size: 15px;
+  }
+
+  .dialog-box {
+    font-size: 22px;
+  }
+
+  .enemy-image {
+    right: 1rem;
+    top: -4rem;
+  }
+
+  .enemy-image-blink {
+    right: 1rem;
+    top: -4rem;
+  }
+
+  .enemy-image-mini {
+    right: 3rem;
+    top: 1rem;
+  }
+
+  .enemy-image-mini-blink {
+    right: 3rem;
+    top: 1rem;
   }
 }
 
@@ -320,6 +382,30 @@ p {
   .question-box {
     font-size: 20px;
   }
+
+  .dialog-box {
+    font-size: 26px;
+  }
+
+  .enemy-image {
+    right: 2rem;
+    top: -3rem;
+  }
+
+  .enemy-image-blink {
+    right: 2rem;
+    top: -3rem;
+  }
+
+  .enemy-image-mini {
+    right: 4rem;
+    top: 1rem;
+  }
+
+  .enemy-image-mini-blink {
+    right: 4rem;
+    top: 1rem;
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -335,6 +421,30 @@ p {
   .question-box {
     font-size: 25px;
   }
+
+  .dialog-box {
+    font-size: 28px;
+  }
+
+  .enemy-image {
+    right: 3rem;
+    top: -2rem;
+  }
+
+  .enemy-image-blink {
+    right: 3rem;
+    top: -2rem;
+  }
+
+  .enemy-image-mini {
+    right: 3rem;
+    top: 2rem;
+  }
+
+  .enemy-image-mini-blink {
+    right: 3rem;
+    top: 2rem;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -349,5 +459,73 @@ p {
 
   .question-box {
     font-size: 30px;
+  }
+
+  .dialog-box {
+    font-size: 28px;
+  }
+
+  .enemy-image {
+    right: 5rem;
+    top: -1rem;
+  }
+
+  .enemy-image-blink {
+    right: 5rem;
+    top: -1rem;
+  }
+
+  .enemy-image-mini {
+    right: 9rem;
+    top: 3rem;
+  }
+
+  .enemy-image-mini-blink {
+    right: 9rem;
+    top: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .enemy-image {
+    right: 4rem;
+    top: 0rem;
+  }
+
+  .enemy-image-blink {
+    right: 4rem;
+    top: 0rem;
+  }
+
+  .enemy-image-mini {
+    right: 9rem;
+    top: 4rem;
+  }
+
+  .enemy-image-mini-blink {
+    right: 9rem;
+    top: 4rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .enemy-image {
+    right: 10rem;
+    top: 5rem;
+  }
+
+  .enemy-image-blink {
+    right: 10rem;
+    top: 5rem;
+  }
+
+  .enemy-image-mini {
+    right: 10rem;
+    top: 10rem;
+  }
+
+  .enemy-image-mini-blink {
+    right: 10rem;
+    top: 10rem;
   }
 }

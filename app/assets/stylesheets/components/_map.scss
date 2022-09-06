@@ -1,6 +1,6 @@
 .map {
   $map-width: 1296px;
-  $map-height: 864px;
+  $map-height: 912px;
 
   $tile-size: 48px;
   $tile-count-x: 27;
@@ -22,8 +22,8 @@
   }
 
   .teacher, .user {
-    width: $tile-size * $scale;
-    height: $tile-size * 2 * $scale;
+    width: 29.8px;//$tile-size * $scale;
+    height: 61.6px;//$tile-size * 2 * $scale;
     position: absolute;
     bottom: 0px;
   }

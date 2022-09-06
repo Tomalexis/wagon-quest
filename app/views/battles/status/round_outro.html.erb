@@ -1,4 +1,4 @@
-<div data-controller="game" class="battle-background" style="background-image: url('<%= image_path "background-plain.png" %>')">
+<div data-controller="game" class="battle-background" style="background-image: url('<%= image_path "background-hd.png" %>')">
   <div class="teacher-character">
     <div class="teacher-infos">
       <div><%= @battle.teacher.name %></div>
@@ -22,17 +22,11 @@
       <% end %>
     <% end %>
   </div>
-  <div class="stand-teacher">
-    <%= image_tag "socle-teacher.png" %>
-  </div>
 
   <div class="question-box">
     <p class="question-text"><%= @round.question.content %></p>
   </div>
 
-  <div class="stand-user">
-    <%= image_tag "socle-user.png" %>
-  </div>
   <div class="user-character">
       <div class="user-infos">
         <div><%= @game.user.username %></div>
@@ -43,7 +37,11 @@
           <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
         <% end %>
       </div>
-    <%= image_tag "back-user.png" %>
+    <% if @game_answer.answer.kind == "perfect" || @game_answer.answer.kind == "correct"%>
+      <%= image_tag "userstaticright.png" %>
+    <% else %>
+      <%= image_tag "userstaticright.png", class:'character-blink' %>
+    <% end %>
   </div>
   <div class="dialog-box">
     <% if @game_answer.answer.kind == "perfect" %>

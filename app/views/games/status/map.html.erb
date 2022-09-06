@@ -1,4 +1,4 @@
-<% tile_count_y = 18 %>
+<% tile_count_y = 19 %>
 <% tile_count_x = 27 %>
 
 <div data-controller="music">
@@ -7,33 +7,62 @@
   <button class="btn back" data-action='click->music#pause' data-music-target='pauseButton' hidden><i class="fa-solid fa-volume-high"></i></button>
 </div>
 
-<div class="map"
-  data-controller="map"
-  data-map-user-position-x-value="<%= @game.user_position_x %>"
-  data-map-user-position-y-value="<%= @game.user_position_y %>"
-  data-map-map-position-x-min-value="1"
-  data-map-map-position-x-max-value="<%= tile_count_x %>"
-  data-map-map-position-y-min-value="1"
-  data-map-map-position-y-max-value="<%= tile_count_y %>"
-  >
-  <% tile_count_y.times do |y| %>
-    <% tile_count_x.times do |x| %>
-      <% position = "#{x + 1}-#{y + 1}" %>
-      <div class ="tile"
-        id="<%=position%>"
-        <% if @obstacle_positions.include?(position) %>
-          data-map-target="obstacle"
-        <% end %>
-        >
+<div class="battle-background" style="background-image: url('<%= image_path "poke-back.png" %>')">
+  <div class="map"
+    data-controller="map"
+    data-map-user-position-x-value="<%= @game.user_position_x %>"
+    data-map-user-position-y-value="<%= @game.user_position_y %>"
+    data-map-map-position-x-min-value="1"
+    data-map-map-position-x-max-value="<%= tile_count_x %>"
+    data-map-map-position-y-min-value="1"
+    data-map-map-position-y-max-value="<%= tile_count_y %>"
+    >
+    <% tile_count_y.times do |y| %>
+      <% tile_count_x.times do |x| %>
+        <% position = "#{x + 1}-#{y + 1}" %>
+        <div class ="tile"
+          id="<%=position%>"
+          <% if @teachers_per_position.key?(position) %>
+            data-map-target="obstacle teacherTile"
+          <% elsif @obstacle_positions.include?(position) %>
+            data-map-target="obstacle"
+          <% end %>
+          >
 
-        <% if @teachers_per_position.key?(position) %>
-          <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 45, height: 93, class: "teacher" %>
-          <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
-        <% end %>
-        <% if @user_position == position %>
-          <%= image_tag "userstatic.png", width: 45, height: 93, class: "user", data: {'map-target': 'user'}%>
-        <% end %>
-      </div>
+          <% if @teachers_per_position.key?(position) %>
+            <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 45, height: 93, class: "teacher" %>
+            <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
+          <% end %>
+          
+          <% if @user_position == position %>            
+            <div data-map-target="user">
+              <%= image_tag "userstaticback.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userBack"}%>
+              <%= image_tag "userstatic.png", width: 45, height: 93, class: "user", data: {'map-target': "userFace"}%>
+              <%= image_tag "userstaticright.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userRight"}%>
+              <%= image_tag "userstaticleft.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userLeft"}%>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+
+    <div class="dialog-box" data-map-target="dialog" hidden>
+      <div data-controller="dialog-switch">
+        <div data-dialog-switch-target='firstDialog'>
+          Jeremy: Hey dude ! Welcome to Le Wagon academy !
+          <i class="fa-regular fa-lg fa-square-caret-down" data-action='click->dialog-switch#next'></i>
+        </div>
+        <div data-dialog-switch-target='secondDialog' hidden>
+          <%= @user.username %> : You really have nice hair man !
+          <i class="fa-regular fa-lg fa-square-caret-down" data-action='click->dialog-switch#next2'></i>
+        </div>
+        <div data-dialog-switch-target='thirdDialog' hidden>
+          Jeremy: Let me teach you the rules around here !
+          <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
+            <i class="fa-regular fa-lg fa-square-caret-down"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
