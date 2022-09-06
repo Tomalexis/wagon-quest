@@ -6,28 +6,28 @@ export default class extends Controller {
 
   connect() {
     this.csrf = document.querySelector('[name="csrf-token"]').content
-    console.log("Is this thing on?")
+    // console.log("Is this thing on?")
     // console.log(this.continueLinkTarget)
     // console.log(this.continueLinkTarget.href)
   }
 
   continue(event) {
     event.preventDefault()
-    console.log("Continue?")
+    // console.log("Continue?")
     fetch(this.continueLinkTarget.href, {
       method: "PATCH",
       headers: { "Accept": "application/json", "X-CSRF-TOKEN": this.csrf }
     })
       .then(response => response.json())
       .then((data) => {
-        console.log(data)
+        // console.log(data)
         this.element.outerHTML = data.battle
       })
   }
 
   answer(event) {
     event.preventDefault()
-    console.log("Continue?")
+    // console.log("Continue?")
     const answerClickedLink = this.answerLinkTargets.find(link => link == event.currentTarget);
     fetch(answerClickedLink.href, {
       method: "POST",
@@ -35,7 +35,7 @@ export default class extends Controller {
     })
       .then(response => response.json())
       .then((data) => {
-        console.log(data)
+        // console.log(data)
         this.element.outerHTML = data.battle
       })
   }
