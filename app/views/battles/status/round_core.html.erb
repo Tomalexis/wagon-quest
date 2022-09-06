@@ -62,7 +62,7 @@
 
   <div class="dialog-box">
     <% if @battle.teacher.status == "secret_boss" %>
-      <%= form_for :secret_boss, url: round_game_answers_path(@round, GameAnswer.new), method: :post, data: { turbo: :false } do |f| %>
+      <%= form_for :secret_boss, url: round_game_answers_path(@round, GameAnswer.new), method: :post, data: { turbo: :false, action: "submit->game#secretBoss", game_target: "form" } do |f| %>
         <%= f.text_field :content %>
         <%= f.submit "Go" %>
       <% end %>

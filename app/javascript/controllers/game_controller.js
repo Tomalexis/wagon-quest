@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="music-in-battle"
 export default class extends Controller {
-  static targets = ["continueLink", "answerLink"]
+  static targets = ["continueLink", "answerLink", "form"]
 
   connect() {
     this.csrf = document.querySelector('[name="csrf-token"]').content
@@ -32,6 +32,21 @@ export default class extends Controller {
     fetch(answerClickedLink.href, {
       method: "POST",
       headers: { "Accept": "application/json", "X-CSRF-TOKEN": this.csrf }
+    })
+      .then(response => response.json())
+      .then((data) => {
+        // console.log(data)
+        this.element.outerHTML = data.battle
+      })
+  }
+
+  secretBoss(event) {
+    event.preventDefault()
+    // console.log("Continue?")
+    fetch(this.formTarget.action, {
+      method: "POST",
+      headers: { "Accept": "application/json", "X-CSRF-TOKEN": this.csrf },
+      body: new FormData(this.formTarget)
     })
       .then(response => response.json())
       .then((data) => {
