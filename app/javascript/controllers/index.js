@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import DialogSwitchController from "./dialog_switch_controller"
+application.register("dialog-switch", DialogSwitchController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
