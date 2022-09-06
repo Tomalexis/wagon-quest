@@ -69,7 +69,7 @@ class GamesController < ApplicationController
       teacher_status = ENV.fetch("TEACHER_STATUS_CHOSEN", "tutorial")
 
       teacher = Teacher.find_by(status: teacher_status)
-      battle = Battle.create(
+      this_battle = Battle.create(
         game: @game,
         teacher: teacher,
         hp_user: teacher.lesson.hp_user,
@@ -113,7 +113,7 @@ class GamesController < ApplicationController
       if this_battle.hp_user <= 0
         # teacher = Teacher.find_by(status: "secret_boss")
         teacher = this_battle.teacher
-        battle = Battle.create(
+        this_battle = Battle.create(
           game: @game,
           teacher: teacher,
           hp_user: teacher.lesson.hp_user,
@@ -124,6 +124,21 @@ class GamesController < ApplicationController
         @game.update(status: "map")
       end
     end
-    redirect_to game_path(@game)
+
+    respond_to do |format|
+      format.html { redirect_to game_path(@game) }
+
+      format.json do
+        round = this_battle.rounds.last
+
+        if round
+          game_answer = round.game_answers.last
+        end
+
+        render json: {
+          battle: render_to_string("battles/status/#{this_battle.status}", locals: { :@battle => this_battle, :@round => round, :@game_answer => game_answer }, layout: false, formats: [:html])
+        }
+      end
+    end
   end
 end

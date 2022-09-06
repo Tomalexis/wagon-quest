@@ -1,4 +1,10 @@
-<div class="battle-background" style="background-image: url('<%= image_path "background-plain.png" %>')">
+<div data-controller="music">
+  <audio src="/Wagon-music.mp3" loop='true' data-music-target='audio'></audio>
+  <button class="btn back" data-action='click->music#play' data-music-target='playButton'><i class="fa-solid fa-volume-xmark"></i></button>
+  <button class="btn back" data-action='click->music#pause' data-music-target='pauseButton' hidden><i class="fa-solid fa-volume-high"></i></button>
+</div>
+
+<div data-controller="game" class="battle-background" style="background-image: url('<%= image_path "background-plain.png" %>')">
   <div class="teacher-character">
     <div class="teacher-infos">
       <div><%= @battle.teacher.name %></div>
@@ -35,7 +41,7 @@
   </div>
   <div class="dialog-box">
     <%= "#{@battle.teacher.name} is challenging you to a flashcard battle !" %>
-    <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
+    <%= link_to continue_game_path(@game), data: { turbo_method: :patch, action: "click->game#continue", game_target: "continueLink" } do %>
       <i class="fa-regular fa-lg fa-square-caret-down"></i>
     <% end %>
   </div>
