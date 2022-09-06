@@ -35,7 +35,6 @@
         </div>
       <% else %>
         <%= link_to round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post, action: "click->game#answer", game_target: "answerLink" }, class:'answer-link' do %>
-        <%# { turbo_method: :patch, action: "click->game#continue", game_target: "continueLink" } %>
           <div class="answer">
             <%= answer.content %>
           </div>
