@@ -22,6 +22,8 @@ class GamesController < ApplicationController
     @game = current_user.games.find(params[:id])
 
     if @game.status == "map"
+
+      @user = current_user
       @user_position = "#{@game.user_position_x}-#{@game.user_position_y}"
 
       @teachers_per_position = {}
@@ -124,6 +126,6 @@ class GamesController < ApplicationController
         @game.update(status: "map")
       end
     end
-    redirect_to game_path(@game)
+    redirect_to game_path(@game), status: :see_other
   end
 end

@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="map"
 export default class extends Controller {
-  static targets = ['user', 'obstacle']
+  static targets = ['user', 'obstacle', 'dialog', 'teacherTile']
   static values = {
     userPositionX: Number,
     userPositionY: Number,
@@ -18,7 +18,7 @@ export default class extends Controller {
     // console.log(this.userPositionXValue)
     // console.log(this.userPositionYValue)
     // console.log(this.obstacleTargets)
-
+    //console.log(this.teacherTileTargets)
     window.addEventListener('keydown', this.logKey.bind(this));
   }
   logKey(e) {
@@ -27,7 +27,6 @@ export default class extends Controller {
     let newPositionY = this.userPositionYValue
 
     if (e.code == "ArrowLeft") {
-      // console.log('move to the left')
       if (this.userPositionXValue > this.mapPositionXMinValue){
         newPositionX = this.userPositionXValue - 1
       }
@@ -56,6 +55,10 @@ export default class extends Controller {
       this.userPositionYValue = newPositionY
 
       tile.appendChild(this.userTarget);
+    }
+
+    if (this.teacherTileTargets.includes(tile)) {
+      this.dialogTarget.hidden = false
     }
   }
 }
