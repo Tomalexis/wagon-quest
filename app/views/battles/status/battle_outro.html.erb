@@ -1,4 +1,4 @@
-<div class="battle-background" style="background-image: url('<%= image_path "background-plain.png" %>')">
+<div class="battle-background" style="background-image: url('<%= image_path "background-hd.png" %>')">
   <div class="teacher-character">
     <div class="teacher-infos">
       <div><%= @battle.teacher.name %></div>
@@ -14,13 +14,7 @@
       <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-mini' %>
     <% end %>
   </div>
-  <div class="stand-teacher">
-    <%= image_tag "socle-teacher.png" %>
-  </div>
 
-  <div class="stand-user">
-    <%= image_tag "socle-user.png" %>
-  </div>
   <div class="user-character">
       <div class="user-infos">
         <div><%= @game.user.username %></div>
@@ -31,7 +25,7 @@
           <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
         <% end %>
       </div>
-    <%= image_tag "back-user.png" %>
+    <%= image_tag "userstaticright.png" %>
   </div>
   <div class="dialog-box">
     <% if @battle.hp_teacher <= 0 %>
