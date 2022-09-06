@@ -1,5 +1,11 @@
 <div data-controller="music">
-  <audio src="/Wagon-music.mp3" loop='true' data-music-target='audio'></audio>
+  <% if @battle.teacher.status == "tutorial" %>
+    <audio src="/Slackbot_Battle.mp3" loop='true' data-music-target='audio'></audio>
+  <% elsif @battle.teacher.status == "regular" %>
+    <audio src="/Jeremy_Battle.mp3" loop='true' data-music-target='audio'></audio>
+  <% elsif @battle.teacher.status == "secret_boss" %>
+    <audio src="/Secret_Boss.mp3" loop='true' data-music-target='audio'></audio>
+  <% end %>
   <button class="btn back" data-action='click->music#play' data-music-target='playButton'><i class="fa-solid fa-volume-xmark"></i></button>
   <button class="btn back" data-action='click->music#pause' data-music-target='pauseButton' hidden><i class="fa-solid fa-volume-high"></i></button>
 </div>
