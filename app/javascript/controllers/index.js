@@ -15,3 +15,6 @@ application.register("map", MapController)
 
 import MusicController from "./music_controller"
 application.register("music", MusicController)
+
+import GameController from "./game_controller"
+application.register("game", GameController)

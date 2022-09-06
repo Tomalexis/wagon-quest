@@ -15,7 +15,7 @@ class GameAnswersController < ApplicationController
       @answer = @round.question.answers.find(params[:game_answer][:answer_id])
     end
     # créer un game_answer connecté au round et à l'answer
-    GameAnswer.create(
+    game_answer = GameAnswer.create(
       game: @round.battle.game,
       round: @round,
       answer: @answer
@@ -33,6 +33,16 @@ class GameAnswersController < ApplicationController
     # récupérer le game à partir de la battle
     @game = @battle.game
     # rediriger toujours vers la show du game
-    redirect_to game_path(@game), status: :see_other
+
+    respond_to do |format|
+      format.html { redirect_to game_path(@game), status: :see_other }
+
+      format.json do
+
+        render json: {
+          battle: render_to_string("battles/status/#{@battle.status}", locals: { :@battle => @battle, :@round => @round, :@game_answer => game_answer }, layout: false, formats: [:html])
+        }
+      end
+    end
   end
 end

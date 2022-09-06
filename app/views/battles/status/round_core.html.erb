@@ -1,4 +1,4 @@
-<div class="battle-background" style="background-image: url('<%= image_path "background-hd.png" %>')">
+<div data-controller="game" class="battle-background" style="background-image: url('<%= image_path "background-hd.png" %>')">
   <div class="teacher-character">
     <div class="teacher-infos">
       <div><%= @battle.teacher.name %></div>
@@ -25,13 +25,13 @@
       style="display: none"
     <% end %>
     >
-    <% @round.question.answers.each do |answer| %>
+    <% @round.question.answers.shuffle(random: Random.new(@round.id)).each do |answer| %>
       <% if @round.answer_ids.include?(answer.id) %>
         <div class="answer answer-disabled">
           <%= answer.content %>
         </div>
       <% else %>
-        <%= link_to round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post }, class:'answer-link' do %>
+        <%= link_to round_game_answers_path(@round, game_answer: {answer_id: answer.id}), data: { turbo_method: :post, action: "click->game#answer", game_target: "answerLink" }, class:'answer-link' do %>
           <div class="answer">
             <%= answer.content %>
           </div>
@@ -55,7 +55,7 @@
 
   <div class="dialog-box">
     <% if @battle.teacher.status == "secret_boss" %>
-      <%= form_for :secret_boss, url: round_game_answers_path(@round, GameAnswer.new), method: :post, data: { turbo: :false } do |f| %>
+      <%= form_for :secret_boss, url: round_game_answers_path(@round, GameAnswer.new), method: :post, data: { turbo: :false, action: "submit->game#secretBoss", game_target: "form" } do |f| %>
         <%= f.text_field :content %>
         <%= f.submit "Go" %>
       <% end %>
