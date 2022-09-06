@@ -136,7 +136,15 @@ class GamesController < ApplicationController
         end
 
         render json: {
-          battle: render_to_string("battles/status/#{this_battle.status}", locals: { :@battle => this_battle, :@round => round, :@game_answer => game_answer }, layout: false, formats: [:html])
+          battle: render_to_string(
+            "battles/status/#{this_battle.status}",
+            locals: {
+              :@battle => this_battle,
+              :@round => round,
+              :@game_answer => game_answer
+            },
+            layout: false, formats: [:html]
+          )
         }
       end
     end
