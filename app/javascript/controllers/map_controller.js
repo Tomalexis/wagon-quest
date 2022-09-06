@@ -22,26 +22,27 @@ export default class extends Controller {
     window.addEventListener('keydown', this.logKey.bind(this));
   }
   logKey(e) {
-    // console.log(e.code)
+    console.log(e.code)
     let newPositionX = this.userPositionXValue
     let newPositionY = this.userPositionYValue
 
-    if (e.code == "ArrowLeft") {
+    if (e.code == "ArrowLeft" || e.code == "KeyA") {
       // console.log('move to the left')
       if (this.userPositionXValue > this.mapPositionXMinValue){
         newPositionX = this.userPositionXValue - 1
       }
-    } else if (e.code == "ArrowRight") {
+    } else if (e.code == "ArrowRight" || e.code == "KeyD" ) {
       // console.log('move to the right')
       if (this.userPositionXValue < this.mapPositionXMaxValue){
         newPositionX = this.userPositionXValue + 1
       }
-    } else if (e.code == "ArrowUp") {
+    } else if (e.code == "ArrowUp" || e.code == "KeyW") {
       // console.log('move up')
       if (this.userPositionYValue > this.mapPositionYMinValue){
         newPositionY = this.userPositionYValue - 1
+        //this.userTarget =
       }
-    } else if (e.code == "ArrowDown") {
+    } else if (e.code == "ArrowDown" || e.code == "KeyS") {
       // console.log('move down')
       if (this.userPositionYValue < this.mapPositionYMaxValue){
         newPositionY = this.userPositionYValue + 1

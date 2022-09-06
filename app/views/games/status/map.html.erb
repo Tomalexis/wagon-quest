@@ -31,6 +31,8 @@
           <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
         <% end %>
         <% if @user_position == position %>
+          #d.none
+
           <%= image_tag "userstatic.png", width: 45, height: 93, class: "user", data: {'map-target': 'user'}%>
         <% end %>
       </div>
