@@ -18,13 +18,13 @@ export default class extends Controller {
     // console.log(this.userPositionXValue)
     // console.log(this.userPositionYValue)
     // console.log(this.obstacleTargets)
-    console.log(this.userFaceTarget)
-    console.log(this.userBackTarget)
+    // console.log(this.userFaceTarget)
+    // console.log(this.userBackTarget)
 
     window.addEventListener('keydown', this.logKey.bind(this));
   }
   logKey(e) {
-    console.log(e.code)
+    // console.log(e.code)
     let newPositionX = this.userPositionXValue
     let newPositionY = this.userPositionYValue
 
