@@ -1,4 +1,4 @@
-<% tile_count_y = 18 %>
+<% tile_count_y = 19 %>
 <% tile_count_x = 27 %>
 
 <div data-controller="music">
@@ -8,7 +8,6 @@
 </div>
 
 <div class="battle-background" style="background-image: url('<%= image_path "poke-back.png" %>')">
-
   <div class="map"
     data-controller="map"
     data-map-user-position-x-value="<%= @game.user_position_x %>"
@@ -34,8 +33,14 @@
             <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 45, height: 93, class: "teacher" %>
             <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
           <% end %>
-          <% if @user_position == position %>
-            <%= image_tag "userstatic.png", width: 45, height: 93, class: "user", data: {'map-target': 'user'}%>
+          
+          <% if @user_position == position %>            
+            <div data-map-target="user">
+              <%= image_tag "userstaticback.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userBack"}%>
+              <%= image_tag "userstatic.png", width: 45, height: 93, class: "user", data: {'map-target': "userFace"}%>
+              <%= image_tag "userstaticright.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userRight"}%>
+              <%= image_tag "userstaticleft.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userLeft"}%>
+            </div>
           <% end %>
         </div>
       <% end %>

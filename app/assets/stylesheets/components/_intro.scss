@@ -19,8 +19,6 @@
     width: $tile-size * $scale;
     height: $tile-size * $scale;
     position: relative;
-    display: flex;
-    justify-content: center;
   }
 
   .teacher, .user {

@@ -32,8 +32,14 @@
             <% end %>
           >
             <% if @user_position == position %>
-              <%= image_tag "userstatic.png", width: 44, height: 92, class: "user", data: {'map-target': 'user'}%>
+              <div data-map-target="user">
+                <%= image_tag "userstaticback.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userBack"}%>
+                <%= image_tag "userstatic.png", width: 45, height: 93, class: "user", data: {'map-target': "userFace"}%>
+                <%= image_tag "userstaticright.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userRight"}%>
+                <%= image_tag "userstaticleft.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userLeft"}%>
+              </div>
             <% end %>
+            
             <% if @slackbot_position == position %>
               <%= cl_image_tag @slackbot.avatar_map.key, width: 48, height: 96, class: "teacher" %>
             <% end %>
@@ -41,6 +47,7 @@
         <% end %>
       <% end %>
     </div>
+    
     <div class="dialog-box" data-map-target="dialog" hidden>
       <div data-controller="dialog-switch">
         <div data-dialog-switch-target='firstDialog'>
