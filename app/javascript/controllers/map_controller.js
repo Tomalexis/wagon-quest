@@ -11,6 +11,7 @@ export default class extends Controller {
     mapPositionXMax: Number,
     mapPositionYMin: Number,
     mapPositionYMax: Number,
+    conversation: Boolean
   }
 
   connect() {
@@ -71,7 +72,12 @@ export default class extends Controller {
     const tileId = `${newPositionX}-${newPositionY}`
     const tile = document.getElementById(tileId)
 
-    if (!this.obstacleTargets.includes(tile)) {
+    if (this.teacherTileTargets.includes(tile)) {
+      this.dialogTarget.hidden = false
+      this.conversationValue = true
+    }
+
+    if (this.conversationValue === false && !this.obstacleTargets.includes(tile)) {
       this.userPositionXValue = newPositionX
       this.userPositionYValue = newPositionY
 
@@ -81,8 +87,5 @@ export default class extends Controller {
       tile.appendChild(this.userTarget);
     }
 
-    if (this.teacherTileTargets.includes(tile)) {
-      this.dialogTarget.hidden = false
-    }
   }
 }

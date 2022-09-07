@@ -7,8 +7,7 @@ class BattlesController < ApplicationController
     # Changer le status du game en "battle"
     @game.update(
       user_position_x: params[:user_position_x],
-      user_position_y: params[:user_position_y],
-      status: "battle"
+      user_position_y: params[:user_position_y]
     )
     # Trouver le teacher par rapport à la position du user (4 cases au tour)
     position_left_x = (params[:user_position_x].to_i - 1).to_s
@@ -36,13 +35,20 @@ class BattlesController < ApplicationController
       position_down_x, position_down_y
     )
     # Créer la battle comme dans le continue du GamesController
-    Battle.create(
-      game: @game,
-      teacher: @teacher,
-      hp_user: @teacher.lesson.hp_user,
-      hp_teacher: @teacher.lesson.hp_teacher,
-      status: "battle_intro"
-    )
+    if @teacher
+      @game.update(
+        status: "battle"
+      )
+      Battle.create(
+        game: @game,
+        teacher: @teacher,
+        hp_user: @teacher.lesson.hp_user,
+        hp_teacher: @teacher.lesson.hp_teacher,
+        status: "battle_intro"
+      )
+    else
+      flash[:alert] = "Don't break my code please."
+    end
     # Rediriger sur la show du game
     redirect_to game_path(@game), status: :see_other
 
