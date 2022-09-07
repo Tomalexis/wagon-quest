@@ -214,7 +214,7 @@ class GamesController < ApplicationController
     end
   end
 
-  def continue # for secret_boss
+  def continue
     @game = current_user.games.find(params[:id])
 
     if @game.status == "intro"
@@ -274,7 +274,11 @@ class GamesController < ApplicationController
           status: "battle_intro"
         )
       elsif this_battle.hp_teacher <= 0
-        @game.update(status: "map")
+        if this_battle.teacher.status == "tutorial"
+          @game.update(status: "map", user_position_x: 48, user_position_y: 37)
+        else
+          @game.update(status: "map")
+        end
       end
     end
 
