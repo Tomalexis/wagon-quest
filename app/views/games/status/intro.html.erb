@@ -39,7 +39,7 @@
                 <%= image_tag "userstaticleft.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userLeft"}%>
               </div>
             <% end %>
-            
+
             <% if @slackbot_position == position %>
               <%= cl_image_tag @slackbot.avatar_map.key, width: 48, height: 96, class: "teacher" %>
             <% end %>
@@ -47,7 +47,7 @@
         <% end %>
       <% end %>
     </div>
-    
+
     <div class="dialog-box" data-map-target="dialog" hidden>
       <div data-controller="dialog-switch">
         <div data-dialog-switch-target='firstDialog'>
@@ -62,6 +62,10 @@
           Slackbot: Yes... And your lack of seriousness pains me... It's time to fight !
           <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
             <i class="fa-regular fa-lg fa-square-caret-down"></i>
+          <% end %>
+          <%= form_for :battle, url: game_battles_path(@game), method: :post, data: { turbo: :false } do |f| %>
+            <%= hidden_field_tag :user_position_x, @game.user_position_x, data: { map_target: "userPositionXInput" } %>
+            <%= hidden_field_tag :user_position_y, @game.user_position_y, data: { map_target: "userPositionYInput" } %>
           <% end %>
         </div>
       </div>
