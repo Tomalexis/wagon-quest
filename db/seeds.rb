@@ -30,7 +30,7 @@ first_lesson = Lesson.create!(
 
 second_lesson = Lesson.create!(
   name: "Savoir vivre rules",
-  hp_user: 10,
+  hp_user: 8,
   hp_teacher: 4
 )
 
