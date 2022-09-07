@@ -63,6 +63,10 @@
           <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
             <i class="fa-regular fa-lg fa-square-caret-down"></i>
           <% end %>
+          <%= form_for :battle, url: game_battles_path(@game), method: :post, data: { turbo: :false } do |f| %>
+            <%= hidden_field_tag :user_position_x, @game.user_position_x, data: { map_target: "userPositionXInput" } %>
+            <%= hidden_field_tag :user_position_y, @game.user_position_y, data: { map_target: "userPositionYInput" } %>
+          <% end %>
         </div>
       </div>
     </div>
