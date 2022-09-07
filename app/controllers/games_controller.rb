@@ -137,7 +137,7 @@ class GamesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to game_path(@game), status: :see_other }
+      format.html { redirect_to game_path(@game) }
 
       format.json do
         round = this_battle.rounds.last

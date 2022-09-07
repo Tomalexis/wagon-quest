@@ -9,7 +9,7 @@
   <div class="wrapper-start d-flex flex-column">
     <h1>Wagon Quest</h1>
     <div class="mini-wrap">
-    <p style="font-family: Inconsolata; font-size: 1rem;">Name your character (10 characters max)</p>
+    <p style="font-family: Inconsolata; font-size: 1rem; padding-bottom: 10px;">Name your character (10 characters max)</p>
       <%= simple_form_for(@game) do |f| %>
       <div class="d-flex justify-content-center flex-column">
         <%= text_area_tag :username, nil, maxlength: 10, placeholder: "Paul Mc Cartney...", class:'input-box'%>
@@ -19,3 +19,9 @@
     </div>
   </div>
 </div>
+
+  <div class="footer">
+    <div class="footer-copyright">
+      This website is made by Paryssa, Luther and Thomas <i class="fa-solid fa-handshake-simple"></i> at Le Wagon
+    </div>
+  </div>
