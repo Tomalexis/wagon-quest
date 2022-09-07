@@ -33,8 +33,8 @@
             <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 45, height: 93, class: "teacher" %>
             <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
           <% end %>
-          
-          <% if @user_position == position %>            
+
+          <% if @user_position == position %>
             <div data-map-target="user">
               <%= image_tag "userstaticback.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userBack"}%>
               <%= image_tag "userstatic.png", width: 45, height: 93, class: "user", data: {'map-target': "userFace"}%>
@@ -60,6 +60,11 @@
           Jeremy: Let me teach you the rules around here !
           <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
             <i class="fa-regular fa-lg fa-square-caret-down"></i>
+          <% end %>
+          <%= form_for :battle, url: game_battles_path(@game), method: :post, data: { turbo: :false } do |f| %>
+            <%= hidden_field_tag :user_position_x, @game.user_position_x, data: { map_target: "userPositionXInput" } %>
+            <%= hidden_field_tag :user_position_y, @game.user_position_y, data: { map_target: "userPositionYInput" } %>
+            <%= f.submit "Go" %>
           <% end %>
         </div>
       </div>

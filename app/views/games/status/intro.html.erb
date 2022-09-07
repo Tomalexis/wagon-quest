@@ -39,7 +39,7 @@
                 <%= image_tag "userstaticleft.png", width: 45, height: 93, class: "user d-none", data: {'map-target': "userLeft"}%>
               </div>
             <% end %>
-            
+
             <% if @slackbot_position == position %>
               <%= cl_image_tag @slackbot.avatar_map.key, width: 48, height: 96, class: "teacher" %>
             <% end %>
@@ -47,7 +47,7 @@
         <% end %>
       <% end %>
     </div>
-    
+
     <div class="dialog-box" data-map-target="dialog" hidden>
       <div data-controller="dialog-switch">
         <div data-dialog-switch-target='firstDialog'>

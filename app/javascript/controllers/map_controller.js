@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="map"
 export default class extends Controller {
-  static targets = ['user', 'obstacle', 'dialog', 'teacherTile', 'userFace', 'userBack', 'userRight', 'userLeft']
+  static targets = ['user', 'obstacle', 'dialog', 'teacherTile', 'userFace', 'userBack', 'userRight', 'userLeft', 'userPositionXInput', 'userPositionYInput']
 
   static values = {
     userPositionX: Number,
@@ -74,6 +74,9 @@ export default class extends Controller {
     if (!this.obstacleTargets.includes(tile)) {
       this.userPositionXValue = newPositionX
       this.userPositionYValue = newPositionY
+
+      this.userPositionXInputTarget.value = newPositionX
+      this.userPositionYInputTarget.value = newPositionY
 
       tile.appendChild(this.userTarget);
     }
