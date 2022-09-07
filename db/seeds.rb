@@ -25,13 +25,43 @@ puts 'Adding lessons'
 first_lesson = Lesson.create!(
   name: "Setup terminal and Git",
   hp_user: 9999,
-  hp_teacher: 10
+  hp_teacher: 4
 )
 
 second_lesson = Lesson.create!(
   name: "Savoir vivre rules",
   hp_user: 10,
-  hp_teacher: 8
+  hp_teacher: 4
+)
+
+third_lesson = Lesson.create!(
+  name: "Javascript",
+  hp_user: 10,
+  hp_teacher: 4
+)
+
+fourth_lesson = Lesson.create!(
+  name: "Bootstrap",
+  hp_user: 10,
+  hp_teacher: 4
+)
+
+fifth_lesson = Lesson.create!(
+  name: "Ruby",
+  hp_user: 10,
+  hp_teacher: 4
+)
+
+sixth_lesson = Lesson.create!(
+  name: "Rails",
+  hp_user: 10,
+  hp_teacher: 4
+)
+
+final_lesson = Lesson.create!(
+  name: "Finals",
+  hp_user: 10,
+  hp_teacher: 4
 )
 
 secret_lesson = Lesson.create!(
@@ -54,20 +84,20 @@ second_slackbot_question = Question.create!(
   lesson_id: first_lesson.id
 )
 
-third_slackbot_question = Question.create!(
-  content: 'How do you go from current directory to a child folder ?',
-  lesson_id: first_lesson.id
-)
+# third_slackbot_question = Question.create!(
+#   content: 'How do you go from current directory to a child folder ?',
+#   lesson_id: first_lesson.id
+# )
 
-fourth_slackbot_question = Question.create!(
-  content: 'How do you create a file in current directory ?',
-  lesson_id: first_lesson.id
-)
+# fourth_slackbot_question = Question.create!(
+#   content: 'How do you create a file in current directory ?',
+#   lesson_id: first_lesson.id
+# )
 
-fifth_slackbot_question = Question.create!(
-  content: 'How can you tell if you have uncommitted changes in your project ?',
-  lesson_id: first_lesson.id
-)
+# fifth_slackbot_question = Question.create!(
+#   content: 'How can you tell if you have uncommitted changes in your project ?',
+#   lesson_id: first_lesson.id
+# )
 
 puts 'Slackbot questions created'
 
@@ -78,15 +108,15 @@ first_jeremy_question = Question.create!(
   lesson_id: second_lesson.id
 )
 
-second_jeremy_question = Question.create!(
-  content: 'When can you grab beers in the fridge ?',
-  lesson_id: second_lesson.id
-)
+# second_jeremy_question = Question.create!(
+#   content: 'When can you grab beers in the fridge ?',
+#   lesson_id: second_lesson.id
+# )
 
-third_jeremy_question = Question.create!(
-  content: 'Where should you put your dirty coffee cups ?',
-  lesson_id: second_lesson.id
-)
+# third_jeremy_question = Question.create!(
+#   content: 'Where should you put your dirty coffee cups ?',
+#   lesson_id: second_lesson.id
+# )
 
 fourth_jeremy_question = Question.create!(
   content: 'How many bottles of shampoo do I use each week to keep my hair so silky ?',
@@ -199,77 +229,77 @@ second_slackbot_question_fourth_answer = Answer.create!(
   question_id: second_slackbot_question.id
 )
 
-third_slackbot_question_first_answer = Answer.create!(
-  content: 'cd <folder_name>',
-  kind: "perfect",
-  question_id: third_slackbot_question.id
-)
+# third_slackbot_question_first_answer = Answer.create!(
+#   content: 'cd <folder_name>',
+#   kind: "perfect",
+#   question_id: third_slackbot_question.id
+# )
 
-third_slackbot_question_second_answer = Answer.create!(
-  content: 'cd',
-  kind: "correct",
-  question_id: third_slackbot_question.id
-)
+# third_slackbot_question_second_answer = Answer.create!(
+#   content: 'cd',
+#   kind: "correct",
+#   question_id: third_slackbot_question.id
+# )
 
-third_slackbot_question_third_answer = Answer.create!(
-  content: 'pwd',
-  kind: "misleading",
-  question_id: third_slackbot_question.id
-)
+# third_slackbot_question_third_answer = Answer.create!(
+#   content: 'pwd',
+#   kind: "misleading",
+#   question_id: third_slackbot_question.id
+# )
 
-third_slackbot_question_fourth_answer = Answer.create!(
-  content: 'laserdisc <folder_name>',
-  kind: "weird",
-  question_id: third_slackbot_question.id
-)
+# third_slackbot_question_fourth_answer = Answer.create!(
+#   content: 'laserdisc <folder_name>',
+#   kind: "weird",
+#   question_id: third_slackbot_question.id
+# )
 
-fourth_slackbot_question_first_answer = Answer.create!(
-  content: 'touch <file_name>',
-  kind: "perfect",
-  question_id: fourth_slackbot_question.id
-)
+# fourth_slackbot_question_first_answer = Answer.create!(
+#   content: 'touch <file_name>',
+#   kind: "perfect",
+#   question_id: fourth_slackbot_question.id
+# )
 
-fourth_slackbot_question_second_answer = Answer.create!(
-  content: 'touch',
-  kind: "correct",
-  question_id: fourth_slackbot_question.id
-)
+# fourth_slackbot_question_second_answer = Answer.create!(
+#   content: 'touch',
+#   kind: "correct",
+#   question_id: fourth_slackbot_question.id
+# )
 
-fourth_slackbot_question_third_answer = Answer.create!(
-  content: 'create <file_name>',
-  kind: "misleading",
-  question_id: fourth_slackbot_question.id
-)
+# fourth_slackbot_question_third_answer = Answer.create!(
+#   content: 'create <file_name>',
+#   kind: "misleading",
+#   question_id: fourth_slackbot_question.id
+# )
 
-fourth_slackbot_question_fourth_answer = Answer.create!(
-  content: 'Cause everytime we touch I get this feeling 🎵',
-  kind: "weird",
-  question_id: fourth_slackbot_question.id
-)
+# fourth_slackbot_question_fourth_answer = Answer.create!(
+#   content: 'Cause everytime we touch I get this feeling 🎵',
+#   kind: "weird",
+#   question_id: fourth_slackbot_question.id
+# )
 
-fifth_slackbot_question_first_answer = Answer.create!(
-  content: 'git status',
-  kind: "perfect",
-  question_id: fifth_slackbot_question.id
-)
+# fifth_slackbot_question_first_answer = Answer.create!(
+#   content: 'git status',
+#   kind: "perfect",
+#   question_id: fifth_slackbot_question.id
+# )
 
-fifth_slackbot_question_second_answer = Answer.create!(
-  content: 'gst',
-  kind: "correct",
-  question_id: fifth_slackbot_question.id
-)
+# fifth_slackbot_question_second_answer = Answer.create!(
+#   content: 'gst',
+#   kind: "correct",
+#   question_id: fifth_slackbot_question.id
+# )
 
-fifth_slackbot_question_third_answer = Answer.create!(
-  content: 'git log',
-  kind: "misleading",
-  question_id: fifth_slackbot_question.id
-)
+# fifth_slackbot_question_third_answer = Answer.create!(
+#   content: 'git log',
+#   kind: "misleading",
+#   question_id: fifth_slackbot_question.id
+# )
 
-fifth_slackbot_question_fourth_answer = Answer.create!(
-  content: 'I am not looking for commitment right now...',
-  kind: "weird",
-  question_id: fifth_slackbot_question.id
-)
+# fifth_slackbot_question_fourth_answer = Answer.create!(
+#   content: 'I am not looking for commitment right now...',
+#   kind: "weird",
+#   question_id: fifth_slackbot_question.id
+# )
 
 first_jeremy_question_first_answer = Answer.create!(
   content: '8:45 AM',
@@ -295,53 +325,53 @@ first_jeremy_question_fourth_answer = Answer.create!(
   question_id: first_jeremy_question.id
 )
 
-second_jeremy_question_first_answer = Answer.create!(
-  content: 'Only during events after working hours',
-  kind: "perfect",
-  question_id: second_jeremy_question.id
-)
+# second_jeremy_question_first_answer = Answer.create!(
+#   content: 'Only during events after working hours',
+#   kind: "perfect",
+#   question_id: second_jeremy_question.id
+# )
 
-second_jeremy_question_second_answer = Answer.create!(
-  content: 'Only after 6:00 PM',
-  kind: "correct",
-  question_id: second_jeremy_question.id
-)
+# second_jeremy_question_second_answer = Answer.create!(
+#   content: 'Only after 6:00 PM',
+#   kind: "correct",
+#   question_id: second_jeremy_question.id
+# )
 
-second_jeremy_question_third_answer = Answer.create!(
-  content: 'During lunch break',
-  kind: "misleading",
-  question_id: second_jeremy_question.id
-)
+# second_jeremy_question_third_answer = Answer.create!(
+#   content: 'During lunch break',
+#   kind: "misleading",
+#   question_id: second_jeremy_question.id
+# )
 
-second_jeremy_question_fourth_answer = Answer.create!(
-  content: 'Well I usually mix my cereals with a white russian so...',
-  kind: "weird",
-  question_id: second_jeremy_question.id
-)
+# second_jeremy_question_fourth_answer = Answer.create!(
+#   content: 'Well I usually mix my cereals with a white russian so...',
+#   kind: "weird",
+#   question_id: second_jeremy_question.id
+# )
 
-third_jeremy_question_first_answer = Answer.create!(
-  content: 'In the dishwasher',
-  kind: "perfect",
-  question_id: third_jeremy_question.id
-)
+# third_jeremy_question_first_answer = Answer.create!(
+#   content: 'In the dishwasher',
+#   kind: "perfect",
+#   question_id: third_jeremy_question.id
+# )
 
-third_jeremy_question_second_answer = Answer.create!(
-  content: 'In the sink',
-  kind: "correct",
-  question_id: third_jeremy_question.id
-)
+# third_jeremy_question_second_answer = Answer.create!(
+#   content: 'In the sink',
+#   kind: "correct",
+#   question_id: third_jeremy_question.id
+# )
 
-third_jeremy_question_third_answer = Answer.create!(
-  content: 'I can leave it at my seat',
-  kind: "misleading",
-  question_id: third_jeremy_question.id
-)
+# third_jeremy_question_third_answer = Answer.create!(
+#   content: 'I can leave it at my seat',
+#   kind: "misleading",
+#   question_id: third_jeremy_question.id
+# )
 
-third_jeremy_question_fourth_answer = Answer.create!(
-  content: 'I drink tea so the rules does not apply to me !',
-  kind: "weird",
-  question_id: third_jeremy_question.id
-)
+# third_jeremy_question_fourth_answer = Answer.create!(
+#   content: 'I drink tea so the rules does not apply to me !',
+#   kind: "weird",
+#   question_id: third_jeremy_question.id
+# )
 
 fourth_jeremy_question_first_answer = Answer.create!(
   content: 'One (family) bottle',
@@ -525,8 +555,8 @@ jeremy = Teacher.create!(
   feedback_intro: "Fun is important but so are rules Dude ! Never forget that !",
   feedback_user_won: 'Damn Dude, you are pretty good for a newbie !',
   feedback_user_lost: 'Dude, that is not a very chill attitude, go have an ice cream and try again !',
-  position_x: 10,
-  position_y: 10,
+  position_x: 14,
+  position_y: 23,
   lesson_id: second_lesson.id,
   status: "regular"
 )
@@ -557,5 +587,110 @@ seb.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/pn
 file = File.open(Rails.root.join("app/assets/images/seb_square.png"))
 seb.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 seb.save!
+
+tim = Teacher.create!(
+  name: 'Timothée',
+  feedback_answer_perfect: '...',
+  feedback_answer_correct: '...',
+  feedback_answer_misleading: '...',
+  feedback_answer_weird: '...',
+  feedback_intro: "...",
+  feedback_user_won: '...',
+  feedback_user_lost: '...',
+  position_x: 2,
+  position_y: 20,
+  lesson_id: third_lesson.id,
+  status: "regular"
+)
+
+file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+tim.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
+file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+tim.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
+tim.save!
+
+hugo = Teacher.create!(
+  name: 'Hugo',
+  feedback_answer_perfect: '...',
+  feedback_answer_correct: '...',
+  feedback_answer_misleading: '...',
+  feedback_answer_weird: '...',
+  feedback_intro: "...",
+  feedback_user_won: '...',
+  feedback_user_lost: '...',
+  position_x: 10,
+  position_y: 4,
+  lesson_id: fourth_lesson.id,
+  status: "regular"
+)
+
+file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+hugo.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
+file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+hugo.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
+hugo.save!
+
+diane = Teacher.create!(
+  name: 'Diane',
+  feedback_answer_perfect: '...',
+  feedback_answer_correct: '...',
+  feedback_answer_misleading: '...',
+  feedback_answer_weird: '...',
+  feedback_intro: "...",
+  feedback_user_won: '...',
+  feedback_user_lost: '...',
+  position_x: 28,
+  position_y: 4,
+  lesson_id: fifth_lesson.id,
+  status: "regular"
+)
+
+file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+diane.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
+file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+diane.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
+diane.save!
+
+paul = Teacher.create!(
+  name: 'Paul',
+  feedback_answer_perfect: '...',
+  feedback_answer_correct: '...',
+  feedback_answer_misleading: '...',
+  feedback_answer_weird: '...',
+  feedback_intro: "...",
+  feedback_user_won: '...',
+  feedback_user_lost: '...',
+  position_x: 50,
+  position_y: 9,
+  lesson_id: sixth_lesson.id,
+  status: "regular"
+)
+
+file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+paul.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
+file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+paul.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
+paul.save!
+
+boris = Teacher.create!(
+  name: 'Boris',
+  feedback_answer_perfect: '...',
+  feedback_answer_correct: '...',
+  feedback_answer_misleading: '...',
+  feedback_answer_weird: '...',
+  feedback_intro: "...",
+  feedback_user_won: '...',
+  feedback_user_lost: '...',
+  position_x: 46,
+  position_y: 18,
+  lesson_id: final_lesson.id,
+  status: "final_boss"
+)
+
+file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+boris.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
+file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+boris.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
+boris.save!
 
 puts 'Finish !'
