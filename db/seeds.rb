@@ -603,9 +603,9 @@ tim = Teacher.create!(
   status: "regular"
 )
 
-file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+file = File.open(Rails.root.join("app/assets/images/timstatic.png"))
 tim.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
-file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+file = File.open(Rails.root.join("app/assets/images/timstatic.png"))
 tim.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 tim.save!
 
@@ -624,9 +624,9 @@ hugo = Teacher.create!(
   status: "regular"
 )
 
-file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+file = File.open(Rails.root.join("app/assets/images/hugostatic.png"))
 hugo.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
-file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+file = File.open(Rails.root.join("app/assets/images/hugostatic.png"))
 hugo.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 hugo.save!
 
@@ -645,9 +645,9 @@ diane = Teacher.create!(
   status: "regular"
 )
 
-file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+file = File.open(Rails.root.join("app/assets/images/dianestatic.png"))
 diane.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
-file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+file = File.open(Rails.root.join("app/assets/images/dianestatic.png"))
 diane.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 diane.save!
 
@@ -666,9 +666,9 @@ paul = Teacher.create!(
   status: "regular"
 )
 
-file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+file = File.open(Rails.root.join("app/assets/images/paulstatic.png"))
 paul.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
-file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+file = File.open(Rails.root.join("app/assets/images/paulstatic.png"))
 paul.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 paul.save!
 
@@ -681,15 +681,15 @@ boris = Teacher.create!(
   feedback_intro: "...",
   feedback_user_won: '...',
   feedback_user_lost: '...',
-  position_x: 46,
-  position_y: 18,
+  position_x: 45,
+  position_y: 16,
   lesson_id: final_lesson.id,
   status: "final_boss"
 )
 
-file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+file = File.open(Rails.root.join("app/assets/images/borisstatic.png"))
 boris.avatar_map.attach(io: file, filename: "teacher.png", content_type: "image/png")
-file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
+file = File.open(Rails.root.join("app/assets/images/borisstatic.png"))
 boris.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 boris.save!
 
