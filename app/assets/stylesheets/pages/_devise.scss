@@ -1,0 +1,55 @@
+.game-form {
+  border: 2px solid #243038;
+  border-radius: 5px;
+  padding: 1vh;
+  box-shadow: rgba(36, 48, 56, 0.4) 5px 5px, rgba(36, 48, 56, 0.3) 10px 10px, rgba(36, 48, 56, 0.2) 15px 15px, rgba(36, 48, 56, 0.1) 20px 20px, rgba(36, 48, 56, 0.05) 25px 25px;
+}
+ .page-subtitle {
+  text-align: center;
+  padding-top: 2vh;
+  font-family: 'Inconsolata',monospace;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #243038;
+ }
+
+ .form-label {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: #243038;
+ }
+
+ .btn-flat {
+  border: 2px solid #50C7BB;
+  padding: 5px 24px;
+  border-radius: 12px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-family: 'Silkscreen', cursive;
+  color: #50C7BB;
+}
+
+.btn-flat:hover {
+  opacity: 1;
+  background-color: #50C7BB;
+  color: #F8E4C8;
+  border-color: #F8E4C8;
+}
+
+ .booking {
+  background-color: #243038;
+  color: #EBD6B8;
+  border-radius: 0px;
+  padding: 3px 12px;
+  box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.05);
+  opacity: 1;
+  border: none !important;
+  font-size: 24px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.booking:hover {
+  background-color: #2c3b46;
+}
