@@ -49,26 +49,24 @@
       <% end %>
     </div>
 
-    <div class="dialog-box" data-map-target="dialog" hidden>
-      <div data-controller="dialog-switch">
-        <div data-dialog-switch-target='firstDialog'>
-          Slackbot: Hello student. I see that you did not do your flashcards tonight...
-          <i class="fa-regular fa-lg fa-square-caret-down" data-action='click->dialog-switch#next'></i>
-        </div>
-        <div data-dialog-switch-target='secondDialog' hidden>
-          <%= @user.username %> : Wait are you real Slackbot ?!!
-          <i class="fa-regular fa-lg fa-square-caret-down" data-action='click->dialog-switch#next2'></i>
-        </div>
-        <div data-dialog-switch-target='thirdDialog' hidden>
-          Slackbot: Yes... And your lack of seriousness pains me... It's time to fight !
-          <%= link_to continue_game_path(@game), data: { turbo_method: :patch } do %>
-            <i class="fa-regular fa-lg fa-square-caret-down"></i>
-          <% end %>
-          <%= form_for :battle, url: game_battles_path(@game), method: :post, data: { turbo: :false } do |f| %>
-            <%= hidden_field_tag :user_position_x, @game.user_position_x, data: { map_target: "userPositionXInput" } %>
-            <%= hidden_field_tag :user_position_y, @game.user_position_y, data: { map_target: "userPositionYInput" } %>
-          <% end %>
-        </div>
+    <div class="dialog-box" data-map-target="dialog" data-controller="dialog-switch" data-dialog-switch-current-dialog-value="1" hidden>
+      <div data-dialog-switch-target='firstDialog'>
+        Slackbot: Hello student. I see that you did not do your flashcards tonight...
+        <i class="fa-regular fa-lg fa-square-caret-down" data-dialog-switch-target='continue' data-action='click->dialog-switch#next'></i>
+      </div>
+      <div data-dialog-switch-target='secondDialog' hidden>
+        <%= @user.username %> : Wait are you real Slackbot ?!!
+        <i class="fa-regular fa-lg fa-square-caret-down" data-dialog-switch-target='continue' data-action='click->dialog-switch#next2'></i>
+      </div>
+      <div data-dialog-switch-target='thirdDialog' hidden>
+        Slackbot: Yes... And your lack of seriousness pains me... It's time to fight !
+        <%= link_to continue_game_path(@game), data: { turbo_method: :patch, dialog_switch_target: 'continue' } do %>
+          <i class="fa-regular fa-lg fa-square-caret-down"></i>
+        <% end %>
+        <%= form_for :battle, url: game_battles_path(@game), method: :post, data: { turbo: :false } do |f| %>
+          <%= hidden_field_tag :user_position_x, @game.user_position_x, data: { map_target: "userPositionXInput" } %>
+          <%= hidden_field_tag :user_position_y, @game.user_position_y, data: { map_target: "userPositionYInput" } %>
+        <% end %>
       </div>
     </div>
   </div>
