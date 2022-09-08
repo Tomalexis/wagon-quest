@@ -7,6 +7,9 @@ import { application } from "./application"
 import DialogSwitchController from "./dialog_switch_controller"
 application.register("dialog-switch", DialogSwitchController)
 
+import GameController from "./game_controller"
+application.register("game", GameController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
@@ -16,5 +19,5 @@ application.register("map", MapController)
 import MusicController from "./music_controller"
 application.register("music", MusicController)
 
-import GameController from "./game_controller"
-application.register("game", GameController)
+import TransitionController from "./transition_controller"
+application.register("transition", TransitionController)

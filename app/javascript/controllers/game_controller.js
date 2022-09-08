@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="music-in-battle"
 export default class extends Controller {
-  static targets = ["continueLink", "answerLink", "form"]
+  static targets = ["continueLink", "answerLink", "form", "appear"]
   static values = {battleStatus: String}
 
   connect() {
@@ -11,7 +11,9 @@ export default class extends Controller {
     // console.log(this.battleStatusValue)
     // console.log(this.continueLinkTarget)
     // console.log(this.continueLinkTarget.href)
-
+    setTimeout(() => {
+      this.appearTarget.hidden = false
+    }, 1000);
     window.addEventListener('keydown', this.logKey.bind(this));
   }
 

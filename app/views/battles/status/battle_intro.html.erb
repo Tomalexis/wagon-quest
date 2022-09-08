@@ -1,8 +1,10 @@
+<%= render "battles/status/battle_transition" %>
+
 <div data-controller="music">
   <% if @battle.teacher.status == "tutorial" %>
     <audio src="/free_battle1.wav" loop='true' data-music-target='audio'></audio>
   <% elsif @battle.teacher.status == "regular" %>
-    <audio src="/Jeremy_Battle.mp3" loop='true' data-music-target='audio'></audio>
+    <audio src="/free_battle2.wav" loop='true' data-music-target='audio'></audio>
   <% elsif @battle.teacher.status == "secret_boss" %>
     <audio src="/Secret_Boss.mp3" loop='true' data-music-target='audio'></audio>
   <% end %>
@@ -10,7 +12,7 @@
   <button class="btn back" data-action='click->music#pause' data-music-target='pauseButton' hidden><i class="fa-solid fa-volume-high"></i></button>
 </div>
 
-<div data-controller="game" data-game-battle-status-value="<%= @battle.status %>" class="battle-background" style="background-image: url('<%= image_path "background-hd.png" %>')">
+<div data-controller="game" data-game-target='appear' data-game-battle-status-value="<%= @battle.status %>" class="battle-background" style="background-image: url('<%= image_path "background-hd.png" %>')" hidden>
   <div class="teacher-character">
     <div class="teacher-infos">
       <div><%= @battle.teacher.name %></div>
@@ -25,6 +27,10 @@
     <% else  %>
       <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-mini' %>
     <% end %>
+  </div>
+
+  <div class="battle-starter">
+    <h2 class="question-text text_shadows">Battle Start !</h2>
   </div>
 
   <div class="user-character">
