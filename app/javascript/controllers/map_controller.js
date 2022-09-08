@@ -73,7 +73,10 @@ export default class extends Controller {
     const tile = document.getElementById(tileId)
 
     if (this.teacherTileTargets.includes(tile)) {
-      this.dialogTarget.hidden = false
+      const dialogId = `dialog-${tileId}`
+      const dialog = document.getElementById(dialogId)
+
+      dialog.hidden = false
       this.conversationValue = true
     }
 
@@ -81,8 +84,12 @@ export default class extends Controller {
       this.userPositionXValue = newPositionX
       this.userPositionYValue = newPositionY
 
-      this.userPositionXInputTarget.value = newPositionX
-      this.userPositionYInputTarget.value = newPositionY
+      this.userPositionXInputTargets.forEach(input => {
+        input.value = newPositionX
+      });
+      this.userPositionYInputTargets.forEach(input => {
+        input.value = newPositionY
+      });
 
       tile.appendChild(this.userTarget);
     }

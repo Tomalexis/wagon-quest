@@ -49,17 +49,17 @@
       <% end %>
     </div>
 
-    <div class="dialog-box" data-map-target="dialog" data-controller="dialog-switch" data-dialog-switch-current-dialog-value="1" hidden>
+    <div id="dialog-<%= "#{@slackbot.position_x}-#{@slackbot.position_y}" %>" class="dialog-box" data-map-target="dialog" data-controller="dialog-switch" data-dialog-switch-current-dialog-value="1" hidden>
       <div data-dialog-switch-target='firstDialog'>
-        Slackbot: Hello student. I see that you did not do your flashcards tonight...
+        <%= "#{@slackbot.name} : #{@slackbot.open_dialog1}" %>
         <i class="fa-regular fa-lg fa-square-caret-down" data-dialog-switch-target='continue' data-action='click->dialog-switch#next'></i>
       </div>
       <div data-dialog-switch-target='secondDialog' hidden>
-        <%= @user.username %> : Wait are you real Slackbot ?!!
+        <%= "#{@user.username} : #{@slackbot.open_dialog2}" %>
         <i class="fa-regular fa-lg fa-square-caret-down" data-dialog-switch-target='continue' data-action='click->dialog-switch#next2'></i>
       </div>
       <div data-dialog-switch-target='thirdDialog' hidden>
-        Slackbot: Yes... And your lack of seriousness pains me... It's time to fight !
+        <%= "#{@slackbot.name} : #{@slackbot.open_dialog3}" %>
         <%= link_to continue_game_path(@game), data: { turbo_method: :patch, dialog_switch_target: 'continue' } do %>
           <i class="fa-regular fa-lg fa-square-caret-down"></i>
         <% end %>
