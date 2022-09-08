@@ -84,9 +84,6 @@ export default class extends Controller {
       this.userPositionXValue = newPositionX
       this.userPositionYValue = newPositionY
 
-      // this.userPositionXInputTarget.value = newPositionX
-      // this.userPositionYInputTarget.value = newPositionY
-
       this.userPositionXInputTargets.forEach(input => {
         input.value = newPositionX
       });

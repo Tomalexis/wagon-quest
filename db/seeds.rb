@@ -583,7 +583,7 @@ seb = Teacher.create!(
   feedback_user_won: '...',
   feedback_user_lost: '...',
   position_x: 2,
-  position_y: 29,
+  position_y: 34,
   lesson_id: secret_lesson.id,
   status: "secret_boss",
   open_dialog1: "...",
