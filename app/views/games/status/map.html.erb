@@ -47,26 +47,29 @@
       <% end %>
     <% end %>
 
-    <div class="dialog-box" data-map-target="dialog" data-controller="dialog-switch" data-dialog-switch-current-dialog-value="1" hidden>
-      <div data-dialog-switch-target='firstDialog'>
-        Jeremy: Hey dude ! Welcome to Le Wagon academy !
-        <i class="fa-regular fa-lg fa-square-caret-down" data-dialog-switch-target='continue' data-action='click->dialog-switch#next'></i>
-      </div>
-      <div data-dialog-switch-target='secondDialog' hidden>
-        <%= @user.username %> : You really have nice hair man !
-        <i class="fa-regular fa-lg fa-square-caret-down" data-dialog-switch-target='continue' data-action='click->dialog-switch#next2'></i>
-      </div>
-      <div data-dialog-switch-target='thirdDialog' hidden>
-        <%= form_for :battle, url: game_battles_path(@game), method: :post, data: { turbo: :false } do |f| %>
-          <%= hidden_field_tag :user_position_x, @game.user_position_x, data: { map_target: "userPositionXInput" } %>
-          <%= hidden_field_tag :user_position_y, @game.user_position_y, data: { map_target: "userPositionYInput" } %>
+    <% @teachers.each do |teacher| %>
+      <div id="dialog-<%= "#{teacher.position_x}-#{teacher.position_y}" %>" class="dialog-box" data-map-target="dialog" data-controller="dialog-switch" data-dialog-switch-current-dialog-value="1" hidden>
+        <div data-dialog-switch-target='firstDialog'>
+          <%= "#{teacher.name} : #{teacher.open_dialog1}" %>
+          <i class="fa-regular fa-lg fa-square-caret-down" data-dialog-switch-target='continue' data-action='click->dialog-switch#next'></i>
+        </div>
+        <div data-dialog-switch-target='secondDialog' hidden>
+          <%= "#{@user.username} : #{teacher.open_dialog2}" %>
+          <i class="fa-regular fa-lg fa-square-caret-down" data-dialog-switch-target='continue' data-action='click->dialog-switch#next2'></i>
+        </div>
+        <div data-dialog-switch-target='thirdDialog' hidden>
+          <%= form_for :battle, url: game_battles_path(@game), method: :post, data: { turbo: :false } do |f| %>
+            <%= hidden_field_tag :user_position_x, @game.user_position_x, data: { map_target: "userPositionXInput" } %>
+            <%= hidden_field_tag :user_position_y, @game.user_position_y, data: { map_target: "userPositionYInput" } %>
 
-          Jeremy: Let me teach you the rules around here !
-          <%= button_tag(type: "submit", data: {dialog_switch_target: 'continue'}) do %>
-            <i class="fa-regular fa-lg fa-square-caret-down"></i>
+            <%= "#{teacher.name} : #{teacher.open_dialog3}" %>
+            <%= button_tag(type: "submit", data: {dialog_switch_target: 'continue'}) do %>
+              <i class="fa-regular fa-lg fa-square-caret-down"></i>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
-    </div>
+    <% end %>
+
   </div>
 </div>

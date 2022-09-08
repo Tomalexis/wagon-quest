@@ -537,7 +537,10 @@ slackbot = Teacher.create!(
   position_x: 2,
   position_y: 3,
   lesson_id: first_lesson.id,
-  status: "tutorial"
+  status: "tutorial",
+  open_dialog1: "Hello student. I see that you did not do your flashcards tonight...",
+  open_dialog2: "Wait are you real Slackbot ?!!",
+  open_dialog3: "Yes... And your lack of seriousness pains me... It's time to fight !"
 )
 
 file = File.open(Rails.root.join("app/assets/images/slackbotstatic.png"))
@@ -558,7 +561,10 @@ jeremy = Teacher.create!(
   position_x: 14,
   position_y: 23,
   lesson_id: second_lesson.id,
-  status: "regular"
+  status: "regular",
+  open_dialog1: "Hey dude ! Welcome to Le Wagon academy !",
+  open_dialog2: "You really have nice hair man !",
+  open_dialog3: "Let me teach you the rules around here !"
 )
 
 file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
@@ -579,7 +585,10 @@ seb = Teacher.create!(
   position_x: 99,
   position_y: 99,
   lesson_id: secret_lesson.id,
-  status: "secret_boss"
+  status: "secret_boss",
+  open_dialog1: "...",
+  open_dialog2: "...",
+  open_dialog3: "..."
 )
 
 file = File.open(Rails.root.join("app/assets/images/seb_tall.png"))
@@ -600,7 +609,10 @@ tim = Teacher.create!(
   position_x: 2,
   position_y: 20,
   lesson_id: third_lesson.id,
-  status: "regular"
+  status: "regular",
+  open_dialog1: '...',
+  open_dialog2: '...',
+  open_dialog3: '...'
 )
 
 file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
@@ -621,7 +633,10 @@ hugo = Teacher.create!(
   position_x: 10,
   position_y: 4,
   lesson_id: fourth_lesson.id,
-  status: "regular"
+  status: "regular",
+  open_dialog1: '...',
+  open_dialog2: '...',
+  open_dialog3: '...'
 )
 
 file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
@@ -642,7 +657,10 @@ diane = Teacher.create!(
   position_x: 28,
   position_y: 4,
   lesson_id: fifth_lesson.id,
-  status: "regular"
+  status: "regular",
+  open_dialog1: '...',
+  open_dialog2: '...',
+  open_dialog3: '...'
 )
 
 file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
@@ -663,7 +681,10 @@ paul = Teacher.create!(
   position_x: 50,
   position_y: 9,
   lesson_id: sixth_lesson.id,
-  status: "regular"
+  status: "regular",
+  open_dialog1: '...',
+  open_dialog2: '...',
+  open_dialog3: '...'
 )
 
 file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
@@ -684,7 +705,10 @@ boris = Teacher.create!(
   position_x: 46,
   position_y: 18,
   lesson_id: final_lesson.id,
-  status: "final_boss"
+  status: "final_boss",
+  open_dialog1: '...',
+  open_dialog2: '...',
+  open_dialog3: '...'
 )
 
 file = File.open(Rails.root.join("app/assets/images/strangerstatic.png"))
