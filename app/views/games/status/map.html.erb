@@ -30,7 +30,7 @@
           <% end %>
           >
 
-          <% if @teachers_per_position.key?(position) %>
+          <% if @teachers_per_position.key?(position) && @teachers_per_position[position].status != "secret_boss" %>
             <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 45, height: 93, class: "teacher" %>
             <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
           <% end %>

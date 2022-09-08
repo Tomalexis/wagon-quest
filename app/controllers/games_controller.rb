@@ -28,7 +28,7 @@ class GamesController < ApplicationController
 
       @teachers_per_position = {}
 
-      @teachers = Teacher.where(status: ["regular", "final_boss"])
+      @teachers = Teacher.where(status: ["regular", "final_boss", "secret_boss"])
 
       @teachers.each do |teacher|
         @teachers_per_position["#{teacher.position_x}-#{teacher.position_y}"] = teacher
