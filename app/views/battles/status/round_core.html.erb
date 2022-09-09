@@ -57,7 +57,7 @@
     <% if @battle.teacher.status == "secret_boss" %>
       <%= form_for :secret_boss, url: round_game_answers_path(@round, GameAnswer.new), method: :post, data: { turbo: :false, action: "submit->game#secretBoss", game_target: "form" } do |f| %>
         <div class='secret-form'>
-          <%= f.text_field :content, placeholder:'Answer Here', class:'secret-input' %>
+          <%= f.text_field :content, placeholder:'Answer Here', class:'secret-input', :autocomplete => "off" %>
           <%= f.submit "Go", class:'btn secret-validation' %>
         </div>
       <% end %>
