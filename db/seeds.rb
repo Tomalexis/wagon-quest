@@ -25,13 +25,13 @@ puts 'Adding lessons'
 first_lesson = Lesson.create!(
   name: "Setup terminal and Git",
   hp_user: 9999,
-  hp_teacher: 4
+  hp_teacher: 10
 )
 
 second_lesson = Lesson.create!(
   name: "Savoir vivre rules",
   hp_user: 8,
-  hp_teacher: 4
+  hp_teacher: 8
 )
 
 third_lesson = Lesson.create!(
@@ -84,20 +84,20 @@ second_slackbot_question = Question.create!(
   lesson_id: first_lesson.id
 )
 
-# third_slackbot_question = Question.create!(
-#   content: 'How do you go from current directory to a child folder ?',
-#   lesson_id: first_lesson.id
-# )
+third_slackbot_question = Question.create!(
+content: 'How do you go from current directory to a child folder ?',
+lesson_id: first_lesson.id
+)
 
-# fourth_slackbot_question = Question.create!(
-#   content: 'How do you create a file in current directory ?',
-#   lesson_id: first_lesson.id
-# )
+fourth_slackbot_question = Question.create!(
+content: 'How do you create a file in current directory ?',
+lesson_id: first_lesson.id
+)
 
-# fifth_slackbot_question = Question.create!(
-#   content: 'How can you tell if you have uncommitted changes in your project ?',
-#   lesson_id: first_lesson.id
-# )
+fifth_slackbot_question = Question.create!(
+content: 'How can you tell if you have uncommitted changes in your project ?',
+lesson_id: first_lesson.id
+)
 
 puts 'Slackbot questions created'
 
@@ -108,15 +108,15 @@ first_jeremy_question = Question.create!(
   lesson_id: second_lesson.id
 )
 
-# second_jeremy_question = Question.create!(
-#   content: 'When can you grab beers in the fridge ?',
-#   lesson_id: second_lesson.id
-# )
+second_jeremy_question = Question.create!(
+  content: 'When can you grab beers in the fridge ?',
+  lesson_id: second_lesson.id
+)
 
-# third_jeremy_question = Question.create!(
-#   content: 'Where should you put your dirty coffee cups ?',
-#   lesson_id: second_lesson.id
-# )
+third_jeremy_question = Question.create!(
+  content: 'Where should you put your dirty coffee cups ?',
+  lesson_id: second_lesson.id
+)
 
 fourth_jeremy_question = Question.create!(
   content: 'How many bottles of shampoo do I use each week to keep my hair so silky ?',
@@ -229,77 +229,77 @@ second_slackbot_question_fourth_answer = Answer.create!(
   question_id: second_slackbot_question.id
 )
 
-# third_slackbot_question_first_answer = Answer.create!(
-#   content: 'cd <folder_name>',
-#   kind: "perfect",
-#   question_id: third_slackbot_question.id
-# )
+third_slackbot_question_first_answer = Answer.create!(
+  content: 'cd <folder_name>',
+  kind: "perfect",
+  question_id: third_slackbot_question.id
+)
 
-# third_slackbot_question_second_answer = Answer.create!(
-#   content: 'cd',
-#   kind: "correct",
-#   question_id: third_slackbot_question.id
-# )
+third_slackbot_question_second_answer = Answer.create!(
+  content: 'cd',
+  kind: "correct",
+  question_id: third_slackbot_question.id
+)
 
-# third_slackbot_question_third_answer = Answer.create!(
-#   content: 'pwd',
-#   kind: "misleading",
-#   question_id: third_slackbot_question.id
-# )
+third_slackbot_question_third_answer = Answer.create!(
+  content: 'pwd',
+  kind: "misleading",
+  question_id: third_slackbot_question.id
+)
 
-# third_slackbot_question_fourth_answer = Answer.create!(
-#   content: 'laserdisc <folder_name>',
-#   kind: "weird",
-#   question_id: third_slackbot_question.id
-# )
+third_slackbot_question_fourth_answer = Answer.create!(
+  content: 'laserdisc <folder_name>',
+  kind: "weird",
+  question_id: third_slackbot_question.id
+)
 
-# fourth_slackbot_question_first_answer = Answer.create!(
-#   content: 'touch <file_name>',
-#   kind: "perfect",
-#   question_id: fourth_slackbot_question.id
-# )
+fourth_slackbot_question_first_answer = Answer.create!(
+  content: 'touch <file_name>',
+  kind: "perfect",
+  question_id: fourth_slackbot_question.id
+)
 
-# fourth_slackbot_question_second_answer = Answer.create!(
-#   content: 'touch',
-#   kind: "correct",
-#   question_id: fourth_slackbot_question.id
-# )
+fourth_slackbot_question_second_answer = Answer.create!(
+  content: 'touch',
+  kind: "correct",
+  question_id: fourth_slackbot_question.id
+)
 
-# fourth_slackbot_question_third_answer = Answer.create!(
-#   content: 'create <file_name>',
-#   kind: "misleading",
-#   question_id: fourth_slackbot_question.id
-# )
+fourth_slackbot_question_third_answer = Answer.create!(
+  content: 'create <file_name>',
+  kind: "misleading",
+  question_id: fourth_slackbot_question.id
+)
 
-# fourth_slackbot_question_fourth_answer = Answer.create!(
-#   content: 'Cause everytime we touch I get this feeling 🎵',
-#   kind: "weird",
-#   question_id: fourth_slackbot_question.id
-# )
+fourth_slackbot_question_fourth_answer = Answer.create!(
+  content: 'Cause everytime we touch I get this feeling 🎵',
+  kind: "weird",
+  question_id: fourth_slackbot_question.id
+)
 
-# fifth_slackbot_question_first_answer = Answer.create!(
-#   content: 'git status',
-#   kind: "perfect",
-#   question_id: fifth_slackbot_question.id
-# )
+fifth_slackbot_question_first_answer = Answer.create!(
+  content: 'git status',
+  kind: "perfect",
+  question_id: fifth_slackbot_question.id
+)
 
-# fifth_slackbot_question_second_answer = Answer.create!(
-#   content: 'gst',
-#   kind: "correct",
-#   question_id: fifth_slackbot_question.id
-# )
+fifth_slackbot_question_second_answer = Answer.create!(
+  content: 'gst',
+  kind: "correct",
+  question_id: fifth_slackbot_question.id
+)
 
-# fifth_slackbot_question_third_answer = Answer.create!(
-#   content: 'git log',
-#   kind: "misleading",
-#   question_id: fifth_slackbot_question.id
-# )
+fifth_slackbot_question_third_answer = Answer.create!(
+  content: 'git log',
+  kind: "misleading",
+  question_id: fifth_slackbot_question.id
+)
 
-# fifth_slackbot_question_fourth_answer = Answer.create!(
-#   content: 'I am not looking for commitment right now...',
-#   kind: "weird",
-#   question_id: fifth_slackbot_question.id
-# )
+fifth_slackbot_question_fourth_answer = Answer.create!(
+  content: 'I am not looking for commitment right now...',
+  kind: "weird",
+  question_id: fifth_slackbot_question.id
+)
 
 first_jeremy_question_first_answer = Answer.create!(
   content: '8:45 AM',
@@ -325,53 +325,53 @@ first_jeremy_question_fourth_answer = Answer.create!(
   question_id: first_jeremy_question.id
 )
 
-# second_jeremy_question_first_answer = Answer.create!(
-#   content: 'Only during events after working hours',
-#   kind: "perfect",
-#   question_id: second_jeremy_question.id
-# )
+second_jeremy_question_first_answer = Answer.create!(
+  content: 'Only during events after working hours',
+  kind: "perfect",
+  question_id: second_jeremy_question.id
+)
 
-# second_jeremy_question_second_answer = Answer.create!(
-#   content: 'Only after 6:00 PM',
-#   kind: "correct",
-#   question_id: second_jeremy_question.id
-# )
+second_jeremy_question_second_answer = Answer.create!(
+  content: 'Only after 6:00 PM',
+  kind: "correct",
+  question_id: second_jeremy_question.id
+)
 
-# second_jeremy_question_third_answer = Answer.create!(
-#   content: 'During lunch break',
-#   kind: "misleading",
-#   question_id: second_jeremy_question.id
-# )
+second_jeremy_question_third_answer = Answer.create!(
+  content: 'During lunch break',
+  kind: "misleading",
+  question_id: second_jeremy_question.id
+)
 
-# second_jeremy_question_fourth_answer = Answer.create!(
-#   content: 'Well I usually mix my cereals with a white russian so...',
-#   kind: "weird",
-#   question_id: second_jeremy_question.id
-# )
+second_jeremy_question_fourth_answer = Answer.create!(
+  content: 'Well I usually mix my cereals with a white russian so...',
+  kind: "weird",
+  question_id: second_jeremy_question.id
+)
 
-# third_jeremy_question_first_answer = Answer.create!(
-#   content: 'In the dishwasher',
-#   kind: "perfect",
-#   question_id: third_jeremy_question.id
-# )
+third_jeremy_question_first_answer = Answer.create!(
+  content: 'In the dishwasher',
+  kind: "perfect",
+  question_id: third_jeremy_question.id
+)
 
-# third_jeremy_question_second_answer = Answer.create!(
-#   content: 'In the sink',
-#   kind: "correct",
-#   question_id: third_jeremy_question.id
-# )
+third_jeremy_question_second_answer = Answer.create!(
+  content: 'In the sink',
+  kind: "correct",
+  question_id: third_jeremy_question.id
+)
 
-# third_jeremy_question_third_answer = Answer.create!(
-#   content: 'I can leave it at my seat',
-#   kind: "misleading",
-#   question_id: third_jeremy_question.id
-# )
+third_jeremy_question_third_answer = Answer.create!(
+  content: 'I can leave it at my seat',
+  kind: "misleading",
+  question_id: third_jeremy_question.id
+)
 
-# third_jeremy_question_fourth_answer = Answer.create!(
-#   content: 'I drink tea so the rules does not apply to me !',
-#   kind: "weird",
-#   question_id: third_jeremy_question.id
-# )
+third_jeremy_question_fourth_answer = Answer.create!(
+  content: 'I drink tea so the rules does not apply to me !',
+  kind: "weird",
+  question_id: third_jeremy_question.id
+)
 
 fourth_jeremy_question_first_answer = Answer.create!(
   content: 'One (family) bottle',
