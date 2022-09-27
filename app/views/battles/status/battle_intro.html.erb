@@ -16,10 +16,18 @@
   <div class="teacher-character">
     <div class="teacher-infos">
       <div><%= @battle.teacher.name %></div>
-      <% if @battle.hp_teacher > 4 %>
-          <div>HP: <span class="hp-number"><%= @battle.hp_teacher %></span></div>
+      <% if @battle.teacher.status == "tutorial" %>
+          <% if @battle.hp_teacher > 2 %>
+            <div>HP: <span class="hp-number"><%= @battle.hp_teacher %></span></div>
+          <% else %>
+            <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
+          <% end %>
         <% else %>
-          <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
+          <% if @battle.hp_teacher > 4 %>
+            <div>HP: <span class="hp-number"><%= @battle.hp_teacher %></span></div>
+          <% else %>
+            <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
+          <% end %>
         <% end %>
     </div>
     <% if @battle.teacher.status == "tutorial" %>
