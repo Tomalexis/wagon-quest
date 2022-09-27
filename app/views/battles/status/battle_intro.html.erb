@@ -24,7 +24,7 @@
     </div>
     <% if @battle.teacher.status == "tutorial" %>
       <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image' %>
-    <% else  %>
+    <% else %>
       <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-mini' %>
     <% end %>
   </div>
@@ -34,15 +34,15 @@
   </div>
 
   <div class="user-character">
-      <div class="user-infos">
-        <div><%= @game.user.username %></div>
-        <% if @battle.teacher.status == "tutorial" %>
-        <% elsif @battle.hp_user > 4 %>
-          <div>HP: <span class="hp-number"><%= @battle.hp_user %></span></div>
-        <% else %>
-          <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
-        <% end %>
-      </div>
+    <div class="user-infos">
+      <div><%= @game.user.username %></div>
+      <% if @battle.teacher.status == "tutorial" %>
+      <% elsif @battle.hp_user > 4 %>
+        <div>HP: <span class="hp-number"><%= @battle.hp_user %></span></div>
+      <% else %>
+        <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
+      <% end %>
+    </div>
     <%= image_tag "userstaticright.png" %>
   </div>
   <div class="dialog-box">
