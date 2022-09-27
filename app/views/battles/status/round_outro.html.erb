@@ -3,10 +3,10 @@
     <div class="teacher-infos">
       <div><%= @battle.teacher.name %></div>
       <% if @battle.hp_teacher > 4 %>
-          <div>HP: <span class="hp-number"><%= @battle.hp_teacher %></span></div>
-        <% else %>
-          <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
-        <% end %>
+        <div>HP: <span class="hp-number"><%= @battle.hp_teacher %></span></div>
+      <% else %>
+        <div>HP: <span class="hp-number-low"><%= @battle.hp_teacher %></span></div>
+      <% end %>
     </div>
     <% if @battle.teacher.status == "tutorial" %>
       <% if @game_answer.answer.kind == "perfect" || @game_answer.answer.kind == "correct"%>
@@ -14,7 +14,7 @@
       <% else %>
         <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image' %>
       <% end %>
-    <% else  %>
+    <% else %>
       <% if @game_answer.answer.kind == "perfect" || @game_answer.answer.kind == "correct"%>
         <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-mini-blink' %>
       <% else %>
@@ -28,15 +28,15 @@
   </div>
 
   <div class="user-character">
-      <div class="user-infos">
-        <div><%= @game.user.username %></div>
-        <% if @battle.teacher.status == "tutorial" %>
-        <% elsif @battle.hp_user > 4 %>
-          <div>HP: <span class="hp-number"><%= @battle.hp_user %></span></div>
-        <% else %>
-          <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
-        <% end %>
-      </div>
+    <div class="user-infos">
+      <div><%= @game.user.username %></div>
+      <% if @battle.teacher.status == "tutorial" %>
+      <% elsif @battle.hp_user > 4 %>
+        <div>HP: <span class="hp-number"><%= @battle.hp_user %></span></div>
+      <% else %>
+        <div>HP: <span class="hp-number-low"><%= @battle.hp_user %></span></div>
+      <% end %>
+    </div>
     <% if @game_answer.answer.kind == "perfect" || @game_answer.answer.kind == "correct"%>
       <%= image_tag "userstaticright.png" %>
     <% else %>
