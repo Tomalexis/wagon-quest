@@ -353,7 +353,791 @@ tenth_sebastien_question = Question.create!(
 
 puts 'Sebastien questions created.'
 
-puts 'Creating answers...'
+puts 'Creating empty Ruby answers...'
+
+first_ruby_question_first_answer = Answer.create!(
+  content: 'Ruby 1 perfect.',
+  kind: 'perfect',
+  question_id: first_ruby_question.id
+)
+
+first_ruby_question_second_answer = Answer.create!(
+  content: 'Ruby 1 correct.',
+  kind: "correct",
+  question_id: first_ruby_question.id
+)
+
+first_ruby_question_third_answer = Answer.create!(
+  content: 'Ruby 1 misleading.',
+  kind: "misleading",
+  question_id: first_ruby_question.id
+)
+
+first_ruby_question_fourth_answer = Answer.create!(
+  content: 'Ruby 1 weird.',
+  kind: "weird",
+  question_id: first_ruby_question.id
+)
+
+second_ruby_question_first_answer = Answer.create!(
+  content: 'Ruby 2 perfect.',
+  kind: 'perfect',
+  question_id: second_ruby_question.id
+)
+
+second_ruby_question_second_answer = Answer.create!(
+  content: 'Ruby 2 correct.',
+  kind: "correct",
+  question_id: second_ruby_question.id
+)
+
+second_ruby_question_third_answer = Answer.create!(
+  content: 'Ruby 2 misleading.',
+  kind: "misleading",
+  question_id: second_ruby_question.id
+)
+
+second_ruby_question_fourth_answer = Answer.create!(
+  content: 'Ruby 2 weird.',
+  kind: "weird",
+  question_id: second_ruby_question.id
+)
+
+third_ruby_question_first_answer = Answer.create!(
+  content: 'Ruby 3 perfect.',
+  kind: 'perfect',
+  question_id: third_ruby_question.id
+)
+
+third_ruby_question_second_answer = Answer.create!(
+  content: 'Ruby 3 correct.',
+  kind: "correct",
+  question_id: third_ruby_question.id
+)
+
+third_ruby_question_third_answer = Answer.create!(
+  content: 'Ruby 3 misleading.',
+  kind: "misleading",
+  question_id: third_ruby_question.id
+)
+
+third_ruby_question_fourth_answer = Answer.create!(
+  content: 'Ruby 3 weird.',
+  kind: "weird",
+  question_id: third_ruby_question.id
+)
+
+fourth_ruby_question_first_answer = Answer.create!(
+  content: 'Ruby 4 perfect.',
+  kind: 'perfect',
+  question_id: fourth_ruby_question.id
+)
+
+fourth_ruby_question_second_answer = Answer.create!(
+  content: 'Ruby 4 correct.',
+  kind: "correct",
+  question_id: fourth_ruby_question.id
+)
+
+fourth_ruby_question_third_answer = Answer.create!(
+  content: 'Ruby 4 misleading.',
+  kind: "misleading",
+  question_id: fourth_ruby_question.id
+)
+
+fourth_ruby_question_fourth_answer = Answer.create!(
+  content: 'Ruby 4 weird.',
+  kind: "weird",
+  question_id: fourth_ruby_question.id
+)
+
+fifth_ruby_question_first_answer = Answer.create!(
+  content: 'Ruby 5 perfect.',
+  kind: 'perfect',
+  question_id: fifth_ruby_question.id
+)
+
+fifth_ruby_question_second_answer = Answer.create!(
+  content: 'Ruby 5 correct.',
+  kind: "correct",
+  question_id: fifth_ruby_question.id
+)
+
+fifth_ruby_question_third_answer = Answer.create!(
+  content: 'Ruby 5 misleading.',
+  kind: "misleading",
+  question_id: fifth_ruby_question.id
+)
+
+fifth_ruby_question_fourth_answer = Answer.create!(
+  content: 'Ruby 5 weird.',
+  kind: "weird",
+  question_id: fifth_ruby_question.id
+)
+
+sixth_ruby_question_first_answer = Answer.create!(
+  content: 'Ruby 6 perfect.',
+  kind: 'perfect',
+  question_id: sixth_ruby_question.id
+)
+
+sixth_ruby_question_second_answer = Answer.create!(
+  content: 'Ruby 6 correct.',
+  kind: "correct",
+  question_id: sixth_ruby_question.id
+)
+
+sixth_ruby_question_third_answer = Answer.create!(
+  content: 'Ruby 6 misleading.',
+  kind: "misleading",
+  question_id: sixth_ruby_question.id
+)
+
+sixth_ruby_question_fourth_answer = Answer.create!(
+  content: 'Ruby 6 weird.',
+  kind: "weird",
+  question_id: sixth_ruby_question.id
+)
+
+seventh_ruby_question_first_answer = Answer.create!(
+  content: 'Ruby 7 perfect.',
+  kind: 'perfect',
+  question_id: seventh_ruby_question.id
+)
+
+seventh_ruby_question_second_answer = Answer.create!(
+  content: 'Ruby 7 correct.',
+  kind: "correct",
+  question_id: seventh_ruby_question.id
+)
+
+seventh_ruby_question_third_answer = Answer.create!(
+  content: 'Ruby 7 misleading.',
+  kind: "misleading",
+  question_id: seventh_ruby_question.id
+)
+
+seventh_ruby_question_fourth_answer = Answer.create!(
+  content: 'Ruby 7 weird.',
+  kind: "weird",
+  question_id: seventh_ruby_question.id
+)
+
+eighth_ruby_question_first_answer = Answer.create!(
+  content: 'Ruby 8 perfect.',
+  kind: 'perfect',
+  question_id: eighth_ruby_question.id
+)
+
+eighth_ruby_question_second_answer = Answer.create!(
+  content: 'Ruby 8 correct.',
+  kind: "correct",
+  question_id: eighth_ruby_question.id
+)
+
+eighth_ruby_question_third_answer = Answer.create!(
+  content: 'Ruby 8 misleading.',
+  kind: "misleading",
+  question_id: eighth_ruby_question.id
+)
+
+eighth_ruby_question_fourth_answer = Answer.create!(
+  content: 'Ruby 8 weird.',
+  kind: "weird",
+  question_id: eighth_ruby_question.id
+)
+
+puts 'Empty Ruby answers created.'
+
+puts 'Creating empty OOP answers...'
+
+first_oop_question_first_answer = Answer.create!(
+  content: 'OOP 1 perfect.',
+  kind: 'perfect',
+  question_id: first_oop_question.id
+)
+
+first_oop_question_second_answer = Answer.create!(
+  content: 'OOP 1 correct.',
+  kind: "correct",
+  question_id: first_oop_question.id
+)
+
+first_oop_question_third_answer = Answer.create!(
+  content: 'OOP 1 misleading.',
+  kind: "misleading",
+  question_id: first_oop_question.id
+)
+
+first_oop_question_fourth_answer = Answer.create!(
+  content: 'OOP 1 weird.',
+  kind: "weird",
+  question_id: first_oop_question.id
+)
+
+second_oop_question_first_answer = Answer.create!(
+  content: 'OOP 2 perfect.',
+  kind: 'perfect',
+  question_id: second_oop_question.id
+)
+
+second_oop_question_second_answer = Answer.create!(
+  content: 'OOP 2 correct.',
+  kind: "correct",
+  question_id: second_oop_question.id
+)
+
+second_oop_question_third_answer = Answer.create!(
+  content: 'OOP 2 misleading.',
+  kind: "misleading",
+  question_id: second_oop_question.id
+)
+
+second_oop_question_fourth_answer = Answer.create!(
+  content: 'OOP 2 weird.',
+  kind: "weird",
+  question_id: second_oop_question.id
+)
+
+third_oop_question_first_answer = Answer.create!(
+  content: 'OOP 3 perfect.',
+  kind: 'perfect',
+  question_id: third_oop_question.id
+)
+
+third_oop_question_second_answer = Answer.create!(
+  content: 'OOP 3 correct.',
+  kind: "correct",
+  question_id: third_oop_question.id
+)
+
+third_oop_question_third_answer = Answer.create!(
+  content: 'OOP 3 misleading.',
+  kind: "misleading",
+  question_id: third_oop_question.id
+)
+
+third_oop_question_fourth_answer = Answer.create!(
+  content: 'OOP 3 weird.',
+  kind: "weird",
+  question_id: third_oop_question.id
+)
+
+fourth_oop_question_first_answer = Answer.create!(
+  content: 'OOP 4 perfect.',
+  kind: 'perfect',
+  question_id: fourth_oop_question.id
+)
+
+fourth_oop_question_second_answer = Answer.create!(
+  content: 'OOP 4 correct.',
+  kind: "correct",
+  question_id: fourth_oop_question.id
+)
+
+fourth_oop_question_third_answer = Answer.create!(
+  content: 'OOP 4 misleading.',
+  kind: "misleading",
+  question_id: fourth_oop_question.id
+)
+
+fourth_oop_question_fourth_answer = Answer.create!(
+  content: 'OOP 4 weird.',
+  kind: "weird",
+  question_id: fourth_oop_question.id
+)
+
+fifth_oop_question_first_answer = Answer.create!(
+  content: 'OOP 5 perfect.',
+  kind: 'perfect',
+  question_id: fifth_oop_question.id
+)
+
+fifth_oop_question_second_answer = Answer.create!(
+  content: 'OOP 5 correct.',
+  kind: "correct",
+  question_id: fifth_oop_question.id
+)
+
+fifth_oop_question_third_answer = Answer.create!(
+  content: 'OOP 5 misleading.',
+  kind: "misleading",
+  question_id: fifth_oop_question.id
+)
+
+fifth_oop_question_fourth_answer = Answer.create!(
+  content: 'OOP 5 weird.',
+  kind: "weird",
+  question_id: fifth_oop_question.id
+)
+
+sixth_oop_question_first_answer = Answer.create!(
+  content: 'OOP 6 perfect.',
+  kind: 'perfect',
+  question_id: sixth_oop_question.id
+)
+
+sixth_oop_question_second_answer = Answer.create!(
+  content: 'OOP 6 correct.',
+  kind: "correct",
+  question_id: sixth_oop_question.id
+)
+
+sixth_oop_question_third_answer = Answer.create!(
+  content: 'OOP 6 misleading.',
+  kind: "misleading",
+  question_id: sixth_oop_question.id
+)
+
+sixth_oop_question_fourth_answer = Answer.create!(
+  content: 'OOP 6 weird.',
+  kind: "weird",
+  question_id: sixth_oop_question.id
+)
+
+seventh_oop_question_first_answer = Answer.create!(
+  content: 'OOP 7 perfect.',
+  kind: 'perfect',
+  question_id: seventh_oop_question.id
+)
+
+seventh_oop_question_second_answer = Answer.create!(
+  content: 'OOP 7 correct.',
+  kind: "correct",
+  question_id: seventh_oop_question.id
+)
+
+seventh_oop_question_third_answer = Answer.create!(
+  content: 'OOP 7 misleading.',
+  kind: "misleading",
+  question_id: seventh_oop_question.id
+)
+
+seventh_oop_question_fourth_answer = Answer.create!(
+  content: 'OOP 7 weird.',
+  kind: "weird",
+  question_id: seventh_oop_question.id
+)
+
+eighth_oop_question_first_answer = Answer.create!(
+  content: 'OOP 8 perfect.',
+  kind: 'perfect',
+  question_id: eighth_oop_question.id
+)
+
+eighth_oop_question_second_answer = Answer.create!(
+  content: 'OOP 8 correct.',
+  kind: "correct",
+  question_id: eighth_oop_question.id
+)
+
+eighth_oop_question_third_answer = Answer.create!(
+  content: 'OOP 8 misleading.',
+  kind: "misleading",
+  question_id: eighth_oop_question.id
+)
+
+eighth_oop_question_fourth_answer = Answer.create!(
+  content: 'OOP 8 weird.',
+  kind: "weird",
+  question_id: eighth_oop_question.id
+)
+
+puts 'Empty OOP answers created.'
+
+puts 'Creating empty DB answers...'
+
+first_db_question_first_answer = Answer.create!(
+  content: 'DB 1 perfect.',
+  kind: 'perfect',
+  question_id: first_db_question.id
+)
+
+first_db_question_second_answer = Answer.create!(
+  content: 'DB 1 correct.',
+  kind: "correct",
+  question_id: first_db_question.id
+)
+
+first_db_question_third_answer = Answer.create!(
+  content: 'DB 1 misleading.',
+  kind: "misleading",
+  question_id: first_db_question.id
+)
+
+first_db_question_fourth_answer = Answer.create!(
+  content: 'DB 1 weird.',
+  kind: "weird",
+  question_id: first_db_question.id
+)
+
+second_db_question_first_answer = Answer.create!(
+  content: 'DB 2 perfect.',
+  kind: 'perfect',
+  question_id: second_db_question.id
+)
+
+second_db_question_second_answer = Answer.create!(
+  content: 'DB 2 correct.',
+  kind: "correct",
+  question_id: second_db_question.id
+)
+
+second_db_question_third_answer = Answer.create!(
+  content: 'DB 2 misleading.',
+  kind: "misleading",
+  question_id: second_db_question.id
+)
+
+second_db_question_fourth_answer = Answer.create!(
+  content: 'DB 2 weird.',
+  kind: "weird",
+  question_id: second_db_question.id
+)
+
+third_db_question_first_answer = Answer.create!(
+  content: 'DB 3 perfect.',
+  kind: 'perfect',
+  question_id: third_db_question.id
+)
+
+third_db_question_second_answer = Answer.create!(
+  content: 'DB 3 correct.',
+  kind: "correct",
+  question_id: third_db_question.id
+)
+
+third_db_question_third_answer = Answer.create!(
+  content: 'DB 3 misleading.',
+  kind: "misleading",
+  question_id: third_db_question.id
+)
+
+third_db_question_fourth_answer = Answer.create!(
+  content: 'DB 3 weird.',
+  kind: "weird",
+  question_id: third_db_question.id
+)
+
+fourth_db_question_first_answer = Answer.create!(
+  content: 'DB 4 perfect.',
+  kind: 'perfect',
+  question_id: fourth_db_question.id
+)
+
+fourth_db_question_second_answer = Answer.create!(
+  content: 'DB 4 correct.',
+  kind: "correct",
+  question_id: fourth_db_question.id
+)
+
+fourth_db_question_third_answer = Answer.create!(
+  content: 'DB 4 misleading.',
+  kind: "misleading",
+  question_id: fourth_db_question.id
+)
+
+fourth_db_question_fourth_answer = Answer.create!(
+  content: 'DB 4 weird.',
+  kind: "weird",
+  question_id: fourth_db_question.id
+)
+
+fifth_db_question_first_answer = Answer.create!(
+  content: 'DB 5 perfect.',
+  kind: 'perfect',
+  question_id: fifth_db_question.id
+)
+
+fifth_db_question_second_answer = Answer.create!(
+  content: 'DB 5 correct.',
+  kind: "correct",
+  question_id: fifth_db_question.id
+)
+
+fifth_db_question_third_answer = Answer.create!(
+  content: 'DB 5 misleading.',
+  kind: "misleading",
+  question_id: fifth_db_question.id
+)
+
+fifth_db_question_fourth_answer = Answer.create!(
+  content: 'DB 5 weird.',
+  kind: "weird",
+  question_id: fifth_db_question.id
+)
+
+sixth_db_question_first_answer = Answer.create!(
+  content: 'DB 6 perfect.',
+  kind: 'perfect',
+  question_id: sixth_db_question.id
+)
+
+sixth_db_question_second_answer = Answer.create!(
+  content: 'DB 6 correct.',
+  kind: "correct",
+  question_id: sixth_db_question.id
+)
+
+sixth_db_question_third_answer = Answer.create!(
+  content: 'DB 6 misleading.',
+  kind: "misleading",
+  question_id: sixth_db_question.id
+)
+
+sixth_db_question_fourth_answer = Answer.create!(
+  content: 'DB 6 weird.',
+  kind: "weird",
+  question_id: sixth_db_question.id
+)
+
+seventh_db_question_first_answer = Answer.create!(
+  content: 'DB 7 perfect.',
+  kind: 'perfect',
+  question_id: seventh_db_question.id
+)
+
+seventh_db_question_second_answer = Answer.create!(
+  content: 'DB 7 correct.',
+  kind: "correct",
+  question_id: seventh_db_question.id
+)
+
+seventh_db_question_third_answer = Answer.create!(
+  content: 'DB 7 misleading.',
+  kind: "misleading",
+  question_id: seventh_db_question.id
+)
+
+seventh_db_question_fourth_answer = Answer.create!(
+  content: 'DB 7 weird.',
+  kind: "weird",
+  question_id: seventh_db_question.id
+)
+
+eighth_db_question_first_answer = Answer.create!(
+  content: 'DB 8 perfect.',
+  kind: 'perfect',
+  question_id: eighth_db_question.id
+)
+
+eighth_db_question_second_answer = Answer.create!(
+  content: 'DB 8 correct.',
+  kind: "correct",
+  question_id: eighth_db_question.id
+)
+
+eighth_db_question_third_answer = Answer.create!(
+  content: 'DB 8 misleading.',
+  kind: "misleading",
+  question_id: eighth_db_question.id
+)
+
+eighth_db_question_fourth_answer = Answer.create!(
+  content: 'DB 8 weird.',
+  kind: "weird",
+  question_id: eighth_db_question.id
+)
+
+puts 'Empty DB answers created.'
+
+puts 'Creating empty Front answers...'
+
+first_front_question_first_answer = Answer.create!(
+  content: 'Front 1 perfect.',
+  kind: 'perfect',
+  question_id: first_front_question.id
+)
+
+first_front_question_second_answer = Answer.create!(
+  content: 'Front 1 correct.',
+  kind: "correct",
+  question_id: first_front_question.id
+)
+
+first_front_question_third_answer = Answer.create!(
+  content: 'Front 1 misleading.',
+  kind: "misleading",
+  question_id: first_front_question.id
+)
+
+first_front_question_fourth_answer = Answer.create!(
+  content: 'Front 1 weird.',
+  kind: "weird",
+  question_id: first_front_question.id
+)
+
+second_front_question_first_answer = Answer.create!(
+  content: 'Front 2 perfect.',
+  kind: 'perfect',
+  question_id: second_front_question.id
+)
+
+second_front_question_second_answer = Answer.create!(
+  content: 'Front 2 correct.',
+  kind: "correct",
+  question_id: second_front_question.id
+)
+
+second_front_question_third_answer = Answer.create!(
+  content: 'Front 2 misleading.',
+  kind: "misleading",
+  question_id: second_front_question.id
+)
+
+second_front_question_fourth_answer = Answer.create!(
+  content: 'Front 2 weird.',
+  kind: "weird",
+  question_id: second_front_question.id
+)
+
+third_front_question_first_answer = Answer.create!(
+  content: 'Front 3 perfect.',
+  kind: 'perfect',
+  question_id: third_front_question.id
+)
+
+third_front_question_second_answer = Answer.create!(
+  content: 'Front 3 correct.',
+  kind: "correct",
+  question_id: third_front_question.id
+)
+
+third_front_question_third_answer = Answer.create!(
+  content: 'Front 3 misleading.',
+  kind: "misleading",
+  question_id: third_front_question.id
+)
+
+third_front_question_fourth_answer = Answer.create!(
+  content: 'Front 3 weird.',
+  kind: "weird",
+  question_id: third_front_question.id
+)
+
+fourth_front_question_first_answer = Answer.create!(
+  content: 'Front 4 perfect.',
+  kind: 'perfect',
+  question_id: fourth_front_question.id
+)
+
+fourth_front_question_second_answer = Answer.create!(
+  content: 'Front 4 correct.',
+  kind: "correct",
+  question_id: fourth_front_question.id
+)
+
+fourth_front_question_third_answer = Answer.create!(
+  content: 'Front 4 misleading.',
+  kind: "misleading",
+  question_id: fourth_front_question.id
+)
+
+fourth_front_question_fourth_answer = Answer.create!(
+  content: 'Front 4 weird.',
+  kind: "weird",
+  question_id: fourth_front_question.id
+)
+
+fifth_front_question_first_answer = Answer.create!(
+  content: 'Front 5 perfect.',
+  kind: 'perfect',
+  question_id: fifth_front_question.id
+)
+
+fifth_front_question_second_answer = Answer.create!(
+  content: 'Front 5 correct.',
+  kind: "correct",
+  question_id: fifth_front_question.id
+)
+
+fifth_front_question_third_answer = Answer.create!(
+  content: 'Front 5 misleading.',
+  kind: "misleading",
+  question_id: fifth_front_question.id
+)
+
+fifth_front_question_fourth_answer = Answer.create!(
+  content: 'Front 5 weird.',
+  kind: "weird",
+  question_id: fifth_front_question.id
+)
+
+sixth_front_question_first_answer = Answer.create!(
+  content: 'Front 6 perfect.',
+  kind: 'perfect',
+  question_id: sixth_front_question.id
+)
+
+sixth_front_question_second_answer = Answer.create!(
+  content: 'Front 6 correct.',
+  kind: "correct",
+  question_id: sixth_front_question.id
+)
+
+sixth_front_question_third_answer = Answer.create!(
+  content: 'Front 6 misleading.',
+  kind: "misleading",
+  question_id: sixth_front_question.id
+)
+
+sixth_front_question_fourth_answer = Answer.create!(
+  content: 'Front 6 weird.',
+  kind: "weird",
+  question_id: sixth_front_question.id
+)
+
+seventh_front_question_first_answer = Answer.create!(
+  content: 'Front 7 perfect.',
+  kind: 'perfect',
+  question_id: seventh_front_question.id
+)
+
+seventh_front_question_second_answer = Answer.create!(
+  content: 'Front 7 correct.',
+  kind: "correct",
+  question_id: seventh_front_question.id
+)
+
+seventh_front_question_third_answer = Answer.create!(
+  content: 'Front 7 misleading.',
+  kind: "misleading",
+  question_id: seventh_front_question.id
+)
+
+seventh_front_question_fourth_answer = Answer.create!(
+  content: 'Front 7 weird.',
+  kind: "weird",
+  question_id: seventh_front_question.id
+)
+
+eighth_front_question_first_answer = Answer.create!(
+  content: 'Front 8 perfect.',
+  kind: 'perfect',
+  question_id: eighth_front_question.id
+)
+
+eighth_front_question_second_answer = Answer.create!(
+  content: 'Front 8 correct.',
+  kind: "correct",
+  question_id: eighth_front_question.id
+)
+
+eighth_front_question_third_answer = Answer.create!(
+  content: 'Front 8 misleading.',
+  kind: "misleading",
+  question_id: eighth_front_question.id
+)
+
+eighth_front_question_fourth_answer = Answer.create!(
+  content: 'Front 8 weird.',
+  kind: "weird",
+  question_id: eighth_front_question.id
+)
+
+puts 'Empty Front answers created.'
+
+puts 'Creating Slackbot answers...'
 
 first_slackbot_question_first_answer = Answer.create!(
   content: 'mkdir <folder_name>',
@@ -475,6 +1259,10 @@ fifth_slackbot_question_fourth_answer = Answer.create!(
   question_id: fifth_slackbot_question.id
 )
 
+puts 'Slackbot answers created.'
+
+puts 'Creating Jeremy answers...'
+
 first_jeremy_question_first_answer = Answer.create!(
   content: '8:45 AM',
   kind: "perfect",
@@ -571,7 +1359,7 @@ fourth_jeremy_question_fourth_answer = Answer.create!(
   question_id: fourth_jeremy_question.id
 )
 
-puts 'Answers created.'
+puts 'Jeremy answers created.'
 
 puts 'Creating Sébastien answers...'
 
