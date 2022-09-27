@@ -8,6 +8,8 @@
 
 require "open-uri"
 
+puts 'Starting seeds :'
+
 puts 'Cleaning up Database...'
 GameAnswer.destroy_all
 Round.destroy_all
@@ -20,7 +22,7 @@ Question.destroy_all
 Lesson.destroy_all
 puts 'Database cleaned.'
 
-puts 'Adding lessons'
+puts 'Adding lessons...'
 
 first_lesson = Lesson.create!(
   name: "Setup terminal and Git",
@@ -70,7 +72,7 @@ secret_lesson = Lesson.create!(
   hp_teacher: 20
 )
 
-puts 'Lessons created'
+puts 'Lessons added.'
 
 puts 'Creating empty Ruby questions...'
 
@@ -114,6 +116,8 @@ eighth_ruby_question = Question.create!(
   lesson_id: third_lesson.id
 )
 
+puts 'Empty Ruby questions created.'
+
 puts 'Creating empty OOP questions...'
 
 first_oop_question = Question.create!(
@@ -156,7 +160,7 @@ eighth_oop_question = Question.create!(
   lesson_id: fourth_lesson.id
 )
 
-puts 'Empty OOP questions created'
+puts 'Empty OOP questions created.'
 
 puts 'Creating empty DB questions...'
 
@@ -200,7 +204,7 @@ eighth_db_question = Question.create!(
   lesson_id: fifth_lesson.id
 )
 
-puts 'Empty DB questions created'
+puts 'Empty DB questions created.'
 
 puts 'Creating empty Front questions...'
 
@@ -244,7 +248,7 @@ eighth_front_question = Question.create!(
   lesson_id: sixth_lesson.id
 )
 
-puts 'Empty Front questions created'
+puts 'Empty Front questions created.'
 
 puts 'Creating Slackbot questions...'
 
@@ -273,7 +277,7 @@ fifth_slackbot_question = Question.create!(
   lesson_id: first_lesson.id
 )
 
-puts 'Slackbot questions created'
+puts 'Slackbot questions created.'
 
 puts 'Creating Jeremy questions...'
 
@@ -1679,4 +1683,6 @@ file = File.open(Rails.root.join("app/assets/images/borisstatic.png"))
 boris.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "image/png")
 boris.save!
 
-puts 'Finish !'
+puts 'Teachers created.'
+
+puts 'Seeds finished !'
