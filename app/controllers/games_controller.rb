@@ -247,10 +247,21 @@ class GamesController < ApplicationController
     elsif @game.status == "battle" && @game.battles.last.status == "battle_intro"
       this_battle = @game.battles.last
       this_battle.update(status: "round_intro")
-      @round = Round.create(
-        battle: this_battle,
-        question: this_battle.teacher.lesson.questions.sample
-      )
+      # if this_battle.teacher.status != "final_boss"
+        @round = Round.create(
+          battle: this_battle,
+          question: this_battle.teacher.lesson.questions.sample
+        )
+      # else
+      #   final_questions = []
+      #   @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
+      #     final_questions << e.answer.question
+      #   end
+      #   @round = Round.create(
+      #     battle: this_battle,
+      #     question: final_questions.sample
+      #   )
+      # end
     elsif @game.status == "battle" && @game.battles.last.status == "round_intro"
       this_battle = @game.battles.last
       this_battle.update(status: "round_core")
@@ -268,10 +279,18 @@ class GamesController < ApplicationController
       elsif this_answer.kind == "weird" || this_answer.kind == "misleading"
         this_battle.update(status: "round_core")
       elsif question_to_ask
-        @round = Round.create(
-          battle: this_battle,
-          question: question_to_ask
-        )
+        # if this_battle.teacher.status != "final_boss"
+          @round = Round.create(
+            battle: this_battle,
+            question: question_to_ask
+          )
+        # else
+        #   question_to_ask2 = final_questions.where.not(id: this_battle.question_ids).sample
+        #   @round = Round.create(
+        #     battle: this_battle,
+        #     question: question_to_ask2
+        #   )
+        # end
         this_battle.update(status: "round_intro")
       else
         this_battle.update(status: "battle_outro")
