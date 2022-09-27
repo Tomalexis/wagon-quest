@@ -35,33 +35,33 @@ second_lesson = Lesson.create!(
 )
 
 third_lesson = Lesson.create!(
-  name: "Javascript",
+  name: "Ruby",
   hp_user: 10,
-  hp_teacher: 4
+  hp_teacher: 10
 )
 
 fourth_lesson = Lesson.create!(
-  name: "Bootstrap",
+  name: "OOP",
   hp_user: 10,
-  hp_teacher: 4
+  hp_teacher: 10
 )
 
 fifth_lesson = Lesson.create!(
-  name: "Ruby",
+  name: "DB",
   hp_user: 10,
-  hp_teacher: 4
+  hp_teacher: 10
 )
 
 sixth_lesson = Lesson.create!(
-  name: "Rails",
+  name: "Front",
   hp_user: 10,
-  hp_teacher: 4
+  hp_teacher: 10
 )
 
 final_lesson = Lesson.create!(
   name: "Finals",
   hp_user: 10,
-  hp_teacher: 4
+  hp_teacher: 20
 )
 
 secret_lesson = Lesson.create!(
@@ -71,6 +71,180 @@ secret_lesson = Lesson.create!(
 )
 
 puts 'Lessons created'
+
+puts 'Creating empty Ruby questions...'
+
+first_ruby_question = Question.create!(
+  content: 'Ruby 1 ?',
+  lesson_id: third_lesson.id
+)
+
+second_ruby_question = Question.create!(
+  content: 'Ruby 2 ?',
+  lesson_id: third_lesson.id
+)
+
+third_ruby_question = Question.create!(
+  content: 'Ruby 3 ?',
+  lesson_id: third_lesson.id
+)
+
+fourth_ruby_question = Question.create!(
+  content: 'Ruby 4 ?',
+  lesson_id: third_lesson.id
+)
+
+fifth_ruby_question = Question.create!(
+  content: 'Ruby 5 ?',
+  lesson_id: third_lesson.id
+)
+
+sixth_ruby_question = Question.create!(
+  content: 'Ruby 6 ?',
+  lesson_id: third_lesson.id
+)
+
+seventh_ruby_question = Question.create!(
+  content: 'Ruby 7 ?',
+  lesson_id: third_lesson.id
+)
+
+eighth_ruby_question = Question.create!(
+  content: 'Ruby 8 ?',
+  lesson_id: third_lesson.id
+)
+
+puts 'Creating empty OOP questions...'
+
+first_oop_question = Question.create!(
+  content: 'OOP 1 ?',
+  lesson_id: fourth_lesson.id
+)
+
+second_oop_question = Question.create!(
+  content: 'OOP 2 ?',
+  lesson_id: fourth_lesson.id
+)
+
+third_oop_question = Question.create!(
+  content: 'OOP 3 ?',
+  lesson_id: fourth_lesson.id
+)
+
+fourth_oop_question = Question.create!(
+  content: 'OOP 4 ?',
+  lesson_id: fourth_lesson.id
+)
+
+fifth_oop_question = Question.create!(
+  content: 'OOP 5 ?',
+  lesson_id: fourth_lesson.id
+)
+
+sixth_oop_question = Question.create!(
+  content: 'OOP 6 ?',
+  lesson_id: fourth_lesson.id
+)
+
+seventh_oop_question = Question.create!(
+  content: 'OOP 7 ?',
+  lesson_id: fourth_lesson.id
+)
+
+eighth_oop_question = Question.create!(
+  content: 'OOP 8 ?',
+  lesson_id: fourth_lesson.id
+)
+
+puts 'Empty OOP questions created'
+
+puts 'Creating empty DB questions...'
+
+first_db_question = Question.create!(
+  content: 'DB 1 ?',
+  lesson_id: fifth_lesson.id
+)
+
+second_db_question = Question.create!(
+  content: 'DB 2 ?',
+  lesson_id: fifth_lesson.id
+)
+
+third_db_question = Question.create!(
+  content: 'DB 3 ?',
+  lesson_id: fifth_lesson.id
+)
+
+fourth_db_question = Question.create!(
+  content: 'DB 4 ?',
+  lesson_id: fifth_lesson.id
+)
+
+fifth_db_question = Question.create!(
+  content: 'DB 5 ?',
+  lesson_id: fifth_lesson.id
+)
+
+sixth_db_question = Question.create!(
+  content: 'DB 6 ?',
+  lesson_id: fifth_lesson.id
+)
+
+seventh_db_question = Question.create!(
+  content: 'DB 7 ?',
+  lesson_id: fifth_lesson.id
+)
+
+eighth_db_question = Question.create!(
+  content: 'DB 8 ?',
+  lesson_id: fifth_lesson.id
+)
+
+puts 'Empty DB questions created'
+
+puts 'Creating empty Front questions...'
+
+first_front_question = Question.create!(
+  content: 'Front 1 ?',
+  lesson_id: fifth_lesson.id
+)
+
+second_front_question = Question.create!(
+  content: 'Front 2 ?',
+  lesson_id: fifth_lesson.id
+)
+
+third_front_question = Question.create!(
+  content: 'Front 3 ?',
+  lesson_id: fifth_lesson.id
+)
+
+fourth_front_question = Question.create!(
+  content: 'Front 4 ?',
+  lesson_id: fifth_lesson.id
+)
+
+fifth_front_question = Question.create!(
+  content: 'Front 5 ?',
+  lesson_id: fifth_lesson.id
+)
+
+sixth_front_question = Question.create!(
+  content: 'Front 6 ?',
+  lesson_id: fifth_lesson.id
+)
+
+seventh_front_question = Question.create!(
+  content: 'Front 7 ?',
+  lesson_id: fifth_lesson.id
+)
+
+eighth_front_question = Question.create!(
+  content: 'Front 8 ?',
+  lesson_id: fifth_lesson.id
+)
+
+puts 'Empty Front questions created'
 
 puts 'Creating Slackbot questions...'
 
@@ -85,18 +259,18 @@ second_slackbot_question = Question.create!(
 )
 
 third_slackbot_question = Question.create!(
-content: 'How do you go from current directory to a child folder ?',
-lesson_id: first_lesson.id
+  content: 'How do you go from current directory to a child folder ?',
+  lesson_id: first_lesson.id
 )
 
 fourth_slackbot_question = Question.create!(
-content: 'How do you create a file in current directory ?',
-lesson_id: first_lesson.id
+  content: 'How do you create a file in current directory ?',
+  lesson_id: first_lesson.id
 )
 
 fifth_slackbot_question = Question.create!(
-content: 'How can you tell if you have uncommitted changes in your project ?',
-lesson_id: first_lesson.id
+  content: 'How can you tell if you have uncommitted changes in your project ?',
+  lesson_id: first_lesson.id
 )
 
 puts 'Slackbot questions created'
