@@ -247,21 +247,21 @@ class GamesController < ApplicationController
     elsif @game.status == "battle" && @game.battles.last.status == "battle_intro"
       this_battle = @game.battles.last
       this_battle.update(status: "round_intro")
-      # if this_battle.teacher.status != "final_boss"
+      if this_battle.teacher.status != "final_boss"
         @round = Round.create(
           battle: this_battle,
           question: this_battle.teacher.lesson.questions.sample
         )
-      # else
-      #   final_questions = []
-      #   @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
-      #     final_questions << e.answer.question
-      #   end
-      #   @round = Round.create(
-      #     battle: this_battle,
-      #     question: final_questions.sample
-      #   )
-      # end
+      else
+        @final_questions = []
+        @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
+          @final_questions << e.answer.question
+        end
+        @round = Round.create(
+          battle: this_battle,
+          question: @final_questions.sample
+        )
+      end
     elsif @game.status == "battle" && @game.battles.last.status == "round_intro"
       this_battle = @game.battles.last
       this_battle.update(status: "round_core")
@@ -272,7 +272,22 @@ class GamesController < ApplicationController
       this_battle = @game.battles.last
       this_round = this_battle.rounds.last
       this_answer = this_round.game_answers.last.answer
-      question_to_ask = this_battle.teacher.lesson.questions.where.not(id: this_battle.question_ids).sample
+      if this_battle.teacher.status != "final_boss"
+        question_to_ask = this_battle.teacher.lesson.questions.where.not(id: this_battle.question_ids).sample
+      else
+        @final_questions = []
+        @real_final_questions = []
+        @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
+          @final_questions << e.answer.question
+        end
+        @final_questions.each do |e|
+          if this_battle.question_ids.include?(e.id)
+          else
+            @real_final_questions << e
+          end
+        end
+        question_to_ask = @real_final_questions.sample
+      end
 
       if this_battle.hp_user <= 0 || this_battle.hp_teacher <= 0
         this_battle.update(status: "battle_outro")
