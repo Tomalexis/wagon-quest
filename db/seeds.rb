@@ -206,42 +206,42 @@ puts 'Creating empty Front questions...'
 
 first_front_question = Question.create!(
   content: 'Front 1 ?',
-  lesson_id: fifth_lesson.id
+  lesson_id: sixth_lesson.id
 )
 
 second_front_question = Question.create!(
   content: 'Front 2 ?',
-  lesson_id: fifth_lesson.id
+  lesson_id: sixth_lesson.id
 )
 
 third_front_question = Question.create!(
   content: 'Front 3 ?',
-  lesson_id: fifth_lesson.id
+  lesson_id: sixth_lesson.id
 )
 
 fourth_front_question = Question.create!(
   content: 'Front 4 ?',
-  lesson_id: fifth_lesson.id
+  lesson_id: sixth_lesson.id
 )
 
 fifth_front_question = Question.create!(
   content: 'Front 5 ?',
-  lesson_id: fifth_lesson.id
+  lesson_id: sixth_lesson.id
 )
 
 sixth_front_question = Question.create!(
   content: 'Front 6 ?',
-  lesson_id: fifth_lesson.id
+  lesson_id: sixth_lesson.id
 )
 
 seventh_front_question = Question.create!(
   content: 'Front 7 ?',
-  lesson_id: fifth_lesson.id
+  lesson_id: sixth_lesson.id
 )
 
 eighth_front_question = Question.create!(
   content: 'Front 8 ?',
-  lesson_id: fifth_lesson.id
+  lesson_id: sixth_lesson.id
 )
 
 puts 'Empty Front questions created'
