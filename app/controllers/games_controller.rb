@@ -282,6 +282,8 @@ class GamesController < ApplicationController
         real_final_questions = []
         other_questions = []
         real_other_questions = []
+        rescue_questions = []
+        real_rescue_questions = []
         @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
           final_questions << e.answer.question
         end
@@ -299,12 +301,29 @@ class GamesController < ApplicationController
             else
               other_questions << q
             end
-            other_questions.each do |e|
-              if this_battle.question_ids.include?(e.id)
+          end
+          other_questions.each do |e|
+            if this_battle.question_ids.include?(e.id)
+            else
+              real_other_questions << e
+            end
+          end
+          if real_other_questions == []
+            Question.all.each do |q|
+              if q.lesson.name == "Savoir vivre rules"
+              elsif q.lesson.name == "Setup terminal and Git"
+              elsif q.lesson.name == "Do or die"
               else
-                real_other_questions << e
+                rescue_questions << q
               end
             end
+            rescue_questions.each do |e|
+              if this_battle.question_ids.include?(e.id)
+              else
+                real_rescue_questions << e
+              end
+            end
+            question_to_ask = real_rescue_questions.sample
           end
           question_to_ask = real_other_questions.sample
         else
