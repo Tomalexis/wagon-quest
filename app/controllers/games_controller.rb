@@ -126,7 +126,7 @@ class GamesController < ApplicationController
                              '10-21', '11-21', '12-21', '13-21', '14-21',
                              '35-21', '36-21', '37-21', '38-21', '39-21',
                              '40-21', '41-21', '42-21', '43-21', '44-21', '45-21', '46-21', '47-21', '48-21', '49-21',
-                             '50-21', '51-21', '53-21', '54-21',
+                             '50-21', '51-21', '52-21', '53-21', '54-21',
                              '13-22', '13-22', '14-22',
                              '31-22', '32-22', '35-22', '36-22', '37-22', '38-22', '39-22',
                              '40-22', '41-22', '42-22', '43-22', '44-22', '45-22', '46-22', '47-22', '48-22', '49-22',
@@ -247,10 +247,23 @@ class GamesController < ApplicationController
     elsif @game.status == "battle" && @game.battles.last.status == "battle_intro"
       this_battle = @game.battles.last
       this_battle.update(status: "round_intro")
-      @round = Round.create(
-        battle: this_battle,
-        question: this_battle.teacher.lesson.questions.sample
-      )
+      if this_battle.teacher.status != "final_boss"
+        @round = Round.create(
+          battle: this_battle,
+          question: this_battle.teacher.lesson.questions.sample
+        )
+
+      else
+        final_questions = []
+        @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
+          final_questions << e.answer.question
+        end
+        @round = Round.create(
+          battle: this_battle,
+          question: final_questions.sample
+        )
+      end
+
     elsif @game.status == "battle" && @game.battles.last.status == "round_intro"
       this_battle = @game.battles.last
       this_battle.update(status: "round_core")
@@ -261,17 +274,72 @@ class GamesController < ApplicationController
       this_battle = @game.battles.last
       this_round = this_battle.rounds.last
       this_answer = this_round.game_answers.last.answer
-      question_to_ask = this_battle.teacher.lesson.questions.where.not(id: this_battle.question_ids).sample
+      if this_battle.teacher.status != "final_boss"
+        question_to_ask = this_battle.teacher.lesson.questions.where.not(id: this_battle.question_ids).sample
+      else
+
+        final_questions = []
+        real_final_questions = []
+        other_questions = []
+        real_other_questions = []
+        rescue_questions = []
+        real_rescue_questions = []
+        @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
+          final_questions << e.answer.question
+        end
+        final_questions.each do |e|
+          if this_battle.question_ids.include?(e.id)
+          else
+            real_final_questions << e
+          end
+        end
+        if real_final_questions == []
+          Question.all.each do |q|
+            if q.lesson.name == "Savoir vivre rules"
+            elsif q.lesson.name == "Setup terminal and Git"
+            elsif q.lesson.name == "Do or die"
+            else
+              other_questions << q
+            end
+          end
+          other_questions.each do |e|
+            if this_battle.question_ids.include?(e.id)
+            else
+              real_other_questions << e
+            end
+          end
+          if real_other_questions == []
+            Question.all.each do |q|
+              if q.lesson.name == "Savoir vivre rules"
+              elsif q.lesson.name == "Setup terminal and Git"
+              elsif q.lesson.name == "Do or die"
+              else
+                rescue_questions << q
+              end
+            end
+            rescue_questions.each do |e|
+              if this_battle.question_ids.include?(e.id)
+              else
+                real_rescue_questions << e
+              end
+            end
+            question_to_ask = real_rescue_questions.sample
+          end
+          question_to_ask = real_other_questions.sample
+        else
+          question_to_ask = real_final_questions.sample
+        end
+      end
 
       if this_battle.hp_user <= 0 || this_battle.hp_teacher <= 0
         this_battle.update(status: "battle_outro")
       elsif this_answer.kind == "weird" || this_answer.kind == "misleading"
         this_battle.update(status: "round_core")
       elsif question_to_ask
-        @round = Round.create(
-          battle: this_battle,
-          question: question_to_ask
-        )
+          @round = Round.create(
+            battle: this_battle,
+            question: question_to_ask
+          )
         this_battle.update(status: "round_intro")
       else
         this_battle.update(status: "battle_outro")

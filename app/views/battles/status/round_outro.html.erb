@@ -9,13 +9,13 @@
       <% end %>
     </div>
     <% if @battle.teacher.status == "tutorial" %>
-      <% if @game_answer.answer.kind == "perfect" || @game_answer.answer.kind == "correct"%>
+      <% if @game_answer.answer.kind == "perfect" || @game_answer.answer.kind == "correct" %>
         <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-blink' %>
       <% else %>
         <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image' %>
       <% end %>
     <% else %>
-      <% if @game_answer.answer.kind == "perfect" || @game_answer.answer.kind == "correct"%>
+      <% if @game_answer.answer.kind == "perfect" || @game_answer.answer.kind == "correct" %>
         <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-mini-blink' %>
       <% else %>
         <%= cl_image_tag @battle.teacher.avatar_battle.key, class: 'enemy-image-mini' %>
