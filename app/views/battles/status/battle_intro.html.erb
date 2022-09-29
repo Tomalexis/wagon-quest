@@ -5,6 +5,8 @@
     <audio src="/free_battle1.wav" loop='true' data-music-target='audio'></audio>
   <% elsif @battle.teacher.status == "regular" %>
     <audio src="/free_battle2.wav" loop='true' data-music-target='audio'></audio>
+  <% elsif @battle.teacher.status == "final_boss" %>
+    <audio src="/For_Final_Boss.mp3" loop='true' data-music-target='audio'></audio>
   <% elsif @battle.teacher.status == "secret_boss" %>
     <audio src="/Secret_Boss.mp3" loop='true' data-music-target='audio'></audio>
   <% end %>

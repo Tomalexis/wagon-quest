@@ -256,7 +256,11 @@ class GamesController < ApplicationController
       else
         final_questions = []
         @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
-          final_questions << e.answer.question
+          if e.answer.question.lesson.name == "Savoir vivre rules"
+          elsif e.answer.question.lesson.name == "Do or die"
+          else
+            final_questions << e.answer.question
+          end
         end
         @round = Round.create(
           battle: this_battle,
@@ -285,7 +289,11 @@ class GamesController < ApplicationController
         rescue_questions = []
         real_rescue_questions = []
         @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
-          final_questions << e.answer.question
+          if e.answer.question.lesson.name == "Savoir vivre rules"
+          elsif e.answer.question.lesson.name == "Do or die"
+          else
+            final_questions << e.answer.question
+          end
         end
         final_questions.each do |e|
           if this_battle.question_ids.include?(e.id)

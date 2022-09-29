@@ -63,7 +63,7 @@ sixth_lesson = Lesson.create!(
 final_lesson = Lesson.create!(
   name: "Finals",
   hp_user: 10,
-  hp_teacher: 20
+  hp_teacher: 40
 )
 
 secret_lesson = Lesson.create!(
