@@ -262,10 +262,14 @@ class GamesController < ApplicationController
         rescue_questions = []
         real_rescue_questions = []
         @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
-          if e.answer.question.lesson.name == "Savoir vivre rules"
-          elsif e.answer.question.lesson.name == "Do or die"
-          else
+          # if e.answer.question.lesson.name == "Savoir vivre rules"
+          # elsif e.answer.question.lesson.name == "Do or die"
+          # else
+          #   final_questions << e.answer.question
+          # end
+          if e.answer.question.lesson.name == "Setup terminal and Git"
             final_questions << e.answer.question
+          else
           end
         end
         final_questions.each do |e|
@@ -370,6 +374,7 @@ class GamesController < ApplicationController
         real_final_questions = real_final_questions.uniq
 
         all_questions_asked = []
+        all_questions = []
         @game.game_answers.each do |e|
           all_questions_asked << e.answer.question
         end
@@ -378,11 +383,17 @@ class GamesController < ApplicationController
           elsif q.lesson.name == "Setup terminal and Git"
           elsif q.lesson.name == "Do or die"
           else
-            other_questions << q
+            all_questions << q
+          end
+        end
+        all_questions.each do |e|
+          if all_questions_asked.uniq.include?(e.id)
+          else
+            other_questions << e
           end
         end
         other_questions.each do |e|
-          if all_questions_asked.uniq.include?(e.id)
+          if this_battle.question_ids.include?(e.id)
           else
             real_other_questions << e
           end
@@ -404,16 +415,6 @@ class GamesController < ApplicationController
           end
         end
         real_rescue_questions = real_rescue_questions.uniq
-
-        if real_debut_questions.empty? == false
-          question_to_ask = real_debut_questions.sample
-        elsif real_debut_questions.empty?
-          question_to_ask = real_final_questions.sample
-        elsif real_debut_questions.empty? && real_final_questions.empty?
-          question_to_ask = real_other_questions.sample
-        elsif real_debut_questions.empty? && real_final_questions.empty? && real_other_questions.empty?
-          question_to_ask = real_rescue_questions.sample
-        end
 
         if real_debut_questions.empty? == false
           question_to_ask = real_debut_questions.sample
