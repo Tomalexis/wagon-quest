@@ -7,6 +7,7 @@ class GamesController < ApplicationController
     @game = Game.new
     @game.user = @user
     @game.status = 'intro'
+    @game.cleared = false
     @game.user_position_x = 9
     @game.user_position_y = 6
     @game.save
@@ -558,9 +559,11 @@ class GamesController < ApplicationController
         )
         end
       elsif this_battle.hp_teacher <= 0
+        this_battle.teacher.defeated = true
         if this_battle.teacher.status == "tutorial"
           @game.update(status: "map", user_position_x: 48, user_position_y: 37)
         elsif this_battle.teacher.status == "final_boss"
+          @game.cleared = true
           @game.update(status: "clear")
         else
           @game.update(status: "map")

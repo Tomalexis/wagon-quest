@@ -1506,7 +1506,8 @@ slackbot = Teacher.create!(
   status: "tutorial",
   open_dialog1: "Hello student. I see that you did not do your flashcards tonight...",
   open_dialog2: "Wait are you real Slackbot ?!!",
-  open_dialog3: "Yes... And your lack of seriousness pains me... It's time to fight !"
+  open_dialog3: "Yes... And your lack of seriousness pains me... It's time to fight !",
+  defeated: false
 )
 
 file = File.open(Rails.root.join("app/assets/images/slackbotstatic.png"))
@@ -1530,7 +1531,8 @@ jeremy = Teacher.create!(
   status: "regular",
   open_dialog1: "Hey dude ! Welcome to Le Wagon academy !",
   open_dialog2: "You really have nice hair man !",
-  open_dialog3: "Let me teach you the rules around here !"
+  open_dialog3: "Let me teach you the rules around here !",
+  defeated: false
 )
 
 file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
@@ -1554,7 +1556,8 @@ seb = Teacher.create!(
   status: "secret_boss",
   open_dialog1: "...",
   open_dialog2: "...",
-  open_dialog3: "..."
+  open_dialog3: "...",
+  defeated: false
 )
 
 file = File.open(Rails.root.join("app/assets/images/seb_tall.png"))
@@ -1578,7 +1581,8 @@ tim = Teacher.create!(
   status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
-  open_dialog3: '...'
+  open_dialog3: '...',
+  defeated: false
 )
 
 file = File.open(Rails.root.join("app/assets/images/timstatic.png"))
@@ -1602,7 +1606,8 @@ hugo = Teacher.create!(
   status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
-  open_dialog3: '...'
+  open_dialog3: '...',
+  defeated: false
 )
 
 file = File.open(Rails.root.join("app/assets/images/hugostatic.png"))
@@ -1626,7 +1631,8 @@ diane = Teacher.create!(
   status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
-  open_dialog3: '...'
+  open_dialog3: '...',
+  defeated: false
 )
 
 file = File.open(Rails.root.join("app/assets/images/dianestatic.png"))
@@ -1650,7 +1656,8 @@ paul = Teacher.create!(
   status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
-  open_dialog3: '...'
+  open_dialog3: '...',
+  defeated: false
 )
 
 file = File.open(Rails.root.join("app/assets/images/paulstatic.png"))
@@ -1674,7 +1681,8 @@ boris = Teacher.create!(
   status: "final_boss",
   open_dialog1: '...',
   open_dialog2: '...',
-  open_dialog3: '...'
+  open_dialog3: '...',
+  defeated: false
 )
 
 file = File.open(Rails.root.join("app/assets/images/borisstatic.png"))

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_08_100134) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_29_230833) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -81,6 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_100134) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "cleared"
     t.index ["user_id"], name: "index_games_on_user_id"
   end
 
@@ -127,6 +128,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_100134) do
     t.string "open_dialog1"
     t.string "open_dialog2"
     t.string "open_dialog3"
+    t.boolean "defeated"
     t.index ["lesson_id"], name: "index_teachers_on_lesson_id"
   end
 
