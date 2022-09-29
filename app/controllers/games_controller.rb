@@ -405,10 +405,24 @@ class GamesController < ApplicationController
           question_to_ask = real_debut_questions.sample
         elsif real_debut_questions.empty?
           question_to_ask = real_final_questions.sample
-        elsif real_final_questions.empty?
+        elsif real_debut_questions.empty? && real_final_questions.empty?
           question_to_ask = real_other_questions.sample
-        elsif real_other_questions.empty?
+        elsif real_debut_questions.empty? && real_final_questions.empty? && real_other_questions.empty?
           question_to_ask = real_rescue_questions.sample
+        end
+
+        if real_debut_questions.empty? == false
+          question_to_ask = real_debut_questions.sample
+        elsif real_debut_questions.empty?
+          if real_final_questions.empty? == false
+            question_to_ask = real_final_questions.sample
+          elsif real_final_questions.empty?
+            if real_other_questions.empty? == false
+              question_to_ask = real_other_questions.sample
+            else
+              question_to_ask = real_rescue_questions.sample
+            end
+          end
         end
 
       end
