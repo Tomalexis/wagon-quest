@@ -344,13 +344,14 @@ class GamesController < ApplicationController
           if e.answer.question.lesson.name == "Setup terminal and Git"
             debut_questions << e.answer.question
           end
-          debut_questions.each do |q|
-            if this_battle.question_ids.include?(q.id)
-            else
-              real_debut_questions << q
-            end
+        end
+        debut_questions.uniq.each do |q|
+          if this_battle.question_ids.include?(q.id)
+          else
+            real_debut_questions << q
           end
         end
+        real_debut_questions = real_debut_questions.uniq
 
         @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
           if e.answer.question.lesson.name == "Setup terminal and Git"
@@ -360,12 +361,13 @@ class GamesController < ApplicationController
             final_questions << e.answer.question
           end
         end
-        final_questions.each do |e|
+        final_questions.uniq.each do |e|
           if this_battle.question_ids.include?(e.id)
           else
             real_final_questions << e
           end
         end
+        real_final_questions = real_final_questions.uniq
 
         all_questions_asked = []
         @game.game_answers.each do |e|
@@ -380,11 +382,12 @@ class GamesController < ApplicationController
           end
         end
         other_questions.each do |e|
-          if all_questions_asked.include?(e.id)
+          if all_questions_asked.uniq.include?(e.id)
           else
             real_other_questions << e
           end
         end
+        real_other_questions = real_other_questions.uniq
 
         Question.all.each do |q|
           if q.lesson.name == "Savoir vivre rules"
@@ -400,6 +403,7 @@ class GamesController < ApplicationController
             real_rescue_questions << e
           end
         end
+        real_rescue_questions = real_rescue_questions.uniq
 
         if real_debut_questions.empty? == false
           question_to_ask = real_debut_questions.sample
