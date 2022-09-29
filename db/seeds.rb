@@ -1575,7 +1575,7 @@ tim = Teacher.create!(
   position_x: 2,
   position_y: 20,
   lesson_id: third_lesson.id,
-  status: "regular",
+  status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
   open_dialog3: '...'
@@ -1599,7 +1599,7 @@ hugo = Teacher.create!(
   position_x: 10,
   position_y: 4,
   lesson_id: fourth_lesson.id,
-  status: "regular",
+  status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
   open_dialog3: '...'
@@ -1623,7 +1623,7 @@ diane = Teacher.create!(
   position_x: 28,
   position_y: 4,
   lesson_id: fifth_lesson.id,
-  status: "regular",
+  status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
   open_dialog3: '...'
@@ -1647,7 +1647,7 @@ paul = Teacher.create!(
   position_x: 50,
   position_y: 9,
   lesson_id: sixth_lesson.id,
-  status: "regular",
+  status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
   open_dialog3: '...'
