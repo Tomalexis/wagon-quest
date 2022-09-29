@@ -376,7 +376,7 @@ class GamesController < ApplicationController
         all_questions_asked = []
         all_questions = []
         @game.game_answers.each do |e|
-          all_questions_asked << e.answer.question
+          all_questions_asked << e.answer.question.id
         end
         Question.all.each do |q|
           if q.lesson.name == "Savoir vivre rules"
