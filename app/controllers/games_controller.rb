@@ -405,8 +405,12 @@ class GamesController < ApplicationController
     elsif @game.status == "battle" && @game.battles.last.status == "battle_outro"
       this_battle = @game.battles.last
       if this_battle.hp_user <= 0
-        # teacher = Teacher.find_by(status: "secret_boss")
         teacher = this_battle.teacher
+        if this_battle.teacher.status == "final_boss"
+          @game.update(status: "map")
+        elsif this_battle.teacher.status == "secret_boss"
+          @game.update(status: "map")
+        else
         this_battle = Battle.create(
           game: @game,
           teacher: teacher,
@@ -414,6 +418,7 @@ class GamesController < ApplicationController
           hp_teacher: teacher.lesson.hp_teacher,
           status: "battle_intro"
         )
+        end
       elsif this_battle.hp_teacher <= 0
         if this_battle.teacher.status == "tutorial"
           @game.update(status: "map", user_position_x: 48, user_position_y: 37)
