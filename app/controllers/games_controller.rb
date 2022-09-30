@@ -559,6 +559,7 @@ class GamesController < ApplicationController
         )
         end
       elsif this_battle.hp_teacher <= 0
+        @game.update("#{this_battle.teacher.name}_defeated" => true)
         if this_battle.teacher.status == "tutorial"
           @game.update(status: "map", user_position_x: 48, user_position_y: 37)
         elsif this_battle.teacher.status == "final_boss"
