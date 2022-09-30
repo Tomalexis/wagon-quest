@@ -1,8 +1,8 @@
 <h1>This is the clear page</h1>
 
-<p>Congrats <%= current_user.username %>! You are ruler of Gaudelet Kingdom!</p>
+<p>Congrats <%= current_user.username %>! You are the ruler of Gaudelet Kingdom!</p>
 
-<p>Find back your game #<%= @game.id %> whenever (you're logged in) at http://127.0.0.1:3000/games/<%= @game.id %>.</p>
+<p>Find back your game #<%= @game.id %> whenever you're logged in at https://www.wagon-quest.xyz<%= "#{game_path(@game)}" %>.</p>
 
 <p><%= link_to continue_game_path(@game), data: { turbo_method: :patch, dialog_switch_target: 'continue' } do %>
           Continue
@@ -11,3 +11,7 @@
 <p><%= link_to root_path do %>
           Return home
         <% end %></p>
+
+<p><%= cl_image_tag Teacher.find_by(status: "secret_boss").avatar_battle.key %></p>
+
+<p>Will you find him? Will you... defeat him? 😬</p>

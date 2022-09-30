@@ -351,66 +351,6 @@ class GamesController < ApplicationController
           end
         end
 
-        # final_questions = []
-        # real_final_questions = []
-        # other_questions = []
-        # real_other_questions = []
-        # rescue_questions = []
-        # real_rescue_questions = []
-        # @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
-        #   # if e.answer.question.lesson.name == "Savoir vivre rules"
-        #   # elsif e.answer.question.lesson.name == "Do or die"
-        #   # else
-        #   #   final_questions << e.answer.question
-        #   # end
-        #   if e.answer.question.lesson.name == "Setup terminal and Git"
-        #     final_questions << e.answer.question
-        #   else
-        #   end
-        # end
-        # final_questions.each do |e|
-        #   if this_battle.question_ids.include?(e.id)
-        #   else
-        #     real_final_questions << e
-        #   end
-        # end
-        # if real_final_questions == []
-        #   Question.all.each do |q|
-        #     if q.lesson.name == "Savoir vivre rules"
-        #     elsif q.lesson.name == "Setup terminal and Git"
-        #     elsif q.lesson.name == "Do or die"
-        #     else
-        #       other_questions << q
-        #     end
-        #   end
-        #   other_questions.each do |e|
-        #     if this_battle.question_ids.include?(e.id)
-        #     else
-        #       real_other_questions << e
-        #     end
-        #   end
-        #   if real_other_questions == []
-        #     Question.all.each do |q|
-        #       if q.lesson.name == "Savoir vivre rules"
-        #       elsif q.lesson.name == "Setup terminal and Git"
-        #       elsif q.lesson.name == "Do or die"
-        #       else
-        #         rescue_questions << q
-        #       end
-        #     end
-        #     rescue_questions.each do |e|
-        #       if this_battle.question_ids.include?(e.id)
-        #       else
-        #         real_rescue_questions << e
-        #       end
-        #     end
-        #     question_to_ask = real_rescue_questions.sample
-        #   end
-        #   question_to_ask = real_other_questions.sample
-        # else
-        #   question_to_ask = real_final_questions.sample
-        # end
-
         @round = Round.create(
           battle: this_battle,
           question: question_to_ask

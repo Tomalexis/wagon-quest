@@ -29,7 +29,7 @@
                 data-map-target="obstacle teacherTile"
               <% elsif @teachers_per_position.key?(position) && @teachers_per_position[position].status == "regular" %>
                 data-map-target="obstacle teacherTile"
-              <% elsif @teachers_per_position.key?(position) && @game["Timothée_defeated"] == true && @game["Hugo_defeated"] == true && @game["Diane_defeated"] == true && @game["Paul_defeated"] == true && @teachers_per_position[position].status == "final_boss" %>
+              <% elsif @teachers_per_position.key?(position) && @game["#{Teacher.where(status: "core_four")[0].name}_defeated"] == true && @game["#{Teacher.where(status: "core_four")[1].name}_defeated"] == true && @game["#{Teacher.where(status: "core_four")[2].name}_defeated"] == true && @game["#{Teacher.where(status: "core_four")[3].name}_defeated"] == true && @teachers_per_position[position].status == "final_boss" %>
                 data-map-target="obstacle teacherTile"
               <% elsif @teachers_per_position.key?(position) %>
                 data-map-target="obstacle"
