@@ -279,7 +279,7 @@ fifth_slackbot_question = Question.create!(
 
 puts 'Slackbot questions created.'
 
-puts 'Creating Jeremy questions...'
+puts 'Creating Jérémy questions...'
 
 first_jeremy_question = Question.create!(
   content: 'At what time should you arrive in the morning ?',
@@ -301,7 +301,7 @@ fourth_jeremy_question = Question.create!(
   lesson_id: second_lesson.id
 )
 
-puts 'Jeremy questions created.'
+puts 'Jérémy questions created.'
 
 puts 'Creating Sébastien questions...'
 
@@ -1265,7 +1265,7 @@ fifth_slackbot_question_fourth_answer = Answer.create!(
 
 puts 'Slackbot answers created.'
 
-puts 'Creating Jeremy answers...'
+puts 'Creating Jérémy answers...'
 
 first_jeremy_question_first_answer = Answer.create!(
   content: '8:45 AM',
@@ -1363,7 +1363,7 @@ fourth_jeremy_question_fourth_answer = Answer.create!(
   question_id: fourth_jeremy_question.id
 )
 
-puts 'Jeremy answers created.'
+puts 'Jérémy answers created.'
 
 puts 'Creating Sébastien answers...'
 
@@ -1516,7 +1516,7 @@ slackbot.avatar_battle.attach(io: file, filename: "teacher.png", content_type: "
 slackbot.save!
 
 jeremy = Teacher.create!(
-  name: 'Jeremy',
+  name: 'Jérémy',
   feedback_answer_perfect: 'Dude, that answer is HAIRxtraordinary !',
   feedback_answer_correct: 'Pretty cool answer Dude !',
   feedback_answer_misleading: 'Come on Dude, you can do better than that !',
