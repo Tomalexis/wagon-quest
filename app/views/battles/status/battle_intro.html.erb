@@ -5,8 +5,12 @@
     <audio src="/free_battle1.wav" loop='true' data-music-target='audio'></audio>
   <% elsif @battle.teacher.status == "regular" %>
     <audio src="/free_battle2.wav" loop='true' data-music-target='audio'></audio>
+    <% elsif @battle.teacher.status == "core_four" %>
+    <audio src="/Slackbot_Battle.mp3" loop='true' data-music-target='audio'></audio>
+  <% elsif @battle.teacher.status == "final_boss" %>
+    <audio src="/For_Final_Boss_Extended.mp3" loop='true' data-music-target='audio'></audio>
   <% elsif @battle.teacher.status == "secret_boss" %>
-    <audio src="/Secret_Boss.mp3" loop='true' data-music-target='audio'></audio>
+    <audio src="/For_Secret_Boss_Extended.mp3" loop='true' data-music-target='audio'></audio>
   <% end %>
   <button class="btn back" data-action='click->music#play' data-music-target='playButton'><i class="fa-solid fa-volume-xmark"></i></button>
   <button class="btn back" data-action='click->music#pause' data-music-target='pauseButton' hidden><i class="fa-solid fa-volume-high"></i></button>

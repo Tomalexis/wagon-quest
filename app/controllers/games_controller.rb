@@ -7,6 +7,7 @@ class GamesController < ApplicationController
     @game = Game.new
     @game.user = @user
     @game.status = 'intro'
+    @game.cleared = false
     @game.user_position_x = 9
     @game.user_position_y = 6
     @game.save
@@ -28,7 +29,7 @@ class GamesController < ApplicationController
 
       @teachers_per_position = {}
 
-      @teachers = Teacher.where(status: ["regular", "final_boss", "secret_boss"])
+      @teachers = Teacher.where(status: ["regular", "core_four", "final_boss", "secret_boss"])
 
       @teachers.each do |teacher|
         @teachers_per_position["#{teacher.position_x}-#{teacher.position_y}"] = teacher
@@ -254,13 +255,105 @@ class GamesController < ApplicationController
         )
 
       else
+
+        debut_questions = []
+        real_debut_questions = []
         final_questions = []
+        real_final_questions = []
+        other_questions = []
+        real_other_questions = []
+        rescue_questions = []
+        real_rescue_questions = []
+
         @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
-          final_questions << e.answer.question
+          if e.answer.question.lesson.name == "Setup terminal and Git"
+            debut_questions << e.answer.question
+          end
         end
+        debut_questions.uniq.each do |q|
+          if this_battle.question_ids.include?(q.id)
+          else
+            real_debut_questions << q
+          end
+        end
+        real_debut_questions = real_debut_questions.uniq
+
+        @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
+          if e.answer.question.lesson.name == "Setup terminal and Git"
+          elsif e.answer.question.lesson.name == "Savoir vivre rules"
+          elsif e.answer.question.lesson.name == "Do or die"
+          else
+            final_questions << e.answer.question
+          end
+        end
+        final_questions.uniq.each do |e|
+          if this_battle.question_ids.include?(e.id)
+          else
+            real_final_questions << e
+          end
+        end
+        real_final_questions = real_final_questions.uniq
+
+        all_questions_asked = []
+        all_questions = []
+        @game.game_answers.each do |e|
+          all_questions_asked << e.answer.question.id
+        end
+        Question.all.each do |q|
+          if q.lesson.name == "Savoir vivre rules"
+          elsif q.lesson.name == "Setup terminal and Git"
+          elsif q.lesson.name == "Do or die"
+          else
+            all_questions << q
+          end
+        end
+        all_questions.each do |e|
+          if all_questions_asked.uniq.include?(e.id)
+          else
+            other_questions << e
+          end
+        end
+        other_questions.each do |e|
+          if this_battle.question_ids.include?(e.id)
+          else
+            real_other_questions << e
+          end
+        end
+        real_other_questions = real_other_questions.uniq
+
+        Question.all.each do |q|
+          if q.lesson.name == "Savoir vivre rules"
+          elsif q.lesson.name == "Setup terminal and Git"
+          elsif q.lesson.name == "Do or die"
+          else
+            rescue_questions << q
+          end
+        end
+        rescue_questions.each do |e|
+          if this_battle.question_ids.include?(e.id)
+          else
+            real_rescue_questions << e
+          end
+        end
+        real_rescue_questions = real_rescue_questions.uniq
+
+        if real_debut_questions.empty? == false
+          question_to_ask = real_debut_questions.sample
+        elsif real_debut_questions.empty?
+          if real_final_questions.empty? == false
+            question_to_ask = real_final_questions.sample
+          elsif real_final_questions.empty?
+            if real_other_questions.empty? == false
+              question_to_ask = real_other_questions.sample
+            else
+              question_to_ask = real_rescue_questions.sample
+            end
+          end
+        end
+
         @round = Round.create(
           battle: this_battle,
-          question: final_questions.sample
+          question: question_to_ask
         )
       end
 
@@ -278,57 +371,101 @@ class GamesController < ApplicationController
         question_to_ask = this_battle.teacher.lesson.questions.where.not(id: this_battle.question_ids).sample
       else
 
+        debut_questions = []
+        real_debut_questions = []
         final_questions = []
         real_final_questions = []
         other_questions = []
         real_other_questions = []
         rescue_questions = []
         real_rescue_questions = []
+
         @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
-          final_questions << e.answer.question
+          if e.answer.question.lesson.name == "Setup terminal and Git"
+            debut_questions << e.answer.question
+          end
         end
-        final_questions.each do |e|
+        debut_questions.uniq.each do |q|
+          if this_battle.question_ids.include?(q.id)
+          else
+            real_debut_questions << q
+          end
+        end
+        real_debut_questions = real_debut_questions.uniq
+
+        @game.game_answers.joins(:answer).where(answers: { kind: ["weird", "misleading"] }).each do |e|
+          if e.answer.question.lesson.name == "Setup terminal and Git"
+          elsif e.answer.question.lesson.name == "Savoir vivre rules"
+          elsif e.answer.question.lesson.name == "Do or die"
+          else
+            final_questions << e.answer.question
+          end
+        end
+        final_questions.uniq.each do |e|
           if this_battle.question_ids.include?(e.id)
           else
             real_final_questions << e
           end
         end
-        if real_final_questions == []
-          Question.all.each do |q|
-            if q.lesson.name == "Savoir vivre rules"
-            elsif q.lesson.name == "Setup terminal and Git"
-            elsif q.lesson.name == "Do or die"
-            else
-              other_questions << q
-            end
-          end
-          other_questions.each do |e|
-            if this_battle.question_ids.include?(e.id)
-            else
-              real_other_questions << e
-            end
-          end
-          if real_other_questions == []
-            Question.all.each do |q|
-              if q.lesson.name == "Savoir vivre rules"
-              elsif q.lesson.name == "Setup terminal and Git"
-              elsif q.lesson.name == "Do or die"
-              else
-                rescue_questions << q
-              end
-            end
-            rescue_questions.each do |e|
-              if this_battle.question_ids.include?(e.id)
-              else
-                real_rescue_questions << e
-              end
-            end
-            question_to_ask = real_rescue_questions.sample
-          end
-          question_to_ask = real_other_questions.sample
-        else
-          question_to_ask = real_final_questions.sample
+        real_final_questions = real_final_questions.uniq
+
+        all_questions_asked = []
+        all_questions = []
+        @game.game_answers.each do |e|
+          all_questions_asked << e.answer.question.id
         end
+        Question.all.each do |q|
+          if q.lesson.name == "Savoir vivre rules"
+          elsif q.lesson.name == "Setup terminal and Git"
+          elsif q.lesson.name == "Do or die"
+          else
+            all_questions << q
+          end
+        end
+        all_questions.each do |e|
+          if all_questions_asked.uniq.include?(e.id)
+          else
+            other_questions << e
+          end
+        end
+        other_questions.each do |e|
+          if this_battle.question_ids.include?(e.id)
+          else
+            real_other_questions << e
+          end
+        end
+        real_other_questions = real_other_questions.uniq
+
+        Question.all.each do |q|
+          if q.lesson.name == "Savoir vivre rules"
+          elsif q.lesson.name == "Setup terminal and Git"
+          elsif q.lesson.name == "Do or die"
+          else
+            rescue_questions << q
+          end
+        end
+        rescue_questions.each do |e|
+          if this_battle.question_ids.include?(e.id)
+          else
+            real_rescue_questions << e
+          end
+        end
+        real_rescue_questions = real_rescue_questions.uniq
+
+        if real_debut_questions.empty? == false
+          question_to_ask = real_debut_questions.sample
+        elsif real_debut_questions.empty?
+          if real_final_questions.empty? == false
+            question_to_ask = real_final_questions.sample
+          elsif real_final_questions.empty?
+            if real_other_questions.empty? == false
+              question_to_ask = real_other_questions.sample
+            else
+              question_to_ask = real_rescue_questions.sample
+            end
+          end
+        end
+
       end
 
       if this_battle.hp_user <= 0 || this_battle.hp_teacher <= 0
@@ -336,10 +473,10 @@ class GamesController < ApplicationController
       elsif this_answer.kind == "weird" || this_answer.kind == "misleading"
         this_battle.update(status: "round_core")
       elsif question_to_ask
-          @round = Round.create(
-            battle: this_battle,
-            question: question_to_ask
-          )
+        @round = Round.create(
+          battle: this_battle,
+          question: question_to_ask
+        )
         this_battle.update(status: "round_intro")
       else
         this_battle.update(status: "battle_outro")
@@ -347,8 +484,12 @@ class GamesController < ApplicationController
     elsif @game.status == "battle" && @game.battles.last.status == "battle_outro"
       this_battle = @game.battles.last
       if this_battle.hp_user <= 0
-        # teacher = Teacher.find_by(status: "secret_boss")
         teacher = this_battle.teacher
+        if this_battle.teacher.status == "final_boss"
+          @game.update(status: "map")
+        elsif this_battle.teacher.status == "secret_boss"
+          @game.update(status: "map")
+        else
         this_battle = Battle.create(
           game: @game,
           teacher: teacher,
@@ -356,13 +497,20 @@ class GamesController < ApplicationController
           hp_teacher: teacher.lesson.hp_teacher,
           status: "battle_intro"
         )
+        end
       elsif this_battle.hp_teacher <= 0
+        @game.update("#{this_battle.teacher.name}_defeated" => true)
         if this_battle.teacher.status == "tutorial"
           @game.update(status: "map", user_position_x: 48, user_position_y: 37)
+        elsif this_battle.teacher.status == "final_boss"
+          @game.update(cleared: true)
+          @game.update(status: "clear")
         else
           @game.update(status: "map")
         end
       end
+    elsif @game.status == "clear"
+      @game.update(status: "map")
     end
 
     respond_to do |format|

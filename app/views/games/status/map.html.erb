@@ -24,16 +24,29 @@
           <% position = "#{x + 1}-#{y + 1}" %>
           <div class ="tile"
             id="<%=position%>"
-            <% if @teachers_per_position.key?(position) %>
-              data-map-target="obstacle teacherTile"
-            <% elsif @obstacle_positions.include?(position) %>
-              data-map-target="obstacle"
+            <% if @game.cleared == false %>
+              <% if @teachers_per_position.key?(position) && @game["#{@teachers_per_position[position].name}_defeated"] == false && @teachers_per_position[position].status == "core_four" %>
+                data-map-target="obstacle teacherTile"
+              <% elsif @teachers_per_position.key?(position) && @teachers_per_position[position].status == "regular" %>
+                data-map-target="obstacle teacherTile"
+              <% elsif @teachers_per_position.key?(position) && @game["#{Teacher.where(status: "core_four")[0].name}_defeated"] == true && @game["#{Teacher.where(status: "core_four")[1].name}_defeated"] == true && @game["#{Teacher.where(status: "core_four")[2].name}_defeated"] == true && @game["#{Teacher.where(status: "core_four")[3].name}_defeated"] == true && @teachers_per_position[position].status == "final_boss" %>
+                data-map-target="obstacle teacherTile"
+              <% elsif @teachers_per_position.key?(position) %>
+                data-map-target="obstacle"
+              <% elsif @obstacle_positions.include?(position) %>
+                data-map-target="obstacle"
+              <% end %>
+            <% else %>
+              <% if @teachers_per_position.key?(position) %>
+                data-map-target="obstacle teacherTile"
+              <% elsif @obstacle_positions.include?(position) %>
+                data-map-target="obstacle"
+              <% end %>
             <% end %>
             >
 
             <% if @teachers_per_position.key?(position) && @teachers_per_position[position].status != "secret_boss" %>
               <%= cl_image_tag @teachers_per_position[position].avatar_map.key, width: 45, height: 93, class: "teacher" %>
-              <%#= image_tag "jeremystatic.png", width: 48, height: 96, class: "teacher" %>
             <% end %>
 
             <% if @user_position == position %>
