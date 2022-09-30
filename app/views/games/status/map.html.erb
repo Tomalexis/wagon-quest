@@ -24,7 +24,7 @@
           <% position = "#{x + 1}-#{y + 1}" %>
           <div class ="tile"
             id="<%=position%>"
-            <% if @teachers_per_position.key?(position) %>
+            <% if @teachers_per_position.key?(position) && @game["#{@teachers_per_position[position].name}_defeated"] == false %>
               data-map-target="obstacle teacherTile"
             <% elsif @obstacle_positions.include?(position) %>
               data-map-target="obstacle"
