@@ -1,9 +1,13 @@
 <h1>This is the clear page</h1>
 
-<%= link_to continue_game_path(@game), data: { turbo_method: :patch, dialog_switch_target: 'continue' } do %>
-          <i class="fa-regular fa-lg fa-square-caret-down"></i>
-        <% end %>
+<p>Congrats <%= current_user.username %>! You are ruler of Gaudelet Kingdom!</p>
 
-<%= link_to root_path do %>
-          <i class="fa-regular fa-lg fa-square-caret-down"></i> "Return home"
-        <% end %>
+<p>Find back your game #<%= @game.id %> whenever (you're logged in) at http://127.0.0.1:3000/games/<%= @game.id %>.</p>
+
+<p><%= link_to continue_game_path(@game), data: { turbo_method: :patch, dialog_switch_target: 'continue' } do %>
+          Continue
+        <% end %></p>
+
+<p><%= link_to root_path do %>
+          Return home
+        <% end %></p>
