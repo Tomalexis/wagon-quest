@@ -24,11 +24,22 @@
           <% position = "#{x + 1}-#{y + 1}" %>
           <div class ="tile"
             id="<%=position%>"
-            <% if @teachers_per_position.key?(position) && @game["#{@teachers_per_position[position].name}_defeated"] == false %>
-              data-map-target="obstacle teacherTile"
-            <% elsif @obstacle_positions.include?(position) %>
-              data-map-target="obstacle"
+            <% if @game.cleared == false %>
+              <% if @teachers_per_position.key?(position) && @game["#{@teachers_per_position[position].name}_defeated"] == false %>
+                data-map-target="obstacle teacherTile"
+              <% elsif @teachers_per_position.key?(position) %>
+                data-map-target="obstacle"
+              <% elsif @obstacle_positions.include?(position) %>
+                data-map-target="obstacle"
+              <% end %>
+            <% else %>
+              <% if @teachers_per_position.key?(position) %>
+                data-map-target="obstacle teacherTile"
+              <% elsif @obstacle_positions.include?(position) %>
+                data-map-target="obstacle"
+              <% end %>
             <% end %>
+
             >
 
             <% if @teachers_per_position.key?(position) && @teachers_per_position[position].status != "secret_boss" %>
