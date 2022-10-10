@@ -39,7 +39,7 @@ second_lesson = Lesson.create!(
 third_lesson = Lesson.create!(
   name: "Ruby",
   hp_user: 10,
-  hp_teacher: 10
+  hp_teacher: 20
 )
 
 fourth_lesson = Lesson.create!(
@@ -74,49 +74,159 @@ secret_lesson = Lesson.create!(
 
 puts 'Lessons added.'
 
-puts 'Creating empty Ruby questions...'
+puts 'Creating Ruby questions...'
 
 first_ruby_question = Question.create!(
-  content: 'Ruby 1 ?',
+  content: 'What are the 3 types of CSS selectors used for scraping ?',
   lesson_id: third_lesson.id
 )
 
 second_ruby_question = Question.create!(
-  content: 'Ruby 2 ?',
+  content: 'What do you need to require to parse a .json file ?',
   lesson_id: third_lesson.id
 )
 
 third_ruby_question = Question.create!(
-  content: 'Ruby 3 ?',
+  content: 'Which gem is used to parse a .xml or .html document ?',
   lesson_id: third_lesson.id
 )
 
 fourth_ruby_question = Question.create!(
-  content: 'Ruby 4 ?',
+  content: 'How can you open a web page in Ruby ?',
   lesson_id: third_lesson.id
 )
 
 fifth_ruby_question = Question.create!(
-  content: 'Ruby 5 ?',
+  content: 'What Regexp anchor would you use to specify that the pattern you look for is at the end of a line ?',
   lesson_id: third_lesson.id
 )
 
 sixth_ruby_question = Question.create!(
-  content: 'Ruby 6 ?',
+  content: 'How do you define ranges in a Regexp ?',
   lesson_id: third_lesson.id
 )
 
 seventh_ruby_question = Question.create!(
-  content: 'Ruby 7 ?',
+  content: 'What are the main uses of regular expressions ?',
   lesson_id: third_lesson.id
 )
 
 eighth_ruby_question = Question.create!(
-  content: 'Ruby 8 ?',
+  content: 'How do you define group patterns in a Regexp ?',
   lesson_id: third_lesson.id
 )
 
-puts 'Empty Ruby questions created.'
+ninth_ruby_question = Question.create!(
+  content: 'Do you know how to use #gsub with a Regexp ?',
+  lesson_id: third_lesson.id
+)
+
+tenth_ruby_question = Question.create!(
+  content: 'How can you tell if a key is present in a Hash ?',
+  lesson_id: third_lesson.id
+)
+
+eleventh_ruby_question = Question.create!(
+  content: 'How can you get all the values of a Hash in an array ?',
+  lesson_id: third_lesson.id
+)
+
+twelfth_ruby_question = Question.create!(
+  content: 'How can you iterate through a Hash ?',
+  lesson_id: third_lesson.id
+)
+
+thirteenth_ruby_question = Question.create!(
+  content: 'Do you know how to split a String sentence into an Array of words ?',
+  lesson_id: third_lesson.id
+)
+
+fourteenth_ruby_question = Question.create!(
+  content: 'How would you sort an Array with a given sorting criteria ?',
+  lesson_id: third_lesson.id
+)
+
+fifteenth_ruby_question = Question.create!(
+  content: 'What is the simplest way to iterate through the items of an Array ?',
+  lesson_id: third_lesson.id
+)
+
+sixteenth_ruby_question = Question.create!(
+  content: 'Is there a way to have the index and the element when you iterate through an Array ?',
+  lesson_id: third_lesson.id
+)
+
+seventeenth_ruby_question = Question.create!(
+  content: 'Which iterator should you call on an Array to get another Array where all the elements were subject to the same treatment ?',
+  lesson_id: third_lesson.id
+)
+
+eighteenth_ruby_question = Question.create!(
+  content: 'How can you get the first item of an Array satisfying a given condition ?',
+  lesson_id: third_lesson.id
+)
+
+nineteenth_ruby_question = Question.create!(
+  content: 'How do you transform an array into another one with only elements matching a condition ?',
+  lesson_id: third_lesson.id
+)
+
+twentieth_ruby_question = Question.create!(
+  content: 'How can you delete an item from an array ?',
+  lesson_id: third_lesson.id
+)
+
+twenty_first_ruby_question = Question.create!(
+  content: 'Do you know how to test if condition_1 AND condition_2 are satisfied ?',
+  lesson_id: third_lesson.id
+)
+
+twenty_second_ruby_question = Question.create!(
+  content: 'How can you get the position (index) of an item in an array ?',
+  lesson_id: third_lesson.id
+)
+
+twenty_third_ruby_question = Question.create!(
+  content: 'How can you test if an item is included in an array ?',
+  lesson_id: third_lesson.id
+)
+
+twenty_fourth_ruby_question = Question.create!(
+  content: 'How do you append an element to an array ?',
+  lesson_id: third_lesson.id
+)
+
+twenty_fifth_ruby_question = Question.create!(
+  content: 'What is the opposite of while ?',
+  lesson_id: third_lesson.id
+)
+
+twenty_sixth_ruby_question = Question.create!(
+  content: 'Do you know how to test if condition_1 OR condition_2 is satisfied ?',
+  lesson_id: third_lesson.id
+)
+
+twenty_seventh_ruby_question = Question.create!(
+  content: 'What operator can you use on an Integer to compute the remainder of its euclidean division by any number ?',
+  lesson_id: third_lesson.id
+)
+
+twenty_eigth_ruby_question = Question.create!(
+  content: 'How can you sort an array ?',
+  lesson_id: third_lesson.id
+)
+
+twenty_ninth_ruby_question = Question.create!(
+  content: 'How can you get the number of items contained in an array ?',
+  lesson_id: third_lesson.id
+)
+
+thirtieth_ruby_question = Question.create!(
+  content: 'What does (1..10).to_a return ?',
+  lesson_id: third_lesson.id
+)
+
+puts 'Ruby questions created.'
 
 puts 'Creating empty OOP questions...'
 
@@ -357,201 +467,369 @@ tenth_sebastien_question = Question.create!(
 
 puts 'Sebastien questions created.'
 
-puts 'Creating empty Ruby answers...'
+puts 'Creating Ruby answers...'
 
 first_ruby_question_first_answer = Answer.create!(
-  content: 'Ruby 1 perfect.',
+  content: 'Html tag, Class and ID',
   kind: 'perfect',
   question_id: first_ruby_question.id
 )
 
 first_ruby_question_second_answer = Answer.create!(
-  content: 'Ruby 1 correct.',
+  content: 'Div, Class and ID',
   kind: "correct",
   question_id: first_ruby_question.id
 )
 
 first_ruby_question_third_answer = Answer.create!(
-  content: 'Ruby 1 misleading.',
+  content: 'Html tags',
   kind: "misleading",
   question_id: first_ruby_question.id
 )
 
 first_ruby_question_fourth_answer = Answer.create!(
-  content: 'Ruby 1 weird.',
+  content: 'Selector, more like Skeletor',
   kind: "weird",
   question_id: first_ruby_question.id
 )
 
 second_ruby_question_first_answer = Answer.create!(
-  content: 'Ruby 2 perfect.',
+  content: 'require "json"',
   kind: 'perfect',
   question_id: second_ruby_question.id
 )
 
 second_ruby_question_second_answer = Answer.create!(
-  content: 'Ruby 2 correct.',
+  content: 'json',
   kind: "correct",
   question_id: second_ruby_question.id
 )
 
 second_ruby_question_third_answer = Answer.create!(
-  content: 'Ruby 2 misleading.',
+  content: 'require "j.son"',
   kind: "misleading",
   question_id: second_ruby_question.id
 )
 
 second_ruby_question_fourth_answer = Answer.create!(
-  content: 'Ruby 2 weird.',
+  content: 'require "Jason Statham"',
   kind: "weird",
   question_id: second_ruby_question.id
 )
 
 third_ruby_question_first_answer = Answer.create!(
-  content: 'Ruby 3 perfect.',
+  content: 'require "nokogiri"',
   kind: 'perfect',
   question_id: third_ruby_question.id
 )
 
 third_ruby_question_second_answer = Answer.create!(
-  content: 'Ruby 3 correct.',
+  content: 'nokogiri',
   kind: "correct",
   question_id: third_ruby_question.id
 )
 
 third_ruby_question_third_answer = Answer.create!(
-  content: 'Ruby 3 misleading.',
+  content: 'noko-giri',
   kind: "misleading",
   question_id: third_ruby_question.id
 )
 
 third_ruby_question_fourth_answer = Answer.create!(
-  content: 'Ruby 3 weird.',
+  content: 'require "onigiri"',
   kind: "weird",
   question_id: third_ruby_question.id
 )
 
 fourth_ruby_question_first_answer = Answer.create!(
-  content: 'Ruby 4 perfect.',
+  content: 'require "open-uri" and use the .open method',
   kind: 'perfect',
   question_id: fourth_ruby_question.id
 )
 
 fourth_ruby_question_second_answer = Answer.create!(
-  content: 'Ruby 4 correct.',
+  content: 'require "open-uri"',
   kind: "correct",
   question_id: fourth_ruby_question.id
 )
 
 fourth_ruby_question_third_answer = Answer.create!(
-  content: 'Ruby 4 misleading.',
+  content: 'require "open-url"',
   kind: "misleading",
   question_id: fourth_ruby_question.id
 )
 
 fourth_ruby_question_fourth_answer = Answer.create!(
-  content: 'Ruby 4 weird.',
+  content: 'require "open-sesame"',
   kind: "weird",
   question_id: fourth_ruby_question.id
 )
 
 fifth_ruby_question_first_answer = Answer.create!(
-  content: 'Ruby 5 perfect.',
+  content: '$',
   kind: 'perfect',
   question_id: fifth_ruby_question.id
 )
 
 fifth_ruby_question_second_answer = Answer.create!(
-  content: 'Ruby 5 correct.',
+  content: '/abc$/',
   kind: "correct",
   question_id: fifth_ruby_question.id
 )
 
 fifth_ruby_question_third_answer = Answer.create!(
-  content: 'Ruby 5 misleading.',
+  content: '€',
   kind: "misleading",
   question_id: fifth_ruby_question.id
 )
 
 fifth_ruby_question_fourth_answer = Answer.create!(
-  content: 'Ruby 5 weird.',
+  content: '/show me the money$/',
   kind: "weird",
   question_id: fifth_ruby_question.id
 )
 
 sixth_ruby_question_first_answer = Answer.create!(
-  content: 'Ruby 6 perfect.',
+  content: 'With brackets []',
   kind: 'perfect',
   question_id: sixth_ruby_question.id
 )
 
 sixth_ruby_question_second_answer = Answer.create!(
-  content: 'Ruby 6 correct.',
+  content: '/[a-zA-Z]/',
   kind: "correct",
   question_id: sixth_ruby_question.id
 )
 
 sixth_ruby_question_third_answer = Answer.create!(
-  content: 'Ruby 6 misleading.',
+  content: 'With parentheses ()',
   kind: "misleading",
   question_id: sixth_ruby_question.id
 )
 
 sixth_ruby_question_fourth_answer = Answer.create!(
-  content: 'Ruby 6 weird.',
+  content: 'By using buckets 🗑',
   kind: "weird",
   question_id: sixth_ruby_question.id
 )
 
 seventh_ruby_question_first_answer = Answer.create!(
-  content: 'Ruby 7 perfect.',
+  content: 'Data validation and extraction',
   kind: 'perfect',
   question_id: seventh_ruby_question.id
 )
 
 seventh_ruby_question_second_answer = Answer.create!(
-  content: 'Ruby 7 correct.',
+  content: 'Data validation',
   kind: "correct",
   question_id: seventh_ruby_question.id
 )
 
 seventh_ruby_question_third_answer = Answer.create!(
-  content: 'Ruby 7 misleading.',
+  content: 'Data parsing',
   kind: "misleading",
   question_id: seventh_ruby_question.id
 )
 
 seventh_ruby_question_fourth_answer = Answer.create!(
-  content: 'Ruby 7 weird.',
+  content: 'To make your life miserable',
   kind: "weird",
   question_id: seventh_ruby_question.id
 )
 
 eighth_ruby_question_first_answer = Answer.create!(
-  content: 'Ruby 8 perfect.',
+  content: 'By using parentheses ()',
   kind: 'perfect',
   question_id: eighth_ruby_question.id
 )
 
 eighth_ruby_question_second_answer = Answer.create!(
-  content: 'Ruby 8 correct.',
+  content: '/(abc)+/',
   kind: "correct",
   question_id: eighth_ruby_question.id
 )
 
 eighth_ruby_question_third_answer = Answer.create!(
-  content: 'Ruby 8 misleading.',
+  content: 'By using brackets []',
   kind: "misleading",
   question_id: eighth_ruby_question.id
 )
 
 eighth_ruby_question_fourth_answer = Answer.create!(
-  content: 'Ruby 8 weird.',
+  content: 'By using parents thesis',
   kind: "weird",
   question_id: eighth_ruby_question.id
 )
 
-puts 'Empty Ruby answers created.'
+ninth_ruby_question_first_answer = Answer.create!(
+  content: 'By using parentheses ()',
+  kind: 'perfect',
+  question_id: ninth_ruby_question.id
+)
+
+ninth_ruby_question_second_answer = Answer.create!(
+  content: '/(abc)+/',
+  kind: "correct",
+  question_id: ninth_ruby_question.id
+)
+
+ninth_ruby_question_third_answer = Answer.create!(
+  content: 'By using brackets []',
+  kind: "misleading",
+  question_id: ninth_ruby_question.id
+)
+
+ninth_ruby_question_fourth_answer = Answer.create!(
+  content: 'By using parents thesis',
+  kind: "weird",
+  question_id: ninth_ruby_question.id
+)
+
+tenth_ruby_question_first_answer = Answer.create!(
+  content: 'gsub(pattern, replacement)',
+  kind: 'perfect',
+  question_id: tenth_ruby_question.id
+)
+
+tenth_ruby_question_second_answer = Answer.create!(
+  content: 'gsub(/[aeiou]/, "i")',
+  kind: "correct",
+  question_id: tenth_ruby_question.id
+)
+
+tenth_ruby_question_third_answer = Answer.create!(
+  content: 'gsub(replacement, pattern)',
+  kind: "misleading",
+  question_id: tenth_ruby_question.id
+)
+
+tenth_ruby_question_fourth_answer = Answer.create!(
+  content: 'gsub(I hate, regexp)',
+  kind: "weird",
+  question_id: tenth_ruby_question.id
+)
+
+eleventh_ruby_question_first_answer = Answer.create!(
+  content: 'By using .key? :key_you look for',
+  kind: 'perfect',
+  question_id: eleventh_ruby_question.id
+)
+
+eleventh_ruby_question_second_answer = Answer.create!(
+  content: '.key?',
+  kind: "correct",
+  question_id: eleventh_ruby_question.id
+)
+
+eleventh_ruby_question_third_answer = Answer.create!(
+  content: '.find(key)',
+  kind: "misleading",
+  question_id: eleventh_ruby_question.id
+)
+
+eleventh_ruby_question_fourth_answer = Answer.create!(
+  content: 'Oops I lost my keys',
+  kind: "weird",
+  question_id: eleventh_ruby_question.id
+)
+
+twelfth_ruby_question_first_answer = Answer.create!(
+  content: 'By using .values',
+  kind: 'perfect',
+  question_id: twelfth_ruby_question.id
+)
+
+twelfth_ruby_question_second_answer = Answer.create!(
+  content: 'Hash.values',
+  kind: "correct",
+  question_id: twelfth_ruby_question.id
+)
+
+twelfth_ruby_question_third_answer = Answer.create!(
+  content: 'By using .value',
+  kind: "misleading",
+  question_id: twelfth_ruby_question.id
+)
+
+twelfth_ruby_question_fourth_answer = Answer.create!(
+  content: 'Sorry we do not share the same values',
+  kind: "weird",
+  question_id: twelfth_ruby_question.id
+)
+
+thirteenth_ruby_question_first_answer = Answer.create!(
+  content: 'By calling the .split("") method',
+  kind: 'perfect',
+  question_id: thirteenth_ruby_question.id
+)
+
+thirteenth_ruby_question_second_answer = Answer.create!(
+  content: 'string.split',
+  kind: "correct",
+  question_id: thirteenth_ruby_question.id
+)
+
+thirteenth_ruby_question_third_answer = Answer.create!(
+  content: 'string.splice("")',
+  kind: "misleading",
+  question_id: thirteenth_ruby_question.id
+)
+
+thirteenth_ruby_question_fourth_answer = Answer.create!(
+  content: 'Banana split',
+  kind: "weird",
+  question_id: thirteenth_ruby_question.id
+)
+
+fourteenth_ruby_question_first_answer = Answer.create!(
+  content: 'Hash.each do |key, value|',
+  kind: 'perfect',
+  question_id: fourteenth_ruby_question.id
+)
+
+fourteenth_ruby_question_second_answer = Answer.create!(
+  content: 'With the each method',
+  kind: "correct",
+  question_id: fourteenth_ruby_question.id
+)
+
+fourteenth_ruby_question_third_answer = Answer.create!(
+  content: 'Hash.each_with_index do',
+  kind: "misleading",
+  question_id: fourteenth_ruby_question.id
+)
+
+fourteenth_ruby_question_fourth_answer = Answer.create!(
+  content: 'To each its own Hash.',
+  kind: "weird",
+  question_id: fourteenth_ruby_question.id
+)
+
+fifteenth_ruby_question_first_answer = Answer.create!(
+  content: 'Array.sort_by {criteria}',
+  kind: 'perfect',
+  question_id: fifteenth_ruby_question.id
+)
+
+fifteenth_ruby_question_second_answer = Answer.create!(
+  content: 'Array.sort_by',
+  kind: "correct",
+  question_id: fifteenth_ruby_question.id
+)
+
+fifteenth_ruby_question_third_answer = Answer.create!(
+  content: 'Array.sort',
+  kind: "misleading",
+  question_id: fifteenth_ruby_question.id
+)
+
+fifteenth_ruby_question_fourth_answer = Answer.create!(
+  content: "I sorta don't know",
+  kind: "weird",
+  question_id: fifteenth_ruby_question.id
+)
+
+puts 'Ruby answers created.'
 
 puts 'Creating empty OOP answers...'
 
@@ -1529,8 +1807,8 @@ jeremy = Teacher.create!(
   lesson_id: second_lesson.id,
   status: "regular",
   open_dialog1: "Hey dude ! Welcome to Le Wagon academy !",
-  open_dialog2: "You really have nice hair man !",
-  open_dialog3: "Let me teach you the rules around here !"
+  open_dialog2: "Hello to you too, you really have nice hair man !",
+  open_dialog3: "Thanks but flattery won't let you escape the rules around here !"
 )
 
 file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
@@ -1565,20 +1843,20 @@ seb.save!
 
 tim = Teacher.create!(
   name: 'Timothée',
-  feedback_answer_perfect: '...',
-  feedback_answer_correct: '...',
-  feedback_answer_misleading: '...',
-  feedback_answer_weird: '...',
-  feedback_intro: "...",
-  feedback_user_won: '...',
-  feedback_user_lost: '...',
+  feedback_answer_perfect: 'It is very goodeee',
+  feedback_answer_correct: 'Quite goodeee',
+  feedback_answer_misleading: 'Not very goode',
+  feedback_answer_weird: 'You are the opposite of goode',
+  feedback_intro: "You need to be goode at the basics of Ruby",
+  feedback_user_won: 'You have mastered the basics of Ruby, tout est goode !',
+  feedback_user_lost: 'You need to brush up on your Ruby lectures to be goode at it.',
   position_x: 2,
   position_y: 20,
   lesson_id: third_lesson.id,
   status: "core_four",
-  open_dialog1: '...',
-  open_dialog2: '...',
-  open_dialog3: '...'
+  open_dialog1: 'Hello newbie, I am Timothée and I will teach you the basics of Ruby here ! Goode pour toi ?',
+  open_dialog2: 'Hum yes...it is goode..? By the way, what is the secret of your perfect tan',
+  open_dialog3: 'A bit of surfing and a lot of Ruby programming, let us battle now !'
 )
 
 file = File.open(Rails.root.join("app/assets/images/timstatic.png"))
