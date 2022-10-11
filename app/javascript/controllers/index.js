@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import ClearAnimationController from "./clear_animation_controller"
+application.register("clear-animation", ClearAnimationController)
+
 import DialogSwitchController from "./dialog_switch_controller"
 application.register("dialog-switch", DialogSwitchController)
 

@@ -130,6 +130,7 @@
 .dialog-box {
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   background-color: #579097;
   border: solid #D04F37;
@@ -144,8 +145,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  text-indent: 10px;
-  padding-top: 5px;
+  padding: 10px;
   font-family: $nav-font;
   text-shadow: 1px 1px 1px white;
   font-size: 30px;
