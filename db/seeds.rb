@@ -662,25 +662,25 @@ eighth_ruby_question_fourth_answer = Answer.create!(
 )
 
 ninth_ruby_question_first_answer = Answer.create!(
-  content: 'gsub(pattern, replacement)',
+  content: 'gsub (pattern, replacement)',
   kind: 'perfect',
   question_id: ninth_ruby_question.id
 )
 
 ninth_ruby_question_second_answer = Answer.create!(
-  content: 'gsub(/[aeiou]/, "i")',
+  content: 'gsub (/[aeiou]/, "i")',
   kind: "correct",
   question_id: ninth_ruby_question.id
 )
 
 ninth_ruby_question_third_answer = Answer.create!(
-  content: 'gsub(replacement, pattern)',
+  content: 'gsub (replacement, pattern)',
   kind: "misleading",
   question_id: ninth_ruby_question.id
 )
 
 ninth_ruby_question_fourth_answer = Answer.create!(
-  content: 'gsub(I hate, regexp)',
+  content: 'gsub (I hate, regexp)',
   kind: "weird",
   question_id: ninth_ruby_question.id
 )
@@ -716,7 +716,7 @@ eleventh_ruby_question_first_answer = Answer.create!(
 )
 
 eleventh_ruby_question_second_answer = Answer.create!(
-  content: 'Hash.values',
+  content: 'Hash .values',
   kind: "correct",
   question_id: eleventh_ruby_question.id
 )
@@ -734,7 +734,7 @@ eleventh_ruby_question_fourth_answer = Answer.create!(
 )
 
 twelfth_ruby_question_first_answer = Answer.create!(
-  content: 'Hash.each do |key, value|',
+  content: 'Hash .each do |key, value|',
   kind: 'perfect',
   question_id: twelfth_ruby_question.id
 )
@@ -746,7 +746,7 @@ twelfth_ruby_question_second_answer = Answer.create!(
 )
 
 twelfth_ruby_question_third_answer = Answer.create!(
-  content: 'Hash.each_with_index do',
+  content: 'Hash .each_with_index do',
   kind: "misleading",
   question_id: twelfth_ruby_question.id
 )
@@ -764,13 +764,13 @@ thirteenth_ruby_question_first_answer = Answer.create!(
 )
 
 thirteenth_ruby_question_second_answer = Answer.create!(
-  content: 'string.split',
+  content: 'string .split',
   kind: "correct",
   question_id: thirteenth_ruby_question.id
 )
 
 thirteenth_ruby_question_third_answer = Answer.create!(
-  content: 'string.splice("")',
+  content: 'string .splice("")',
   kind: "misleading",
   question_id: thirteenth_ruby_question.id
 )
@@ -782,19 +782,19 @@ thirteenth_ruby_question_fourth_answer = Answer.create!(
 )
 
 fourteenth_ruby_question_first_answer = Answer.create!(
-  content: 'Array.sort_by {criteria}',
+  content: 'Array .sort_by {criteria}',
   kind: 'perfect',
   question_id: fourteenth_ruby_question.id
 )
 
 fourteenth_ruby_question_second_answer = Answer.create!(
-  content: 'Array.sort_by',
+  content: 'Array .sort_by',
   kind: "correct",
   question_id: fourteenth_ruby_question.id
 )
 
 fourteenth_ruby_question_third_answer = Answer.create!(
-  content: 'Array.sort',
+  content: 'Array .sort',
   kind: "misleading",
   question_id: fourteenth_ruby_question.id
 )
@@ -806,7 +806,7 @@ fourteenth_ruby_question_fourth_answer = Answer.create!(
 )
 
 fifteenth_ruby_question_first_answer = Answer.create!(
-  content: 'Array.each do |element|',
+  content: 'Array .each do |element|',
   kind: 'perfect',
   question_id: fifteenth_ruby_question.id
 )
@@ -818,19 +818,19 @@ fifteenth_ruby_question_second_answer = Answer.create!(
 )
 
 fifteenth_ruby_question_third_answer = Answer.create!(
-  content: 'Array.map do |element|',
+  content: 'Array .map do |element|',
   kind: "misleading",
   question_id: fifteenth_ruby_question.id
 )
 
 fifteenth_ruby_question_fourth_answer = Answer.create!(
-  content: "Array.sted.development",
+  content: "Array .sted .development",
   kind: "weird",
   question_id: fifteenth_ruby_question.id
 )
 
 sixteenth_ruby_question_first_answer = Answer.create!(
-  content: 'Array.each_with_index do |element, index|',
+  content: 'Array .each_with_index do |element, index|',
   kind: 'perfect',
   question_id: sixteenth_ruby_question.id
 )
@@ -848,13 +848,13 @@ sixteenth_ruby_question_third_answer = Answer.create!(
 )
 
 sixteenth_ruby_question_fourth_answer = Answer.create!(
-  content: "Array.each_with_thumb",
+  content: "Array .each_with_thumb",
   kind: "weird",
   question_id: sixteenth_ruby_question.id
 )
 
 seventeenth_ruby_question_first_answer = Answer.create!(
-  content: 'Array.map do |element|',
+  content: 'Array .map do |element|',
   kind: 'perfect',
   question_id: seventeenth_ruby_question.id
 )
@@ -866,19 +866,19 @@ seventeenth_ruby_question_second_answer = Answer.create!(
 )
 
 seventeenth_ruby_question_third_answer = Answer.create!(
-  content: 'Array.each do',
+  content: 'Array .each do',
   kind: "misleading",
   question_id: seventeenth_ruby_question.id
 )
 
 seventeenth_ruby_question_fourth_answer = Answer.create!(
-  content: "Array.roadmap",
+  content: "Array .roadmap",
   kind: "weird",
   question_id: seventeenth_ruby_question.id
 )
 
 eighteenth_ruby_question_first_answer = Answer.create!(
-  content: 'Array.find { |element| condition }',
+  content: 'Array .find { |element| condition }',
   kind: 'perfect',
   question_id: eighteenth_ruby_question.id
 )
@@ -890,19 +890,19 @@ eighteenth_ruby_question_second_answer = Answer.create!(
 )
 
 eighteenth_ruby_question_third_answer = Answer.create!(
-  content: 'Array.search',
+  content: 'Array .search',
   kind: "misleading",
   question_id: eighteenth_ruby_question.id
 )
 
 eighteenth_ruby_question_fourth_answer = Answer.create!(
-  content: "Array.google.search",
+  content: "Array .google .search",
   kind: "weird",
   question_id: eighteenth_ruby_question.id
 )
 
 nineteenth_ruby_question_first_answer = Answer.create!(
-  content: 'Array.select do { |element| condition }',
+  content: 'Array .select do { |element| condition }',
   kind: 'perfect',
   question_id: nineteenth_ruby_question.id
 )
@@ -914,37 +914,37 @@ nineteenth_ruby_question_second_answer = Answer.create!(
 )
 
 nineteenth_ruby_question_third_answer = Answer.create!(
-  content: 'Array.chose',
+  content: 'Array .chose',
   kind: "misleading",
   question_id: nineteenth_ruby_question.id
 )
 
 nineteenth_ruby_question_fourth_answer = Answer.create!(
-  content: "Array.i_chose_you_pikachu",
+  content: "Array .i_chose_you_pikachu",
   kind: "weird",
   question_id: nineteenth_ruby_question.id
 )
 
 tentieth_ruby_question_first_answer = Answer.create!(
-  content: 'Array.delete(element)',
+  content: 'Array .delete (element)',
   kind: 'perfect',
   question_id: twentieth_ruby_question.id
 )
 
 twentieth_ruby_question_second_answer = Answer.create!(
-  content: 'Array.delete_at(index)',
+  content: 'Array .delete_at (index)',
   kind: "correct",
   question_id: twentieth_ruby_question.id
 )
 
 twentieth_ruby_question_third_answer = Answer.create!(
-  content: 'Array.reject(element)',
+  content: 'Array .reject (element)',
   kind: "misleading",
   question_id: twentieth_ruby_question.id
 )
 
 twentieth_ruby_question_fourth_answer = Answer.create!(
-  content: "Array.exterminaaate",
+  content: "Array .exterminaaate",
   kind: "weird",
   question_id: twentieth_ruby_question.id
 )
@@ -974,7 +974,7 @@ twenty_first_ruby_question_fourth_answer = Answer.create!(
 )
 
 twenty_second_ruby_question_first_answer = Answer.create!(
-  content: 'Array.index(element)',
+  content: 'Array .index (element)',
   kind: 'perfect',
   question_id: twenty_second_ruby_question.id
 )
@@ -998,7 +998,7 @@ twenty_second_ruby_question_fourth_answer = Answer.create!(
 )
 
 twenty_third_ruby_question_first_answer = Answer.create!(
-  content: 'Array.include?(element)',
+  content: 'Array .include? (element)',
   kind: 'perfect',
   question_id: twenty_third_ruby_question.id
 )
@@ -1010,13 +1010,13 @@ twenty_third_ruby_question_second_answer = Answer.create!(
 )
 
 twenty_third_ruby_question_third_answer = Answer.create!(
-  content: 'Array.includes',
+  content: 'Array .includes',
   kind: "misleading",
   question_id: twenty_third_ruby_question.id
 )
 
 twenty_third_ruby_question_fourth_answer = Answer.create!(
-  content: "Array.all_inclusive",
+  content: "Array .all_inclusive",
   kind: "weird",
   question_id: twenty_third_ruby_question.id
 )
@@ -1028,19 +1028,19 @@ twenty_fourth_ruby_question_first_answer = Answer.create!(
 )
 
 twenty_fourth_ruby_question_second_answer = Answer.create!(
-  content: 'Array.push(element)',
+  content: 'Array .push (element)',
   kind: "correct",
   question_id: twenty_fourth_ruby_question.id
 )
 
 twenty_fourth_ruby_question_third_answer = Answer.create!(
-  content: 'Array.add(element)',
+  content: 'Array .add (element)',
   kind: "misleading",
   question_id: twenty_fourth_ruby_question.id
 )
 
 twenty_fourth_ruby_question_fourth_answer = Answer.create!(
-  content: "Array.push_ups",
+  content: "Array .push_ups",
   kind: "weird",
   question_id: twenty_fourth_ruby_question.id
 )
@@ -1064,7 +1064,7 @@ twenty_fifth_ruby_question_third_answer = Answer.create!(
 )
 
 twenty_fifth_ruby_question_fourth_answer = Answer.create!(
-  content: "Meanwhile...in Vera Cruz",
+  content: "Meanwhile... in Vera Cruz",
   kind: "weird",
   question_id: twenty_fifth_ruby_question.id
 )
@@ -1112,7 +1112,7 @@ twenty_seventh_ruby_question_third_answer = Answer.create!(
 )
 
 twenty_seventh_ruby_question_fourth_answer = Answer.create!(
-  content: "Maths...what a concept !",
+  content: "Maths... what a concept !",
   kind: "weird",
   question_id: twenty_seventh_ruby_question.id
 )
@@ -1124,13 +1124,13 @@ twenty_eighth_ruby_question_first_answer = Answer.create!(
 )
 
 twenty_eighth_ruby_question_second_answer = Answer.create!(
-  content: 'Array.sort_by',
+  content: 'Array .sort_by',
   kind: "correct",
   question_id: twenty_eighth_ruby_question.id
 )
 
 twenty_eighth_ruby_question_third_answer = Answer.create!(
-  content: 'Array.organize',
+  content: 'Array .organize',
   kind: "misleading",
   question_id: twenty_eighth_ruby_question.id
 )
@@ -1148,13 +1148,13 @@ twenty_ninth_ruby_question_first_answer = Answer.create!(
 )
 
 twenty_ninth_ruby_question_second_answer = Answer.create!(
-  content: 'Array.length',
+  content: 'Array .length',
   kind: "correct",
   question_id: twenty_ninth_ruby_question.id
 )
 
 twenty_ninth_ruby_question_third_answer = Answer.create!(
-  content: 'Array.counting',
+  content: 'Array .counting',
   kind: "misleading",
   question_id: twenty_ninth_ruby_question.id
 )
@@ -1166,7 +1166,7 @@ twenty_ninth_ruby_question_fourth_answer = Answer.create!(
 )
 
 thirtieth_ruby_question_first_answer = Answer.create!(
-  content: '[1,2,3,4,5,6,7,8,9,10]',
+  content: '[1,2,3,4,5 ,6,7,8,9,10]',
   kind: 'perfect',
   question_id: thirtieth_ruby_question.id
 )
@@ -1178,7 +1178,7 @@ thirtieth_ruby_question_second_answer = Answer.create!(
 )
 
 thirtieth_ruby_question_third_answer = Answer.create!(
-  content: '{1,2,3,4,5,6,7,8,9,10}',
+  content: '{1,2,3,4,5 ,6,7,8,9,10}',
   kind: "misleading",
   question_id: thirtieth_ruby_question.id
 )
@@ -2215,7 +2215,7 @@ tim = Teacher.create!(
   lesson_id: third_lesson.id,
   status: "core_four",
   open_dialog1: 'Hello newbie, I am Timothée and I will teach you the basics of Ruby here ! Goode pour toi ?',
-  open_dialog2: 'Hum yes...it is goode..? By the way, what is the secret of your perfect tan',
+  open_dialog2: 'Hum yes...it is goode..? By the way, what is the secret of your perfect tan ?',
   open_dialog3: 'A bit of surfing and a lot of Ruby programming, let us battle now !'
 )
 
