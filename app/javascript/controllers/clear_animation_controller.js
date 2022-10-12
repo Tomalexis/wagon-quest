@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="clear-animation"
+// Comment for commit by Luther, just to say it works on testing-clear-animation branch.
 export default class extends Controller {
 
   connect() {
