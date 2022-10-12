@@ -1,19 +1,34 @@
 <%= render "games/status/clear_animation" %>
+<%= render "shared/navbar" %>
+<div data-controller="music">
+  <audio src="/hall_of_fame.mp3" loop='true' data-music-target='audio'></audio>
+  <button class="btn back" data-action='click->music#play' data-music-target='playButton'><i class="fa-solid fa-volume-xmark"></i></button>
+  <button class="btn back" data-action='click->music#pause' data-music-target='pauseButton' hidden><i class="fa-solid fa-volume-high"></i></button>
+</div>
 
-<h1>This is the clear page</h1>
+<div class="container">
+  <h1>Congratulations <%= current_user.username %>! You are the ruler of Gaudelet Kingdom!</h1>
+  <div class="wrapper-start d-flex flex-column">
+    <div class="mini-wrap">
 
-<p>Congrats <%= current_user.username %>! You are the ruler of Gaudelet Kingdom!</p>
+      <p>Find back your game #<%= @game.id %> whenever you're logged in at <strong>https://www.wagon-quest.xyz<%= "#{game_path(@game)}" %></strong>.</p>
 
-<p>Find back your game #<%= @game.id %> whenever you're logged in at https://www.wagon-quest.xyz<%= "#{game_path(@game)}" %>.</p>
+      <div class="secret-boss-infos">
+        <%= cl_image_tag Teacher.find_by(status: "secret_boss").avatar_battle.key, class:'seb-final'%>
+        <p id="secret-message">Will you find him? Will you...defeat him? <br> Look between the tree and the Market building on the map !</p>
+      </div>
 
-<p><%= link_to continue_game_path(@game), data: { turbo_method: :patch, dialog_switch_target: 'continue' } do %>
-          Continue
-        <% end %></p>
+      <div class="clear-buttons">
+        <%= link_to 'Continue', continue_game_path(@game), data: { turbo_method: :patch, dialog_switch_target: 'continue' }, class:"btn btn-start" %>
 
-<p><%= link_to root_path do %>
-          Return home
-        <% end %></p>
+        <%= link_to 'Return home', root_path, class:"btn btn-start" %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p><%= cl_image_tag Teacher.find_by(status: "secret_boss").avatar_battle.key %></p>
-
-<p>Will you find him? Will you... defeat him? 😬</p>
+<div class="footer">
+    <div class="footer-copyright">
+      This website is made by Paryssa, Luther and Thomas <i class="fa-solid fa-handshake-simple"></i> at Le Wagon
+    </div>
+</div>
