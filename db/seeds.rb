@@ -316,49 +316,164 @@ eighth_db_question = Question.create!(
 
 puts 'Empty DB questions created.'
 
-puts 'Creating empty Front questions...'
+puts 'Creating Front questions...'
 
 first_front_question = Question.create!(
-  content: 'Front 1 ?',
+  content: 'What are the standard CSS selectors ?',
   lesson_id: sixth_lesson.id
 )
 
 second_front_question = Question.create!(
-  content: 'Front 2 ?',
+  content: 'How do you create a hyperlink ?',
   lesson_id: sixth_lesson.id
 )
 
 third_front_question = Question.create!(
-  content: 'Front 3 ?',
+  content: 'What are the four types of CSS length units ?',
   lesson_id: sixth_lesson.id
 )
 
 fourth_front_question = Question.create!(
-  content: 'Front 4 ?',
+  content: 'How do you add an image in HTML ?',
   lesson_id: sixth_lesson.id
 )
 
 fifth_front_question = Question.create!(
-  content: 'Front 5 ?',
+  content: 'How do you define a <div> with round corners ?',
   lesson_id: sixth_lesson.id
 )
 
 sixth_front_question = Question.create!(
-  content: 'Front 6 ?',
+  content: 'How do you set the background color to red for the whole body of the page ?',
   lesson_id: sixth_lesson.id
 )
 
 seventh_front_question = Question.create!(
-  content: 'Front 7 ?',
+  content: 'How do you emphasize a word in a paragraph ?',
   lesson_id: sixth_lesson.id
 )
 
 eighth_front_question = Question.create!(
-  content: 'Front 8 ?',
+  content: 'What is the basic syntax of a HTML element ?',
   lesson_id: sixth_lesson.id
 )
 
-puts 'Empty Front questions created.'
+ninth_front_question = Question.create!(
+  content: 'What flexbox CSS property sets the relative position of flex-items horizontally inside the flexbox ?',
+  lesson_id: sixth_lesson.id
+)
+
+tenth_front_question = Question.create!(
+  content: 'What flex-item CSS property sets its ability to shrink if necessary ?',
+  lesson_id: sixth_lesson.id
+)
+
+eleventh_front_question = Question.create!(
+  content: 'What flexbox CSS property sets flex-items’ vertical alignment inside the flexbox ?',
+  lesson_id: sixth_lesson.id
+)
+
+twelfth_front_question = Question.create!(
+  content: 'What CSS property should you use on background images to improve contrast ?',
+  lesson_id: sixth_lesson.id
+)
+
+thirteenth_front_question = Question.create!(
+  content: 'How do you define a div as a flexbox in your CSS ?',
+  lesson_id: sixth_lesson.id
+)
+
+fourteenth_front_question = Question.create!(
+  content: 'What flexbox CSS property is needed to display flex-items above one another (and not side by side) ?',
+  lesson_id: sixth_lesson.id
+)
+
+fifteenth_front_question = Question.create!(
+  content: 'How do you center the text of a div with Bootstrap ?',
+  lesson_id: sixth_lesson.id
+)
+
+sixteenth_front_question = Question.create!(
+  content: 'How do you make an image circular with Bootstrap ?',
+  lesson_id: sixth_lesson.id
+)
+
+seventeenth_front_question = Question.create!(
+  content: 'How many columns are there in Bootstrap’s grid ?',
+  lesson_id: sixth_lesson.id
+)
+
+eighteenth_front_question = Question.create!(
+  content: 'What are the three Bootstrap CSS classes you have to know to design a grid ?',
+  lesson_id: sixth_lesson.id
+)
+
+nineteenth_front_question = Question.create!(
+  content: 'How do you store a value in a brand new variable in JavaScript ?',
+  lesson_id: sixth_lesson.id
+)
+
+twentieth_front_question = Question.create!(
+  content: 'What is the naming convention for variables ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_first_front_question = Question.create!(
+  content: 'How can you pick randomly a float between 0 and 1 in JavaScript ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_second_front_question = Question.create!(
+  content: 'In ES6, how do you interpolate a string ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_third_front_question = Question.create!(
+  content: 'How do you iterate over an array in JavaScript ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_fourth_front_question = Question.create!(
+  content: 'How do you append content into a DOM element ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_fifth_front_question = Question.create!(
+  content: 'How do you select an element in the DOM with its id ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_sixth_front_question = Question.create!(
+  content: 'How do you listen and react to a DOM event ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_seventh_front_question = Question.create!(
+  content: 'How do you select element(s) when you don’t have an id at hand ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_eighth_front_question = Question.create!(
+  content: 'In which file can you see your project’s external npm dependencies listed ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_ninth_front_question = Question.create!(
+  content: 'What is the most popular package repository for JavaScript ?',
+  lesson_id: sixth_lesson.id
+)
+
+thirtieth_front_question = Question.create!(
+  content: 'How do you add an external package available on NPM using Yarn ?',
+  lesson_id: sixth_lesson.id
+)
+
+thirty_first_front_question = Question.create!(
+  content: 'What do you do if Bootstrap is installed on your project ?',
+  lesson_id: sixth_lesson.id
+)
+
+puts 'Front questions created.'
 
 puts 'Creating Slackbot questions...'
 
@@ -2236,7 +2351,7 @@ hugo = Teacher.create!(
   feedback_user_lost: '...',
   position_x: 10,
   position_y: 4,
-  lesson_id: fourth_lesson.id,
+  lesson_id: sixth_lesson.id,
   status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
@@ -2260,7 +2375,7 @@ diane = Teacher.create!(
   feedback_user_lost: '...',
   position_x: 28,
   position_y: 4,
-  lesson_id: fifth_lesson.id,
+  lesson_id: fourth_lesson.id,
   status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
@@ -2284,7 +2399,7 @@ paul = Teacher.create!(
   feedback_user_lost: '...',
   position_x: 50,
   position_y: 9,
-  lesson_id: sixth_lesson.id,
+  lesson_id: fifth_lesson.id,
   status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
