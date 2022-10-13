@@ -1698,201 +1698,729 @@ eighth_db_question_fourth_answer = Answer.create!(
 
 puts 'Empty DB answers created.'
 
-puts 'Creating empty Front answers...'
+puts 'Creating Front answers...'
 
 first_front_question_first_answer = Answer.create!(
-  content: 'Front 1 perfect.',
+  content: 'HTML tags, CSS classes and IDs',
   kind: 'perfect',
   question_id: first_front_question.id
 )
 
 first_front_question_second_answer = Answer.create!(
-  content: 'Front 1 correct.',
+  content: 'Tags, classes and IDs',
   kind: "correct",
   question_id: first_front_question.id
 )
 
 first_front_question_third_answer = Answer.create!(
-  content: 'Front 1 misleading.',
+  content: 'Divs, Headers and paragraphs',
   kind: "misleading",
   question_id: first_front_question.id
 )
 
 first_front_question_fourth_answer = Answer.create!(
-  content: 'Front 1 weird.',
+  content: 'My standards are too high for this question',
   kind: "weird",
   question_id: first_front_question.id
 )
 
 second_front_question_first_answer = Answer.create!(
-  content: 'Front 2 perfect.',
+  content: '<a href= "url"> text </a>',
   kind: 'perfect',
   question_id: second_front_question.id
 )
 
 second_front_question_second_answer = Answer.create!(
-  content: 'Front 2 correct.',
+  content: 'With the <a> tag',
   kind: "correct",
   question_id: second_front_question.id
 )
 
 second_front_question_third_answer = Answer.create!(
-  content: 'Front 2 misleading.',
+  content: 'With the <link> tag',
   kind: "misleading",
   question_id: second_front_question.id
 )
 
 second_front_question_fourth_answer = Answer.create!(
-  content: 'Front 2 weird.',
+  content: "I only know about Hyperspeed",
   kind: "weird",
   question_id: second_front_question.id
 )
 
 third_front_question_first_answer = Answer.create!(
-  content: 'Front 3 perfect.',
+  content: 'Px, %, Vh/Vw, em',
   kind: 'perfect',
   question_id: third_front_question.id
 )
 
 third_front_question_second_answer = Answer.create!(
-  content: 'Front 3 correct.',
+  content: 'Px, %, viewport, em',
   kind: "correct",
   question_id: third_front_question.id
 )
 
 third_front_question_third_answer = Answer.create!(
-  content: 'Front 3 misleading.',
+  content: 'Cm, inch, px, foot',
   kind: "misleading",
   question_id: third_front_question.id
 )
 
 third_front_question_fourth_answer = Answer.create!(
-  content: 'Front 3 weird.',
+  content: 'I only have one type: you.',
   kind: "weird",
   question_id: third_front_question.id
 )
 
 fourth_front_question_first_answer = Answer.create!(
-  content: 'Front 4 perfect.',
+  content: '<img src= "file_path" alt= "description">',
   kind: 'perfect',
   question_id: fourth_front_question.id
 )
 
 fourth_front_question_second_answer = Answer.create!(
-  content: 'Front 4 correct.',
+  content: 'With the <img> tag',
   kind: "correct",
   question_id: fourth_front_question.id
 )
 
 fourth_front_question_third_answer = Answer.create!(
-  content: 'Front 4 misleading.',
+  content: 'With the <image> tag',
   kind: "misleading",
   question_id: fourth_front_question.id
 )
 
 fourth_front_question_fourth_answer = Answer.create!(
-  content: 'Front 4 weird.',
+  content: 'With the <emile et image> tag',
   kind: "weird",
   question_id: fourth_front_question.id
 )
 
 fifth_front_question_first_answer = Answer.create!(
-  content: 'Front 5 perfect.',
+  content: 'div { border-radius: 5px; }',
   kind: 'perfect',
   question_id: fifth_front_question.id
 )
 
 fifth_front_question_second_answer = Answer.create!(
-  content: 'Front 5 correct.',
+  content: 'With border-radius',
   kind: "correct",
   question_id: fifth_front_question.id
 )
 
 fifth_front_question_third_answer = Answer.create!(
-  content: 'Front 5 misleading.',
+  content: 'With the border property',
   kind: "misleading",
   question_id: fifth_front_question.id
 )
 
 fifth_front_question_fourth_answer = Answer.create!(
-  content: 'Front 5 weird.',
+  content: 'With border-cubitus',
   kind: "weird",
   question_id: fifth_front_question.id
 )
 
 sixth_front_question_first_answer = Answer.create!(
-  content: 'Front 6 perfect.',
+  content: 'body { background-color: red; }',
   kind: 'perfect',
   question_id: sixth_front_question.id
 )
 
 sixth_front_question_second_answer = Answer.create!(
-  content: 'Front 6 correct.',
+  content: 'With background-color: red',
   kind: "correct",
   question_id: sixth_front_question.id
 )
 
 sixth_front_question_third_answer = Answer.create!(
-  content: 'Front 6 misleading.',
+  content: 'With background: red',
   kind: "misleading",
   question_id: sixth_front_question.id
 )
 
 sixth_front_question_fourth_answer = Answer.create!(
-  content: 'Front 6 weird.',
+  content: 'I just change the wallpaper',
   kind: "weird",
   question_id: sixth_front_question.id
 )
 
 seventh_front_question_first_answer = Answer.create!(
-  content: 'Front 7 perfect.',
+  content: 'With the <strong> tag',
   kind: 'perfect',
   question_id: seventh_front_question.id
 )
 
 seventh_front_question_second_answer = Answer.create!(
-  content: 'Front 7 correct.',
+  content: 'With the <em> tag',
   kind: "correct",
   question_id: seventh_front_question.id
 )
 
 seventh_front_question_third_answer = Answer.create!(
-  content: 'Front 7 misleading.',
+  content: 'With the <bold> tag',
   kind: "misleading",
   question_id: seventh_front_question.id
 )
 
 seventh_front_question_fourth_answer = Answer.create!(
-  content: 'Front 7 weird.',
+  content: 'I just put the font size to 56',
   kind: "weird",
   question_id: seventh_front_question.id
 )
 
 eighth_front_question_first_answer = Answer.create!(
-  content: 'Front 8 perfect.',
+  content: '<element attr= "value"> some text </element>',
   kind: 'perfect',
   question_id: eighth_front_question.id
 )
 
 eighth_front_question_second_answer = Answer.create!(
-  content: 'Front 8 correct.',
+  content: 'With an element tag, an attribute and a value',
   kind: "correct",
   question_id: eighth_front_question.id
 )
 
 eighth_front_question_third_answer = Answer.create!(
-  content: 'Front 8 misleading.',
+  content: 'html{ attr: value }',
   kind: "misleading",
   question_id: eighth_front_question.id
 )
 
 eighth_front_question_fourth_answer = Answer.create!(
-  content: 'Front 8 weird.',
+  content: '<I> "Love" </Bootstrap>',
   kind: "weird",
   question_id: eighth_front_question.id
 )
 
-puts 'Empty Front answers created.'
+ninth_front_question_first_answer = Answer.create!(
+  content: 'justify content: value',
+  kind: 'perfect',
+  question_id: ninth_front_question.id
+)
+
+ninth_front_question_second_answer = Answer.create!(
+  content: 'justify content',
+  kind: "correct",
+  question_id: ninth_front_question.id
+)
+
+ninth_front_question_third_answer = Answer.create!(
+  content: 'justify',
+  kind: "misleading",
+  question_id: ninth_front_question.id
+)
+
+ninth_front_question_fourth_answer = Answer.create!(
+  content: "I don't have to justify myself !",
+  kind: "weird",
+  question_id: ninth_front_question.id
+)
+
+tenth_front_question_first_answer = Answer.create!(
+  content: 'flex shrink: 1',
+  kind: 'perfect',
+  question_id: tenth_front_question.id
+)
+
+tenth_front_question_second_answer = Answer.create!(
+  content: 'flex shrink',
+  kind: "correct",
+  question_id: tenth_front_question.id
+)
+
+tenth_front_question_third_answer = Answer.create!(
+  content: 'flex shrink: -1',
+  kind: "misleading",
+  question_id: tenth_front_question.id
+)
+
+tenth_front_question_fourth_answer = Answer.create!(
+  content: 'Set an appointment with my shrink',
+  kind: "weird",
+  question_id: tenth_front_question.id
+)
+
+eleventh_front_question_first_answer = Answer.create!(
+  content: 'align items: value',
+  kind: 'perfect',
+  question_id: eleventh_ruby_question.id
+)
+
+eleventh_front_question_second_answer = Answer.create!(
+  content: 'With align items',
+  kind: "correct",
+  question_id: eleventh_front_question.id
+)
+
+eleventh_front_question_third_answer = Answer.create!(
+  content: 'With align content',
+  kind: "misleading",
+  question_id: eleventh_front_question.id
+)
+
+eleventh_front_question_fourth_answer = Answer.create!(
+  content: 'With stars align',
+  kind: "weird",
+  question_id: eleventh_front_question.id
+)
+
+twelfth_front_question_first_answer = Answer.create!(
+  content: 'background image: linear gradient()',
+  kind: 'perfect',
+  question_id: twelfth_front_question.id
+)
+
+twelfth_front_question_second_answer = Answer.create!(
+  content: 'With linear gradient',
+  kind: "correct",
+  question_id: twelfth_front_question.id
+)
+
+twelfth_front_question_third_answer = Answer.create!(
+  content: 'background image: contrast()',
+  kind: "misleading",
+  question_id: twelfth_front_question.id
+)
+
+twelfth_front_question_fourth_answer = Answer.create!(
+  content: 'Put the image in black and white',
+  kind: "weird",
+  question_id: twelfth_front_question.id
+)
+
+thirteenth_front_question_first_answer = Answer.create!(
+  content: 'display: flex',
+  kind: 'perfect',
+  question_id: thirteenth_front_question.id
+)
+
+thirteenth_front_question_second_answer = Answer.create!(
+  content: 'With the flex property',
+  kind: "correct",
+  question_id: thirteenth_front_question.id
+)
+
+thirteenth_front_question_third_answer = Answer.create!(
+  content: 'display: flexbox',
+  kind: "misleading",
+  question_id: thirteenth_front_question.id
+)
+
+thirteenth_front_question_fourth_answer = Answer.create!(
+  content: '*flex your muscles*',
+  kind: "weird",
+  question_id: thirteenth_front_question.id
+)
+
+fourteenth_front_question_first_answer = Answer.create!(
+  content: 'flex direction: column',
+  kind: 'perfect',
+  question_id: fourteenth_front_question.id
+)
+
+fourteenth_front_question_second_answer = Answer.create!(
+  content: 'With flex direction',
+  kind: "correct",
+  question_id: fourteenth_front_question.id
+)
+
+fourteenth_front_question_third_answer = Answer.create!(
+  content: 'flex direction: row',
+  kind: "misleading",
+  question_id: fourteenth_front_question.id
+)
+
+fourteenth_front_question_fourth_answer = Answer.create!(
+  content: "With one direction",
+  kind: "weird",
+  question_id: fourteenth_front_question.id
+)
+
+fifteenth_front_question_first_answer = Answer.create!(
+  content: '<div class= "text center"> </div>',
+  kind: 'perfect',
+  question_id: fifteenth_front_question.id
+)
+
+fifteenth_front_question_second_answer = Answer.create!(
+  content: 'With the "text center" class',
+  kind: "correct",
+  question_id: fifteenth_front_question.id
+)
+
+fifteenth_front_question_third_answer = Answer.create!(
+  content: '<div class= "text align"> </div>',
+  kind: "misleading",
+  question_id: fifteenth_front_question.id
+)
+
+fifteenth_front_question_fourth_answer = Answer.create!(
+  content: "*press space bar fifty times*",
+  kind: "weird",
+  question_id: fifteenth_front_question.id
+)
+
+sixteenth_ruby_question_first_answer = Answer.create!(
+  content: 'Array .each_with_index do |element, index|',
+  kind: 'perfect',
+  question_id: sixteenth_ruby_question.id
+)
+
+sixteenth_ruby_question_second_answer = Answer.create!(
+  content: 'By using .each_with_index',
+  kind: "correct",
+  question_id: sixteenth_ruby_question.id
+)
+
+sixteenth_ruby_question_third_answer = Answer.create!(
+  content: 'Array.index',
+  kind: "misleading",
+  question_id: sixteenth_ruby_question.id
+)
+
+sixteenth_ruby_question_fourth_answer = Answer.create!(
+  content: "Array .each_with_thumb",
+  kind: "weird",
+  question_id: sixteenth_ruby_question.id
+)
+
+seventeenth_ruby_question_first_answer = Answer.create!(
+  content: 'Array .map do |element|',
+  kind: 'perfect',
+  question_id: seventeenth_ruby_question.id
+)
+
+seventeenth_ruby_question_second_answer = Answer.create!(
+  content: 'By using .map',
+  kind: "correct",
+  question_id: seventeenth_ruby_question.id
+)
+
+seventeenth_ruby_question_third_answer = Answer.create!(
+  content: 'Array .each do',
+  kind: "misleading",
+  question_id: seventeenth_ruby_question.id
+)
+
+seventeenth_ruby_question_fourth_answer = Answer.create!(
+  content: "Array .roadmap",
+  kind: "weird",
+  question_id: seventeenth_ruby_question.id
+)
+
+eighteenth_ruby_question_first_answer = Answer.create!(
+  content: 'Array .find { |element| condition }',
+  kind: 'perfect',
+  question_id: eighteenth_ruby_question.id
+)
+
+eighteenth_ruby_question_second_answer = Answer.create!(
+  content: 'By using .find',
+  kind: "correct",
+  question_id: eighteenth_ruby_question.id
+)
+
+eighteenth_ruby_question_third_answer = Answer.create!(
+  content: 'Array .search',
+  kind: "misleading",
+  question_id: eighteenth_ruby_question.id
+)
+
+eighteenth_ruby_question_fourth_answer = Answer.create!(
+  content: "Array .google .search",
+  kind: "weird",
+  question_id: eighteenth_ruby_question.id
+)
+
+nineteenth_ruby_question_first_answer = Answer.create!(
+  content: 'Array .select do { |element| condition }',
+  kind: 'perfect',
+  question_id: nineteenth_ruby_question.id
+)
+
+nineteenth_ruby_question_second_answer = Answer.create!(
+  content: 'By using .select',
+  kind: "correct",
+  question_id: nineteenth_ruby_question.id
+)
+
+nineteenth_ruby_question_third_answer = Answer.create!(
+  content: 'Array .chose',
+  kind: "misleading",
+  question_id: nineteenth_ruby_question.id
+)
+
+nineteenth_ruby_question_fourth_answer = Answer.create!(
+  content: "Array .i_chose_you_pikachu",
+  kind: "weird",
+  question_id: nineteenth_ruby_question.id
+)
+
+tentieth_ruby_question_first_answer = Answer.create!(
+  content: 'Array .delete (element)',
+  kind: 'perfect',
+  question_id: twentieth_ruby_question.id
+)
+
+twentieth_ruby_question_second_answer = Answer.create!(
+  content: 'Array .delete_at (index)',
+  kind: "correct",
+  question_id: twentieth_ruby_question.id
+)
+
+twentieth_ruby_question_third_answer = Answer.create!(
+  content: 'Array .reject (element)',
+  kind: "misleading",
+  question_id: twentieth_ruby_question.id
+)
+
+twentieth_ruby_question_fourth_answer = Answer.create!(
+  content: "Array .exterminaaate",
+  kind: "weird",
+  question_id: twentieth_ruby_question.id
+)
+
+twenty_first_ruby_question_first_answer = Answer.create!(
+  content: 'If condition_1 && condition_2',
+  kind: 'perfect',
+  question_id: twenty_first_ruby_question.id
+)
+
+twenty_first_ruby_question_second_answer = Answer.create!(
+  content: 'With &&',
+  kind: "correct",
+  question_id: twenty_first_ruby_question.id
+)
+
+twenty_first_ruby_question_third_answer = Answer.create!(
+  content: 'With ||',
+  kind: "misleading",
+  question_id: twenty_first_ruby_question.id
+)
+
+twenty_first_ruby_question_fourth_answer = Answer.create!(
+  content: "...and what ?",
+  kind: "weird",
+  question_id: twenty_first_ruby_question.id
+)
+
+twenty_second_ruby_question_first_answer = Answer.create!(
+  content: 'Array .index (element)',
+  kind: 'perfect',
+  question_id: twenty_second_ruby_question.id
+)
+
+twenty_second_ruby_question_second_answer = Answer.create!(
+  content: 'With .index',
+  kind: "correct",
+  question_id: twenty_second_ruby_question.id
+)
+
+twenty_second_ruby_question_third_answer = Answer.create!(
+  content: 'Array.id',
+  kind: "misleading",
+  question_id: twenty_second_ruby_question.id
+)
+
+twenty_second_ruby_question_fourth_answer = Answer.create!(
+  content: "*You point your index at the array*",
+  kind: "weird",
+  question_id: twenty_second_ruby_question.id
+)
+
+twenty_third_ruby_question_first_answer = Answer.create!(
+  content: 'Array .include? (element)',
+  kind: 'perfect',
+  question_id: twenty_third_ruby_question.id
+)
+
+twenty_third_ruby_question_second_answer = Answer.create!(
+  content: 'With .include?',
+  kind: "correct",
+  question_id: twenty_third_ruby_question.id
+)
+
+twenty_third_ruby_question_third_answer = Answer.create!(
+  content: 'Array .includes',
+  kind: "misleading",
+  question_id: twenty_third_ruby_question.id
+)
+
+twenty_third_ruby_question_fourth_answer = Answer.create!(
+  content: "Array .all_inclusive",
+  kind: "weird",
+  question_id: twenty_third_ruby_question.id
+)
+
+twenty_fourth_ruby_question_first_answer = Answer.create!(
+  content: 'Array << element',
+  kind: 'perfect',
+  question_id: twenty_fourth_ruby_question.id
+)
+
+twenty_fourth_ruby_question_second_answer = Answer.create!(
+  content: 'Array .push (element)',
+  kind: "correct",
+  question_id: twenty_fourth_ruby_question.id
+)
+
+twenty_fourth_ruby_question_third_answer = Answer.create!(
+  content: 'Array .add (element)',
+  kind: "misleading",
+  question_id: twenty_fourth_ruby_question.id
+)
+
+twenty_fourth_ruby_question_fourth_answer = Answer.create!(
+  content: "Array .push_ups",
+  kind: "weird",
+  question_id: twenty_fourth_ruby_question.id
+)
+
+twenty_fifth_ruby_question_first_answer = Answer.create!(
+  content: 'Until condition end',
+  kind: 'perfect',
+  question_id: twenty_fifth_ruby_question.id
+)
+
+twenty_fifth_ruby_question_second_answer = Answer.create!(
+  content: 'Until',
+  kind: "correct",
+  question_id: twenty_fifth_ruby_question.id
+)
+
+twenty_fifth_ruby_question_third_answer = Answer.create!(
+  content: 'until then',
+  kind: "misleading",
+  question_id: twenty_fifth_ruby_question.id
+)
+
+twenty_fifth_ruby_question_fourth_answer = Answer.create!(
+  content: "Meanwhile... in Vera Cruz",
+  kind: "weird",
+  question_id: twenty_fifth_ruby_question.id
+)
+
+twenty_sixth_ruby_question_first_answer = Answer.create!(
+  content: 'If condition_1 || condition_2',
+  kind: 'perfect',
+  question_id: twenty_sixth_ruby_question.id
+)
+
+twenty_sixth_ruby_question_second_answer = Answer.create!(
+  content: 'With ||',
+  kind: "correct",
+  question_id: twenty_sixth_ruby_question.id
+)
+
+twenty_sixth_ruby_question_third_answer = Answer.create!(
+  content: 'With &&',
+  kind: "misleading",
+  question_id: twenty_sixth_ruby_question.id
+)
+
+twenty_sixth_ruby_question_fourth_answer = Answer.create!(
+  content: "Should I stay OR should I go ?",
+  kind: "weird",
+  question_id: twenty_sixth_ruby_question.id
+)
+
+twenty_seventh_ruby_question_first_answer = Answer.create!(
+  content: 'With %',
+  kind: 'perfect',
+  question_id: twenty_seventh_ruby_question.id
+)
+
+twenty_seventh_ruby_question_second_answer = Answer.create!(
+  content: 'With the modulo operator',
+  kind: "correct",
+  question_id: twenty_seventh_ruby_question.id
+)
+
+twenty_seventh_ruby_question_third_answer = Answer.create!(
+  content: 'With /',
+  kind: "misleading",
+  question_id: twenty_seventh_ruby_question.id
+)
+
+twenty_seventh_ruby_question_fourth_answer = Answer.create!(
+  content: "Maths... what a concept !",
+  kind: "weird",
+  question_id: twenty_seventh_ruby_question.id
+)
+
+twenty_eighth_ruby_question_first_answer = Answer.create!(
+  content: 'Array.sort',
+  kind: 'perfect',
+  question_id: twenty_eighth_ruby_question.id
+)
+
+twenty_eighth_ruby_question_second_answer = Answer.create!(
+  content: 'Array .sort_by',
+  kind: "correct",
+  question_id: twenty_eighth_ruby_question.id
+)
+
+twenty_eighth_ruby_question_third_answer = Answer.create!(
+  content: 'Array .organize',
+  kind: "misleading",
+  question_id: twenty_eighth_ruby_question.id
+)
+
+twenty_eighth_ruby_question_fourth_answer = Answer.create!(
+  content: "I can't even sort out my life...",
+  kind: "weird",
+  question_id: twenty_eighth_ruby_question.id
+)
+
+twenty_ninth_ruby_question_first_answer = Answer.create!(
+  content: 'Array.size',
+  kind: 'perfect',
+  question_id: twenty_ninth_ruby_question.id
+)
+
+twenty_ninth_ruby_question_second_answer = Answer.create!(
+  content: 'Array .length',
+  kind: "correct",
+  question_id: twenty_ninth_ruby_question.id
+)
+
+twenty_ninth_ruby_question_third_answer = Answer.create!(
+  content: 'Array .counting',
+  kind: "misleading",
+  question_id: twenty_ninth_ruby_question.id
+)
+
+twenty_ninth_ruby_question_fourth_answer = Answer.create!(
+  content: "Size doesn't matter",
+  kind: "weird",
+  question_id: twenty_ninth_ruby_question.id
+)
+
+thirtieth_ruby_question_first_answer = Answer.create!(
+  content: '[1,2,3,4,5 ,6,7,8,9,10]',
+  kind: 'perfect',
+  question_id: thirtieth_ruby_question.id
+)
+
+thirtieth_ruby_question_second_answer = Answer.create!(
+  content: 'An array of integers',
+  kind: "correct",
+  question_id: thirtieth_ruby_question.id
+)
+
+thirtieth_ruby_question_third_answer = Answer.create!(
+  content: '{1,2,3,4,5 ,6,7,8,9,10}',
+  kind: "misleading",
+  question_id: thirtieth_ruby_question.id
+)
+
+thirtieth_ruby_question_fourth_answer = Answer.create!(
+  content: "[I, don't, know]",
+  kind: "weird",
+  question_id: thirtieth_ruby_question.id
+)
+
+puts 'Front answers created.'
 
 puts 'Creating Slackbot answers...'
 
