@@ -2061,385 +2061,385 @@ fifteenth_front_question_fourth_answer = Answer.create!(
 )
 
 sixteenth_front_question_first_answer = Answer.create!(
-  content: 'Array .each_with_index do |element, index|',
+  content: '<img src= "example.png" class= "rounded circle">',
   kind: 'perfect',
   question_id: sixteenth_front_question.id
 )
 
 sixteenth_front_question_second_answer = Answer.create!(
-  content: 'By using .each_with_index',
+  content: 'With the class rounded circle',
   kind: "correct",
   question_id: sixteenth_front_question.id
 )
 
 sixteenth_front_question_third_answer = Answer.create!(
-  content: 'Array.index',
+  content: '<img src= "example.png" class= "circle">',
   kind: "misleading",
   question_id: sixteenth_front_question.id
 )
 
 sixteenth_front_question_fourth_answer = Answer.create!(
-  content: "Array .each_with_thumb",
+  content: "Bootstrap sucks, just use border radius like an adult",
   kind: "weird",
   question_id: sixteenth_front_question.id
 )
 
 seventeenth_front_question_first_answer = Answer.create!(
-  content: 'Array .map do |element|',
+  content: '12 columns',
   kind: 'perfect',
   question_id: seventeenth_front_question.id
 )
 
 seventeenth_front_question_second_answer = Answer.create!(
-  content: 'By using .map',
+  content: '2 x 6 columns',
   kind: "correct",
   question_id: seventeenth_front_question.id
 )
 
 seventeenth_front_question_third_answer = Answer.create!(
-  content: 'Array .each do',
+  content: '10 columns',
   kind: "misleading",
   question_id: seventeenth_front_question.id
 )
 
 seventeenth_front_question_fourth_answer = Answer.create!(
-  content: "Array .roadmap",
+  content: "Those columns are like prison bars. Bootstrap prison.",
   kind: "weird",
   question_id: seventeenth_front_question.id
 )
 
 eighteenth_front_question_first_answer = Answer.create!(
-  content: 'Array .find { |element| condition }',
+  content: 'Container, row and col',
   kind: 'perfect',
   question_id: eighteenth_front_question.id
 )
 
 eighteenth_front_question_second_answer = Answer.create!(
-  content: 'By using .find',
+  content: 'Container, rows and columns',
   kind: "correct",
   question_id: eighteenth_front_question.id
 )
 
 eighteenth_front_question_third_answer = Answer.create!(
-  content: 'Array .search',
+  content: 'Div, header, line',
   kind: "misleading",
   question_id: eighteenth_front_question.id
 )
 
 eighteenth_front_question_fourth_answer = Answer.create!(
-  content: "Array .google .search",
+  content: "BOOTSTRAP, IS, HELL",
   kind: "weird",
   question_id: eighteenth_front_question.id
 )
 
 nineteenth_front_question_first_answer = Answer.create!(
-  content: 'Array .select do { |element| condition }',
+  content: 'With const',
   kind: 'perfect',
   question_id: nineteenth_front_question.id
 )
 
 nineteenth_front_question_second_answer = Answer.create!(
-  content: 'By using .select',
+  content: 'With let',
   kind: "correct",
   question_id: nineteenth_front_question.id
 )
 
 nineteenth_front_question_third_answer = Answer.create!(
-  content: 'Array .chose',
+  content: 'With var',
   kind: "misleading",
   question_id: nineteenth_front_question.id
 )
 
 nineteenth_front_question_fourth_answer = Answer.create!(
-  content: "Array .i_chose_you_pikachu",
+  content: "I had to learn Ruby and now THIS ?!!",
   kind: "weird",
   question_id: nineteenth_front_question.id
 )
 
 tentieth_front_question_first_answer = Answer.create!(
-  content: 'Array .delete (element)',
+  content: 'lowerCamelCase',
   kind: 'perfect',
   question_id: twentieth_front_question.id
 )
 
 twentieth_front_question_second_answer = Answer.create!(
-  content: 'Array .delete_at (index)',
+  content: 'const firstName',
   kind: "correct",
   question_id: twentieth_front_question.id
 )
 
 twentieth_front_question_third_answer = Answer.create!(
-  content: 'Array .reject (element)',
+  content: 'const first_name',
   kind: "misleading",
   question_id: twentieth_front_question.id
 )
 
 twentieth_front_question_fourth_answer = Answer.create!(
-  content: "Array .exterminaaate",
+  content: "I'll have a pack of Camel please",
   kind: "weird",
   question_id: twentieth_front_question.id
 )
 
 twenty_first_front_question_first_answer = Answer.create!(
-  content: 'If condition_1 && condition_2',
+  content: 'Math.random();',
   kind: 'perfect',
   question_id: twenty_first_front_question.id
 )
 
 twenty_first_front_question_second_answer = Answer.create!(
-  content: 'With &&',
+  content: 'With the random() method on Math',
   kind: "correct",
   question_id: twenty_first_front_question.id
 )
 
 twenty_first_front_question_third_answer = Answer.create!(
-  content: 'With ||',
+  content: 'Math. sample (0..1)',
   kind: "misleading",
   question_id: twenty_first_front_question.id
 )
 
 twenty_first_front_question_fourth_answer = Answer.create!(
-  content: "...and what ?",
+  content: "I don't float, I sink.",
   kind: "weird",
   question_id: twenty_first_front_question.id
 )
 
 twenty_second_front_question_first_answer = Answer.create!(
-  content: 'Array .index (element)',
+  content: 'With template literals (backtick symbol + dollar sign)',
   kind: 'perfect',
   question_id: twenty_second_front_question.id
 )
 
 twenty_second_front_question_second_answer = Answer.create!(
-  content: 'With .index',
+  content: '`${firstName} is a drummer`',
   kind: "correct",
   question_id: twenty_second_front_question.id
 )
 
 twenty_second_front_question_third_answer = Answer.create!(
-  content: 'Array.id',
+  content: '"#{firstName} is a singer"',
   kind: "misleading",
   question_id: twenty_second_front_question.id
 )
 
 twenty_second_front_question_fourth_answer = Answer.create!(
-  content: "*You point your index at the array*",
+  content: "I don't work for Interpol",
   kind: "weird",
   question_id: twenty_second_front_question.id
 )
 
 twenty_third_front_question_first_answer = Answer.create!(
-  content: 'Array .include? (element)',
+  content: 'array .forEach (element)',
   kind: 'perfect',
   question_id: twenty_third_front_question.id
 )
 
 twenty_third_front_question_second_answer = Answer.create!(
-  content: 'With .include?',
+  content: 'With .forEach',
   kind: "correct",
   question_id: twenty_third_front_question.id
 )
 
 twenty_third_front_question_third_answer = Answer.create!(
-  content: 'Array .includes',
+  content: 'array .each do',
   kind: "misleading",
   question_id: twenty_third_front_question.id
 )
 
 twenty_third_front_question_fourth_answer = Answer.create!(
-  content: "Array .all_inclusive",
+  content: "We're not made forEach other",
   kind: "weird",
   question_id: twenty_third_front_question.id
 )
 
 twenty_fourth_front_question_first_answer = Answer.create!(
-  content: 'Array << element',
+  content: 'element .insert Adjacent HTML',
   kind: 'perfect',
   question_id: twenty_fourth_front_question.id
 )
 
 twenty_fourth_front_question_second_answer = Answer.create!(
-  content: 'Array .push (element)',
+  content: 'With .insert Adjacent HTML',
   kind: "correct",
   question_id: twenty_fourth_front_question.id
 )
 
 twenty_fourth_front_question_third_answer = Answer.create!(
-  content: 'Array .add (element)',
+  content: 'With .insert inner HTML',
   kind: "misleading",
   question_id: twenty_fourth_front_question.id
 )
 
 twenty_fourth_front_question_fourth_answer = Answer.create!(
-  content: "Array .push_ups",
+  content: "Insert adjacent what ? 0_0",
   kind: "weird",
   question_id: twenty_fourth_front_question.id
 )
 
 twenty_fifth_front_question_first_answer = Answer.create!(
-  content: 'Until condition end',
+  content: 'document .get Element By Id()',
   kind: 'perfect',
   question_id: twenty_fifth_front_question.id
 )
 
 twenty_fifth_front_question_second_answer = Answer.create!(
-  content: 'Until',
+  content: 'With .get Element By Id',
   kind: "correct",
   question_id: twenty_fifth_front_question.id
 )
 
 twenty_fifth_front_question_third_answer = Answer.create!(
-  content: 'until then',
+  content: 'With query Selector',
   kind: "misleading",
   question_id: twenty_fifth_front_question.id
 )
 
 twenty_fifth_front_question_fourth_answer = Answer.create!(
-  content: "Meanwhile... in Vera Cruz",
+  content: "I'm old enough to get Elements without showing my ID",
   kind: "weird",
   question_id: twenty_fifth_front_question.id
 )
 
 twenty_sixth_front_question_first_answer = Answer.create!(
-  content: 'If condition_1 || condition_2',
+  content: 'element .add Event Listener (event Type, (event))',
   kind: 'perfect',
   question_id: twenty_sixth_front_question.id
 )
 
 twenty_sixth_front_question_second_answer = Answer.create!(
-  content: 'With ||',
+  content: 'With .add Event Listener',
   kind: "correct",
   question_id: twenty_sixth_front_question.id
 )
 
 twenty_sixth_front_question_third_answer = Answer.create!(
-  content: 'With &&',
+  content: 'With .insert Inner HTML',
   kind: "misleading",
   question_id: twenty_sixth_front_question.id
 )
 
 twenty_sixth_front_question_fourth_answer = Answer.create!(
-  content: "Should I stay OR should I go ?",
+  content: "I'm a very good listener you know",
   kind: "weird",
   question_id: twenty_sixth_front_question.id
 )
 
 twenty_seventh_front_question_first_answer = Answer.create!(
-  content: 'With %',
+  content: 'With element .query Selector ()',
   kind: 'perfect',
   question_id: twenty_seventh_front_question.id
 )
 
 twenty_seventh_front_question_second_answer = Answer.create!(
-  content: 'With the modulo operator',
+  content: 'With element .query Selector All()',
   kind: "correct",
   question_id: twenty_seventh_front_question.id
 )
 
 twenty_seventh_front_question_third_answer = Answer.create!(
-  content: 'With /',
+  content: 'With get Element By Id()',
   kind: "misleading",
   question_id: twenty_seventh_front_question.id
 )
 
 twenty_seventh_front_question_fourth_answer = Answer.create!(
-  content: "Maths... what a concept !",
+  content: "You just can't. I give up.",
   kind: "weird",
   question_id: twenty_seventh_front_question.id
 )
 
 twenty_eighth_front_question_first_answer = Answer.create!(
-  content: 'Array.sort',
+  content: 'In package.json',
   kind: 'perfect',
   question_id: twenty_eighth_front_question.id
 )
 
 twenty_eighth_front_question_second_answer = Answer.create!(
-  content: 'Array .sort_by',
+  content: 'In a json file',
   kind: "correct",
   question_id: twenty_eighth_front_question.id
 )
 
 twenty_eighth_front_question_third_answer = Answer.create!(
-  content: 'Array .organize',
+  content: 'In Gemfile',
   kind: "misleading",
   question_id: twenty_eighth_front_question.id
 )
 
 twenty_eighth_front_question_fourth_answer = Answer.create!(
-  content: "I can't even sort out my life...",
+  content: "Nice package...json.",
   kind: "weird",
   question_id: twenty_eighth_front_question.id
 )
 
 twenty_ninth_front_question_first_answer = Answer.create!(
-  content: 'Array.size',
+  content: 'NPM',
   kind: 'perfect',
   question_id: twenty_ninth_front_question.id
 )
 
 twenty_ninth_front_question_second_answer = Answer.create!(
-  content: 'Array .length',
+  content: 'NPM.js',
   kind: "correct",
   question_id: twenty_ninth_front_question.id
 )
 
 twenty_ninth_front_question_third_answer = Answer.create!(
-  content: 'Array .counting',
+  content: 'YARN',
   kind: "misleading",
   question_id: twenty_ninth_front_question.id
 )
 
 twenty_ninth_front_question_fourth_answer = Answer.create!(
-  content: "Size doesn't matter",
+  content: "NTM",
   kind: "weird",
   question_id: twenty_ninth_front_question.id
 )
 
 thirtieth_front_question_first_answer = Answer.create!(
-  content: '[1,2,3,4,5 ,6,7,8,9,10]',
+  content: 'yarn add <package> [--dev]',
   kind: 'perfect',
   question_id: thirtieth_front_question.id
 )
 
 thirtieth_front_question_second_answer = Answer.create!(
-  content: 'An array of integers',
+  content: 'yarn add',
   kind: "correct",
   question_id: thirtieth_front_question.id
 )
 
 thirtieth_front_question_third_answer = Answer.create!(
-  content: '{1,2,3,4,5 ,6,7,8,9,10}',
+  content: 'npm add',
   kind: "misleading",
   question_id: thirtieth_front_question.id
 )
 
 thirtieth_front_question_fourth_answer = Answer.create!(
-  content: "[I, don't, know]",
+  content: "wool yarn add",
   kind: "weird",
   question_id: thirtieth_front_question.id
 )
 
 thirty_first_front_question_first_answer = Answer.create!(
-  content: 'If condition_1 && condition_2',
+  content: 'You burn your computer',
   kind: 'perfect',
   question_id: thirty_first_front_question.id
 )
 
 thirty_first_front_question_second_answer = Answer.create!(
-  content: 'With &&',
+  content: 'You uninstall it this instant',
   kind: "correct",
   question_id: thirty_first_front_question.id
 )
 
 thirty_first_front_question_third_answer = Answer.create!(
-  content: 'With ||',
+  content: 'Bootstrap is not that bad',
   kind: "misleading",
   question_id: thirty_first_front_question.id
 )
 
 thirty_first_front_question_fourth_answer = Answer.create!(
-  content: "...and what ?",
+  content: "I call you for all my Bootstrap issues 💞",
   kind: "weird",
   question_id: thirty_first_front_question.id
 )
