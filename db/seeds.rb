@@ -45,19 +45,19 @@ third_lesson = Lesson.create!(
 fourth_lesson = Lesson.create!(
   name: "OOP",
   hp_user: 10,
-  hp_teacher: 10
+  hp_teacher: 20
 )
 
 fifth_lesson = Lesson.create!(
   name: "DB",
   hp_user: 10,
-  hp_teacher: 10
+  hp_teacher: 20
 )
 
 sixth_lesson = Lesson.create!(
   name: "Front",
   hp_user: 10,
-  hp_teacher: 10
+  hp_teacher: 20
 )
 
 final_lesson = Lesson.create!(
@@ -2870,10 +2870,10 @@ seb.save!
 
 tim = Teacher.create!(
   name: 'Timothée',
-  feedback_answer_perfect: 'It is very goodeee',
-  feedback_answer_correct: 'Quite goodeee',
-  feedback_answer_misleading: 'Not very goode',
-  feedback_answer_weird: 'You are the opposite of goode',
+  feedback_answer_perfect: 'It is very goodeee ',
+  feedback_answer_correct: 'Quite goodeee ',
+  feedback_answer_misleading: 'Not very goode ',
+  feedback_answer_weird: 'You are the opposite of goode ',
   feedback_intro: "You need to be goode at the basics of Ruby",
   feedback_user_won: 'You have mastered the basics of Ruby, tout est goode !',
   feedback_user_lost: 'You need to brush up on your Ruby lectures to be goode at it.',
@@ -2894,10 +2894,10 @@ tim.save!
 
 hugo = Teacher.create!(
   name: 'Hugo',
-  feedback_answer_perfect: 'Urgh... Great job...I guess.',
-  feedback_answer_correct: 'I guess you got lucky this time.',
-  feedback_answer_misleading: 'You really are trying my patience newbie...',
-  feedback_answer_weird: '*Hugo starts cracking his knucles, you are in trouble*',
+  feedback_answer_perfect: 'Urgh... Great job...I guess. ',
+  feedback_answer_correct: 'I guess you got lucky this time. ',
+  feedback_answer_misleading: 'You really are trying my patience newbie... ',
+  feedback_answer_weird: '*Hugo starts cracking his knucles, you are in trouble* ',
   feedback_intro: "You're in for a world of hurt newbie !!!",
   feedback_user_won: 'Pff... Whatever, you won, just let me go back to my rave now.',
   feedback_user_lost: 'You suck just as much as Bootstrap !!!',
