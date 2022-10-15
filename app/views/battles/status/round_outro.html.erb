@@ -45,18 +45,18 @@
   </div>
   <div class="dialog-box">
     <% if @game_answer.answer.kind == "perfect" %>
-      <p><%= @battle.teacher.feedback_answer_perfect %></p>
+      <p class="feedback"><%= @battle.teacher.feedback_answer_perfect %></p>
       <p><%= "#{@battle.teacher.name} loses 2 HP !" %></p>
     <% elsif @game_answer.answer.kind == "correct" %>
-      <p><%= @battle.teacher.feedback_answer_correct %></p>
+      <p class="feedback"><%= @battle.teacher.feedback_answer_correct %></p>
       <p><%= "#{@battle.teacher.name} loses 2 HP !" %></p>
     <% elsif @game_answer.answer.kind == "misleading" %>
-      <p><%= @battle.teacher.feedback_answer_misleading %></p>
+      <p class="feedback"><%= @battle.teacher.feedback_answer_misleading %></p>
       <% if @battle.teacher.status != "tutorial" %>
         <p><%= "#{@game.user.username} loses 2 HP !" %></p>
       <% end %>
     <% elsif @game_answer.answer.kind == "weird" %>
-      <p><%= @battle.teacher.feedback_answer_weird %></p>
+      <p class="feedback"><%= @battle.teacher.feedback_answer_weird %></p>
       <% if @battle.teacher.status != "tutorial" %>
         <p><%= "#{@game.user.username} loses 2 HP !" %></p>
       <% end %>

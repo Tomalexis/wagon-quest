@@ -45,19 +45,19 @@ third_lesson = Lesson.create!(
 fourth_lesson = Lesson.create!(
   name: "OOP",
   hp_user: 10,
-  hp_teacher: 10
+  hp_teacher: 20
 )
 
 fifth_lesson = Lesson.create!(
   name: "DB",
   hp_user: 10,
-  hp_teacher: 10
+  hp_teacher: 20
 )
 
 sixth_lesson = Lesson.create!(
   name: "Front",
   hp_user: 10,
-  hp_teacher: 10
+  hp_teacher: 20
 )
 
 final_lesson = Lesson.create!(
@@ -316,49 +316,164 @@ eighth_db_question = Question.create!(
 
 puts 'Empty DB questions created.'
 
-puts 'Creating empty Front questions...'
+puts 'Creating Front questions...'
 
 first_front_question = Question.create!(
-  content: 'Front 1 ?',
+  content: 'What are the standard CSS selectors ?',
   lesson_id: sixth_lesson.id
 )
 
 second_front_question = Question.create!(
-  content: 'Front 2 ?',
+  content: 'How do you create a hyperlink ?',
   lesson_id: sixth_lesson.id
 )
 
 third_front_question = Question.create!(
-  content: 'Front 3 ?',
+  content: 'What are the four types of CSS length units ?',
   lesson_id: sixth_lesson.id
 )
 
 fourth_front_question = Question.create!(
-  content: 'Front 4 ?',
+  content: 'How do you add an image in HTML ?',
   lesson_id: sixth_lesson.id
 )
 
 fifth_front_question = Question.create!(
-  content: 'Front 5 ?',
+  content: 'How do you define a <div> with round corners ?',
   lesson_id: sixth_lesson.id
 )
 
 sixth_front_question = Question.create!(
-  content: 'Front 6 ?',
+  content: 'How do you set the background color to red for the whole body of the page ?',
   lesson_id: sixth_lesson.id
 )
 
 seventh_front_question = Question.create!(
-  content: 'Front 7 ?',
+  content: 'How do you emphasize a word in a paragraph ?',
   lesson_id: sixth_lesson.id
 )
 
 eighth_front_question = Question.create!(
-  content: 'Front 8 ?',
+  content: 'What is the basic syntax of a HTML element ?',
   lesson_id: sixth_lesson.id
 )
 
-puts 'Empty Front questions created.'
+ninth_front_question = Question.create!(
+  content: 'What flexbox CSS property sets the relative position of flex-items horizontally inside the flexbox ?',
+  lesson_id: sixth_lesson.id
+)
+
+tenth_front_question = Question.create!(
+  content: 'What flex-item CSS property sets its ability to shrink if necessary ?',
+  lesson_id: sixth_lesson.id
+)
+
+eleventh_front_question = Question.create!(
+  content: 'What flexbox CSS property sets flex-items’ vertical alignment inside the flexbox ?',
+  lesson_id: sixth_lesson.id
+)
+
+twelfth_front_question = Question.create!(
+  content: 'What CSS property should you use on background images to improve contrast ?',
+  lesson_id: sixth_lesson.id
+)
+
+thirteenth_front_question = Question.create!(
+  content: 'How do you define a div as a flexbox in your CSS ?',
+  lesson_id: sixth_lesson.id
+)
+
+fourteenth_front_question = Question.create!(
+  content: 'What flexbox CSS property is needed to display flex-items above one another (and not side by side) ?',
+  lesson_id: sixth_lesson.id
+)
+
+fifteenth_front_question = Question.create!(
+  content: 'How do you center the text of a div with Bootstrap ?',
+  lesson_id: sixth_lesson.id
+)
+
+sixteenth_front_question = Question.create!(
+  content: 'How do you make an image circular with Bootstrap ?',
+  lesson_id: sixth_lesson.id
+)
+
+seventeenth_front_question = Question.create!(
+  content: 'How many columns are there in Bootstrap’s grid ?',
+  lesson_id: sixth_lesson.id
+)
+
+eighteenth_front_question = Question.create!(
+  content: 'What are the three Bootstrap CSS classes you have to know to design a grid ?',
+  lesson_id: sixth_lesson.id
+)
+
+nineteenth_front_question = Question.create!(
+  content: 'How do you store a value in a brand new variable in JavaScript ?',
+  lesson_id: sixth_lesson.id
+)
+
+twentieth_front_question = Question.create!(
+  content: 'What is the naming convention for variables ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_first_front_question = Question.create!(
+  content: 'How can you pick randomly a float between 0 and 1 in JavaScript ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_second_front_question = Question.create!(
+  content: 'In ES6, how do you interpolate a string ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_third_front_question = Question.create!(
+  content: 'How do you iterate over an array in JavaScript ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_fourth_front_question = Question.create!(
+  content: 'How do you append content into a DOM element ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_fifth_front_question = Question.create!(
+  content: 'How do you select an element in the DOM with its id ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_sixth_front_question = Question.create!(
+  content: 'How do you listen and react to a DOM event ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_seventh_front_question = Question.create!(
+  content: 'How do you select element(s) when you don’t have an id at hand ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_eighth_front_question = Question.create!(
+  content: 'In which file can you see your project’s external npm dependencies listed ?',
+  lesson_id: sixth_lesson.id
+)
+
+twenty_ninth_front_question = Question.create!(
+  content: 'What is the most popular package repository for JavaScript ?',
+  lesson_id: sixth_lesson.id
+)
+
+thirtieth_front_question = Question.create!(
+  content: 'How do you add an external package available on NPM using Yarn ?',
+  lesson_id: sixth_lesson.id
+)
+
+thirty_first_front_question = Question.create!(
+  content: 'What do you do if Bootstrap is installed on your project ?',
+  lesson_id: sixth_lesson.id
+)
+
+puts 'Front questions created.'
 
 puts 'Creating Slackbot questions...'
 
@@ -1583,201 +1698,753 @@ eighth_db_question_fourth_answer = Answer.create!(
 
 puts 'Empty DB answers created.'
 
-puts 'Creating empty Front answers...'
+puts 'Creating Front answers...'
 
 first_front_question_first_answer = Answer.create!(
-  content: 'Front 1 perfect.',
+  content: 'HTML tags, CSS classes and IDs',
   kind: 'perfect',
   question_id: first_front_question.id
 )
 
 first_front_question_second_answer = Answer.create!(
-  content: 'Front 1 correct.',
+  content: 'Tags, classes and IDs',
   kind: "correct",
   question_id: first_front_question.id
 )
 
 first_front_question_third_answer = Answer.create!(
-  content: 'Front 1 misleading.',
+  content: 'Divs, Headers and paragraphs',
   kind: "misleading",
   question_id: first_front_question.id
 )
 
 first_front_question_fourth_answer = Answer.create!(
-  content: 'Front 1 weird.',
+  content: 'My standards are too high for this question',
   kind: "weird",
   question_id: first_front_question.id
 )
 
 second_front_question_first_answer = Answer.create!(
-  content: 'Front 2 perfect.',
+  content: '<a href= "url"> text </a>',
   kind: 'perfect',
   question_id: second_front_question.id
 )
 
 second_front_question_second_answer = Answer.create!(
-  content: 'Front 2 correct.',
+  content: 'With the <a> tag',
   kind: "correct",
   question_id: second_front_question.id
 )
 
 second_front_question_third_answer = Answer.create!(
-  content: 'Front 2 misleading.',
+  content: 'With the <link> tag',
   kind: "misleading",
   question_id: second_front_question.id
 )
 
 second_front_question_fourth_answer = Answer.create!(
-  content: 'Front 2 weird.',
+  content: "I only know about Hyperspeed",
   kind: "weird",
   question_id: second_front_question.id
 )
 
 third_front_question_first_answer = Answer.create!(
-  content: 'Front 3 perfect.',
+  content: 'Px, %, Vh/Vw, em',
   kind: 'perfect',
   question_id: third_front_question.id
 )
 
 third_front_question_second_answer = Answer.create!(
-  content: 'Front 3 correct.',
+  content: 'Px, %, viewport, em',
   kind: "correct",
   question_id: third_front_question.id
 )
 
 third_front_question_third_answer = Answer.create!(
-  content: 'Front 3 misleading.',
+  content: 'Cm, inch, px, foot',
   kind: "misleading",
   question_id: third_front_question.id
 )
 
 third_front_question_fourth_answer = Answer.create!(
-  content: 'Front 3 weird.',
+  content: 'I only have one type: you.',
   kind: "weird",
   question_id: third_front_question.id
 )
 
 fourth_front_question_first_answer = Answer.create!(
-  content: 'Front 4 perfect.',
+  content: '<img src= "file_path" alt= "description">',
   kind: 'perfect',
   question_id: fourth_front_question.id
 )
 
 fourth_front_question_second_answer = Answer.create!(
-  content: 'Front 4 correct.',
+  content: 'With the <img> tag',
   kind: "correct",
   question_id: fourth_front_question.id
 )
 
 fourth_front_question_third_answer = Answer.create!(
-  content: 'Front 4 misleading.',
+  content: 'With the <image> tag',
   kind: "misleading",
   question_id: fourth_front_question.id
 )
 
 fourth_front_question_fourth_answer = Answer.create!(
-  content: 'Front 4 weird.',
+  content: 'With the <emile et image> tag',
   kind: "weird",
   question_id: fourth_front_question.id
 )
 
 fifth_front_question_first_answer = Answer.create!(
-  content: 'Front 5 perfect.',
+  content: 'div { border-radius: 5px; }',
   kind: 'perfect',
   question_id: fifth_front_question.id
 )
 
 fifth_front_question_second_answer = Answer.create!(
-  content: 'Front 5 correct.',
+  content: 'With border-radius',
   kind: "correct",
   question_id: fifth_front_question.id
 )
 
 fifth_front_question_third_answer = Answer.create!(
-  content: 'Front 5 misleading.',
+  content: 'With the border property',
   kind: "misleading",
   question_id: fifth_front_question.id
 )
 
 fifth_front_question_fourth_answer = Answer.create!(
-  content: 'Front 5 weird.',
+  content: 'With border-cubitus',
   kind: "weird",
   question_id: fifth_front_question.id
 )
 
 sixth_front_question_first_answer = Answer.create!(
-  content: 'Front 6 perfect.',
+  content: 'body { background-color: red; }',
   kind: 'perfect',
   question_id: sixth_front_question.id
 )
 
 sixth_front_question_second_answer = Answer.create!(
-  content: 'Front 6 correct.',
+  content: 'With background-color: red',
   kind: "correct",
   question_id: sixth_front_question.id
 )
 
 sixth_front_question_third_answer = Answer.create!(
-  content: 'Front 6 misleading.',
+  content: 'With background: red',
   kind: "misleading",
   question_id: sixth_front_question.id
 )
 
 sixth_front_question_fourth_answer = Answer.create!(
-  content: 'Front 6 weird.',
+  content: 'I just change the wallpaper',
   kind: "weird",
   question_id: sixth_front_question.id
 )
 
 seventh_front_question_first_answer = Answer.create!(
-  content: 'Front 7 perfect.',
+  content: 'With the <strong> tag',
   kind: 'perfect',
   question_id: seventh_front_question.id
 )
 
 seventh_front_question_second_answer = Answer.create!(
-  content: 'Front 7 correct.',
+  content: 'With the <em> tag',
   kind: "correct",
   question_id: seventh_front_question.id
 )
 
 seventh_front_question_third_answer = Answer.create!(
-  content: 'Front 7 misleading.',
+  content: 'With the <bold> tag',
   kind: "misleading",
   question_id: seventh_front_question.id
 )
 
 seventh_front_question_fourth_answer = Answer.create!(
-  content: 'Front 7 weird.',
+  content: 'I just put the font size to 56',
   kind: "weird",
   question_id: seventh_front_question.id
 )
 
 eighth_front_question_first_answer = Answer.create!(
-  content: 'Front 8 perfect.',
+  content: '<element attr= "value"> some text </element>',
   kind: 'perfect',
   question_id: eighth_front_question.id
 )
 
 eighth_front_question_second_answer = Answer.create!(
-  content: 'Front 8 correct.',
+  content: 'With an element tag, an attribute and a value',
   kind: "correct",
   question_id: eighth_front_question.id
 )
 
 eighth_front_question_third_answer = Answer.create!(
-  content: 'Front 8 misleading.',
+  content: 'html{ attr: value }',
   kind: "misleading",
   question_id: eighth_front_question.id
 )
 
 eighth_front_question_fourth_answer = Answer.create!(
-  content: 'Front 8 weird.',
+  content: '<I> "Love" </Bootstrap>',
   kind: "weird",
   question_id: eighth_front_question.id
 )
 
-puts 'Empty Front answers created.'
+ninth_front_question_first_answer = Answer.create!(
+  content: 'justify content: value',
+  kind: 'perfect',
+  question_id: ninth_front_question.id
+)
+
+ninth_front_question_second_answer = Answer.create!(
+  content: 'justify content',
+  kind: "correct",
+  question_id: ninth_front_question.id
+)
+
+ninth_front_question_third_answer = Answer.create!(
+  content: 'justify',
+  kind: "misleading",
+  question_id: ninth_front_question.id
+)
+
+ninth_front_question_fourth_answer = Answer.create!(
+  content: "I don't have to justify myself !",
+  kind: "weird",
+  question_id: ninth_front_question.id
+)
+
+tenth_front_question_first_answer = Answer.create!(
+  content: 'flex shrink: 1',
+  kind: 'perfect',
+  question_id: tenth_front_question.id
+)
+
+tenth_front_question_second_answer = Answer.create!(
+  content: 'flex shrink',
+  kind: "correct",
+  question_id: tenth_front_question.id
+)
+
+tenth_front_question_third_answer = Answer.create!(
+  content: 'flex shrink: -1',
+  kind: "misleading",
+  question_id: tenth_front_question.id
+)
+
+tenth_front_question_fourth_answer = Answer.create!(
+  content: 'Set an appointment with my shrink',
+  kind: "weird",
+  question_id: tenth_front_question.id
+)
+
+eleventh_front_question_first_answer = Answer.create!(
+  content: 'align items: value',
+  kind: 'perfect',
+  question_id: eleventh_ruby_question.id
+)
+
+eleventh_front_question_second_answer = Answer.create!(
+  content: 'With align items',
+  kind: "correct",
+  question_id: eleventh_front_question.id
+)
+
+eleventh_front_question_third_answer = Answer.create!(
+  content: 'With align content',
+  kind: "misleading",
+  question_id: eleventh_front_question.id
+)
+
+eleventh_front_question_fourth_answer = Answer.create!(
+  content: 'With stars align',
+  kind: "weird",
+  question_id: eleventh_front_question.id
+)
+
+twelfth_front_question_first_answer = Answer.create!(
+  content: 'background image: linear gradient()',
+  kind: 'perfect',
+  question_id: twelfth_front_question.id
+)
+
+twelfth_front_question_second_answer = Answer.create!(
+  content: 'With linear gradient',
+  kind: "correct",
+  question_id: twelfth_front_question.id
+)
+
+twelfth_front_question_third_answer = Answer.create!(
+  content: 'background image: contrast()',
+  kind: "misleading",
+  question_id: twelfth_front_question.id
+)
+
+twelfth_front_question_fourth_answer = Answer.create!(
+  content: 'Put the image in black and white',
+  kind: "weird",
+  question_id: twelfth_front_question.id
+)
+
+thirteenth_front_question_first_answer = Answer.create!(
+  content: 'display: flex',
+  kind: 'perfect',
+  question_id: thirteenth_front_question.id
+)
+
+thirteenth_front_question_second_answer = Answer.create!(
+  content: 'With the flex property',
+  kind: "correct",
+  question_id: thirteenth_front_question.id
+)
+
+thirteenth_front_question_third_answer = Answer.create!(
+  content: 'display: flexbox',
+  kind: "misleading",
+  question_id: thirteenth_front_question.id
+)
+
+thirteenth_front_question_fourth_answer = Answer.create!(
+  content: '*flex your muscles*',
+  kind: "weird",
+  question_id: thirteenth_front_question.id
+)
+
+fourteenth_front_question_first_answer = Answer.create!(
+  content: 'flex direction: column',
+  kind: 'perfect',
+  question_id: fourteenth_front_question.id
+)
+
+fourteenth_front_question_second_answer = Answer.create!(
+  content: 'With flex direction',
+  kind: "correct",
+  question_id: fourteenth_front_question.id
+)
+
+fourteenth_front_question_third_answer = Answer.create!(
+  content: 'flex direction: row',
+  kind: "misleading",
+  question_id: fourteenth_front_question.id
+)
+
+fourteenth_front_question_fourth_answer = Answer.create!(
+  content: "With one direction",
+  kind: "weird",
+  question_id: fourteenth_front_question.id
+)
+
+fifteenth_front_question_first_answer = Answer.create!(
+  content: '<div class= "text center"> </div>',
+  kind: 'perfect',
+  question_id: fifteenth_front_question.id
+)
+
+fifteenth_front_question_second_answer = Answer.create!(
+  content: 'With the "text center" class',
+  kind: "correct",
+  question_id: fifteenth_front_question.id
+)
+
+fifteenth_front_question_third_answer = Answer.create!(
+  content: '<div class= "text align"> </div>',
+  kind: "misleading",
+  question_id: fifteenth_front_question.id
+)
+
+fifteenth_front_question_fourth_answer = Answer.create!(
+  content: "*press space bar fifty times*",
+  kind: "weird",
+  question_id: fifteenth_front_question.id
+)
+
+sixteenth_front_question_first_answer = Answer.create!(
+  content: '<img src= "example.png" class= "rounded circle">',
+  kind: 'perfect',
+  question_id: sixteenth_front_question.id
+)
+
+sixteenth_front_question_second_answer = Answer.create!(
+  content: 'With the class rounded circle',
+  kind: "correct",
+  question_id: sixteenth_front_question.id
+)
+
+sixteenth_front_question_third_answer = Answer.create!(
+  content: '<img src= "example.png" class= "circle">',
+  kind: "misleading",
+  question_id: sixteenth_front_question.id
+)
+
+sixteenth_front_question_fourth_answer = Answer.create!(
+  content: "Bootstrap sucks, just use border radius like an adult",
+  kind: "weird",
+  question_id: sixteenth_front_question.id
+)
+
+seventeenth_front_question_first_answer = Answer.create!(
+  content: '12 columns',
+  kind: 'perfect',
+  question_id: seventeenth_front_question.id
+)
+
+seventeenth_front_question_second_answer = Answer.create!(
+  content: '2 x 6 columns',
+  kind: "correct",
+  question_id: seventeenth_front_question.id
+)
+
+seventeenth_front_question_third_answer = Answer.create!(
+  content: '10 columns',
+  kind: "misleading",
+  question_id: seventeenth_front_question.id
+)
+
+seventeenth_front_question_fourth_answer = Answer.create!(
+  content: "Those columns are like prison bars. Bootstrap prison.",
+  kind: "weird",
+  question_id: seventeenth_front_question.id
+)
+
+eighteenth_front_question_first_answer = Answer.create!(
+  content: 'Container, row and col',
+  kind: 'perfect',
+  question_id: eighteenth_front_question.id
+)
+
+eighteenth_front_question_second_answer = Answer.create!(
+  content: 'Container, rows and columns',
+  kind: "correct",
+  question_id: eighteenth_front_question.id
+)
+
+eighteenth_front_question_third_answer = Answer.create!(
+  content: 'Div, header, line',
+  kind: "misleading",
+  question_id: eighteenth_front_question.id
+)
+
+eighteenth_front_question_fourth_answer = Answer.create!(
+  content: "BOOTSTRAP, IS, HELL",
+  kind: "weird",
+  question_id: eighteenth_front_question.id
+)
+
+nineteenth_front_question_first_answer = Answer.create!(
+  content: 'With const',
+  kind: 'perfect',
+  question_id: nineteenth_front_question.id
+)
+
+nineteenth_front_question_second_answer = Answer.create!(
+  content: 'With let',
+  kind: "correct",
+  question_id: nineteenth_front_question.id
+)
+
+nineteenth_front_question_third_answer = Answer.create!(
+  content: 'With var',
+  kind: "misleading",
+  question_id: nineteenth_front_question.id
+)
+
+nineteenth_front_question_fourth_answer = Answer.create!(
+  content: "I had to learn Ruby and now THIS ?!!",
+  kind: "weird",
+  question_id: nineteenth_front_question.id
+)
+
+tentieth_front_question_first_answer = Answer.create!(
+  content: 'lowerCamelCase',
+  kind: 'perfect',
+  question_id: twentieth_front_question.id
+)
+
+twentieth_front_question_second_answer = Answer.create!(
+  content: 'const firstName',
+  kind: "correct",
+  question_id: twentieth_front_question.id
+)
+
+twentieth_front_question_third_answer = Answer.create!(
+  content: 'const first_name',
+  kind: "misleading",
+  question_id: twentieth_front_question.id
+)
+
+twentieth_front_question_fourth_answer = Answer.create!(
+  content: "I'll have a pack of Camel please",
+  kind: "weird",
+  question_id: twentieth_front_question.id
+)
+
+twenty_first_front_question_first_answer = Answer.create!(
+  content: 'Math.random();',
+  kind: 'perfect',
+  question_id: twenty_first_front_question.id
+)
+
+twenty_first_front_question_second_answer = Answer.create!(
+  content: 'With the random() method on Math',
+  kind: "correct",
+  question_id: twenty_first_front_question.id
+)
+
+twenty_first_front_question_third_answer = Answer.create!(
+  content: 'Math. sample (0..1)',
+  kind: "misleading",
+  question_id: twenty_first_front_question.id
+)
+
+twenty_first_front_question_fourth_answer = Answer.create!(
+  content: "I don't float, I sink.",
+  kind: "weird",
+  question_id: twenty_first_front_question.id
+)
+
+twenty_second_front_question_first_answer = Answer.create!(
+  content: 'With template literals (backtick symbol + dollar sign)',
+  kind: 'perfect',
+  question_id: twenty_second_front_question.id
+)
+
+twenty_second_front_question_second_answer = Answer.create!(
+  content: '`${firstName} is a drummer`',
+  kind: "correct",
+  question_id: twenty_second_front_question.id
+)
+
+twenty_second_front_question_third_answer = Answer.create!(
+  content: '"#{firstName} is a singer"',
+  kind: "misleading",
+  question_id: twenty_second_front_question.id
+)
+
+twenty_second_front_question_fourth_answer = Answer.create!(
+  content: "I don't work for Interpol",
+  kind: "weird",
+  question_id: twenty_second_front_question.id
+)
+
+twenty_third_front_question_first_answer = Answer.create!(
+  content: 'array .forEach (element)',
+  kind: 'perfect',
+  question_id: twenty_third_front_question.id
+)
+
+twenty_third_front_question_second_answer = Answer.create!(
+  content: 'With .forEach',
+  kind: "correct",
+  question_id: twenty_third_front_question.id
+)
+
+twenty_third_front_question_third_answer = Answer.create!(
+  content: 'array .each do',
+  kind: "misleading",
+  question_id: twenty_third_front_question.id
+)
+
+twenty_third_front_question_fourth_answer = Answer.create!(
+  content: "We're not made forEach other",
+  kind: "weird",
+  question_id: twenty_third_front_question.id
+)
+
+twenty_fourth_front_question_first_answer = Answer.create!(
+  content: 'element .insert Adjacent HTML',
+  kind: 'perfect',
+  question_id: twenty_fourth_front_question.id
+)
+
+twenty_fourth_front_question_second_answer = Answer.create!(
+  content: 'With .insert Adjacent HTML',
+  kind: "correct",
+  question_id: twenty_fourth_front_question.id
+)
+
+twenty_fourth_front_question_third_answer = Answer.create!(
+  content: 'With .insert inner HTML',
+  kind: "misleading",
+  question_id: twenty_fourth_front_question.id
+)
+
+twenty_fourth_front_question_fourth_answer = Answer.create!(
+  content: "Insert adjacent what ? 0_0",
+  kind: "weird",
+  question_id: twenty_fourth_front_question.id
+)
+
+twenty_fifth_front_question_first_answer = Answer.create!(
+  content: 'document .get Element By Id()',
+  kind: 'perfect',
+  question_id: twenty_fifth_front_question.id
+)
+
+twenty_fifth_front_question_second_answer = Answer.create!(
+  content: 'With .get Element By Id',
+  kind: "correct",
+  question_id: twenty_fifth_front_question.id
+)
+
+twenty_fifth_front_question_third_answer = Answer.create!(
+  content: 'With query Selector',
+  kind: "misleading",
+  question_id: twenty_fifth_front_question.id
+)
+
+twenty_fifth_front_question_fourth_answer = Answer.create!(
+  content: "I'm old enough to get Elements without showing my ID",
+  kind: "weird",
+  question_id: twenty_fifth_front_question.id
+)
+
+twenty_sixth_front_question_first_answer = Answer.create!(
+  content: 'element .add Event Listener (event Type, (event))',
+  kind: 'perfect',
+  question_id: twenty_sixth_front_question.id
+)
+
+twenty_sixth_front_question_second_answer = Answer.create!(
+  content: 'With .add Event Listener',
+  kind: "correct",
+  question_id: twenty_sixth_front_question.id
+)
+
+twenty_sixth_front_question_third_answer = Answer.create!(
+  content: 'With .insert Inner HTML',
+  kind: "misleading",
+  question_id: twenty_sixth_front_question.id
+)
+
+twenty_sixth_front_question_fourth_answer = Answer.create!(
+  content: "I'm a very good listener you know",
+  kind: "weird",
+  question_id: twenty_sixth_front_question.id
+)
+
+twenty_seventh_front_question_first_answer = Answer.create!(
+  content: 'With element .query Selector ()',
+  kind: 'perfect',
+  question_id: twenty_seventh_front_question.id
+)
+
+twenty_seventh_front_question_second_answer = Answer.create!(
+  content: 'With element .query Selector All()',
+  kind: "correct",
+  question_id: twenty_seventh_front_question.id
+)
+
+twenty_seventh_front_question_third_answer = Answer.create!(
+  content: 'With get Element By Id()',
+  kind: "misleading",
+  question_id: twenty_seventh_front_question.id
+)
+
+twenty_seventh_front_question_fourth_answer = Answer.create!(
+  content: "You just can't. I give up.",
+  kind: "weird",
+  question_id: twenty_seventh_front_question.id
+)
+
+twenty_eighth_front_question_first_answer = Answer.create!(
+  content: 'In package.json',
+  kind: 'perfect',
+  question_id: twenty_eighth_front_question.id
+)
+
+twenty_eighth_front_question_second_answer = Answer.create!(
+  content: 'In a json file',
+  kind: "correct",
+  question_id: twenty_eighth_front_question.id
+)
+
+twenty_eighth_front_question_third_answer = Answer.create!(
+  content: 'In Gemfile',
+  kind: "misleading",
+  question_id: twenty_eighth_front_question.id
+)
+
+twenty_eighth_front_question_fourth_answer = Answer.create!(
+  content: "Nice package...json.",
+  kind: "weird",
+  question_id: twenty_eighth_front_question.id
+)
+
+twenty_ninth_front_question_first_answer = Answer.create!(
+  content: 'NPM',
+  kind: 'perfect',
+  question_id: twenty_ninth_front_question.id
+)
+
+twenty_ninth_front_question_second_answer = Answer.create!(
+  content: 'NPM.js',
+  kind: "correct",
+  question_id: twenty_ninth_front_question.id
+)
+
+twenty_ninth_front_question_third_answer = Answer.create!(
+  content: 'YARN',
+  kind: "misleading",
+  question_id: twenty_ninth_front_question.id
+)
+
+twenty_ninth_front_question_fourth_answer = Answer.create!(
+  content: "NTM",
+  kind: "weird",
+  question_id: twenty_ninth_front_question.id
+)
+
+thirtieth_front_question_first_answer = Answer.create!(
+  content: 'yarn add <package> [--dev]',
+  kind: 'perfect',
+  question_id: thirtieth_front_question.id
+)
+
+thirtieth_front_question_second_answer = Answer.create!(
+  content: 'yarn add',
+  kind: "correct",
+  question_id: thirtieth_front_question.id
+)
+
+thirtieth_front_question_third_answer = Answer.create!(
+  content: 'npm add',
+  kind: "misleading",
+  question_id: thirtieth_front_question.id
+)
+
+thirtieth_front_question_fourth_answer = Answer.create!(
+  content: "wool yarn add",
+  kind: "weird",
+  question_id: thirtieth_front_question.id
+)
+
+thirty_first_front_question_first_answer = Answer.create!(
+  content: 'You burn your computer',
+  kind: 'perfect',
+  question_id: thirty_first_front_question.id
+)
+
+thirty_first_front_question_second_answer = Answer.create!(
+  content: 'You uninstall it this instant',
+  kind: "correct",
+  question_id: thirty_first_front_question.id
+)
+
+thirty_first_front_question_third_answer = Answer.create!(
+  content: 'Bootstrap is not that bad',
+  kind: "misleading",
+  question_id: thirty_first_front_question.id
+)
+
+thirty_first_front_question_fourth_answer = Answer.create!(
+  content: "I call you for all my Bootstrap issues 💞",
+  kind: "weird",
+  question_id: thirty_first_front_question.id
+)
+
+puts 'Front answers created.'
 
 puts 'Creating Slackbot answers...'
 
@@ -2142,9 +2809,9 @@ slackbot = Teacher.create!(
   position_y: 3,
   lesson_id: first_lesson.id,
   status: "tutorial",
-  open_dialog1: "Hello student. I see that you did not do your flashcards tonight...",
-  open_dialog2: "Wait are you real Slackbot ?!!",
-  open_dialog3: "Yes... And your lack of seriousness pains me... It's time to fight !"
+  open_dialog1: "Hello student. I see that you did not do your flashcards tonight... ",
+  open_dialog2: "Wait are you real Slackbot ?!! ",
+  open_dialog3: "Yes... And your lack of seriousness pains me... It's time to fight ! "
 )
 
 file = File.open(Rails.root.join("app/assets/images/slackbotstatic.png"))
@@ -2159,16 +2826,16 @@ jeremy = Teacher.create!(
   feedback_answer_correct: 'Pretty cool answer Dude !',
   feedback_answer_misleading: 'Come on Dude, you can do better than that !',
   feedback_answer_weird: 'Dude, are you making fun of me ? That is a tHAIRrible answer !',
-  feedback_intro: "Fun is important but so are rules Dude ! Never forget that !",
+  feedback_intro: "Fun is important but so are rules Dude ! Never forget that ! ",
   feedback_user_won: 'Damn Dude, you are pretty good for a newbie !',
   feedback_user_lost: 'Dude, that is not a very chill attitude, go have an ice cream and try again !',
   position_x: 14,
   position_y: 23,
   lesson_id: second_lesson.id,
   status: "regular",
-  open_dialog1: "Hey dude ! Welcome to Le Wagon academy !",
-  open_dialog2: "Hello to you too, you really have nice hair man !",
-  open_dialog3: "Thanks but flattery won't let you escape the rules around here !"
+  open_dialog1: "Hey dude ! Welcome to Le Wagon academy ! ",
+  open_dialog2: "Hello to you too, you really have nice hair man ! ",
+  open_dialog3: "Thanks but flattery won't let you escape the rules around here ! "
 )
 
 file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
@@ -2203,20 +2870,20 @@ seb.save!
 
 tim = Teacher.create!(
   name: 'Timothée',
-  feedback_answer_perfect: 'It is very goodeee',
-  feedback_answer_correct: 'Quite goodeee',
-  feedback_answer_misleading: 'Not very goode',
-  feedback_answer_weird: 'You are the opposite of goode',
-  feedback_intro: "You need to be goode at the basics of Ruby",
+  feedback_answer_perfect: 'It is very goodeee !',
+  feedback_answer_correct: 'Quite goodeee !',
+  feedback_answer_misleading: 'Not very goode.',
+  feedback_answer_weird: 'You are the opposite of goode.',
+  feedback_intro: "You need to be goode at the basics of Ruby.",
   feedback_user_won: 'You have mastered the basics of Ruby, tout est goode !',
   feedback_user_lost: 'You need to brush up on your Ruby lectures to be goode at it.',
   position_x: 2,
   position_y: 20,
   lesson_id: third_lesson.id,
   status: "core_four",
-  open_dialog1: 'Hello newbie, I am Timothée and I will teach you the basics of Ruby here ! Goode pour toi ?',
-  open_dialog2: 'Hum yes...it is goode..? By the way, what is the secret of your perfect tan ?',
-  open_dialog3: 'A bit of surfing and a lot of Ruby programming, let us battle now !'
+  open_dialog1: 'Hello newbie, I am Timothée and I will teach you the basics of Ruby here ! Goode pour toi ? ',
+  open_dialog2: 'Hum yes...it is goode..? By the way, what is the secret of your perfect tan ? ',
+  open_dialog3: 'A bit of surfing and a lot of Ruby programming, let us battle now ! '
 )
 
 file = File.open(Rails.root.join("app/assets/images/timstatic.png"))
@@ -2227,20 +2894,20 @@ tim.save!
 
 hugo = Teacher.create!(
   name: 'Hugo',
-  feedback_answer_perfect: '...',
-  feedback_answer_correct: '...',
-  feedback_answer_misleading: '...',
-  feedback_answer_weird: '...',
-  feedback_intro: "...",
-  feedback_user_won: '...',
-  feedback_user_lost: '...',
+  feedback_answer_perfect: 'Urgh... Great job...I guess.',
+  feedback_answer_correct: 'I guess you got lucky this time.',
+  feedback_answer_misleading: 'You really are trying my patience newbie...',
+  feedback_answer_weird: '*Hugo starts cracking his knucles, you are in trouble*',
+  feedback_intro: "You're in for a world of hurt newbie !!!",
+  feedback_user_won: 'Pff... Whatever, you won, just let me go back to my rave now.',
+  feedback_user_lost: 'You suck just as much as Bootstrap !!!',
   position_x: 10,
   position_y: 4,
-  lesson_id: fourth_lesson.id,
+  lesson_id: sixth_lesson.id,
   status: "core_four",
-  open_dialog1: '...',
-  open_dialog2: '...',
-  open_dialog3: '...'
+  open_dialog1: 'Damnit, they gave me that cursed Bootstrap class again, I hate my life !!! ',
+  open_dialog2: 'Hmm... Hey there, are you ok ? ',
+  open_dialog3: 'NO I AM NOT ! PREPARE TO SUFFER ! '
 )
 
 file = File.open(Rails.root.join("app/assets/images/hugostatic.png"))
@@ -2260,7 +2927,7 @@ diane = Teacher.create!(
   feedback_user_lost: '...',
   position_x: 28,
   position_y: 4,
-  lesson_id: fifth_lesson.id,
+  lesson_id: fourth_lesson.id,
   status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
@@ -2284,7 +2951,7 @@ paul = Teacher.create!(
   feedback_user_lost: '...',
   position_x: 50,
   position_y: 9,
-  lesson_id: sixth_lesson.id,
+  lesson_id: fifth_lesson.id,
   status: "core_four",
   open_dialog1: '...',
   open_dialog2: '...',
