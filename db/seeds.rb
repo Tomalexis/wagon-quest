@@ -2809,9 +2809,9 @@ slackbot = Teacher.create!(
   position_y: 3,
   lesson_id: first_lesson.id,
   status: "tutorial",
-  open_dialog1: "Hello student. I see that you did not do your flashcards tonight...",
-  open_dialog2: "Wait are you real Slackbot ?!!",
-  open_dialog3: "Yes... And your lack of seriousness pains me... It's time to fight !"
+  open_dialog1: "Hello student. I see that you did not do your flashcards tonight... ",
+  open_dialog2: "Wait are you real Slackbot ?!! ",
+  open_dialog3: "Yes... And your lack of seriousness pains me... It's time to fight ! "
 )
 
 file = File.open(Rails.root.join("app/assets/images/slackbotstatic.png"))
@@ -2826,16 +2826,16 @@ jeremy = Teacher.create!(
   feedback_answer_correct: 'Pretty cool answer Dude !',
   feedback_answer_misleading: 'Come on Dude, you can do better than that !',
   feedback_answer_weird: 'Dude, are you making fun of me ? That is a tHAIRrible answer !',
-  feedback_intro: "Fun is important but so are rules Dude ! Never forget that !",
+  feedback_intro: "Fun is important but so are rules Dude ! Never forget that ! ",
   feedback_user_won: 'Damn Dude, you are pretty good for a newbie !',
   feedback_user_lost: 'Dude, that is not a very chill attitude, go have an ice cream and try again !',
   position_x: 14,
   position_y: 23,
   lesson_id: second_lesson.id,
   status: "regular",
-  open_dialog1: "Hey dude ! Welcome to Le Wagon academy !",
-  open_dialog2: "Hello to you too, you really have nice hair man !",
-  open_dialog3: "Thanks but flattery won't let you escape the rules around here !"
+  open_dialog1: "Hey dude ! Welcome to Le Wagon academy ! ",
+  open_dialog2: "Hello to you too, you really have nice hair man ! ",
+  open_dialog3: "Thanks but flattery won't let you escape the rules around here ! "
 )
 
 file = File.open(Rails.root.join("app/assets/images/jeremystatic.png"))
@@ -2870,20 +2870,20 @@ seb.save!
 
 tim = Teacher.create!(
   name: 'Timothée',
-  feedback_answer_perfect: 'It is very goodeee ',
-  feedback_answer_correct: 'Quite goodeee ',
-  feedback_answer_misleading: 'Not very goode ',
-  feedback_answer_weird: 'You are the opposite of goode ',
-  feedback_intro: "You need to be goode at the basics of Ruby",
+  feedback_answer_perfect: 'It is very goodeee !',
+  feedback_answer_correct: 'Quite goodeee !',
+  feedback_answer_misleading: 'Not very goode.',
+  feedback_answer_weird: 'You are the opposite of goode.',
+  feedback_intro: "You need to be goode at the basics of Ruby.",
   feedback_user_won: 'You have mastered the basics of Ruby, tout est goode !',
   feedback_user_lost: 'You need to brush up on your Ruby lectures to be goode at it.',
   position_x: 2,
   position_y: 20,
   lesson_id: third_lesson.id,
   status: "core_four",
-  open_dialog1: 'Hello newbie, I am Timothée and I will teach you the basics of Ruby here ! Goode pour toi ?',
-  open_dialog2: 'Hum yes...it is goode..? By the way, what is the secret of your perfect tan ?',
-  open_dialog3: 'A bit of surfing and a lot of Ruby programming, let us battle now !'
+  open_dialog1: 'Hello newbie, I am Timothée and I will teach you the basics of Ruby here ! Goode pour toi ? ',
+  open_dialog2: 'Hum yes...it is goode..? By the way, what is the secret of your perfect tan ? ',
+  open_dialog3: 'A bit of surfing and a lot of Ruby programming, let us battle now ! '
 )
 
 file = File.open(Rails.root.join("app/assets/images/timstatic.png"))
@@ -2894,10 +2894,10 @@ tim.save!
 
 hugo = Teacher.create!(
   name: 'Hugo',
-  feedback_answer_perfect: 'Urgh... Great job...I guess. ',
-  feedback_answer_correct: 'I guess you got lucky this time. ',
-  feedback_answer_misleading: 'You really are trying my patience newbie... ',
-  feedback_answer_weird: '*Hugo starts cracking his knucles, you are in trouble* ',
+  feedback_answer_perfect: 'Urgh... Great job...I guess.',
+  feedback_answer_correct: 'I guess you got lucky this time.',
+  feedback_answer_misleading: 'You really are trying my patience newbie...',
+  feedback_answer_weird: '*Hugo starts cracking his knucles, you are in trouble*',
   feedback_intro: "You're in for a world of hurt newbie !!!",
   feedback_user_won: 'Pff... Whatever, you won, just let me go back to my rave now.',
   feedback_user_lost: 'You suck just as much as Bootstrap !!!',
@@ -2905,9 +2905,9 @@ hugo = Teacher.create!(
   position_y: 4,
   lesson_id: sixth_lesson.id,
   status: "core_four",
-  open_dialog1: 'Damnit, they gave me that cursed Bootstrap class again, I hate my life !!!',
-  open_dialog2: 'Hmm... Hey there, are you ok ?',
-  open_dialog3: 'NO I AM NOT ! PREPARE TO SUFFER !'
+  open_dialog1: 'Damnit, they gave me that cursed Bootstrap class again, I hate my life !!! ',
+  open_dialog2: 'Hmm... Hey there, are you ok ? ',
+  open_dialog3: 'NO I AM NOT ! PREPARE TO SUFFER ! '
 )
 
 file = File.open(Rails.root.join("app/assets/images/hugostatic.png"))
