@@ -5,7 +5,9 @@
     <audio src="/free_battle1.wav" loop='true' data-music-target='audio'></audio>
   <% elsif @battle.teacher.status == "regular" %>
     <audio src="/free_battle2.wav" loop='true' data-music-target='audio'></audio>
-    <% elsif @battle.teacher.status == "core_four" %>
+  <% elsif @battle.teacher.name == "Hugo" %>
+    <audio src="/hugo_battle_music.mp3" loop='true' data-music-target='audio'></audio>
+  <% elsif @battle.teacher.status == "core_four" %>
     <audio src="/Jeremy_Battle.mp3" loop='true' data-music-target='audio'></audio>
   <% elsif @battle.teacher.status == "final_boss" %>
     <audio src="/For_Final_Boss_Extended.mp3" loop='true' data-music-target='audio'></audio>
