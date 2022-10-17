@@ -1441,7 +1441,7 @@ third_oop_question_fourth_answer = Answer.create!(
 )
 
 fourth_oop_question_first_answer = Answer.create!(
-  content: "It receives the user's request and hits the corresponding action in the Controller.",
+  content: "It receives a user request and hits the correct action in the Controller.",
   kind: 'perfect',
   question_id: fourth_oop_question.id
 )
@@ -1585,7 +1585,7 @@ ninth_oop_question_fourth_answer = Answer.create!(
 )
 
 tenth_oop_question_first_answer = Answer.create!(
-  content: 'It is used when you want to share attributes and methods between classes',
+  content: "It's used when you want to share attributes and methods between classes",
   kind: 'perfect',
   question_id: tenth_oop_question.id
 )
@@ -1633,7 +1633,7 @@ eleventh_oop_question_fourth_answer = Answer.create!(
 )
 
 twelfth_oop_question_first_answer = Answer.create!(
-  content: "Instance methods allowing you to read an object's instance variables values",
+  content: "They allow you to read an object's instance variables values",
   kind: 'perfect',
   question_id: twelfth_oop_question.id
 )
@@ -1657,7 +1657,7 @@ twelfth_oop_question_fourth_answer = Answer.create!(
 )
 
 thirteenth_oop_question_first_answer = Answer.create!(
-  content: "Instance methods allowing you to update an object's instance variables values",
+  content: "They you to update an object's instance variables values",
   kind: 'perfect',
   question_id: thirteenth_oop_question.id
 )
