@@ -1366,201 +1366,489 @@ thirtieth_ruby_question_fourth_answer = Answer.create!(
 
 puts 'Ruby answers created.'
 
-puts 'Creating empty OOP answers...'
+puts 'Creating OOP answers...'
 
 first_oop_question_first_answer = Answer.create!(
-  content: 'OOP 1 perfect.',
+  content: 'Actions',
   kind: 'perfect',
   question_id: first_oop_question.id
 )
 
 first_oop_question_second_answer = Answer.create!(
-  content: 'OOP 1 correct.',
+  content: 'App features',
   kind: "correct",
   question_id: first_oop_question.id
 )
 
 first_oop_question_third_answer = Answer.create!(
-  content: 'OOP 1 misleading.',
+  content: 'User stories',
   kind: "misleading",
   question_id: first_oop_question.id
 )
 
 first_oop_question_fourth_answer = Answer.create!(
-  content: 'OOP 1 weird.',
+  content: 'Instance methods, duh !',
   kind: "weird",
   question_id: first_oop_question.id
 )
 
 second_oop_question_first_answer = Answer.create!(
-  content: 'OOP 2 perfect.',
+  content: 'A design pattern named Model View Controller',
   kind: 'perfect',
   question_id: second_oop_question.id
 )
 
 second_oop_question_second_answer = Answer.create!(
-  content: 'OOP 2 correct.',
+  content: 'Model View Controller',
   kind: "correct",
   question_id: second_oop_question.id
 )
 
 second_oop_question_third_answer = Answer.create!(
-  content: 'OOP 2 misleading.',
+  content: 'Module View Controls',
   kind: "misleading",
   question_id: second_oop_question.id
 )
 
 second_oop_question_fourth_answer = Answer.create!(
-  content: 'OOP 2 weird.',
+  content: 'Marvel Visual Comics',
   kind: "weird",
   question_id: second_oop_question.id
 )
 
 third_oop_question_first_answer = Answer.create!(
-  content: 'OOP 3 perfect.',
+  content: 'A container to store the app information',
   kind: 'perfect',
   question_id: third_oop_question.id
 )
 
 third_oop_question_second_answer = Answer.create!(
-  content: 'OOP 3 correct.',
+  content: "It is the application's dynamic data structure",
   kind: "correct",
   question_id: third_oop_question.id
 )
 
 third_oop_question_third_answer = Answer.create!(
-  content: 'OOP 3 misleading.',
+  content: 'It is the interface',
   kind: "misleading",
   question_id: third_oop_question.id
 )
 
 third_oop_question_fourth_answer = Answer.create!(
-  content: 'OOP 3 weird.',
+  content: 'It has to be the role model for everyone',
   kind: "weird",
   question_id: third_oop_question.id
 )
 
 fourth_oop_question_first_answer = Answer.create!(
-  content: 'OOP 4 perfect.',
+  content: "It receives the user's request and hits the corresponding action in the Controller.",
   kind: 'perfect',
   question_id: fourth_oop_question.id
 )
 
 fourth_oop_question_second_answer = Answer.create!(
-  content: 'OOP 4 correct.',
+  content: "It is the app's entry point.",
   kind: "correct",
   question_id: fourth_oop_question.id
 )
 
 fourth_oop_question_third_answer = Answer.create!(
-  content: 'OOP 4 misleading.',
+  content: 'It connects you to the internet',
   kind: "misleading",
   question_id: fourth_oop_question.id
 )
 
 fourth_oop_question_fourth_answer = Answer.create!(
-  content: 'OOP 4 weird.',
+  content: 'A router ? Is it like a trucker ?',
   kind: "weird",
   question_id: fourth_oop_question.id
 )
 
 fifth_oop_question_first_answer = Answer.create!(
-  content: 'OOP 5 perfect.',
+  content: 'Ruby On Rails',
   kind: 'perfect',
   question_id: fifth_oop_question.id
 )
 
 fifth_oop_question_second_answer = Answer.create!(
-  content: 'OOP 5 correct.',
+  content: 'Rails',
   kind: "correct",
   question_id: fifth_oop_question.id
 )
 
 fifth_oop_question_third_answer = Answer.create!(
-  content: 'OOP 5 misleading.',
+  content: 'Sinatra',
   kind: "misleading",
   question_id: fifth_oop_question.id
 )
 
 fifth_oop_question_fourth_answer = Answer.create!(
-  content: 'OOP 5 weird.',
+  content: 'Ruby Rose',
   kind: "weird",
   question_id: fifth_oop_question.id
 )
 
 sixth_oop_question_first_answer = Answer.create!(
-  content: 'OOP 6 perfect.',
+  content: 'The View puts and gets elements.',
   kind: 'perfect',
   question_id: sixth_oop_question.id
 )
 
 sixth_oop_question_second_answer = Answer.create!(
-  content: 'OOP 6 correct.',
+  content: 'The View renders presentation of the model in a particular format.',
   kind: "correct",
   question_id: sixth_oop_question.id
 )
 
 sixth_oop_question_third_answer = Answer.create!(
-  content: 'OOP 6 misleading.',
+  content: 'The View accepts input and converts it to commands.',
   kind: "misleading",
   question_id: sixth_oop_question.id
 )
 
 sixth_oop_question_fourth_answer = Answer.create!(
-  content: 'OOP 6 weird.',
+  content: 'A View...to a kill',
   kind: "weird",
   question_id: sixth_oop_question.id
 )
 
 seventh_oop_question_first_answer = Answer.create!(
-  content: 'OOP 7 perfect.',
+  content: "Super calls the parent's method which has the same name",
   kind: 'perfect',
   question_id: seventh_oop_question.id
 )
 
 seventh_oop_question_second_answer = Answer.create!(
-  content: 'OOP 7 correct.',
+  content: "It calls a parent's method",
   kind: "correct",
   question_id: seventh_oop_question.id
 )
 
 seventh_oop_question_third_answer = Answer.create!(
-  content: 'OOP 7 misleading.',
+  content: 'It does the same as Yield',
   kind: "misleading",
   question_id: seventh_oop_question.id
 )
 
 seventh_oop_question_fourth_answer = Answer.create!(
-  content: 'OOP 7 weird.',
+  content: "Please don't call my parents",
   kind: "weird",
   question_id: seventh_oop_question.id
 )
 
 eighth_oop_question_first_answer = Answer.create!(
-  content: 'OOP 8 perfect.',
+  content: "It's when you redefine or complete a superclass method in a subclass",
   kind: 'perfect',
   question_id: eighth_oop_question.id
 )
 
 eighth_oop_question_second_answer = Answer.create!(
-  content: 'OOP 8 correct.',
+  content: "It's the act of redefining a superclass method",
   kind: "correct",
   question_id: eighth_oop_question.id
 )
 
 eighth_oop_question_third_answer = Answer.create!(
-  content: 'OOP 8 misleading.',
+  content: 'When you make a method more important than another',
   kind: "misleading",
   question_id: eighth_oop_question.id
 )
 
 eighth_oop_question_fourth_answer = Answer.create!(
-  content: 'OOP 8 weird.',
+  content: 'Bip boop system override',
   kind: "weird",
   question_id: eighth_oop_question.id
 )
 
-puts 'Empty OOP answers created.'
+ninth_oop_question_first_answer = Answer.create!(
+  content: 'It refers to the instance the method is called on',
+  kind: 'perfect',
+  question_id: ninth_oop_question.id
+)
+
+ninth_oop_question_second_answer = Answer.create!(
+  content: 'It refers to an instance',
+  kind: "correct",
+  question_id: ninth_oop_question.id
+)
+
+ninth_oop_question_third_answer = Answer.create!(
+  content: 'It refers to a superclass',
+  kind: "misleading",
+  question_id: ninth_oop_question.id
+)
+
+ninth_oop_question_fourth_answer = Answer.create!(
+  content: 'It refers to me, myself and I',
+  kind: "weird",
+  question_id: ninth_oop_question.id
+)
+
+tenth_oop_question_first_answer = Answer.create!(
+  content: 'It is used when you want to share attributes and methods between classes',
+  kind: 'perfect',
+  question_id: tenth_oop_question.id
+)
+
+tenth_oop_question_second_answer = Answer.create!(
+  content: 'It is used to share behaviors between classes',
+  kind: "correct",
+  question_id: tenth_oop_question.id
+)
+
+tenth_oop_question_third_answer = Answer.create!(
+  content: "It's used to share instances",
+  kind: "misleading",
+  question_id: tenth_oop_question.id
+)
+
+tenth_oop_question_fourth_answer = Answer.create!(
+  content: "I'm the heir to this class' fortune",
+  kind: "weird",
+  question_id: tenth_oop_question.id
+)
+
+eleventh_oop_question_first_answer = Answer.create!(
+  content: 'Inside an instance method',
+  kind: 'perfect',
+  question_id: eleventh_oop_question.id
+)
+
+eleventh_oop_question_second_answer = Answer.create!(
+  content: 'Inside a class definition, to define class methods',
+  kind: "correct",
+  question_id: eleventh_oop_question.id
+)
+
+eleventh_oop_question_third_answer = Answer.create!(
+  content: 'Inside a view',
+  kind: "misleading",
+  question_id: eleventh_oop_question.id
+)
+
+eleventh_oop_question_fourth_answer = Answer.create!(
+  content: "In a self service",
+  kind: "weird",
+  question_id: eleventh_oop_question.id
+)
+
+twelfth_oop_question_first_answer = Answer.create!(
+  content: "Instance methods allowing you to read an object's instance variables values",
+  kind: 'perfect',
+  question_id: twelfth_oop_question.id
+)
+
+twelfth_oop_question_second_answer = Answer.create!(
+  content: "A way to read instance variables values",
+  kind: "correct",
+  question_id: twelfth_oop_question.id
+)
+
+twelfth_oop_question_third_answer = Answer.create!(
+  content: 'A way to modify instance variables values',
+  kind: "misleading",
+  question_id: twelfth_oop_question.id
+)
+
+twelfth_oop_question_fourth_answer = Answer.create!(
+  content: "We're up all night to getter lucky",
+  kind: "weird",
+  question_id: twelfth_oop_question.id
+)
+
+thirteenth_oop_question_first_answer = Answer.create!(
+  content: "Instance methods allowing you to update an object's instance variables values",
+  kind: 'perfect',
+  question_id: thirteenth_oop_question.id
+)
+
+thirteenth_oop_question_second_answer = Answer.create!(
+  content: 'A way to change instance variables values',
+  kind: "correct",
+  question_id: thirteenth_oop_question.id
+)
+
+thirteenth_oop_question_third_answer = Answer.create!(
+  content: 'A way to read instance variables values',
+  kind: "misleading",
+  question_id: thirteenth_oop_question.id
+)
+
+thirteenth_oop_question_fourth_answer = Answer.create!(
+  content: 'I setter fire to the rain',
+  kind: "weird",
+  question_id: thirteenth_oop_question.id
+)
+
+fourteenth_oop_question_first_answer = Answer.create!(
+  content: 'Class .new (arguments)',
+  kind: 'perfect',
+  question_id: fourteenth_oop_question.id
+)
+
+fourteenth_oop_question_second_answer = Answer.create!(
+  content: 'The new method',
+  kind: "correct",
+  question_id: fourteenth_oop_question.id
+)
+
+fourteenth_oop_question_third_answer = Answer.create!(
+  content: 'The create method',
+  kind: "misleading",
+  question_id: fourteenth_oop_question.id
+)
+
+fourteenth_oop_question_fourth_answer = Answer.create!(
+  content: "Bob the builder method",
+  kind: "weird",
+  question_id: fourteenth_oop_question.id
+)
+
+fifteenth_oop_question_first_answer = Answer.create!(
+  content: "By writing 'param_name = default_value'",
+  kind: 'perfect',
+  question_id: fifteenth_oop_question.id
+)
+
+fifteenth_oop_question_second_answer = Answer.create!(
+  content: '@param = param',
+  kind: "correct",
+  question_id: fifteenth_oop_question.id
+)
+
+fifteenth_oop_question_third_answer = Answer.create!(
+  content: '@param = default',
+  kind: "misleading",
+  question_id: fifteenth_oop_question.id
+)
+
+fifteenth_oop_question_fourth_answer = Answer.create!(
+  content: "Arguably Default",
+  kind: "weird",
+  question_id: fifteenth_oop_question.id
+)
+
+sixteenth_oop_question_first_answer = Answer.create!(
+  content: 'Class name is in Upper Camel Case',
+  kind: 'perfect',
+  question_id: sixteenth_oop_question.id
+)
+
+sixteenth_oop_question_second_answer = Answer.create!(
+  content: 'Filename is in lower snake case',
+  kind: "correct",
+  question_id: sixteenth_oop_question.id
+)
+
+sixteenth_oop_question_third_answer = Answer.create!(
+  content: 'They are both in lower snake case',
+  kind: "misleading",
+  question_id: sixteenth_oop_question.id
+)
+
+sixteenth_oop_question_fourth_answer = Answer.create!(
+  content: "They are both in attaché case",
+  kind: "weird",
+  question_id: sixteenth_oop_question.id
+)
+
+seventeenth_oop_question_first_answer = Answer.create!(
+  content: '1 and 4 are instances of the Integer class',
+  kind: 'perfect',
+  question_id: seventeenth_oop_question.id
+)
+
+seventeenth_oop_question_second_answer = Answer.create!(
+  content: '+ is an instance method of the Integer class',
+  kind: "correct",
+  question_id: seventeenth_oop_question.id
+)
+
+seventeenth_oop_question_third_answer = Answer.create!(
+  content: 'They are all part of the Math class',
+  kind: "misleading",
+  question_id: seventeenth_oop_question.id
+)
+
+seventeenth_oop_question_fourth_answer = Answer.create!(
+  content: "1 + 4 = 14",
+  kind: "weird",
+  question_id: seventeenth_oop_question.id
+)
+
+eighteenth_oop_question_first_answer = Answer.create!(
+  content: 'With attr_accessor',
+  kind: 'perfect',
+  question_id: eighteenth_oop_question.id
+)
+
+eighteenth_oop_question_second_answer = Answer.create!(
+  content: 'With an attribute accessor',
+  kind: "correct",
+  question_id: eighteenth_oop_question.id
+)
+
+eighteenth_oop_question_third_answer = Answer.create!(
+  content: 'With an attribute access',
+  kind: "misleading",
+  question_id: eighteenth_oop_question.id
+)
+
+eighteenth_oop_question_fourth_answer = Answer.create!(
+  content: "Sorry but I don't have access to that question",
+  kind: "weird",
+  question_id: eighteenth_oop_question.id
+)
+
+nineteenth_oop_question_first_answer = Answer.create!(
+  content: 'It is an instance method of the Array class',
+  kind: 'perfect',
+  question_id: nineteenth_oop_question.id
+)
+
+nineteenth_oop_question_second_answer = Answer.create!(
+  content: 'It is the equivalent of the push method',
+  kind: "correct",
+  question_id: nineteenth_oop_question.id
+)
+
+nineteenth_oop_question_third_answer = Answer.create!(
+  content: "It's an argument",
+  kind: "misleading",
+  question_id: nineteenth_oop_question.id
+)
+
+nineteenth_oop_question_fourth_answer = Answer.create!(
+  content: "Turn left on the next intersection",
+  kind: "weird",
+  question_id: nineteenth_oop_question.id
+)
+
+tentieth_oop_question_first_answer = Answer.create!(
+  content: 'Object oriented programming',
+  kind: 'perfect',
+  question_id: twentieth_oop_question.id
+)
+
+twentieth_oop_question_second_answer = Answer.create!(
+  content: "It's a programming paradigm based on a concept of objects",
+  kind: "correct",
+  question_id: twentieth_oop_question.id
+)
+
+twentieth_oop_question_third_answer = Answer.create!(
+  content: 'Open office programming',
+  kind: "misleading",
+  question_id: twentieth_oop_question.id
+)
+
+twentieth_oop_question_fourth_answer = Answer.create!(
+  content: "Please don't wh-oop my butt",
+  kind: "weird",
+  question_id: twentieth_oop_question.id
+)
+
+puts 'OOP answers created.'
 
 puts 'Creating empty DB answers...'
 
