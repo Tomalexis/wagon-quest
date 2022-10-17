@@ -228,49 +228,109 @@ thirtieth_ruby_question = Question.create!(
 
 puts 'Ruby questions created.'
 
-puts 'Creating empty OOP questions...'
+puts 'Creating OOP questions...'
 
 first_oop_question = Question.create!(
-  content: 'OOP 1 ?',
+  content: 'In a Controller, the instance methods are referred to as... ?',
   lesson_id: fourth_lesson.id
 )
 
 second_oop_question = Question.create!(
-  content: 'OOP 2 ?',
+  content: 'What does MVC stand for ?',
   lesson_id: fourth_lesson.id
 )
 
 third_oop_question = Question.create!(
-  content: 'OOP 3 ?',
+  content: 'What’s the role of the Model in MVC ?',
   lesson_id: fourth_lesson.id
 )
 
 fourth_oop_question = Question.create!(
-  content: 'OOP 4 ?',
+  content: 'In a 1-model Task manager in Ruby, what’s the role of the router ?',
   lesson_id: fourth_lesson.id
 )
 
 fifth_oop_question = Question.create!(
-  content: 'OOP 5 ?',
+  content: 'Name a famous Ruby framework based on the MVC architectural pattern ?',
   lesson_id: fourth_lesson.id
 )
 
 sixth_oop_question = Question.create!(
-  content: 'OOP 6 ?',
+  content: 'What’s the role of the View in MVC ?',
   lesson_id: fourth_lesson.id
 )
 
 seventh_oop_question = Question.create!(
-  content: 'OOP 7 ?',
+  content: 'What does the super keyword do ?',
   lesson_id: fourth_lesson.id
 )
 
 eighth_oop_question = Question.create!(
-  content: 'OOP 8 ?',
+  content: 'What does overriding of a superclass method mean ?',
   lesson_id: fourth_lesson.id
 )
 
-puts 'Empty OOP questions created.'
+ninth_oop_question = Question.create!(
+  content: 'What does self refer to in an instance method’s body ?',
+  lesson_id: fourth_lesson.id
+)
+
+tenth_oop_question = Question.create!(
+  content: 'When / why should we use inheritance ?',
+  lesson_id: fourth_lesson.id
+)
+
+eleventh_oop_question = Question.create!(
+  content: 'What are the use cases of self ?',
+  lesson_id: fourth_lesson.id
+)
+
+twelfth_oop_question = Question.create!(
+  content: 'Do you know what getters are ?',
+  lesson_id: fourth_lesson.id
+)
+
+thirteenth_oop_question = Question.create!(
+  content: 'Do you know what setters are ?',
+  lesson_id: fourth_lesson.id
+)
+
+fourteenth_oop_question = Question.create!(
+  content: 'What’s the class constructor method name in Ruby ?',
+  lesson_id: fourth_lesson.id
+)
+
+fifteenth_oop_question = Question.create!(
+  content: 'How do you define default arguments in a class #initialize method ?',
+  lesson_id: fourth_lesson.id
+)
+
+sixteenth_oop_question = Question.create!(
+  content: 'What are the naming conventions for a Ruby class (filename and class itself) ?',
+  lesson_id: fourth_lesson.id
+)
+
+seventeenth_oop_question = Question.create!(
+  content: 'In the 1 + 4 instruction how would you characterize 1, + and 4 object oriented wise ?',
+  lesson_id: fourth_lesson.id
+)
+
+eighteenth_oop_question = Question.create!(
+  content: 'Do you know how to set both a getter and a setter in one line ?',
+  lesson_id: fourth_lesson.id
+)
+
+nineteenth_oop_question = Question.create!(
+  content: 'In the numbers << 3 instruction where numbers is an instance of Array, what is << ?',
+  lesson_id: fourth_lesson.id
+)
+
+twentieth_oop_question = Question.create!(
+  content: 'What does OOP stand for ?',
+  lesson_id: fourth_lesson.id
+)
+
+puts 'OOP questions created.'
 
 puts 'Creating empty DB questions...'
 
@@ -2918,20 +2978,20 @@ hugo.save!
 
 diane = Teacher.create!(
   name: 'Diane',
-  feedback_answer_perfect: '...',
-  feedback_answer_correct: '...',
-  feedback_answer_misleading: '...',
-  feedback_answer_weird: '...',
+  feedback_answer_perfect: 'Amazing, you are my favorite student 💖',
+  feedback_answer_correct: 'Good ! Be more specific next time 😊',
+  feedback_answer_misleading: 'Unfortunately that is incorrect 😥',
+  feedback_answer_weird: 'STOP MAKING FUN OF ME ! 💔',
   feedback_intro: "...",
-  feedback_user_won: '...',
-  feedback_user_lost: '...',
+  feedback_user_won: "💞 Congratulations, I'm so proud of you ! 💞",
+  feedback_user_lost: "I'm really disappointed, but I know you will do better next time 🙏🏻",
   position_x: 28,
   position_y: 4,
   lesson_id: fourth_lesson.id,
   status: "core_four",
-  open_dialog1: '...',
-  open_dialog2: '...',
-  open_dialog3: '...'
+  open_dialog1: "💕 Hello student, it's really nice to meet you ! My name is Diane and I'll teach you about OOP 💕",
+  open_dialog2: "Hi Diane, what do you mean by OOP ?",
+  open_dialog3: "I mean OOP, like in 'I'M ABOUT TO WH-OOP YOUR BUTT' UwU"
 )
 
 file = File.open(Rails.root.join("app/assets/images/dianestatic.png"))
