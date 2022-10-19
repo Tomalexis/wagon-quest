@@ -3873,7 +3873,7 @@ seb = Teacher.create!(
   lesson_id: secret_lesson.id,
   status: "secret_boss",
   open_dialog1: "...",
-  open_dialog2: "...",
+  open_dialog2: "What are you doing in the bushes ?",
   open_dialog3: "..."
 )
 
@@ -3957,20 +3957,20 @@ diane.save!
 
 paul = Teacher.create!(
   name: 'Paul',
-  feedback_answer_perfect: '...',
-  feedback_answer_correct: '...',
-  feedback_answer_misleading: '...',
-  feedback_answer_weird: '...',
+  feedback_answer_perfect: 'That answer goes in the Amazing table !',
+  feedback_answer_correct: "SELECT * FROM answer WHERE correct",
+  feedback_answer_misleading: 'This is a one to many mistake relation',
+  feedback_answer_weird: 'I would have preferred I you pitched me a dog dating app',
   feedback_intro: "...",
-  feedback_user_won: '...',
-  feedback_user_lost: '...',
+  feedback_user_won: "Congratulations student, you are now a database master !",
+  feedback_user_lost: "The only table you've flipped is your desk... Try again !",
   position_x: 50,
   position_y: 9,
   lesson_id: fifth_lesson.id,
   status: "core_four",
-  open_dialog1: '...',
-  open_dialog2: '...',
-  open_dialog3: '...'
+  open_dialog1: "Oh no, don't tell me you're here to pitch me another animal dating app...",
+  open_dialog2: "Hmm no, I'm just here for the flashcard battle !",
+  open_dialog3: "Oh wow, you had me scared for a minute ! Sure let's battle, I have some tough questions in my database for you !"
 )
 
 file = File.open(Rails.root.join("app/assets/images/paulstatic.png"))
@@ -3981,20 +3981,20 @@ paul.save!
 
 boris = Teacher.create!(
   name: 'Boris',
-  feedback_answer_perfect: '...',
-  feedback_answer_correct: '...',
-  feedback_answer_misleading: '...',
-  feedback_answer_weird: '...',
+  feedback_answer_perfect: "I guess this is an amazing answer ?",
+  feedback_answer_correct: 'I just checked Kitt and it appears to be the correct answer.',
+  feedback_answer_misleading: "Stack Overflow is telling me you're wrong kid.",
+  feedback_answer_weird: 'You really disturbed my peaceful day for that ?',
   feedback_intro: "...",
-  feedback_user_won: '...',
-  feedback_user_lost: '...',
+  feedback_user_won: "Sooo...you won ? Congratulations, I guess I'm supposed to give a plastic crown or something...",
+  feedback_user_lost: "Apparently you lost... Please don't bother me again kid.",
   position_x: 45,
   position_y: 16,
   lesson_id: final_lesson.id,
   status: "final_boss",
-  open_dialog1: '...',
-  open_dialog2: '...',
-  open_dialog3: '...'
+  open_dialog1: 'Huh hello kid ? Who are you and what are you doing in my office ?',
+  open_dialog2: "Hi Boris, I'm the new student here ! I defeated all the other teachers so I guess that makes you the final boss ?",
+  open_dialog3: "Wait what ? I haven't coded in years ! I guess I'll just have to look through Kitt then..."
 )
 
 file = File.open(Rails.root.join("app/assets/images/borisstatic.png"))
