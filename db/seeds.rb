@@ -51,7 +51,7 @@ fourth_lesson = Lesson.create!(
 fifth_lesson = Lesson.create!(
   name: "DB",
   hp_user: 10,
-  hp_teacher: 10
+  hp_teacher: 20
 )
 
 sixth_lesson = Lesson.create!(
