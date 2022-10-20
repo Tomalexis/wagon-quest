@@ -3896,7 +3896,7 @@ tim = Teacher.create!(
   position_y: 20,
   lesson_id: third_lesson.id,
   status: "core_four",
-  open_dialog1: 'Hello newbie, I am Timothée and I will teach you the basics of Ruby here ! Goode pour toi ? ',
+  open_dialog1: 'Hello newbie, I will teach you the basics of Ruby here ! Goode pour toi ? ',
   open_dialog2: 'Hum yes...it is goode..? By the way, what is the secret of your perfect tan ? ',
   open_dialog3: 'A bit of surfing and a lot of Ruby programming, let us battle now ! '
 )
@@ -3944,7 +3944,7 @@ diane = Teacher.create!(
   position_y: 4,
   lesson_id: fourth_lesson.id,
   status: "core_four",
-  open_dialog1: "💕 Hello student, it's really nice to meet you ! My name is Diane and I'll teach you about OOP 💕",
+  open_dialog1: "💕 Hello student, it's really nice to meet you ! I'll teach you about OOP 💕",
   open_dialog2: "Hi Diane, what do you mean by OOP ?",
   open_dialog3: "I mean OOP, like in 'I'M ABOUT TO WH-OOP YOUR BUTT' UwU"
 )
@@ -3959,7 +3959,7 @@ paul = Teacher.create!(
   name: 'Paul',
   feedback_answer_perfect: 'That answer goes in the Amazing table !',
   feedback_answer_correct: "SELECT * FROM answer WHERE correct.",
-  feedback_answer_misleading: 'This is a one to many mistake relation.',
+  feedback_answer_misleading: 'This is a one-to-many mistake relation.',
   feedback_answer_weird: 'I would have preferred if you pitched me a dog dating app...',
   feedback_intro: "...",
   feedback_user_won: "Congratulations student, you are now a database master !",
@@ -3970,7 +3970,7 @@ paul = Teacher.create!(
   status: "core_four",
   open_dialog1: "Oh no, don't tell me you're here to pitch me another animal dating app...",
   open_dialog2: "Hmm no, I'm just here for the flashcard battle !",
-  open_dialog3: "Oh wow, you had me scared for a minute ! Sure let's battle, I have some tough questions in my database for you !"
+  open_dialog3: "Oh wow, you had me scared for a sec ! I have some tough questions in my database for you !"
 )
 
 file = File.open(Rails.root.join("app/assets/images/paulstatic.png"))
@@ -3993,8 +3993,8 @@ boris = Teacher.create!(
   lesson_id: final_lesson.id,
   status: "final_boss",
   open_dialog1: 'Huh hello kid ? Who are you and what are you doing in my office ?',
-  open_dialog2: "Hi Boris, I'm the new student here ! I defeated all the other teachers so I guess that makes you the final boss ?",
-  open_dialog3: "Wait what ? I haven't coded in years ! I guess I'll just have to look through Kitt then..."
+  open_dialog2: "Hi Boris, new student here ! I defeated all the teachers so that makes you the final boss ?",
+  open_dialog3: "Wait what ? I haven't coded in years ! I guess I'll just look through Kitt then..."
 )
 
 file = File.open(Rails.root.join("app/assets/images/borisstatic.png"))
