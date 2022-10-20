@@ -721,7 +721,7 @@ third_sebastien_question = Question.create!(
 )
 
 fourth_sebastien_question = Question.create!(
-  content: 'How do you active JavaScript in your local project in Rails?',
+  content: 'How do you activate JavaScript in your local project in Rails?',
   lesson_id: secret_lesson.id
 )
 
