@@ -56,7 +56,7 @@
     <%= image_tag "userstaticright.png" %>
   </div>
   <div class="dialog-box">
-    <%= "#{@battle.teacher.name} is challenging you to a flashcard battle !" %>
+    <p class="feedback"><%= "#{@battle.teacher.name} is challenging you to a flashcard battle !" %></p>
     <%= link_to continue_game_path(@game), data: { turbo_method: :patch, action: "click->game#continue", game_target: "continueLink" } do %>
       <i class="fa-regular fa-lg fa-square-caret-down"></i>
     <% end %>
