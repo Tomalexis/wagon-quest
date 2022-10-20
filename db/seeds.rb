@@ -51,7 +51,7 @@ fourth_lesson = Lesson.create!(
 fifth_lesson = Lesson.create!(
   name: "DB",
   hp_user: 10,
-  hp_teacher: 20
+  hp_teacher: 10
 )
 
 sixth_lesson = Lesson.create!(
@@ -1657,7 +1657,7 @@ twelfth_oop_question_fourth_answer = Answer.create!(
 )
 
 thirteenth_oop_question_first_answer = Answer.create!(
-  content: "They you to update an object's instance variables values",
+  content: "They let you update an object's instance variables values",
   kind: 'perfect',
   question_id: thirteenth_oop_question.id
 )
