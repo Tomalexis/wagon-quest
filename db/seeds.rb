@@ -1215,7 +1215,7 @@ nineteenth_ruby_question_fourth_answer = Answer.create!(
   question_id: nineteenth_ruby_question.id
 )
 
-tentieth_ruby_question_first_answer = Answer.create!(
+twentieth_ruby_question_first_answer = Answer.create!(
   content: 'Array .delete (element)',
   kind: 'perfect',
   question_id: twentieth_ruby_question.id
@@ -1939,7 +1939,7 @@ nineteenth_oop_question_fourth_answer = Answer.create!(
   question_id: nineteenth_oop_question.id
 )
 
-tentieth_oop_question_first_answer = Answer.create!(
+twentieth_oop_question_first_answer = Answer.create!(
   content: 'Object oriented programming',
   kind: 'perfect',
   question_id: twentieth_oop_question.id
@@ -2328,385 +2328,385 @@ fifteenth_db_question_fourth_answer = Answer.create!(
 )
 
 sixteenth_db_question_first_answer = Answer.create!(
-  content: '<img src= "example.png" class= "rounded circle">',
+  content: 'rake db: migrate',
   kind: 'perfect',
   question_id: sixteenth_db_question.id
 )
 
 sixteenth_db_question_second_answer = Answer.create!(
-  content: 'With the class rounded circle',
+  content: 'db: migrate',
   kind: "correct",
   question_id: sixteenth_db_question.id
 )
 
 sixteenth_db_question_third_answer = Answer.create!(
-  content: '<img src= "example.png" class= "circle">',
+  content: 'rake db: seed',
   kind: "misleading",
   question_id: sixteenth_db_question.id
 )
 
 sixteenth_db_question_fourth_answer = Answer.create!(
-  content: "Bootstrap sucks, just use border radius like an adult",
+  content: "rake duck: migrate",
   kind: "weird",
   question_id: sixteenth_db_question.id
 )
 
 seventeenth_db_question_first_answer = Answer.create!(
-  content: '12 columns',
+  content: 'rake db: drop',
   kind: 'perfect',
   question_id: seventeenth_db_question.id
 )
 
 seventeenth_db_question_second_answer = Answer.create!(
-  content: '2 x 6 columns',
+  content: 'db: drop',
   kind: "correct",
   question_id: seventeenth_db_question.id
 )
 
 seventeenth_db_question_third_answer = Answer.create!(
-  content: '10 columns',
+  content: 'db: delete',
   kind: "misleading",
   question_id: seventeenth_db_question.id
 )
 
 seventeenth_db_question_fourth_answer = Answer.create!(
-  content: "Those columns are like prison bars. Bootstrap prison.",
+  content: "rake db: drop the mic",
   kind: "weird",
   question_id: seventeenth_db_question.id
 )
 
 eighteenth_db_question_first_answer = Answer.create!(
-  content: 'Container, row and col',
+  content: 'Model .count',
   kind: 'perfect',
   question_id: eighteenth_db_question.id
 )
 
 eighteenth_db_question_second_answer = Answer.create!(
-  content: 'Container, rows and columns',
+  content: 'With the .count method',
   kind: "correct",
   question_id: eighteenth_db_question.id
 )
 
 eighteenth_db_question_third_answer = Answer.create!(
-  content: 'Div, header, line',
+  content: 'With the .size method',
   kind: "misleading",
   question_id: eighteenth_db_question.id
 )
 
 eighteenth_db_question_fourth_answer = Answer.create!(
-  content: "BOOTSTRAP, IS, HELL",
+  content: "With the .stop the count method",
   kind: "weird",
   question_id: eighteenth_db_question.id
 )
 
 nineteenth_db_question_first_answer = Answer.create!(
-  content: 'With const',
+  content: 'SELECT * FROM doctors',
   kind: 'perfect',
   question_id: nineteenth_db_question.id
 )
 
 nineteenth_db_question_second_answer = Answer.create!(
-  content: 'With let',
+  content: 'SELECT *',
   kind: "correct",
   question_id: nineteenth_db_question.id
 )
 
 nineteenth_db_question_third_answer = Answer.create!(
-  content: 'With var',
+  content: 'SELECT * WHERE doctors',
   kind: "misleading",
   question_id: nineteenth_db_question.id
 )
 
 nineteenth_db_question_fourth_answer = Answer.create!(
-  content: "I had to learn Ruby and now THIS ?!!",
+  content: "IS THERE A DOCTOR ON THIS PLANE ?!!",
   kind: "weird",
   question_id: nineteenth_db_question.id
 )
 
-tentieth_db_question_first_answer = Answer.create!(
-  content: 'lowerCamelCase',
+twentieth_db_question_first_answer = Answer.create!(
+  content: 'Model.last',
   kind: 'perfect',
   question_id: twentieth_db_question.id
 )
 
 twentieth_db_question_second_answer = Answer.create!(
-  content: 'const firstName',
+  content: 'With the .last method',
   kind: "correct",
   question_id: twentieth_db_question.id
 )
 
 twentieth_db_question_third_answer = Answer.create!(
-  content: 'const first_name',
+  content: 'With the .latest method',
   kind: "misleading",
   question_id: twentieth_db_question.id
 )
 
 twentieth_db_question_fourth_answer = Answer.create!(
-  content: "I'll have a pack of Camel please",
+  content: "With the .last of us method",
   kind: "weird",
   question_id: twentieth_db_question.id
 )
 
 twenty_first_db_question_first_answer = Answer.create!(
-  content: 'Math.random();',
+  content: 'class Name < ActiveRecord :: Base',
   kind: 'perfect',
   question_id: twenty_first_db_question.id
 )
 
 twenty_first_db_question_second_answer = Answer.create!(
-  content: 'With the random() method on Math',
+  content: 'They should inherit from ActiveRecord :: Base',
   kind: "correct",
   question_id: twenty_first_db_question.id
 )
 
 twenty_first_db_question_third_answer = Answer.create!(
-  content: 'Math. sample (0..1)',
+  content: 'ActiveRecord :: Migration [7.0]',
   kind: "misleading",
   question_id: twenty_first_db_question.id
 )
 
 twenty_first_db_question_fourth_answer = Answer.create!(
-  content: "I don't float, I sink.",
+  content: "For the (active) record: I don't know",
   kind: "weird",
   question_id: twenty_first_db_question.id
 )
 
 twenty_second_db_question_first_answer = Answer.create!(
-  content: 'With template literals (backtick symbol + dollar sign)',
+  content: 'class Create Table < ActiveRecord :: Migration [7.0]',
   kind: 'perfect',
   question_id: twenty_second_db_question.id
 )
 
 twenty_second_db_question_second_answer = Answer.create!(
-  content: '`${firstName} is a drummer`',
+  content: 'ActiveRecord :: Migration [7.0]',
   kind: "correct",
   question_id: twenty_second_db_question.id
 )
 
 twenty_second_db_question_third_answer = Answer.create!(
-  content: '"#{firstName} is a singer"',
+  content: 'ActiveRecord :: Base',
   kind: "misleading",
   question_id: twenty_second_db_question.id
 )
 
 twenty_second_db_question_fourth_answer = Answer.create!(
-  content: "I don't work for Interpol",
+  content: "ActiveRecord :: Wild Geese Migration 🦆",
   kind: "weird",
   question_id: twenty_second_db_question.id
 )
 
 twenty_third_db_question_first_answer = Answer.create!(
-  content: 'array .forEach (element)',
+  content: 'Model .all',
   kind: 'perfect',
   question_id: twenty_third_db_question.id
 )
 
 twenty_third_db_question_second_answer = Answer.create!(
-  content: 'With .forEach',
+  content: 'With the .all method',
   kind: "correct",
   question_id: twenty_third_db_question.id
 )
 
 twenty_third_db_question_third_answer = Answer.create!(
-  content: 'array .each do',
+  content: 'With the .count method',
   kind: "misleading",
   question_id: twenty_third_db_question.id
 )
 
 twenty_third_db_question_fourth_answer = Answer.create!(
-  content: "We're not made forEach other",
+  content: "Imagine all... the Active Records 🎤",
   kind: "weird",
   question_id: twenty_third_db_question.id
 )
 
 twenty_fourth_db_question_first_answer = Answer.create!(
-  content: 'element .insert Adjacent HTML',
+  content: 'The class name should be in Upper Camel Case, singular form',
   kind: 'perfect',
   question_id: twenty_fourth_db_question.id
 )
 
 twenty_fourth_db_question_second_answer = Answer.create!(
-  content: 'With .insert Adjacent HTML',
+  content: 'The table name should be in lower snake case, plural form',
   kind: "correct",
   question_id: twenty_fourth_db_question.id
 )
 
 twenty_fourth_db_question_third_answer = Answer.create!(
-  content: 'With .insert inner HTML',
+  content: 'They should be in Upper Camel Case, plural form',
   kind: "misleading",
   question_id: twenty_fourth_db_question.id
 )
 
 twenty_fourth_db_question_fourth_answer = Answer.create!(
-  content: "Insert adjacent what ? 0_0",
+  content: "What's this about Camels and snakes ? We're not in a zoo !",
   kind: "weird",
   question_id: twenty_fourth_db_question.id
 )
 
 twenty_fifth_db_question_first_answer = Answer.create!(
-  content: 'document .get Element By Id()',
+  content: 'Model .find(id)',
   kind: 'perfect',
   question_id: twenty_fifth_db_question.id
 )
 
 twenty_fifth_db_question_second_answer = Answer.create!(
-  content: 'With .get Element By Id',
+  content: 'Model .find_by (attribute: value)',
   kind: "correct",
   question_id: twenty_fifth_db_question.id
 )
 
 twenty_fifth_db_question_third_answer = Answer.create!(
-  content: 'With query Selector',
+  content: 'Model .search(id)',
   kind: "misleading",
   question_id: twenty_fifth_db_question.id
 )
 
 twenty_fifth_db_question_fourth_answer = Answer.create!(
-  content: "I'm old enough to get Elements without showing my ID",
+  content: "Do I look like a detective to you ?",
   kind: "weird",
   question_id: twenty_fifth_db_question.id
 )
 
 twenty_sixth_db_question_first_answer = Answer.create!(
-  content: 'element .add Event Listener (event Type, (event))',
+  content: 'rake db: create',
   kind: 'perfect',
   question_id: twenty_sixth_db_question.id
 )
 
 twenty_sixth_db_question_second_answer = Answer.create!(
-  content: 'With .add Event Listener',
+  content: 'With db: create',
   kind: "correct",
   question_id: twenty_sixth_db_question.id
 )
 
 twenty_sixth_db_question_third_answer = Answer.create!(
-  content: 'With .insert Inner HTML',
+  content: 'With rake db: migrate',
   kind: "misleading",
   question_id: twenty_sixth_db_question.id
 )
 
 twenty_sixth_db_question_fourth_answer = Answer.create!(
-  content: "I'm a very good listener you know",
+  content: "With rake db: creatine *flex your muscles*",
   kind: "weird",
   question_id: twenty_sixth_db_question.id
 )
 
 twenty_seventh_db_question_first_answer = Answer.create!(
-  content: 'With element .query Selector ()',
+  content: 'Presence and uniqueness',
   kind: 'perfect',
   question_id: twenty_seventh_db_question.id
 )
 
 twenty_seventh_db_question_second_answer = Answer.create!(
-  content: 'With element .query Selector All()',
+  content: 'Length and format',
   kind: "correct",
   question_id: twenty_seventh_db_question.id
 )
 
 twenty_seventh_db_question_third_answer = Answer.create!(
-  content: 'With get Element By Id()',
+  content: 'Absence and numericality',
   kind: "misleading",
   question_id: twenty_seventh_db_question.id
 )
 
 twenty_seventh_db_question_fourth_answer = Answer.create!(
-  content: "You just can't. I give up.",
+  content: "Charisma, uniqueness, nerve and talent",
   kind: "weird",
   question_id: twenty_seventh_db_question.id
 )
 
 twenty_eighth_db_question_first_answer = Answer.create!(
-  content: 'In package.json',
+  content: 'Model .destroy_all',
   kind: 'perfect',
   question_id: twenty_eighth_db_question.id
 )
 
 twenty_eighth_db_question_second_answer = Answer.create!(
-  content: 'In a json file',
+  content: 'With the .destroy_all method',
   kind: "correct",
   question_id: twenty_eighth_db_question.id
 )
 
 twenty_eighth_db_question_third_answer = Answer.create!(
-  content: 'In Gemfile',
+  content: 'With the .delete_all method',
   kind: "misleading",
   question_id: twenty_eighth_db_question.id
 )
 
 twenty_eighth_db_question_fourth_answer = Answer.create!(
-  content: "Nice package...json.",
+  content: "By throwing my hard drive in the trash",
   kind: "weird",
   question_id: twenty_eighth_db_question.id
 )
 
 twenty_ninth_db_question_first_answer = Answer.create!(
-  content: 'NPM',
+  content: 'With the .valid? method',
   kind: 'perfect',
   question_id: twenty_ninth_db_question.id
 )
 
 twenty_ninth_db_question_second_answer = Answer.create!(
-  content: 'NPM.js',
+  content: 'With the .errors .messages methods',
   kind: "correct",
   question_id: twenty_ninth_db_question.id
 )
 
 twenty_ninth_db_question_third_answer = Answer.create!(
-  content: 'YARN',
+  content: 'With the .validity? method',
   kind: "misleading",
   question_id: twenty_ninth_db_question.id
 )
 
 twenty_ninth_db_question_fourth_answer = Answer.create!(
-  content: "NTM",
+  content: "Just look at the expiration date",
   kind: "weird",
   question_id: twenty_ninth_db_question.id
 )
 
 thirtieth_db_question_first_answer = Answer.create!(
-  content: 'yarn add <package> [--dev]',
+  content: 'The INSERT INTO and UPDATE actions',
   kind: 'perfect',
   question_id: thirtieth_db_question.id
 )
 
 thirtieth_db_question_second_answer = Answer.create!(
-  content: 'yarn add',
+  content: 'It will insert the new instance and update the record',
   kind: "correct",
   question_id: thirtieth_db_question.id
 )
 
 thirtieth_db_question_third_answer = Answer.create!(
-  content: 'npm add',
+  content: 'The ADD and MODIFY actions',
   kind: "misleading",
   question_id: thirtieth_db_question.id
 )
 
 thirtieth_db_question_fourth_answer = Answer.create!(
-  content: "wool yarn add",
+  content: "UPDATE: I don't care",
   kind: "weird",
   question_id: thirtieth_db_question.id
 )
 
 thirty_first_db_question_first_answer = Answer.create!(
-  content: 'You burn your computer',
+  content: 'DELETE FROM doctors',
   kind: 'perfect',
   question_id: thirty_first_db_question.id
 )
 
 thirty_first_db_question_second_answer = Answer.create!(
-  content: 'You uninstall it this instant',
+  content: 'DELETE FROM',
   kind: "correct",
   question_id: thirty_first_db_question.id
 )
 
 thirty_first_db_question_third_answer = Answer.create!(
-  content: 'Bootstrap is not that bad',
+  content: 'DELETE * WHERE doctors',
   kind: "misleading",
   question_id: thirty_first_db_question.id
 )
 
 thirty_first_db_question_fourth_answer = Answer.create!(
-  content: "I call you for all my Bootstrap issues 💞",
+  content: "What's your problem with doctors dude ?!!",
   kind: "weird",
   question_id: thirty_first_db_question.id
 )
@@ -3171,7 +3171,7 @@ nineteenth_front_question_fourth_answer = Answer.create!(
   question_id: nineteenth_front_question.id
 )
 
-tentieth_front_question_first_answer = Answer.create!(
+twentieth_front_question_first_answer = Answer.create!(
   content: 'lowerCamelCase',
   kind: 'perfect',
   question_id: twentieth_front_question.id
