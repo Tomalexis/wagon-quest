@@ -3872,9 +3872,9 @@ seb = Teacher.create!(
   position_y: 34,
   lesson_id: secret_lesson.id,
   status: "secret_boss",
-  open_dialog1: "...",
-  open_dialog2: "What are you doing in the bushes ?",
-  open_dialog3: "..."
+  open_dialog1: "... ",
+  open_dialog2: "What are you doing in the bushes ? ",
+  open_dialog3: "... "
 )
 
 file = File.open(Rails.root.join("app/assets/images/seb_tall.png"))
@@ -3944,9 +3944,9 @@ diane = Teacher.create!(
   position_y: 4,
   lesson_id: fourth_lesson.id,
   status: "core_four",
-  open_dialog1: "💕 Hello student, it's really nice to meet you ! I'll teach you about OOP 💕",
-  open_dialog2: "Hi Diane, what do you mean by OOP ?",
-  open_dialog3: "I mean OOP, like in 'I'M ABOUT TO WH-OOP YOUR BUTT' UwU"
+  open_dialog1: "💕 Hello student, it's really nice to meet you ! I'll teach you about OOP 💕 ",
+  open_dialog2: "Hi Diane, what do you mean by OOP ? ",
+  open_dialog3: "I mean OOP, like in 'I'M ABOUT TO WH-OOP YOUR BUTT' UwU "
 )
 
 file = File.open(Rails.root.join("app/assets/images/dianestatic.png"))
@@ -3968,9 +3968,9 @@ paul = Teacher.create!(
   position_y: 9,
   lesson_id: fifth_lesson.id,
   status: "core_four",
-  open_dialog1: "Oh no, don't tell me you're here to pitch me another animal dating app...",
-  open_dialog2: "Hmm no, I'm just here for the flashcard battle !",
-  open_dialog3: "Oh wow, you had me scared for a sec ! I have some tough questions in my database for you !"
+  open_dialog1: "Oh no, don't tell me you're here to pitch me another animal dating app... ",
+  open_dialog2: "Hmm no, I'm just here for the flashcard battle ! ",
+  open_dialog3: "Oh wow, you had me scared for a sec ! I have questions in my database for you ! "
 )
 
 file = File.open(Rails.root.join("app/assets/images/paulstatic.png"))
@@ -3992,9 +3992,9 @@ boris = Teacher.create!(
   position_y: 16,
   lesson_id: final_lesson.id,
   status: "final_boss",
-  open_dialog1: 'Huh hello kid ? Who are you and what are you doing in my office ?',
-  open_dialog2: "Hi Boris, new student here ! I defeated all the teachers so that makes you the final boss ?",
-  open_dialog3: "Wait what ? I haven't coded in years ! I guess I'll just look through Kitt then..."
+  open_dialog1: 'Huh hello kid ? Who are you and what are you doing in my office ? ',
+  open_dialog2: "Hi Boris, new student here ! I defeated the teachers so that makes the final boss ? ",
+  open_dialog3: "Wait what ? I haven't coded in years ! I guess I'll just look through Kitt then... "
 )
 
 file = File.open(Rails.root.join("app/assets/images/borisstatic.png"))
