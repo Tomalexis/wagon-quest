@@ -3916,7 +3916,7 @@ hugo = Teacher.create!(
   feedback_intro: "You're in for a world of hurt newbie !!!",
   feedback_user_won: 'Pff... Whatever, you won, just let me go back to my rave now.',
   feedback_user_lost: 'You suck just as much as Bootstrap !!!',
-  position_x: 28
+  position_x: 28,
   position_y: 4,
   lesson_id: sixth_lesson.id,
   status: "core_four",
@@ -3940,7 +3940,7 @@ diane = Teacher.create!(
   feedback_intro: "...",
   feedback_user_won: "💞 Congratulations, I'm so proud of you ! 💞",
   feedback_user_lost: "I'm really disappointed, but I know you will do better next time 🙏🏻",
-  position_x: 10
+  position_x: 10,
   position_y: 4,
   lesson_id: fourth_lesson.id,
   status: "core_four",
