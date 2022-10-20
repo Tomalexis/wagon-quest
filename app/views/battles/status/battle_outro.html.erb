@@ -29,9 +29,9 @@
   </div>
   <div class="dialog-box">
     <% if @battle.hp_teacher <= 0 %>
-      <p><%= @battle.teacher.feedback_user_won %></p>
+      <p class="feedback"><%= @battle.teacher.feedback_user_won %></p>
     <% elsif @battle.hp_user <= 0 %>
-      <p><%= @battle.teacher.feedback_user_lost %></p>
+      <p class="feedback"><%= @battle.teacher.feedback_user_lost %></p>
     <% end %>
     <%= link_to continue_game_path(@game), data: { turbo_method: :patch, game_target: "continueLink" } do %>
       <i class="fa-regular fa-lg fa-square-caret-down"></i>

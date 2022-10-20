@@ -46,19 +46,19 @@
   <div class="dialog-box">
     <% if @game_answer.answer.kind == "perfect" %>
       <p class="feedback"><%= @battle.teacher.feedback_answer_perfect %></p>
-      <p><%= "#{@battle.teacher.name} loses 2 HP !" %></p>
+      <p class="feedback"><%= "#{@battle.teacher.name} loses 2 HP !" %></p>
     <% elsif @game_answer.answer.kind == "correct" %>
       <p class="feedback"><%= @battle.teacher.feedback_answer_correct %></p>
-      <p><%= "#{@battle.teacher.name} loses 2 HP !" %></p>
+      <p class="feedback"><%= "#{@battle.teacher.name} loses 2 HP !" %></p>
     <% elsif @game_answer.answer.kind == "misleading" %>
       <p class="feedback"><%= @battle.teacher.feedback_answer_misleading %></p>
       <% if @battle.teacher.status != "tutorial" %>
-        <p><%= "#{@game.user.username} loses 2 HP !" %></p>
+        <p class="feedback"><%= "#{@game.user.username} loses 2 HP !" %></p>
       <% end %>
     <% elsif @game_answer.answer.kind == "weird" %>
       <p class="feedback"><%= @battle.teacher.feedback_answer_weird %></p>
       <% if @battle.teacher.status != "tutorial" %>
-        <p><%= "#{@game.user.username} loses 2 HP !" %></p>
+        <p class="feedback"><%= "#{@game.user.username} loses 2 HP !" %></p>
       <% end %>
     <% end %>
     <%= link_to continue_game_path(@game), data: { turbo_method: :patch, action: "click->game#continue", game_target: "continueLink" } do %>
