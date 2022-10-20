@@ -3993,7 +3993,7 @@ boris = Teacher.create!(
   lesson_id: final_lesson.id,
   status: "final_boss",
   open_dialog1: 'Huh hello kid ? Who are you and what are you doing in my office ? ',
-  open_dialog2: "Hi Boris, new student here ! I defeated the teachers so that makes the final boss ? ",
+  open_dialog2: "Hi Boris, new student here ! I defeated the teachers so that makes you the final boss ? ",
   open_dialog3: "Wait what ? I haven't coded in years ! I guess I'll just look through Kitt then... "
 )
 
