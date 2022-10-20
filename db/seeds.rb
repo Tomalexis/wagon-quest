@@ -2210,7 +2210,7 @@ tenth_db_question_fourth_answer = Answer.create!(
 eleventh_db_question_first_answer = Answer.create!(
   content: 'INSERT INTO table () VALUES ()',
   kind: 'perfect',
-  question_id: eleventh_ruby_question.id
+  question_id: eleventh_db_question.id
 )
 
 eleventh_db_question_second_answer = Answer.create!(
@@ -2958,7 +2958,7 @@ tenth_front_question_fourth_answer = Answer.create!(
 eleventh_front_question_first_answer = Answer.create!(
   content: 'align items: value',
   kind: 'perfect',
-  question_id: eleventh_ruby_question.id
+  question_id: eleventh_front_question.id
 )
 
 eleventh_front_question_second_answer = Answer.create!(
@@ -3958,9 +3958,9 @@ diane.save!
 paul = Teacher.create!(
   name: 'Paul',
   feedback_answer_perfect: 'That answer goes in the Amazing table !',
-  feedback_answer_correct: "SELECT * FROM answer WHERE correct",
-  feedback_answer_misleading: 'This is a one to many mistake relation',
-  feedback_answer_weird: 'I would have preferred I you pitched me a dog dating app',
+  feedback_answer_correct: "SELECT * FROM answer WHERE correct.",
+  feedback_answer_misleading: 'This is a one to many mistake relation.',
+  feedback_answer_weird: 'I would have preferred if you pitched me a dog dating app...',
   feedback_intro: "...",
   feedback_user_won: "Congratulations student, you are now a database master !",
   feedback_user_lost: "The only table you've flipped is your desk... Try again !",
@@ -3986,7 +3986,7 @@ boris = Teacher.create!(
   feedback_answer_misleading: "Stack Overflow is telling me you're wrong kid.",
   feedback_answer_weird: 'You really disturbed my peaceful day for that ?',
   feedback_intro: "...",
-  feedback_user_won: "Sooo...you won ? Congratulations, I guess I'm supposed to give a plastic crown or something...",
+  feedback_user_won: "Sooo...you won ? Congratulations, I guess I'm supposed to give you a plastic crown or something...",
   feedback_user_lost: "Apparently you lost... Please don't bother me again kid.",
   position_x: 45,
   position_y: 16,
